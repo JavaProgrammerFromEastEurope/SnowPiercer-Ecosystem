@@ -1,0 +1,86 @@
+{
+  "schema": "snowpiercer.orchestrator.exact-source-recovery/2",
+  "audit_date": "2026-11-16",
+  "source_recovery": {
+    "module/trainos": {
+      "release": "TrainOS v107",
+      "archive_sha256": "661c0346721f7aa3ace1572430f4259d78bba722c3c4eab540de05eaa36ac284",
+      "zip_size": 11495800,
+      "zip_members": 5207,
+      "manifest_verified_members": 5206,
+      "crc_pass": true,
+      "unsafe_paths": 0,
+      "python_ast_files": 3165,
+      "python_ast_errors": 0,
+      "strict_full": "INCOMPLETE_NOT_PASS",
+      "strict_focused": {
+        "runs": 3,
+        "tests_per_run": 11,
+        "all_pass": true
+      },
+      "import_status": "SOURCE_VERIFIED_IMPORT_PENDING",
+      "production": "NO_GO"
+    },
+    "module/island": {
+      "release": "ISLAND-GEO-022 / Island v0.23.0",
+      "archive_sha256": "e71d3d78c79dcea71e151c9d34d10b460a61b0a782eb927042f1c286dab42ce9",
+      "zip_size": 591028,
+      "zip_members": 968,
+      "manifest_verified_members": 967,
+      "crc_pass": true,
+      "unsafe_paths": 0,
+      "python_ast_files": 64,
+      "python_ast_errors": 0,
+      "strict_full": {
+        "runs": 3,
+        "tests_per_run": 200,
+        "all_pass": true
+      },
+      "import_status": "SOURCE_VERIFIED_IMPORT_PENDING",
+      "production": "NO_GO"
+    },
+    "module/rail-system": {
+      "requested": "RAIL-TRUST-016",
+      "exact_source": "MISSING",
+      "available_older": "RAIL-TRUST-015",
+      "older_archive_sha256": "9c9109458736cd5af9963238a23f3a076fe4b149cbfca444eda841ab6014169b",
+      "older_regressions": {
+        "run1": "FAIL_2_OF_335",
+        "run2": "PASS_335",
+        "run3": "PASS_335"
+      },
+      "import_status": "SOURCE_BLOCKED",
+      "production": "NO_GO"
+    },
+    "module/security": {
+      "release_candidate": "v0.1.0",
+      "archive_sha256": "228fcb0eaaebc3d29db01ea2c8138e019075bf9a8315ce3cda47e384918b11fd",
+      "manifest_verified_members": 51,
+      "strict_full": "3x36_PASS",
+      "import_status": "CANDIDATE_VERIFIED_IMPORT_PENDING",
+      "production": "NO_GO"
+    },
+    "module/integration-operations": {
+      "release_candidate": "SP-OPS v0.1.0",
+      "archive_sha256": "3b60a6883fc390d8bec0a10d369a82b33addba055237c204b90214768b7a28f3",
+      "strict_full": "3x18_PASS",
+      "import_status": "CANDIDATE_VERIFIED_IMPORT_PENDING",
+      "production": "NO_GO"
+    }
+  },
+  "local_evidence_bundle": {
+    "filename": "SnowPiercer_Exact_Source_Recovery_2026-11-16.zip",
+    "sha256": "d07d569f91d74e440635a5db08bfff7cb0530bccb221fe7ccd46d95249557ed0",
+    "bytes": 11759273,
+    "contents": "original 5 source ZIPs, per-file SHA256 manifest audit, full stdout stderr exit-code evidence, import helper",
+    "github_uploaded": false
+  },
+  "git_ref_before_audit": "aebd8e8c66c8a2328ebafbe25fb84304eae6019e",
+  "pending_module_refs_expected": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+  "source_branch_imports_executed": 0,
+  "git_module_ref_updates_executed": 0,
+  "new_numeric_stages_created": 0,
+  "publication_limit": "Local sandbox cannot resolve github.com; GitHub connector cannot ingest uploaded ZIP paths as blobs. No source imports falsely claimed.",
+  "next_gate": "Use authorized Git checkout with network access to run 3 fresh strict suites and publish verified exact source using fast-forward only / Git ref CAS. Rail must supply original RAIL-TRUST-016.",
+  "overall_status": "BLOCKED/NO-GO"
+}
