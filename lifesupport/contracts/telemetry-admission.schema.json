@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snowpiercer:life:telemetry-admission:v1",
+  "title": "LIFE-CORE-021 read-only telemetry sample",
+  "description": "Structural schema only. Trusted metric/source/unit policy, GOOD quality, freshness and stateful replay/sequence checks are enforced by TelemetryAdmission. No actuation authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "source_component_id", "message_id", "timestamp_utc", "payload"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "kind": {"const": "LifeTelemetry"},
+    "source_component_id": {"type": "string", "minLength": 1},
+    "message_id": {"type": "string", "minLength": 1, "maxLength": 200},
+    "timestamp_utc": {"type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,6})?(?:Z|\\+00:00)$"},
+    "payload": {
+      "type": "object", "additionalProperties": false,
+      "required": ["metric", "value", "unit", "quality", "sequence"],
+      "properties": {
+        "metric": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,79}$"},
+        "value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1, "maxLength": 32},
+        "quality": {"const": "GOOD"},
+        "sequence": {"type": "integer", "minimum": 1, "maximum": 9223372036854775807}
+      }
+    }
+  }
+}

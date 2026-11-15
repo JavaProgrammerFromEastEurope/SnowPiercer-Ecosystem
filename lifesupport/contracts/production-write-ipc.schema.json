@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LIFE-CORE-016 Production Write IPC Request",
+  "oneOf": [
+    {"type":"object","properties":{"op":{"enum":["health","snapshot"]}},"required":["op"],"additionalProperties":false},
+    {"type":"object","properties":{"op":{"const":"transition"},"component_id":{"type":"string","minLength":1,"maxLength":256},"next_state":{"type":"string","minLength":1,"maxLength":256},"event_id":{"type":"string","minLength":1,"maxLength":256},"reason":{"type":"string","minLength":1,"maxLength":256}},"required":["op","component_id","next_state","event_id","reason"],"additionalProperties":false}
+  ]
+}

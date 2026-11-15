@@ -1,0 +1,5 @@
+# LIFE-CORE-019 — mandatory ledger admission
+
+Opt-in `MandatoryLedgerService` wraps `ReconciledWriteService`. A preflight hook runs before socket bind. Every IPC operation checks `MandatoryLedger.recover()`; client UID is read via SO_PEERCRED. `MandatoryLedger.apply()` writes a signed, fsynced `.pending` intent before calling the existing atomic SQLite event+receipt writer. After commit, recovery verifies exactly one receipt appended to the old snapshot, validates the journal, advances the external HMAC anchor, then removes the intent. A pre-commit crash leaves the old snapshot and permits intent removal. A post-commit crash permits deterministic finalization only for a matching receipt. Any mismatch denies admission.
+
+The intent and anchor live in the same OS trust domain unless provisioned otherwise. The protocol is not an atomic cross-filesystem transaction and does not prove power-loss durability, malicious privileged rollback resistance, or exactly-once physical actuation. The exclusive-writer assumption is mandatory; legacy direct same-UID writes bypass the new gate. The legacy API remains intentionally unchanged.

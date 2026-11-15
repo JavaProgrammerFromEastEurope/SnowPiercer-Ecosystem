@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0",
+  "components": [
+    {
+      "id": "LIFE-CORE-001",
+      "name": "Core reference subsystem",
+      "area": "CORE",
+      "status": "proposed",
+      "depends_on": []
+    },
+    {
+      "id": "LIFE-ATMOSPHERE-001",
+      "name": "Atmosphere reference subsystem",
+      "area": "ATMOSPHERE",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-VENTILATION-001",
+      "name": "Ventilation reference subsystem",
+      "area": "VENTILATION",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-THERMAL-001",
+      "name": "Thermal reference subsystem",
+      "area": "THERMAL",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-HUMIDITY-001",
+      "name": "Humidity reference subsystem",
+      "area": "HUMIDITY",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-WATER-001",
+      "name": "Water reference subsystem",
+      "area": "WATER",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-WATER-RECOVERY-001",
+      "name": "Water Recovery reference subsystem",
+      "area": "WATER-RECOVERY",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-SANITATION-001",
+      "name": "Sanitation reference subsystem",
+      "area": "SANITATION",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-WASTE-001",
+      "name": "Waste reference subsystem",
+      "area": "WASTE",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-FOOD-001",
+      "name": "Food reference subsystem",
+      "area": "FOOD",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-AGRICULTURE-001",
+      "name": "Agriculture reference subsystem",
+      "area": "AGRICULTURE",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-MEDICAL-001",
+      "name": "Medical reference subsystem",
+      "area": "MEDICAL",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-HABITAT-001",
+      "name": "Habitat reference subsystem",
+      "area": "HABITAT",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-FIRE-SAFETY-001",
+      "name": "Fire Safety reference subsystem",
+      "area": "FIRE-SAFETY",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-SENSORS-001",
+      "name": "Sensors reference subsystem",
+      "area": "SENSORS",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-CONTROL-001",
+      "name": "Control reference subsystem",
+      "area": "CONTROL",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-RESILIENCE-001",
+      "name": "Resilience reference subsystem",
+      "area": "RESILIENCE",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-RESOURCES-001",
+      "name": "Resources reference subsystem",
+      "area": "RESOURCES",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-DIGITAL-TWIN-001",
+      "name": "Digital Twin reference subsystem",
+      "area": "DIGITAL-TWIN",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    },
+    {
+      "id": "LIFE-INTEGRATION-001",
+      "name": "Integration reference subsystem",
+      "area": "INTEGRATION",
+      "status": "proposed",
+      "depends_on": [
+        "LIFE-CORE-001"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "LREQ-001",
+      "statement": "The CORE domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-CORE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-002",
+      "statement": "The ATMOSPHERE domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-ATMOSPHERE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-003",
+      "statement": "The VENTILATION domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-VENTILATION-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-004",
+      "statement": "The THERMAL domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-THERMAL-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-005",
+      "statement": "The HUMIDITY domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-HUMIDITY-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-006",
+      "statement": "The WATER domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-WATER-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-007",
+      "statement": "The WATER-RECOVERY domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-WATER-RECOVERY-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-008",
+      "statement": "The SANITATION domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-SANITATION-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-009",
+      "statement": "The WASTE domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-WASTE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-010",
+      "statement": "The FOOD domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-FOOD-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-011",
+      "statement": "The AGRICULTURE domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-AGRICULTURE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-012",
+      "statement": "The MEDICAL domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-MEDICAL-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-013",
+      "statement": "The HABITAT domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-HABITAT-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-014",
+      "statement": "The FIRE-SAFETY domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-FIRE-SAFETY-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-015",
+      "statement": "The SENSORS domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-SENSORS-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-016",
+      "statement": "The CONTROL domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-CONTROL-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-017",
+      "statement": "The RESILIENCE domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-RESILIENCE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-018",
+      "statement": "The RESOURCES domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-RESOURCES-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-019",
+      "statement": "The DIGITAL-TWIN domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-DIGITAL-TWIN-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-020",
+      "statement": "The INTEGRATION domain shall maintain a uniquely identified and versioned component entry.",
+      "component_ids": [
+        "LIFE-INTEGRATION-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Entry has valid ID, domain, lifecycle status, and resolvable dependencies.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-021",
+      "statement": "Component dependency graph shall contain no cycles.",
+      "component_ids": [
+        "LIFE-CORE-001"
+      ],
+      "verification_method": "automated negative and positive tests",
+      "acceptance_criteria": "All missing references, self edges and directed cycles are rejected.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-022",
+      "statement": "Incoming message envelopes shall have validated UTC timestamps, source IDs and version.",
+      "component_ids": [
+        "LIFE-INTEGRATION-001"
+      ],
+      "verification_method": "automated contract tests",
+      "acceptance_criteria": "Invalid versions, source IDs, timestamps and payload types are rejected.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-023",
+      "statement": "No remote actuation shall be enabled by the registry prototype.",
+      "component_ids": [
+        "LIFE-CONTROL-001",
+        "LIFE-INTEGRATION-001"
+      ],
+      "verification_method": "negative contract test",
+      "acceptance_criteria": "LifeCommand messages are rejected unconditionally.",
+      "status": "specified"
+    },
+    {
+      "id": "LREQ-024",
+      "statement": "All requirements shall link to at least one existing component.",
+      "component_ids": [
+        "LIFE-CORE-001"
+      ],
+      "verification_method": "automated registry inspection",
+      "acceptance_criteria": "Empty, duplicate and dangling component references are rejected.",
+      "status": "specified"
+    }
+  ]
+}

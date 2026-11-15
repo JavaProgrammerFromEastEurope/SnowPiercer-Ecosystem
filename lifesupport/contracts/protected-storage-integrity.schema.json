@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"LifeSupport Protected Storage Integrity v2",
+  "type":"object","additionalProperties":false,
+  "required":["protected","version","digest"],
+  "properties":{
+    "protected":{"const":true},
+    "version":{"const":2},
+    "digest":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+  }
+}

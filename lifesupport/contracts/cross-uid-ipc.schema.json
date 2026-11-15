@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"LIFE-CORE-014 read-only IPC request","type":"object","additionalProperties":false,"required":["op"],"properties":{"op":{"enum":["health","snapshot"]}}}

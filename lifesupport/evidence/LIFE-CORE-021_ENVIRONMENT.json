@@ -1,0 +1,9 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "effective_uid": 1000,
+  "resource_warning_mode": "error",
+  "umask": "022",
+  "skipped": 14,
+  "skip_reason": "Existing cross-UID/root-only tests require privileges unavailable in this account."
+}

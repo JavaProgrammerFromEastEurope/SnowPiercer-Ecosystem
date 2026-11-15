@@ -1,0 +1,14 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "euid": 0,
+  "stage": "LIFE-CORE-015",
+  "tests": 201,
+  "result": "PASS",
+  "limitations": [
+    "Linux container",
+    "read-only IPC",
+    "root-owned test service; not dedicated unprivileged service account",
+    "no power-loss testing"
+  ]
+}

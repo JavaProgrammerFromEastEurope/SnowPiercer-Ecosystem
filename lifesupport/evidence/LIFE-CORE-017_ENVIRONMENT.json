@@ -1,0 +1,9 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "euid": 0,
+  "test_count": 223,
+  "result": "OK",
+  "warnings_policy": "error::ResourceWarning",
+  "new_tests": 14
+}

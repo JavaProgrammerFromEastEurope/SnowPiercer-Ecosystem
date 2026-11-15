@@ -1,0 +1,7 @@
+{
+  "manifest": "evidence/LIFE-CORE-020_SHA256_MANIFEST.json",
+  "entries": 202,
+  "matched": 202,
+  "mismatches": [],
+  "archiveSha256": "52a2e31461f720ff04ff31a9d2babeb578ab53fd456eb5a7c30b866ae2316544"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://snowpiercer.local/contracts/life/recovery-fence/v1",
+  "title": "LifeSupport Recovery Fence Token v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "owner", "epoch", "expires_at_ns"],
+  "properties": {
+    "format": {"const": "snowpiercer.life.recovery-fence.v1"},
+    "owner": {"type": "string", "minLength": 1, "maxLength": 128},
+    "epoch": {"type": "integer", "minimum": 1},
+    "expires_at_ns": {"type": "integer", "minimum": 1}
+  },
+  "description": "Informational serialization only. A JSON token is not an authorization credential; the authoritative record is the SQLite coordination row."
+}

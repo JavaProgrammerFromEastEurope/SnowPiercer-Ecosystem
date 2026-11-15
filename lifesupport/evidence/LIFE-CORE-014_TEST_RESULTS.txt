@@ -1,0 +1,7 @@
+Command: PYTHONPATH=src python -W error::ResourceWarning -m unittest discover -s tests -q
+----------------------------------------------------------------------
+Ran 191 tests in 12.415s
+
+OK
+
+Linux root-only cross-UID tests ran in this environment.

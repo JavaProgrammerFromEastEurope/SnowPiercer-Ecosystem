@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Life Support Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "source_component_id",
+    "message_id",
+    "timestamp_utc",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "kind": {
+      "enum": [
+        "LifeTelemetry",
+        "LifeCommand",
+        "LifeCommandResult",
+        "LifeAlarm",
+        "LifeResourceStatus",
+        "LifeHealthStatus",
+        "LifeSafetyState"
+      ]
+    },
+    "source_component_id": {
+      "type": "string"
+    },
+    "message_id": {
+      "type": "string"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "payload": {
+      "type": "object"
+    }
+  }
+}

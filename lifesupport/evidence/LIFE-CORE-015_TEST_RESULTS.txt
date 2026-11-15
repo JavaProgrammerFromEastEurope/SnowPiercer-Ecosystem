@@ -1,0 +1,4 @@
+Command: PYTHONPATH=src python -W error::ResourceWarning -m unittest discover -s tests -q
+Ran 201 tests in 17.149s
+OK
+10 new tests; 191 prior tests.

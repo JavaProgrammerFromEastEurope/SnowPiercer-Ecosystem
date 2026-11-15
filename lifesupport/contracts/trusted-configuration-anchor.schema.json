@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LifeSupport Trusted Configuration Anchor",
+  "type": "object",
+  "required": [
+    "payload",
+    "mac"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "payload": {
+      "type": "object",
+      "required": [
+        "format",
+        "version",
+        "admission_version",
+        "guard_digest",
+        "epoch_floor"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "const": "LIFE-CORE-009"
+        },
+        "version": {
+          "const": 1
+        },
+        "admission_version": {
+          "const": 2
+        },
+        "guard_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "epoch_floor": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "mac": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

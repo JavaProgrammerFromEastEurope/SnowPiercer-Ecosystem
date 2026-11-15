@@ -1,0 +1,7 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"LifeSupportStateSnapshotV1",
+ "type":"object",
+ "propertyNames":{"pattern":"^LIFE-[A-Z0-9-]+$"},
+ "additionalProperties":{"enum":["REGISTERED","INITIALIZING","STANDBY","ACTIVE","DEGRADED","FAULT","ISOLATED","MAINTENANCE"]}
+}

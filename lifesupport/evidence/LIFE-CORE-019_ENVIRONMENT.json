@@ -1,0 +1,8 @@
+{
+  "stage": "LIFE-CORE-019",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "os": "Linux",
+  "timestamp_utc": "2026-11-14T08:52:03.376965+00:00",
+  "scope": "Linux process SIGKILL and SQLite WAL; no physical hardware, no power-loss rig"
+}

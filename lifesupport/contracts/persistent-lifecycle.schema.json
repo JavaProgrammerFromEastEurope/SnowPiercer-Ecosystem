@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Life Support Persistent Lifecycle Journal Record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sequence","event_id","component_id","previous_state","next_state","reason","actor","timestamp_utc","previous_hash","event_hash"],
+  "properties": {
+    "sequence": {"type":"integer","minimum":1},
+    "event_id": {"type":"string","minLength":1},
+    "component_id": {"type":"string","minLength":1},
+    "previous_state": {"$ref":"#/$defs/state"},
+    "next_state": {"$ref":"#/$defs/state"},
+    "reason": {"type":"string","minLength":1},
+    "actor": {"type":"string","minLength":1},
+    "timestamp_utc": {"type":"string","format":"date-time"},
+    "previous_hash": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "event_hash": {"type":"string","pattern":"^[0-9a-f]{64}$"}
+  },
+  "$defs": {"state": {"enum":["REGISTERED","INITIALIZING","STANDBY","ACTIVE","DEGRADED","FAULT","ISOLATED","MAINTENANCE"]}}
+}

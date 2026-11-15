@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Life Support IPC request v1",
+  "type":"object",
+  "properties":{"op":{"enum":["health","snapshot"]}},
+  "required":["op"],"additionalProperties":false
+}

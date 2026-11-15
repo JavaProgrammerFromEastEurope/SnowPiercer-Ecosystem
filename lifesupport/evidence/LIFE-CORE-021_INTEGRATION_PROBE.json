@@ -1,0 +1,1 @@
+{"schema":"snowpiercer.integration-probe.v1","moduleId":"SP-LIFE","stageId":"LIFE-CORE-021","correlationId":"snowpiercer-life-stage-021","status":"ok","checks":[{"name":"fresh_registered_sample_admitted","passed":true},{"name":"replayed_identity_rejected","passed":true},{"name":"stale_sample_rejected","passed":true}],"operationalReady":false}

@@ -1,0 +1,8 @@
+COMMAND: PYTHONPATH=src python -W error::ResourceWarning -m unittest discover -s tests -q
+FIRST RUN: Ran 238 tests in 44.497s; FAILED (errors=1) — test_production_write.ProductionWriteIntegration.test_real_uid_write_and_dac_denial, JSONDecodeError from empty stdout (intermittent cross-UID client failure).
+SECOND RUN: ----------------------------------------------------------------------
+Ran 238 tests in 44.319s
+
+OK
+
+New tests: 15 PASS in 0.700s (initial run; incidental sqlite ResourceWarning in test fixture corrected before final full run).

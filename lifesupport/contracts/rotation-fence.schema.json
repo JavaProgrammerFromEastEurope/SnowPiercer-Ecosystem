@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snowpiercer:lifesupport:rotation-fence:1",
+  "title": "Rotation fence diagnostic record",
+  "description": "Descriptive contract; current fence file is a fixed-text sentinel, not JSON. No on-disk JSON serialization is claimed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "state", "database_path"],
+  "properties": {
+    "format": {"const": "LIFE-CORE-011"},
+    "state": {"const": "BLOCKED"},
+    "database_path": {"type": "string", "minLength": 1}
+  }
+}

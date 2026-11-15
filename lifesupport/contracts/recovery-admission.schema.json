@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LIFE-CORE-007 admission migration record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_fingerprint", "owner", "epoch", "mode"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "registry_fingerprint": {"type":"string", "pattern":"^[a-f0-9]{64}$"},
+    "owner": {"type":"string", "minLength":1, "maxLength":128},
+    "epoch": {"type":"integer", "minimum":1},
+    "mode": {"const":"PROTECTED"}
+  }
+}

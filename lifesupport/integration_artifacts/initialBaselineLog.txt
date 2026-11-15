@@ -1,0 +1,13 @@
+======================================================================
+FAIL: test_sidecar_mode (test_cross_uid.CrossUIDTests.test_sidecar_mode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/ecosystem/life/lifesupport/tests/test_cross_uid.py", line 22, in test_sidecar_mode
+    with self.assertRaises(ServiceError): validate_cross_uid_storage(self.db,service_uid=os.geteuid(),client_uid=os.geteuid()+1)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: ServiceError not raised
+
+----------------------------------------------------------------------
+Ran 265 tests in 4.506s
+
+FAILED (failures=1, skipped=14)

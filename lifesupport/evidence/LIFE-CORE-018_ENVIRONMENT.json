@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "uid": 0,
+  "os": "posix",
+  "warnings": "-W error::ResourceWarning",
+  "stage": "LIFE-CORE-018",
+  "tests": 238,
+  "new_tests": 15,
+  "first_run": "FAILED (one intermittent cross-UID integration test)",
+  "second_run": "PASS"
+}

@@ -1,0 +1,12 @@
+# LIFE-CORE-018 Requirements
+- R018-01: Receipt snapshot must use deterministic canonical serialization.
+- R018-02: Receipt event references must resolve to journal events.
+- R018-03: Anchor must authenticate with HMAC-SHA256 and independent >=32-byte key.
+- R018-04: Missing, corrupt, or symlink anchor must fail closed.
+- R018-05: Ledger mismatch must deny recovery admission.
+- R018-06: SQLite event and receipt commit must remain atomic under Stage 017.
+- R018-07: Post-COMMIT pre-anchor crash must quarantine until explicit reconciliation.
+- R018-08: Reconciliation must require operator-approved current snapshot.
+- R018-09: Snapshot count and maximum sequence cannot decrease during reconciliation.
+- R018-10: Legacy APIs remain compatible and opt-in integration must be documented.
+- R018-11: Evidence must report environment and test failures accurately.

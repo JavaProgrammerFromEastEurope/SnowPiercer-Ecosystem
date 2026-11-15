@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "snowpiercer-lifesupport"
+version = "0.21.0"
+description = "LIFE-CORE-021 offline lifecycle and read-only telemetry admission"
+requires-python = ">=3.11"
+[tool.setuptools.packages.find]
+where = ["src"]

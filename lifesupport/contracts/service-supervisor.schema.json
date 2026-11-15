@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"LIFE-CORE-013 Supervisor Status (informational contract)",
+  "type":"object","additionalProperties":false,
+  "required":["version","status","restarts"],
+  "properties":{"version":{"const":"1.0"},"status":{"enum":["ready","restarting","failed"]},"restarts":{"type":"integer","minimum":0}}
+}

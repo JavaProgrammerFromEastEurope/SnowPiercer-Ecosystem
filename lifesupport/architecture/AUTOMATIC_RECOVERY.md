@@ -1,0 +1,7 @@
+# LIFE-CORE-013 — Automatic service recovery
+
+The supervisor uses an exclusive flock in an owner-owned 0700 directory and starts an independent service process. After SIGKILL, the supervisor checks the stale Unix socket's type, ownership, mode, and inode, probes for a live listener, then removes only a verified stale socket. The service reopens SQLite and replays the lifecycle journal before accepting health/snapshot requests. The supervisor fails closed on ambiguous socket states and readiness timeout.
+
+This is an offline read-only IPC prototype. It does not enable lifecycle mutations, does not implement remote authorized writes, and does not guarantee mandatory production isolation against same-UID or privileged writers. In production policy mode, the service UID must differ from the declared client UID; the service directory is private to its owner. Other-UID clients cannot access this owner-only socket, by design. A separate authenticated broker would be required for cross-UID operations.
+
+flock is advisory; it does not prevent malicious same-UID or root processes. SQLite files and WAL sidecars require filesystem protections, but SQLite direct-write bypass is possible for anyone with OS permissions. SIGKILL testing does not prove crash durability under power loss. No systemd integration or independent supervisor restart is included. Recovery of trusted anchors and in-flight rotation remains outside this Stage.

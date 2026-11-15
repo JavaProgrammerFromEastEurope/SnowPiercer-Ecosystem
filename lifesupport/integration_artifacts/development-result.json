@@ -1,0 +1,107 @@
+{
+  "id": "life",
+  "moduleId": "SP-LIFE",
+  "sourceStage": "LIFE-CORE-020",
+  "targetStage": "LIFE-CORE-021",
+  "versionBefore": "pyproject 0.12.0; runtime 0.2.0 (historical mismatch)",
+  "versionAfter": "0.21.0",
+  "capabilityRu": "Строгий приём телеметрии: свежесть, единицы и защита от повторов",
+  "summaryRu": "Добавлен read-only TelemetryAdmission с доверенными политиками метрик, единиц и допустимых источников, контролем UTC/свежести, запретом нечисловых и некачественных данных, повторов, отката последовательности и переполнения истории. Команды и физическое управление не разрешены.",
+  "tests": {
+    "command": "umask 022; PYTHONPATH=src /workspace/work/trainos-venv/bin/python -W error::ResourceWarning -m unittest discover -s tests -v",
+    "baselinePassed": 251,
+    "baselineTotal": 265,
+    "baselineSkipped": 14,
+    "passed": 280,
+    "total": 294,
+    "added": 29,
+    "failed": 0,
+    "skipped": 14,
+    "log": "/workspace/work/ecosystem/life/lifesupport/evidence/LIFE-CORE-021_TEST_RESULTS.txt",
+    "baselineLog": "/workspace/work/ecosystem/life/lifesupport/evidence/LIFE-CORE-021_BASELINE_NORMALIZED.txt",
+    "initialBaselineLog": "/workspace/work/ecosystem/life/lifesupport/evidence/LIFE-CORE-021_BASELINE_INITIAL.txt",
+    "initialBaselineFailures": 1,
+    "environmentNormalization": "Explicit umask022 restores the intended unsafe0644 fixture in existing test_sidecar_mode; test and guard unchanged."
+  },
+  "sourceIntegrity": {
+    "manifest": "evidence/LIFE-CORE-020_SHA256_MANIFEST.json",
+    "entries": 202,
+    "matched": 202,
+    "mismatches": [],
+    "archiveSha256": "52a2e31461f720ff04ff31a9d2babeb578ab53fd456eb5a7c30b866ae2316544"
+  },
+  "status": "SOFTWARE_VERIFIED",
+  "readiness": "NO_GO",
+  "operationalReady": false,
+  "limits": [
+    "Только программная read-only модель; физическая и медицинская готовность не подтверждены.",
+    "Защита от повторов действует в одном потоке и процессе; перезапуск теряет историю.",
+    "Идентификатор источника и quality=GOOD не являются криптографической аутентификацией, калибровкой или доказательством безопасности датчика.",
+    "Требуются внешние доверенная UTC-шкала и согласованные политики метрик.",
+    "14 исходных привилегированных тестов пропущены; root/cross-UID изоляция в этой среде не подтверждена."
+  ],
+  "changes": [
+    "src/lifesupport/core/telemetry.py",
+    "tests/test_telemetry.py",
+    "contracts/telemetry-admission.schema.json",
+    "integration_probe.py",
+    "docs/STAGE_LIFE-CORE-021.md",
+    "requirements/TELEMETRY_REQUIREMENTS.md",
+    "pyproject.toml",
+    "src/lifesupport/__init__.py",
+    "docs/README.md"
+  ],
+  "requirements": [
+    {
+      "id": "LIFE-021-R01",
+      "criterion": "Метрики, источники и единицы соответствуют доверенной политике.",
+      "evidence": "tests/test_telemetry.py:unknown-source/unknown-metric/wrong-unit checks"
+    },
+    {
+      "id": "LIFE-021-R02",
+      "criterion": "Не допускаются устаревшие данные, время из будущего сверх допуска и неверная UTC-метка.",
+      "evidence": "tests/test_telemetry.py:stale/future/timestamp boundary checks"
+    },
+    {
+      "id": "LIFE-021-R03",
+      "criterion": "Не допускаются NaN, Infinity, bool, неверное качество и порядковые номера.",
+      "evidence": "tests/test_telemetry.py:nonfinite/boolean/quality/sequence checks"
+    },
+    {
+      "id": "LIFE-021-R04",
+      "criterion": "Повторы, откат последовательности, времени наблюдения и часов отклоняются.",
+      "evidence": "tests/test_telemetry.py:replay/rollback/clock checks"
+    },
+    {
+      "id": "LIFE-021-R05",
+      "criterion": "Переполнение истории останавливает допуск без удаления защиты от повторов.",
+      "evidence": "tests/test_telemetry.py:test_capacity_fails_closed_without_forgetting_replay_ids"
+    },
+    {
+      "id": "LIFE-021-R06",
+      "criterion": "Отказ не меняет историю; выход и политика изолированы от мутаций входа.",
+      "evidence": "tests/test_telemetry.py:immutability/rejected-state/policy-snapshot checks"
+    },
+    {
+      "id": "LIFE-021-R07",
+      "criterion": "Команды управления остаются запрещены.",
+      "evidence": "tests/test_telemetry.py:test_commands_and_other_message_kinds_remain_disabled"
+    },
+    {
+      "id": "LIFE-021-R08",
+      "criterion": "Полная регрессия и связанный интеграционный probe имеют отдельные свидетельства.",
+      "evidence": "evidence/LIFE-CORE-021_TEST_RESULTS.txt; evidence/LIFE-CORE-021_INTEGRATION_PROBE.json"
+    }
+  ],
+  "integrationProbe": {
+    "command": [
+      "/workspace/work/trainos-venv/bin/python",
+      "/workspace/work/ecosystem/life/lifesupport/integration_probe.py"
+    ],
+    "schema": "snowpiercer.integration-probe.v1",
+    "stageId": "LIFE-CORE-021",
+    "report": "/workspace/work/ecosystem/life/lifesupport/evidence/LIFE-CORE-021_INTEGRATION_PROBE.json"
+  },
+  "currentManifest": "/workspace/work/ecosystem/life/lifesupport/evidence/LIFE-CORE-021_SHA256_MANIFEST.json",
+  "date": "2026-11-15"
+}

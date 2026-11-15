@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"LIFE-CORE-020 production profile","type":"object","additionalProperties":false,"required":["version","mode","anchor","key_file"],"properties":{"version":{"const":1},"mode":{"const":"mandatory-ledger"},"anchor":{"type":"string","pattern":"^/"},"key_file":{"type":"string","pattern":"^/"}}}

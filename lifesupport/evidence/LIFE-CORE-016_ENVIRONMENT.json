@@ -1,0 +1,11 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "effective_uid": 0,
+  "linux_so_peercred": true,
+  "new_stage_tests": 8,
+  "total_tests": 209,
+  "resourcewarning_mode": "error",
+  "result": "PASS",
+  "scope": "Linux root test harness; service child nonroot UID 65533, client UID 65534"
+}

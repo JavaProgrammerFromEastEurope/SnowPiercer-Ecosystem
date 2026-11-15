@@ -1,0 +1,13 @@
+Stage LIFE-CORE-019
+Command: PYTHONPATH=src python -W error::ResourceWarning -m unittest discover -s tests -q
+Final run:
+----------------------------------------------------------------------
+Ran 253 tests in 44.341s
+
+OK
+
+Two earlier full runs: 251/251 OK each, before adding two tests.
+New stage tests: 15/15 OK.
+Previous baseline: 238 tests.
+No ResourceWarning observed in successful full runs.
+Caveat: existing cross-UID tests have historical intermittent failures; two earlier full runs and final run passed, not a proof of flake elimination.

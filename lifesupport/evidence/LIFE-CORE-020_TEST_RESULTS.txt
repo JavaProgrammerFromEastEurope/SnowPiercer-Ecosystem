@@ -1,0 +1,16 @@
+LIFE-CORE-020 cumulative regression
+Command: PYTHONPATH=src python -W error::ResourceWarning -m unittest discover -s tests -q
+First run:
+----------------------------------------------------------------------
+Ran 265 tests in 46.406s
+
+OK
+Second run:
+----------------------------------------------------------------------
+Ran 265 tests in 45.478s
+
+OK
+New tests: 12 (tests/test_production_consolidation.py); previous: 253.
+ResourceWarning escalated to error. No such errors reported in either run.
+Scope: existing Linux UID/SIGKILL/socket/SQLite tests plus Stage 020 profile and legacy CLI denial tests.
+Limitations: no guarantee against same-UID/root bypass, profile rollback, arbitrary power loss or physical actuation.
