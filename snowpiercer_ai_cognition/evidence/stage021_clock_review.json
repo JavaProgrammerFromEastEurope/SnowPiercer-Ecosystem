@@ -1,0 +1,21 @@
+{
+  "schema": "snowpiercer.ai.review-correction.v1",
+  "stage": "AI-CORE-021",
+  "date": "2026-11-15",
+  "finding": "Expired proposal could be accepted after a subsequent wall-clock rollback that stayed >= issued_at.",
+  "reproducedBeforeFix": true,
+  "beforeFixSequence": [
+    "issue at 2000000000",
+    "verify at expires_at -> PROPOSAL_EXPIRED",
+    "verify same proposal at issued_at+1 -> ACCEPTED"
+  ],
+  "correction": "Thread-safe high-watermark of every valid clock sample in the same bridge; verify observes time before validating input.",
+  "afterFixSequence": [
+    "verify at expires_at -> PROPOSAL_EXPIRED",
+    "verify same proposal at issued_at+1 -> CLOCK_MOVED_BACKWARDS"
+  ],
+  "regressionTestsAdded": 7,
+  "scope": "Process-local per bridge instance; no persistent or cross-process trusted clock claimed.",
+  "historicalLog": "stage021_full_before_clock_fix.log",
+  "finalLog": "stage021_full.log"
+}

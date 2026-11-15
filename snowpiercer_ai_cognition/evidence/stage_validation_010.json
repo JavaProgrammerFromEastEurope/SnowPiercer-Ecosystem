@@ -1,0 +1,26 @@
+{
+  "stage": "AI-CORE-010",
+  "status": "PARTIAL",
+  "test_command": "python -W error::ResourceWarning -m unittest discover -s tests -q",
+  "tests_run": 98,
+  "passed": 95,
+  "skipped": 3,
+  "failures": 0,
+  "resource_warnings": 0,
+  "new_tests": 10,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "verified": [
+    "stale Unix socket reclaim",
+    "live socket rejection",
+    "socket replacement type checks",
+    "SIGKILL child and socket rebinding",
+    "prior suite regression"
+  ],
+  "not_verified": [
+    "full service automatic restart and SQLite reopening",
+    "checkpoint reconciliation after SIGKILL end-to-end",
+    "mandatory legacy API fencing",
+    "complete cross-UID resumed admission"
+  ],
+  "generated_utc": "2026-11-14T08:05:41.934233+00:00"
+}

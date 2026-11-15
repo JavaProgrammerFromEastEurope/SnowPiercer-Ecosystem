@@ -1,0 +1,15 @@
+{
+  "stage": "AI-CORE-008",
+  "status": "PASS",
+  "cumulative_tests": 82,
+  "new_tests": 13,
+  "failures": 0,
+  "resource_warnings": 0,
+  "command": "PYTHONPATH=. python -W error::ResourceWarning -m unittest discover -s tests -v",
+  "sha256_test_log": "0a2ce887f6a4597a4a41db9a804c929456762f8213bd3b62c1b192b8d697e67d",
+  "limitations": [
+    "No end-to-end dedicated UID service deployment",
+    "No stage-008 SIGKILL restart integration",
+    "No cross-UID socket admission policy"
+  ]
+}

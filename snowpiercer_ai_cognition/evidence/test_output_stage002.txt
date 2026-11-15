@@ -1,0 +1,26 @@
+test_bad_clock_fail_closed (test_admission.AdmissionTests.test_bad_clock_fail_closed) ... ok
+test_concurrent_replay_only_one_admitted (test_admission.AdmissionTests.test_concurrent_replay_only_one_admitted) ... ok
+test_cross_source_independent_replay_namespace (test_admission.AdmissionTests.test_cross_source_independent_replay_namespace) ... ok
+test_event_id_replay_with_fresh_nonce (test_admission.AdmissionTests.test_event_id_replay_with_fresh_nonce) ... ok
+test_exact_replay (test_admission.AdmissionTests.test_exact_replay) ... ok
+test_invalid_configuration (test_admission.AdmissionTests.test_invalid_configuration) ... ok
+test_malformed_envelopes (test_admission.AdmissionTests.test_malformed_envelopes) ... ok
+test_oversize_rejected (test_admission.AdmissionTests.test_oversize_rejected) ... ok
+test_replay_survives_restart (test_admission.AdmissionTests.test_replay_survives_restart) ... ok
+test_signing_rejects_invalid (test_admission.AdmissionTests.test_signing_rejects_invalid) ... ok
+test_source_binding (test_admission.AdmissionTests.test_source_binding) ... ok
+test_stale_and_future_boundaries (test_admission.AdmissionTests.test_stale_and_future_boundaries) ... ok
+test_storage_failure_closed (test_admission.AdmissionTests.test_storage_failure_closed) ... ok
+test_tampering_and_wrong_key (test_admission.AdmissionTests.test_tampering_and_wrong_key) ... ok
+test_valid_and_read_only (test_admission.AdmissionTests.test_valid_and_read_only) ... ok
+test_all_sources (test_core.CognitiveCoreTests.test_all_sources) ... ok
+test_deterministic_evidence (test_core.CognitiveCoreTests.test_deterministic_evidence) ... ok
+test_input_is_not_modified (test_core.CognitiveCoreTests.test_input_is_not_modified) ... ok
+test_non_actionable (test_core.CognitiveCoreTests.test_non_actionable) ... ok
+test_reject_invalid (test_core.CognitiveCoreTests.test_reject_invalid) ... ok
+test_severity_matrix (test_core.CognitiveCoreTests.test_severity_matrix) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.050s
+
+OK

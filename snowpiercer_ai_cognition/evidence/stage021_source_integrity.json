@@ -1,0 +1,6 @@
+{
+  "archiveSha256": "c3ecb5220ad5db7825115a5fb2e3df72a77fdd85dbd7073fb99047558660ecf5",
+  "method": "Every extracted file compared byte-for-byte with uploaded ZIP; no source SHA manifest supplied",
+  "filesChecked": 140,
+  "mismatches": []
+}

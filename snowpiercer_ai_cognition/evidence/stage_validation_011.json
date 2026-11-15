@@ -1,0 +1,30 @@
+{
+  "stage": "AI-CORE-011",
+  "status": "PARTIAL",
+  "tests_discovered": 106,
+  "passed": 103,
+  "skipped": 3,
+  "failed": 0,
+  "full_runs": 3,
+  "warning_filters": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "euid": 0
+  },
+  "verified": [
+    "subprocess cross-UID test IPC SIGKILL restart",
+    "socket UID and directory checks",
+    "production opt-in legacy registration denial",
+    "prior cumulative regression"
+  ],
+  "not_verified": [
+    "full anchored gateway crash recovery end-to-end",
+    "SQLite commit/checkpoint gap reconciliation with signed permit end-to-end",
+    "universal legacy admission fencing",
+    "production systemd deployment"
+  ]
+}

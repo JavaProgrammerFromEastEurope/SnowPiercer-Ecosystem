@@ -1,0 +1,15 @@
+{
+  "stage": "AI-CORE-005",
+  "tests_passed": 49,
+  "tests_added": 12,
+  "failures": 0,
+  "resource_warnings": 0,
+  "command": "python -W error::ResourceWarning -m unittest discover -s tests -v",
+  "test_output_sha256": "0a3f501b908ecf12520dbaea5fb4bb2e6e5ad25e5cc777f551c09d007322bc24",
+  "limitations": [
+    "software-only trigger enforcement",
+    "no independent audit-head rollback anchor",
+    "simulated exceptions not process kill",
+    "no TrainOS integration"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "stage": "AI-CORE-020",
+  "status": "PARTIAL",
+  "safety_critical": "NO-GO",
+  "targeted_tests": {
+    "passed": 3,
+    "failed": 0,
+    "warnings_as_errors": true
+  },
+  "full_regression": {
+    "successful_runs": 0,
+    "required_runs": 3,
+    "status": "not completed in available runtime"
+  },
+  "limitations": [
+    "direct library create_service/serve bypasses common runtime lock",
+    "full crash and cross-UID matrix not rerun",
+    "advisory flock not protection against malicious nonparticipating writers",
+    "no proof of SQLite/checkpoint atomicity"
+  ]
+}

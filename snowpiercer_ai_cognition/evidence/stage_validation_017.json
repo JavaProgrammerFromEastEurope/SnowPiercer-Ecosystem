@@ -1,0 +1,19 @@
+{
+  "stage": "AI-CORE-017",
+  "status": "PARTIAL",
+  "verified": [
+    "legacy production012/013 CLI blocked",
+    "legacy imports preserved",
+    "3 focused tests passed with warning filters"
+  ],
+  "unverified": [
+    "full cumulative regression",
+    "3 complete runs",
+    "cross-UID critical-window SIGKILL matrix",
+    "concurrent recovery",
+    "independent operator authentication",
+    "full legacy library fencing"
+  ],
+  "full_regression": "timed out",
+  "safety_critical_readiness": "NO-GO"
+}

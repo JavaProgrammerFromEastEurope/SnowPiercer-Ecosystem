@@ -1,0 +1,27 @@
+{
+  "stage": "AI-CORE-012",
+  "status": "PARTIAL",
+  "runs": 3,
+  "per_run": {
+    "tests": 113,
+    "passed": 110,
+    "skipped": 3,
+    "failed": 0,
+    "errors": 0
+  },
+  "warning_policy": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning"
+  ],
+  "verified": [
+    "anchored production gateway validation",
+    "durable permit consumption",
+    "replay denial after injected crash",
+    "checkpoint mismatch fail-closed"
+  ],
+  "not_verified": [
+    "full cross-UID end-to-end supervisor recovery",
+    "mandatory OS-wide legacy closure",
+    "hardware rollback resistance"
+  ]
+}
