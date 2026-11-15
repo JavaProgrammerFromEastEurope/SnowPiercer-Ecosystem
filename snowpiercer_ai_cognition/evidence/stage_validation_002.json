@@ -1,0 +1,26 @@
+{
+  "stage": "AI-CORE-002",
+  "result": "PASS",
+  "test_count": 21,
+  "stage001_tests": 6,
+  "stage002_tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "resource_warnings": 0,
+  "scope": "AI / Cognition unittest discovery only; no TrainOS integration or production validation",
+  "python": "3.13.5",
+  "files_sha256": {
+    "README.md": "739e68777aecede5aee69e5a6954da8606bbfcd2da3fe9e8839135ca25941fd6",
+    "ai_cognition/__init__.py": "87a7477c4eff8cc4e1097c9a3ccda7b3e922461752c91713f7b7bacd62c0075c",
+    "ai_cognition/admission.py": "e1c8b44fa2b1208ef61647ca27a4ac319b72bdf9540fd7386f2ff1300c16ccd1",
+    "ai_cognition/core.py": "453eed2717525379a95d9e7cd3a82b6bb01ebd3edb1a9acea50740aa9b10c7d9",
+    "docs/CONTRACT.md": "7fcae404a016b1d3c3b0eb13c5cb717a41b89e6ecd3edf8ad56640c3744aa1e3",
+    "docs/REQUIREMENTS.md": "1dac224d761d5e05ea7c341c7951ce9981ecb5a679527a8da4e72b26a765edf9",
+    "docs/SAFETY.md": "73eafb0d03e611b5c50a9254bed63809ca0ccbe9f8b7dfc1ba720d581e817da7",
+    "evidence/stage_validation.json": "da26da8d0f85d70518b4722748292a0c5c9337a6e4e3a04ab6316f611cf5ed85",
+    "evidence/test_output.txt": "4d501ae7827aac2c61503dbf7e003743446f9e311db5ba987dd8c6c8873ba6c0",
+    "evidence/test_output_stage002.txt": "03a5bf2aab6db678850a608a3bd3d2b1c9daea2030e4d62dd4fab1364cd01d21",
+    "tests/test_admission.py": "182a287875e6616dcf6d381c8f01310ae559c209c16ebccca145ff165bb20015",
+    "tests/test_core.py": "5eae6708e88a46d9d27542f271f6f0e9c9e6f37d48f599bdf2500754d8f935ce"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "stage": "AI-CORE-013",
+  "base": "AI-CORE-012",
+  "regression_runs": 3,
+  "tests_discovered": 119,
+  "passed_per_run": 116,
+  "skipped_per_run": 3,
+  "failed_per_run": 0,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "environment": {
+    "linux": true,
+    "root_test_runner": true,
+    "dedicated_service_uid": 65533,
+    "separate_client_uid": 65534
+  },
+  "verified": [
+    "cross_uid_ipc",
+    "private_db_denial",
+    "sigkill_fresh_gateway_restart",
+    "supervisor_sigkill_restart",
+    "checkpoint_tamper_fence",
+    "socket_replacement_fence",
+    "replay_after_restart"
+  ],
+  "not_verified": [
+    "atomic_sqlite_checkpoint_commit",
+    "coordinated_rollback_protection",
+    "universal_legacy_api_fencing",
+    "hardware_trust_anchor",
+    "industrial_deployment"
+  ],
+  "readiness": "NO-GO"
+}

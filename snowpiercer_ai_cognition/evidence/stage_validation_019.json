@@ -1,0 +1,48 @@
+{
+  "stage": "AI-CORE-019",
+  "scope": "Concurrent offline recovery lock and cumulative regression diagnostics",
+  "new_tests": [
+    "test_parallel_recovery_lock_contention",
+    "test_invalid_permit_does_not_clear_phase",
+    "test_symlink_lock_rejected"
+  ],
+  "verified_focused": "3 new tests passed under Linux root-capable fixture",
+  "limitations": [
+    "Service startup does not take the recovery lock",
+    "Coordinated rollback not prevented",
+    "Legacy library bypass remains",
+    "No independently authenticated operator identity",
+    "Not all SIGKILL recovery races verified"
+  ],
+  "safety_critical_readiness": "NO-GO",
+  "full_regression": {
+    "run1": {
+      "exit_code": 0,
+      "discovered": 182,
+      "duration_seconds": 68.444,
+      "skipped": 6,
+      "failures": 0,
+      "resourcewarning_as_error": true,
+      "deprecationwarning_as_error": true
+    },
+    "run2": {
+      "exit_code": 0,
+      "discovered": 182,
+      "duration_seconds": 69.885,
+      "skipped": 6,
+      "failures": 0,
+      "resourcewarning_as_error": true,
+      "deprecationwarning_as_error": true
+    },
+    "run3": {
+      "exit_code": 0,
+      "discovered": 182,
+      "duration_seconds": 71.854,
+      "skipped": 6,
+      "failures": 0,
+      "resourcewarning_as_error": true,
+      "deprecationwarning_as_error": true
+    }
+  },
+  "status": "PARTIAL"
+}

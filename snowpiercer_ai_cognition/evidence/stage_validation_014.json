@@ -1,0 +1,17 @@
+{
+  "stage": "AI-CORE-014",
+  "status": "PARTIAL",
+  "runs": 3,
+  "passed_each": 120,
+  "skipped_each": 3,
+  "subtests_each": 26,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "known_gaps": [
+    "not wired into production013",
+    "no new SIGKILL or cross-UID end-to-end tests",
+    "no cross-store atomicity"
+  ]
+}

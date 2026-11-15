@@ -1,0 +1,16 @@
+................................s....s........ [ 52%]
+..........................................                               [100%]
+=============================== warnings summary ===============================
+tests/test_cross_uid.py::CrossUIDTests::test_cross_uid_end_to_end
+tests/test_cross_uid.py::CrossUIDTests::test_cross_uid_end_to_end
+tests/test_cross_uid.py::CrossUIDTests::test_cross_uid_end_to_end
+tests/test_cross_uid.py::CrossUIDTests::test_cross_uid_end_to_end
+tests/test_cross_uid.py::CrossUIDTests::test_restart_budget
+tests/test_cross_uid.py::CrossUIDTests::test_restart_budget
+tests/test_cross_uid.py::CrossUIDTests::test_restart_exhaustion
+tests/test_cross_uid.py::CrossUIDTests::test_restart_exhaustion
+  /usr/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=2785) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+86 passed, 2 skipped, 8 warnings, 26 subtests passed in 9.38s

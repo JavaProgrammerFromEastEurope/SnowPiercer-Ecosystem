@@ -1,0 +1,26 @@
+{
+  "schema": "snowpiercer.integration-probe.v1",
+  "moduleId": "SP-AI",
+  "stageId": "AI-CORE-021",
+  "correlationId": "ai-stage021-clock-review",
+  "status": "ok",
+  "checks": [
+    {
+      "name": "authenticated_context_bound_review_only_proposal",
+      "passed": true
+    },
+    {
+      "name": "changed_trainos_revision_rejected",
+      "passed": true
+    },
+    {
+      "name": "authority_escalation_tamper_rejected",
+      "passed": true
+    },
+    {
+      "name": "expired_proposal_clock_rollback_revival_rejected",
+      "passed": true
+    }
+  ],
+  "operationalReady": false
+}

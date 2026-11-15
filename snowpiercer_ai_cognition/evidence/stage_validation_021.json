@@ -1,0 +1,116 @@
+{
+  "stage": "AI-CORE-021",
+  "date": "2026-11-15",
+  "status": "SOFTWARE_VERIFIED_WITH_PRIVILEGED_GAPS",
+  "operational_readiness": "NO-GO",
+  "source_stage": "AI-CORE-020",
+  "baseline": {
+    "discovered": 185,
+    "passed": 117,
+    "errors": 8,
+    "skipped": 60,
+    "log": "stage021_baseline.log"
+  },
+  "full_regression": {
+    "command": [
+      "/workspace/work/trainos-venv/bin/python",
+      "-W",
+      "error::ResourceWarning",
+      "-W",
+      "error::DeprecationWarning",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exitcode": 0,
+    "discovered": 215,
+    "passed": 147,
+    "skipped": 68,
+    "failed": 0,
+    "errors": 0,
+    "new_tests": 30,
+    "duration_seconds": 3.158,
+    "log": "stage021_full.log"
+  },
+  "integration_probe": {
+    "schema": "snowpiercer.integration-probe.v1",
+    "moduleId": "SP-AI",
+    "stageId": "AI-CORE-021",
+    "correlationId": "ai-stage021-clock-review",
+    "status": "ok",
+    "checks": [
+      {
+        "name": "authenticated_context_bound_review_only_proposal",
+        "passed": true
+      },
+      {
+        "name": "changed_trainos_revision_rejected",
+        "passed": true
+      },
+      {
+        "name": "authority_escalation_tamper_rejected",
+        "passed": true
+      },
+      {
+        "name": "expired_proposal_clock_rollback_revival_rejected",
+        "passed": true
+      }
+    ],
+    "operationalReady": false
+  },
+  "requirements": [
+    {
+      "id": "AI021-R1",
+      "criterion": "Only supported trusted admission gateways can issue; upstream authentication and replay remain mandatory.",
+      "evidence": "tests/test_trainos021.py::TrainOS021Tests.test_input_authentication_and_replay_remain_mandatory"
+    },
+    {
+      "id": "AI021-R2",
+      "criterion": "Proposal rejects any changed TrainOS context identity, revision, digest or observation timestamp.",
+      "evidence": "tests/test_trainos021.py::TrainOS021Tests.test_changed_context_identity_revision_digest_or_timestamp_rejected"
+    },
+    {
+      "id": "AI021-R3",
+      "criterion": "Future/stale context, expired proposals and backwards clocks fail closed.",
+      "evidence": "tests/test_trainos021.py::TrainOS021Tests.test_expiry_boundary_is_exclusive"
+    },
+    {
+      "id": "AI021-R4",
+      "criterion": "No proposal can authorize actuation; HMAC tamper or signed forbidden flags are rejected.",
+      "evidence": "tests/test_trainos021.py::TrainOS021Tests.test_valid_hmac_does_not_allow_command_authority_or_extended_ttl"
+    },
+    {
+      "id": "AI021-R5",
+      "criterion": "Latest journaled gateway participates and PREPARED state blocks issuance.",
+      "evidence": "tests/test_trainos021.py::JournaledBridge021Tests.test_latest_journaled_gateway_produces_context_bound_review"
+    },
+    {
+      "id": "AI021-R6",
+      "criterion": "Root-only fixtures skip before privileged setup under UID1000, and skipped counts remain explicit.",
+      "evidence": "evidence/stage021_full.log"
+    },
+    {
+      "id": "AI021-R7",
+      "criterion": "An observed expiry cannot be undone by wall-clock rollback within one bridge, including after invalid/stale attempts; concurrent reviews share the fence.",
+      "evidence": "tests/test_trainos021.py::TrainOS021Tests.test_expired_proposal_cannot_revive_after_clock_rollback"
+    }
+  ],
+  "limitations": [
+    "68 root/cross-UID tests were explicitly skipped; these are not passed checks.",
+    "Opt-in local review API; live TrainOS and production IPC are not wired to the bridge.",
+    "No external model, physical control, independent operator authentication or certification.",
+    "Clock, current context and output HMAC key must be provided by trusted components.",
+    "Input admission and proposal issuance are not an atomic distributed operation.",
+    "Existing SQLite/checkpoint atomicity, privileged rollback and mandatory legacy fencing gaps remain.",
+    "Clock high-watermark is process-local to one bridge and is reset by a new instance or process restart; there is no persisted/cross-process monotonic clock."
+  ],
+  "reviewCorrection": {
+    "finding": "rollback-clock revival",
+    "status": "FIXED_WITH_PROCESS_LOCAL_SCOPE",
+    "evidence": "stage021_clock_review.json",
+    "addedTests": 7
+  }
+}

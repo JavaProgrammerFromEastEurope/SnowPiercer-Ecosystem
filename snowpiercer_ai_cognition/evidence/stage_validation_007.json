@@ -1,0 +1,16 @@
+{
+  "stage": "AI-CORE-007",
+  "total_passed": 69,
+  "new_tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "resource_warnings": 0,
+  "command": "PYTHONPATH=. python -W error::ResourceWarning -m unittest discover -s tests -v",
+  "log_sha256": "2c8da6d7b801a72676bc70aacf73895bd7adce65d2aab4fb43e3fbe938c62572",
+  "limits": [
+    "same-UID deployment in tests",
+    "no separate-UID filesystem ACL validation",
+    "no hardware trust root",
+    "TrainOS regression not run"
+  ]
+}
