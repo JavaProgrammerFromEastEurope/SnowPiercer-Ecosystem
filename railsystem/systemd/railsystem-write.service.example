@@ -1,0 +1,34 @@
+# NOT AN INSTALLED UNIT; REQUIRES operator-provisioned 4 UIDs and independent providers.
+# Same-UID arbitrary code or host-root can access protected state: not fully fenced.
+[Unit]
+Description=SnowPiercer RailSystem software release write authority (NO RAIL ACTUATION)
+Requires=railsystem-witness.service railsystem-permits.service
+After=railsystem-witness.service railsystem-permits.service
+[Service]
+Type=simple
+User=rail-service
+Group=rail-ipc
+WorkingDirectory=/opt/railsystem
+Environment=PYTHONPATH=/opt/railsystem
+ExecStart=/usr/bin/python3 -m railsystem.write_authority --config /var/lib/railsystem/deployment.json --root /opt/railsystem --baseline /var/lib/railsystem/baseline.json --attestation /var/lib/railsystem/attestation.json --trust /var/lib/railsystem/trust.json
+Restart=no
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=
+AmbientCapabilities=
+ReadWritePaths=/var/lib/railsystem /run/railsystem-recovery
+StateDirectory=railsystem
+StateDirectoryMode=0700
+RuntimeDirectory=railsystem-recovery
+RuntimeDirectoryMode=0750
+TimeoutStopSec=10
+# Stale socket after SIGKILL is NOT automatically unlinked. Requires signed offline recovery.

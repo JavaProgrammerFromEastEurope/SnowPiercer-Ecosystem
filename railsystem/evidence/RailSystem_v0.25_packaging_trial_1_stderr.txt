@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/mnt/data/package_rail015.py", line 51, in <module>
+    assert len(observed)==335, (len(observed),[x for x in log.splitlines() if ' ... ' in x and not x.endswith(' ... ok')])
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: (334, ['test_production_cli_fails_closed_even_with_fake_providers (test_isolated_authorities_014.OSProductionGuardTests.test_production_cli_fails_closed_even_with_fake_providers) ... RAIL-TRUST-013 BLOCKED: DeploymentDenied'])

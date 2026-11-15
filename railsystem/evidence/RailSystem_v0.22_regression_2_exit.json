@@ -1,0 +1,29 @@
+{
+  "run": 2,
+  "tests": 276,
+  "duration_sec": 4.049,
+  "exit_code": 0,
+  "timeout": false,
+  "PASS": true,
+  "stdout_file": "RailSystem_v0.22_regression_2_stdout.txt",
+  "stderr_file": "RailSystem_v0.22_regression_2_stderr.txt",
+  "stdout_sha256": "a26f6298f0cb555b12bd9ddf39c066a396b42b74d75eb82a71bf220ecf4024db",
+  "stderr_sha256": "4151e5ef99c2e562ff083116ce866bfdee4495c1639468960b90d21b7ca4cdf6",
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

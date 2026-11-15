@@ -1,0 +1,91 @@
+{
+  "release": "RailSystem v0.25",
+  "stage": "RAIL-TRUST-015",
+  "archive_sha256": "9c9109458736cd5af9963238a23f3a076fe4b149cbfca444eda841ab6014169b",
+  "members": 207,
+  "zip_crc": "PASS",
+  "source_paths_verified": true,
+  "regressions": [
+    {
+      "run": 1,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 6.73,
+      "stdout_sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96",
+      "stderr_sha256": "fe6afd91b9134f5b30d15d023b58d10186c1ddee8b10e308cae39f4d6e01c6c1",
+      "stdout_bytes": 44,
+      "stderr_bytes": 36161
+    },
+    {
+      "run": 2,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 6.42,
+      "stdout_sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96",
+      "stderr_sha256": "d7ab51dc76f7d5daf1265591bc60d08173fbfc04d0daff6ba2cfa66b04a9aaf3",
+      "stdout_bytes": 44,
+      "stderr_bytes": 36161
+    },
+    {
+      "run": 3,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 6.53,
+      "stdout_sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96",
+      "stderr_sha256": "fd1bfbeea4cce7bf67ae80267c9349fb9e6a40f69de82e39d7a7ab0446f06c06",
+      "stdout_bytes": 44,
+      "stderr_bytes": 36161
+    }
+  ],
+  "tests_per_run": 335,
+  "status": "PASS (source regression only)",
+  "production_status": "BLOCKED/NO-GO",
+  "previous_branch_head": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+  "backup_branch": "backup/module-rail-system-before-RAIL-TRUST-015-20261116",
+  "source_import_not_new_stage": true
+}

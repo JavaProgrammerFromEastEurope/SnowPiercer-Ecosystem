@@ -1,0 +1,176 @@
+{
+  "cross_uid_dac_fencing_tested": true,
+  "durable_permit_provider_provisioned": false,
+  "entries": [
+    {
+      "allowed_for_production": false,
+      "entrypoint": "trusted_admission.admit",
+      "risk": "separate SQLite replay db; service UID direct call still possible"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "anchored_admission.admit_anchored",
+      "risk": "local anchor only"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "anchored_admission.recover",
+      "risk": "legacy local recovery"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "production_fencing.recover_with_attestation",
+      "risk": "signed permit but lacks independent permit ledger"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "unified_admission.admit",
+      "risk": "provider argument injectable from same service UID"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "unified_admission.recover",
+      "risk": "permit store optional for library compatibility"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "anchored_admission.initialize",
+      "risk": "provisions new local state; not production API"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "release_cli.main",
+      "risk": "old CLI exposed; default provider fails closed"
+    },
+    {
+      "allowed_for_production": false,
+      "entrypoint": "isolated_authorities.LocalDurableAuthority",
+      "risk": "locally durable test backend can be rolled back as a whole by owner/root; not for production"
+    }
+  ],
+  "independent_monotonic_anchor_provisioned": false,
+  "independent_rollback_root_provisioned": false,
+  "legacy_library_api_retained": true,
+  "new_library_entrypoints": [
+    "isolated_authorities.LocalDurableAuthority.provision",
+    "isolated_authorities.LocalDurableAuthority._process",
+    "monotonic_root.verify_root_quote",
+    "monotonic_root.new_challenge",
+    "monotonic_root.require_independent_root"
+  ],
+  "os_mac_enforcement": {
+    "reason": "mandatory MAC profile / independent approval absent",
+    "status": "BLOCKED"
+  },
+  "production_cli_entrypoints": {
+    "railsystem.release_cli.main": "mandatory OS isolation preflight; BLOCKED; trust_cli alias applies",
+    "railsystem.service_runtime.main": "mandatory OS isolation preflight; BLOCKED",
+    "railsystem.write_authority.main": "mandatory OS isolation preflight; BLOCKED"
+  },
+  "production_isolation_status": "BLOCKED",
+  "production_mac_confinement_verified": false,
+  "same_uid_bypass": "OPEN: legacy library API importable and service UID can access own files without verified MAC",
+  "same_uid_legacy_fencing_proven": false,
+  "scan_method": "AST inspection of local modules, compatibility surface inventory; does not cover dynamic imports/foreign binaries",
+  "scanner_write_functions": [
+    {
+      "function": "_read_anchor",
+      "line": 30,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_atomic_anchor",
+      "line": 47,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_locked",
+      "line": 66,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_connect",
+      "line": 80,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_state",
+      "line": 96,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "initialize",
+      "line": 115,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "admit_anchored",
+      "line": 125,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "recover",
+      "line": 151,
+      "module": "anchored_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "read_protected_json",
+      "line": 27,
+      "module": "trusted_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "admit",
+      "line": 42,
+      "module": "trusted_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "admit",
+      "line": 48,
+      "module": "unified_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "recover",
+      "line": 97,
+      "module": "unified_admission.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_inspect_fence_locked",
+      "line": 56,
+      "module": "production_fencing.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "recover_with_attestation",
+      "line": 82,
+      "module": "production_fencing.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_remove_owned",
+      "line": 69,
+      "module": "privileged_recovery.py",
+      "production_access_authorized": false
+    },
+    {
+      "function": "_remove_owned",
+      "line": 73,
+      "module": "write_authority.py",
+      "production_access_authorized": false
+    }
+  ],
+  "scope": "static source code entrypoint inventory, not global OS MAC policy proof",
+  "stage": "RAIL-TRUST-015",
+  "status": "BLOCKED"
+}

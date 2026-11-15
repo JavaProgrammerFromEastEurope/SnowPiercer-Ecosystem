@@ -1,0 +1,52 @@
+{
+  "stage": "RAIL-TRUST-012",
+  "result": "NOT_CLOSED",
+  "policy": "OS-enforced per-UID state file permissions tested for client; universal service-UID/library legacy production bypass remains unresolved",
+  "entrypoints": [
+    {
+      "name": "railsystem.release_gate.evaluate",
+      "finding": "Library-only legacy gate returns software PASS without independent attestation; UNSAFE as production entrypoint"
+    },
+    {
+      "name": "railsystem.trusted_admission.admit",
+      "finding": "Legacy SQLite local replay state; UNSAFE for production"
+    },
+    {
+      "name": "railsystem.anchored_admission.admit_anchored",
+      "finding": "Local anchor only, shared rollback domain; UNSAFE for production"
+    },
+    {
+      "name": "railsystem.anchored_admission.recover",
+      "finding": "Unattested recovery permit; UNSAFE for production"
+    },
+    {
+      "name": "railsystem.production_fencing.recover_with_attestation",
+      "finding": "Signed permit but local SQLite consumption; UNSAFE for production"
+    },
+    {
+      "name": "railsystem.unified_admission.recover",
+      "finding": "permit_store=None preserves legacy behavior, must not be called in production"
+    },
+    {
+      "name": "railsystem.unified_admission.admit",
+      "finding": "External anchor injectable; never call with local test provider in production"
+    },
+    {
+      "name": "railsystem.recovery_broker.RecoveryBroker",
+      "finding": "Older optional experimental recovery IPC, not production"
+    },
+    {
+      "name": "railsystem.recovery_boundary.ProductionBoundary",
+      "finding": "Older optional same-UID experimental release IPC, not production"
+    },
+    {
+      "name": "railsystem.privileged_recovery.PrivilegedRecoveryBroker",
+      "finding": "Approved only behind four-UID preflight and independently deployed providers, not when invoked standalone"
+    },
+    {
+      "name": "railsystem.service_runtime.serve",
+      "finding": "New service entrypoint, still NOT approved without independently deployed durable providers and service manager"
+    }
+  ],
+  "acceptance": "BLOCKED until service-owner code paths and externally exposed production interfaces are proven inaccessible or mediated at OS boundary"
+}

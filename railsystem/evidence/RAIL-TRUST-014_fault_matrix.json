@@ -1,0 +1,87 @@
+{
+  "kind": "bounded local fault evidence, not exhaustive",
+  "not_verified": [
+    "power loss",
+    "full snapshot rollback",
+    "per-step SQLite internal interruption",
+    "production supervisor automatic restart",
+    "mandatory OS MAC same-UID legacy fencing",
+    "HSM/witness trusted persistence",
+    "live railway safety"
+  ],
+  "stage": "RAIL-TRUST-014",
+  "verified_cases": [
+    {
+      "case": "witness_before_commit",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_kill_during_witness_before_commit_rollback"
+    },
+    {
+      "case": "witness_after_commit",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_kill_during_witness_after_commit_persists_without_reply"
+    },
+    {
+      "case": "permit_before_commit",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_kill_during_ledger_before_commit_not_consumed"
+    },
+    {
+      "case": "permit_after_commit",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_kill_during_ledger_after_commit_consumed"
+    },
+    {
+      "case": "witness_restart_after_sigkill",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_witness_persists_sigkill_and_rejects_replay"
+    },
+    {
+      "case": "permit_restart_after_sigkill",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_durable_consumption_survives_sigkill"
+    },
+    {
+      "case": "cross_uid_e2e_negative_admit",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_cross_uid_write_authority_uses_durable_providers_and_blocks_invalid_admission"
+    },
+    {
+      "case": "concurrent_cas",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_concurrent_cas_exactly_one_success"
+    },
+    {
+      "case": "sigterm_service",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_managed_sigterm_removes_own_socket"
+    },
+    {
+      "case": "same_uid_production_denial",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_production_cli_fails_closed_even_with_fake_providers"
+    },
+    {
+      "case": "unauthorized_uid",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_unauthorized_uid_denied_by_kernel_peercred"
+    },
+    {
+      "case": "symlink_database",
+      "regressions": 3,
+      "status": "PASS",
+      "test": "test_symlink_database_denied_without_publication"
+    }
+  ]
+}

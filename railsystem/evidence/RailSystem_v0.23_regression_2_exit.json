@@ -1,0 +1,29 @@
+{
+  "stage": "RAIL-TRUST-013",
+  "run": 2,
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/mnt/data/rail_build_013/railsystem",
+  "exit_code": 0,
+  "elapsed_seconds": 5.9241,
+  "reported_test_count": 292,
+  "reported_test_seconds": 5.101,
+  "timeout": false,
+  "stdout_file": "evidence/RailSystem_v0.23_regression_2_stdout.txt",
+  "stderr_file": "evidence/RailSystem_v0.23_regression_2_stderr.txt",
+  "status": "PASS",
+  "warning_filters": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning"
+  ],
+  "utc_ended": "2026-11-15T09:29:49.686922+00:00"
+}

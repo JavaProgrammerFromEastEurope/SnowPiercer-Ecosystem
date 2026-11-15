@@ -1,0 +1,65 @@
+test_cross_uid_invalid_command (test_privileged_recovery.RecoveryStage011.test_cross_uid_invalid_command) ... ok
+test_existing_path_and_socket_substitution (test_privileged_recovery.RecoveryStage011.test_existing_path_and_socket_substitution) ... ok
+test_external_consumption_blocks_local_rollback_replay (test_privileged_recovery.RecoveryStage011.test_external_consumption_blocks_local_rollback_replay) ... ok
+test_invalid_uid_and_directory_permissions (test_privileged_recovery.RecoveryStage011.test_invalid_uid_and_directory_permissions) ... ok
+test_missing_services_fail_closed (test_privileged_recovery.RecoveryStage011.test_missing_services_fail_closed) ... ok
+test_real_cross_uid_reconcile_and_unauthorized_peer (test_privileged_recovery.RecoveryStage011.test_real_cross_uid_reconcile_and_unauthorized_peer) ... ok
+test_recovery_requires_external_one_use (test_privileged_recovery.RecoveryStage011.test_recovery_requires_external_one_use) ... ok
+test_sigkill_lifecycle_lock_released (test_privileged_recovery.RecoveryStage011.test_sigkill_lifecycle_lock_released) ... ok
+test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) ... 
+  test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='before_permit_consume') ... ERROR
+  test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_permit_consume') ... ERROR
+  test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_recovery_anchor') ... ERROR
+  test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='before_recovery_commit') ... ERROR
+  test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_recovery_commit') ... ERROR
+test_tampered_or_wrong_scope_permit_does_not_consume (test_privileged_recovery.RecoveryStage011.test_tampered_or_wrong_scope_permit_does_not_consume) ... ok
+
+======================================================================
+ERROR: test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='before_permit_consume')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 205, in test_sigkill_recovery_matrix
+    c.execute('DELETE FROM unified_permits')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: unified_permits
+
+======================================================================
+ERROR: test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_permit_consume')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 205, in test_sigkill_recovery_matrix
+    c.execute('DELETE FROM unified_permits')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: unified_permits
+
+======================================================================
+ERROR: test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_recovery_anchor')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 205, in test_sigkill_recovery_matrix
+    c.execute('DELETE FROM unified_permits')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: unified_permits
+
+======================================================================
+ERROR: test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='before_recovery_commit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 205, in test_sigkill_recovery_matrix
+    c.execute('DELETE FROM unified_permits')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: unified_permits
+
+======================================================================
+ERROR: test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) (point='after_recovery_commit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 205, in test_sigkill_recovery_matrix
+    c.execute('DELETE FROM unified_permits')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: unified_permits
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.141s
+
+FAILED (errors=5)

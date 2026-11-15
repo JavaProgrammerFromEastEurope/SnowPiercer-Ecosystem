@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "stage": "RAIL-ARCH-001",
+  "components": [
+    {
+      "id": "rolling_stock",
+      "responsibility": "Vehicle models and consist telemetry",
+      "criticality": "operational",
+      "depends_on": [
+        "traction_braking"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "infrastructure",
+      "responsibility": "Track topology and assets",
+      "criticality": "safety_related",
+      "depends_on": [],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "traffic",
+      "responsibility": "Timetable and dispatch planning",
+      "criticality": "operational",
+      "depends_on": [
+        "infrastructure",
+        "rolling_stock"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "signaling_safety",
+      "responsibility": "Interlocking and train protection boundary",
+      "criticality": "safety_critical",
+      "depends_on": [
+        "infrastructure"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "traction_braking",
+      "responsibility": "Traction and braking status abstractions",
+      "criticality": "safety_related",
+      "depends_on": [],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "maintenance",
+      "responsibility": "Condition monitoring and work orders",
+      "criticality": "operational",
+      "depends_on": [
+        "rolling_stock",
+        "infrastructure"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "digital_twin",
+      "responsibility": "Isolated simulation and replay",
+      "criticality": "simulation",
+      "depends_on": [
+        "traffic",
+        "signaling_safety"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "operations",
+      "responsibility": "Operator workflows and audit",
+      "criticality": "operational",
+      "depends_on": [
+        "traffic",
+        "maintenance"
+      ],
+      "implementation_status": "planned"
+    }
+  ],
+  "external_interfaces": [
+    {
+      "id": "trainos",
+      "purpose": "Authentication, messaging, audit and telemetry adapters",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "ai_cognition",
+      "purpose": "Advisory analytics only",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "energy",
+      "purpose": "Traction supply and isolation status",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "life_support",
+      "purpose": "Passenger environment monitoring",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "logistics",
+      "purpose": "Cargo scheduling",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "security",
+      "purpose": "Identity, access and incident coordination",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "snowpiercer_island",
+      "purpose": "Depot and site facilities",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    },
+    {
+      "id": "integration_operations",
+      "purpose": "System-level assurance and lifecycle evidence",
+      "contract_status": "proposed",
+      "actuation_allowed": false
+    }
+  ]
+}

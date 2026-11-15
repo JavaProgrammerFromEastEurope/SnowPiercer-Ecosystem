@@ -1,0 +1,82 @@
+{
+  "commands": [
+    {
+      "check": "pid1",
+      "command": [
+        "cat",
+        "/proc/1/comm"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "supervisord\n",
+      "timed_out": false
+    },
+    {
+      "check": "lsm_label",
+      "command": [
+        "cat",
+        "/proc/self/attr/current"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "kernel\u0000",
+      "timed_out": false
+    },
+    {
+      "check": "lsm_inventory",
+      "command": [
+        "cat",
+        "/sys/kernel/security/lsm"
+      ],
+      "exit_code": 1,
+      "stderr": "cat: /sys/kernel/security/lsm: No such file or directory\n",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "check": "apparmor_status",
+      "command": [
+        "aa-status"
+      ],
+      "exit_code": 1,
+      "stderr": "apparmor not present.\n",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "check": "systemd_status",
+      "command": [
+        "systemctl",
+        "is-system-running"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": "offline\n",
+      "timed_out": false
+    }
+  ],
+  "probe": {
+    "blockers": [
+      "independently audited monotonic root not connected",
+      "no verified MAC/LSM policy denying same-UID legacy writes",
+      "no deployed independent service-manager lifecycle evidence",
+      "no independently protected durable permit custody",
+      "no independently verified end-to-end crash/rollback matrix"
+    ],
+    "dedicated_systemd_pid1": false,
+    "durable_permit_custody_verified": false,
+    "effective_capabilities": "00000000800405fb",
+    "independent_monotonic_root_proven": false,
+    "independent_service_manager_verified": false,
+    "lsm_inventory": null,
+    "lsm_label": "kernel",
+    "mac_profile_proven": false,
+    "no_new_privileges": "0",
+    "pid1": "supervisord",
+    "reason": "independently audited monotonic root not connected; no verified MAC/LSM policy denying same-UID legacy writes; no deployed independent service-manager lifecycle evidence; no independently protected durable permit custody; no independently verified end-to-end crash/rollback matrix",
+    "same_uid_legacy_fenced": false,
+    "scope": "diagnostic only; no authorization from /proc or self-attestation",
+    "seccomp_mode": "0",
+    "status": "BLOCKED"
+  }
+}

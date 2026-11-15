@@ -1,0 +1,154 @@
+{
+  "stage": "RAIL-TRUST-013",
+  "version": "v0.23",
+  "base_version": "v0.22",
+  "assurance_state": "PARTIAL",
+  "production_release": "BLOCKED",
+  "physical_operation": "NO-GO",
+  "baseline_source_zip_sha256": "c6a9372c8c867d9b9b580ec99ffe8313c1b2af4c1064b844b2826c232b70d32d",
+  "prior_entries_verified_bytes": 123,
+  "prior_entries_changed": [
+    "railsystem/README.md",
+    "railsystem/railsystem/verification.py"
+  ],
+  "system": {
+    "kernel": "6.18.57",
+    "python": "3.13.5",
+    "platform": "Linux",
+    "uid": 0,
+    "pid1": "supervisord",
+    "systemd_active": false,
+    "cgroup": "0::/"
+  },
+  "full_runs": [
+    {
+      "stage": "RAIL-TRUST-013",
+      "run": 1,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/rail_build_013/railsystem",
+      "exit_code": 0,
+      "elapsed_seconds": 6.187,
+      "reported_test_count": 292,
+      "reported_test_seconds": 5.156,
+      "timeout": false,
+      "stdout_file": "evidence/RailSystem_v0.23_regression_1_stdout.txt",
+      "stderr_file": "evidence/RailSystem_v0.23_regression_1_stderr.txt",
+      "status": "PASS",
+      "warning_filters": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ],
+      "utc_ended": "2026-11-15T09:29:43.762539+00:00"
+    },
+    {
+      "stage": "RAIL-TRUST-013",
+      "run": 2,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/rail_build_013/railsystem",
+      "exit_code": 0,
+      "elapsed_seconds": 5.9241,
+      "reported_test_count": 292,
+      "reported_test_seconds": 5.101,
+      "timeout": false,
+      "stdout_file": "evidence/RailSystem_v0.23_regression_2_stdout.txt",
+      "stderr_file": "evidence/RailSystem_v0.23_regression_2_stderr.txt",
+      "status": "PASS",
+      "warning_filters": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ],
+      "utc_ended": "2026-11-15T09:29:49.686922+00:00"
+    },
+    {
+      "stage": "RAIL-TRUST-013",
+      "run": 3,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/rail_build_013/railsystem",
+      "exit_code": 0,
+      "elapsed_seconds": 5.9564,
+      "reported_test_count": 292,
+      "reported_test_seconds": 5.144,
+      "timeout": false,
+      "stdout_file": "evidence/RailSystem_v0.23_regression_3_stdout.txt",
+      "stderr_file": "evidence/RailSystem_v0.23_regression_3_stderr.txt",
+      "status": "PASS",
+      "warning_filters": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ],
+      "utc_ended": "2026-11-15T09:29:55.643569+00:00"
+    }
+  ],
+  "new_test_count": 16,
+  "cumulative_test_count": 292,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "confirmed": [
+    "OS-level denial of non-service-UID direct state open on Linux",
+    "actual SO_PEERCRED UID rejection for unauthorized peer",
+    "fixed ADMIT-only IPC grammar and service-controlled trust artifacts",
+    "single-lock admission and SQLite recovery-fence preflight",
+    "concurrent startup refusal without deleting an existing socket",
+    "SIGTERM graceful service socket removal",
+    "SIGKILL stale IPC socket causes refusal to restart",
+    "SIGKILL during partial IPC request fails closed",
+    "provider unavailable/unready blocks publication and admission",
+    "all cumulative tests pass three times with warnings as errors"
+  ],
+  "unverified_or_unmet": [
+    "independent persistent monotonic CAS authority; test provider volatile",
+    "independently durable and rollback-resistant permit ledger; test provider volatile",
+    "OS-enforced all legacy paths including arbitrary code under service UID",
+    "systemd/OS service manager restart lifecycle; PID1 is supervisord, templates not installed",
+    "complete crash-point SIGKILL matrix with real persistent providers",
+    "cross-UID successful production ADMIT with independently approved signed baseline",
+    "filesystem TOCTOU defense against malicious service/root owner",
+    "host power-loss durability and full-host snapshot rollback defense",
+    "end-to-end railway operational safety certification"
+  ],
+  "legacy_audit_file": "evidence/RAIL-TRUST-013_legacy_audit.json",
+  "code_file": "railsystem/write_authority.py",
+  "docs_file": "docs/RAIL-TRUST-013.md",
+  "regression_totals": {
+    "complete_runs": 3,
+    "executions": 876,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "previous_unresolved_hazards_retained": true,
+  "not_an_operational_authorization": true,
+  "time_utc": "2026-11-15T09:31:13.993002+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "RAIL-IF-001",
+  "schema_version": "1.0",
+  "peer": "TrainOS",
+  "direction": "inbound_observations_only",
+  "actuation_allowed": false,
+  "message_kinds": ["audit.event", "health.report", "telemetry.report"],
+  "identity": "authenticated_source supplied by trusted boundary caller",
+  "authorization": "per-kind role mapping; deny by default",
+  "replay": "single-process in-memory deduplication; not production-grade",
+  "freshness": {"max_age_seconds": 60, "max_future_seconds": 5},
+  "transport": "not implemented",
+  "integration_status": "proposed; no live TrainOS connection"
+}

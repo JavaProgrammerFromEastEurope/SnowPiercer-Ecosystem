@@ -1,0 +1,28 @@
+{
+  "blockers": [
+    "remote independent root true durable monotonic CAS over host-wide snapshot rollback",
+    "independent consumed-permit custody after whole-host rollback",
+    "MAC/LSM denial of direct writes by arbitrary same-service-UID code",
+    "service-manager controlled SIGKILL restart and reconciliation in deployed environment",
+    "power-loss and storage device durability tests",
+    "every instruction-level SQLite/CAS/IPC transition in a production environment",
+    "full credentials, socket and file substitution with external production authority"
+  ],
+  "certification_claim": false,
+  "evidence_types": [
+    "cumulative unit/integration tests",
+    "real Linux UID fork/drop tests inherited from v0.24",
+    "OS diagnostics",
+    "local crash tests",
+    "cryptographic root protocol negative tests"
+  ],
+  "implementation_status": "PARTIAL",
+  "physical_operation": "NO-GO",
+  "production_release": "BLOCKED",
+  "regression": "PASS",
+  "stage": "RAIL-TRUST-015",
+  "strict_runs": 3,
+  "test_executions": 1005,
+  "tests_per_run": 335,
+  "version": "v0.25"
+}

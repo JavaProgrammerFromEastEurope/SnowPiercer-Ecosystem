@@ -1,0 +1,14 @@
+{
+  "stage": "RAIL-TRUST-012",
+  "stage_result": "PARTIAL",
+  "release_status": "BLOCKED",
+  "rail_operations": "NO-GO",
+  "regressions": [
+    "PASS",
+    "PASS",
+    "PASS"
+  ],
+  "passed_tests_per_run": 276,
+  "reason": "no independently protected durable witness and permit ledger; systemd not active; legacy service-owner bypass remains",
+  "automatic_approval": false
+}

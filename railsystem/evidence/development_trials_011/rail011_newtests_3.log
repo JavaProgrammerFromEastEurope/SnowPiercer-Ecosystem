@@ -1,0 +1,27 @@
+test_concurrent_start_refuses_second_broker (test_privileged_recovery.RecoveryStage011.test_concurrent_start_refuses_second_broker) ... ok
+test_cross_uid_invalid_command (test_privileged_recovery.RecoveryStage011.test_cross_uid_invalid_command) ... ok
+test_existing_path_and_socket_substitution (test_privileged_recovery.RecoveryStage011.test_existing_path_and_socket_substitution) ... ok
+test_external_consumption_blocks_local_rollback_replay (test_privileged_recovery.RecoveryStage011.test_external_consumption_blocks_local_rollback_replay) ... ok
+test_false_readiness_blocks_startup_and_recovery (test_privileged_recovery.RecoveryStage011.test_false_readiness_blocks_startup_and_recovery) ... ok
+test_invalid_anchor_contract_blocks_startup (test_privileged_recovery.RecoveryStage011.test_invalid_anchor_contract_blocks_startup) ... ok
+test_invalid_uid_and_directory_permissions (test_privileged_recovery.RecoveryStage011.test_invalid_uid_and_directory_permissions) ... ok
+test_missing_services_fail_closed (test_privileged_recovery.RecoveryStage011.test_missing_services_fail_closed) ... ok
+test_real_concurrent_startup_processes (test_privileged_recovery.RecoveryStage011.test_real_concurrent_startup_processes) ... Exception ignored in: <socket.socket fd=5, family=1, type=1, proto=0, laddr=/tmp/tmps0io7rnf/transport/recovery-v011.sock>
+Traceback (most recent call last):
+  File "/mnt/data/rail_build_011/railsystem/tests/test_privileged_recovery.py", line 404, in test_real_concurrent_startup_processes
+    self.broker().start()
+ResourceWarning: unclosed <socket.socket fd=5, family=1, type=1, proto=0, laddr=/tmp/tmps0io7rnf/transport/recovery-v011.sock>
+ok
+test_real_cross_uid_reconcile_and_unauthorized_peer (test_privileged_recovery.RecoveryStage011.test_real_cross_uid_reconcile_and_unauthorized_peer) ... ok
+test_recovery_requires_external_one_use (test_privileged_recovery.RecoveryStage011.test_recovery_requires_external_one_use) ... ok
+test_sigkill_admission_sqlite_external_anchor_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_admission_sqlite_external_anchor_matrix) ... ok
+test_sigkill_broker_leaves_stale_socket_fail_closed (test_privileged_recovery.RecoveryStage011.test_sigkill_broker_leaves_stale_socket_fail_closed) ... ok
+test_sigkill_lifecycle_lock_released (test_privileged_recovery.RecoveryStage011.test_sigkill_lifecycle_lock_released) ... ok
+test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix) ... ok
+test_tampered_or_wrong_scope_permit_does_not_consume (test_privileged_recovery.RecoveryStage011.test_tampered_or_wrong_scope_permit_does_not_consume) ... ok
+test_tampered_transport_group_refused (test_privileged_recovery.RecoveryStage011.test_tampered_transport_group_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.431s
+
+OK

@@ -1,0 +1,119 @@
+[
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "duration_seconds": 6.757,
+    "exit_code": 0,
+    "files": {
+      "stderr": {
+        "bytes": 36161,
+        "path": "RailSystem_v0.25_regression_1_stderr.txt",
+        "sha256": "16f374c69e635f645e48ebf1d0e7ec3e7ffd021510281aa66f4f078ce99ca8f5"
+      },
+      "stdout": {
+        "bytes": 44,
+        "path": "RailSystem_v0.25_regression_1_stdout.txt",
+        "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+      }
+    },
+    "python": "3.13.5",
+    "run": 1,
+    "started_at_utc": "2026-11-15T09:51:49.237660+00:00",
+    "status": "PASS",
+    "tests_expected": 335,
+    "tests_observed": 335,
+    "timed_out": false,
+    "timeout_seconds": 90,
+    "warnings_as_errors": [
+      "ResourceWarning",
+      "DeprecationWarning"
+    ]
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "duration_seconds": 6.783,
+    "exit_code": 0,
+    "files": {
+      "stderr": {
+        "bytes": 36161,
+        "path": "RailSystem_v0.25_regression_2_stderr.txt",
+        "sha256": "2b98ecc1e43a5a58facd22fda533151fedb5deb1b55ba32cd5d1fb9103109635"
+      },
+      "stdout": {
+        "bytes": 44,
+        "path": "RailSystem_v0.25_regression_2_stdout.txt",
+        "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+      }
+    },
+    "python": "3.13.5",
+    "run": 2,
+    "started_at_utc": "2026-11-15T09:51:55.995534+00:00",
+    "status": "PASS",
+    "tests_expected": 335,
+    "tests_observed": 335,
+    "timed_out": false,
+    "timeout_seconds": 90,
+    "warnings_as_errors": [
+      "ResourceWarning",
+      "DeprecationWarning"
+    ]
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "duration_seconds": 6.307,
+    "exit_code": 0,
+    "files": {
+      "stderr": {
+        "bytes": 36161,
+        "path": "RailSystem_v0.25_regression_3_stderr.txt",
+        "sha256": "4208dfabf86f5725b170bab21e14e202b0b8f2d00a2e0ec7f29edb06b800e69f"
+      },
+      "stdout": {
+        "bytes": 44,
+        "path": "RailSystem_v0.25_regression_3_stdout.txt",
+        "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+      }
+    },
+    "python": "3.13.5",
+    "run": 3,
+    "started_at_utc": "2026-11-15T09:52:02.779168+00:00",
+    "status": "PASS",
+    "tests_expected": 335,
+    "tests_observed": 335,
+    "timed_out": false,
+    "timeout_seconds": 90,
+    "warnings_as_errors": [
+      "ResourceWarning",
+      "DeprecationWarning"
+    ]
+  }
+]

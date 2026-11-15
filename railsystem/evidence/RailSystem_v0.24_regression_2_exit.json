@@ -1,0 +1,31 @@
+{
+  "stage": "RAIL-TRUST-014",
+  "run": 2,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "railsystem",
+  "PYTHONWARNINGS": "error::ResourceWarning,error::DeprecationWarning",
+  "tests": 310,
+  "exit_code": 0,
+  "duration_seconds": 6.8535,
+  "timed_out": false,
+  "status": "PASS",
+  "stdout_path": "RailSystem_v0.24_regression_2_stdout.txt",
+  "stderr_path": "RailSystem_v0.24_regression_2_stderr.txt",
+  "stdout_sha256": "a26f6298f0cb555b12bd9ddf39c066a396b42b74d75eb82a71bf220ecf4024db",
+  "stderr_sha256": "c6dcf7f8cedc7bc4b8d99dd390abc981ff4479767e06084d1bda74fa7bd790d6",
+  "started_utc": "2026-11-15T09:41:47.271249+00:00"
+}

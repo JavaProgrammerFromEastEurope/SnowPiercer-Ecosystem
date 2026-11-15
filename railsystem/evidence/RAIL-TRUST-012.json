@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "stage": "RAIL-TRUST-012",
+  "version": "0.22.0",
+  "scope": "software contracts only, no authority to operate rail hardware",
+  "stage_result": "PARTIAL",
+  "production_release": "BLOCKED",
+  "physical_operation": "NO-GO",
+  "prior_release_zip": "RailSystem_v0.21_RAIL-TRUST-011.zip",
+  "prior_release_zip_sha256": "5a19d7d12b5ec87b573481af55d9acd5e6c3fbf6576eba468cf28ee291e7793b",
+  "prior_entries_count": 86,
+  "prior_entries_missing": [],
+  "modified_prior_entries": [
+    "railsystem/README.md",
+    "railsystem/railsystem/__init__.py",
+    "railsystem/railsystem/release_cli.py",
+    "railsystem/railsystem/verification.py"
+  ],
+  "new_tests": 18,
+  "cumulative_tests": 276,
+  "regressions": [
+    {
+      "run": 1,
+      "tests": 276,
+      "duration_sec": 4.376,
+      "exit_code": 0,
+      "timeout": false,
+      "PASS": true,
+      "stdout_file": "RailSystem_v0.22_regression_1_stdout.txt",
+      "stderr_file": "RailSystem_v0.22_regression_1_stderr.txt",
+      "stdout_sha256": "a26f6298f0cb555b12bd9ddf39c066a396b42b74d75eb82a71bf220ecf4024db",
+      "stderr_sha256": "5e47cbe88f1f4add465163876ca768c13b623a70cca651e0ca0d74618199cf89",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ],
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    {
+      "run": 2,
+      "tests": 276,
+      "duration_sec": 4.049,
+      "exit_code": 0,
+      "timeout": false,
+      "PASS": true,
+      "stdout_file": "RailSystem_v0.22_regression_2_stdout.txt",
+      "stderr_file": "RailSystem_v0.22_regression_2_stderr.txt",
+      "stdout_sha256": "a26f6298f0cb555b12bd9ddf39c066a396b42b74d75eb82a71bf220ecf4024db",
+      "stderr_sha256": "4151e5ef99c2e562ff083116ce866bfdee4495c1639468960b90d21b7ca4cdf6",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ],
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    {
+      "run": 3,
+      "tests": 276,
+      "duration_sec": 4.045,
+      "exit_code": 0,
+      "timeout": false,
+      "PASS": true,
+      "stdout_file": "RailSystem_v0.22_regression_3_stdout.txt",
+      "stderr_file": "RailSystem_v0.22_regression_3_stderr.txt",
+      "stdout_sha256": "a26f6298f0cb555b12bd9ddf39c066a396b42b74d75eb82a71bf220ecf4024db",
+      "stderr_sha256": "1f5faca90c0b36f5131a0af8deacb3851d69a51a582edca4e10945560bffcd9e",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ],
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    }
+  ],
+  "environment": {
+    "kernel": "6.18.57",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "runner_uid": 0,
+    "systemd_active": false,
+    "pid1": "supervisord",
+    "actual_four_uid_tests": true,
+    "client_uid": 62581,
+    "service_uid": 62582,
+    "witness_uid": 62583,
+    "recovery_authority_uid": 62584,
+    "test_only_transport_gid": 62580
+  },
+  "new_components": [
+    "railsystem/provider_ipc.py",
+    "railsystem/os_boundary.py",
+    "railsystem/service_runtime.py",
+    "systemd/railsystem-recovery.service.example",
+    "systemd/railsystem-witness.service.example",
+    "systemd/railsystem-permits.service.example",
+    "deployment/roles.example.json"
+  ],
+  "validated": [
+    "real Linux SO_PEERCRED with four different non-root UIDs",
+    "cross-UID recovery with client denied direct state access",
+    "typed external anchor CAS and permit consume-once using separate-UID volatile server processes",
+    "negative UID/mode/symlink/provider-down checks",
+    "SIGKILL after cross-UID remote CAS, followed by signed recovery",
+    "SIGKILL after cross-UID permit consumption keeps phase PREPARED and burns same permit",
+    "SIGTERM returns service to stopped state with socket cleanup",
+    "SIGKILL leaves stale socket; restart refuses unknown socket",
+    "older Stage full regression with warnings as errors"
+  ],
+  "not_validated": [
+    "production independent tamper/rollback resistant monotonic CAS storage",
+    "production durable permit authority or true out-of-host failure domain",
+    "real systemd service-manager activation or recovery after host reboot",
+    "full exhaustive SIGKILL at EVERY production hardware/remote fsync boundary",
+    "physical host power loss or storage atomicity under real devices",
+    "all possible mount/link/socket TOCTOU manipulations",
+    "OS confinement of all service-owner legacy import paths",
+    "rail safety certification, TrainOS integration or rail actuation"
+  ],
+  "legacy_audit_result": "NOT_CLOSED",
+  "reason_no_go": "no independently deployed durable external witness/permit ledger; no universal production bypass proof",
+  "development_trials": [
+    "rail012_full_trial_1.stderr",
+    "rail012_full_trial_1.stdout",
+    "rail012_full_trial_2.stderr",
+    "rail012_full_trial_2.stdout",
+    "rail012_newtests_2.log",
+    "rail012_newtests_3.log",
+    "rail012_newtests_final.stderr",
+    "rail012_newtests_final.stdout",
+    "rail012_newtests_initial.log",
+    "rail012_newtests_stage_end.stderr",
+    "rail012_newtests_stage_end.stdout"
+  ],
+  "source_manifest_sha256": "4bae24edfa67cd8e03b0b635a6b196490246ba4cde01c029d5dbf19df40fe92d"
+}

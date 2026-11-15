@@ -1,0 +1,17 @@
+{
+  "missing": [
+    "independently operated monotonic CAS",
+    "independent durable replay-permit service",
+    "production service manager with dedicated UID and OS policy",
+    "full legacy production API fencing",
+    "real provider failures and power-loss proof",
+    "external safety approval"
+  ],
+  "physical_operation": "NO-GO",
+  "production_software_release": "BLOCKED",
+  "release": "RailSystem v0.21",
+  "scope": "local noncertifying software verification only",
+  "stage": "RAIL-TRUST-011",
+  "stage_status": "PARTIAL",
+  "unit_and_integration_regression": "258/258 PASS x 3"
+}

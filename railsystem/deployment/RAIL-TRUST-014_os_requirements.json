@@ -1,0 +1,22 @@
+{
+  "stage": "RAIL-TRUST-014",
+  "schema_version": 1,
+  "deployable": false,
+  "status": "BLOCKED",
+  "required_os_boundaries": [
+    "Four distinct non-root client, write, witness, recovery UID identities",
+    "Independent durable monotonic rollback-resistant anchor outside host snapshot domain",
+    "Independently protected replay-resistant permit custody",
+    "Mandatory MAC/LSM confinement of arbitrary same-service-UID legacy library calls",
+    "Supervised, authenticated and crash-safe startup, SIGKILL and recovery lifecycle",
+    "Tamper-evident audit, policy signing and independent approval",
+    "End-to-end physical safety assessment before any rail control"
+  ],
+  "provided_by_this_stage": [
+    "Laboratory SQLite FULL synchronous authority state with separate UID ownership",
+    "Cross-UID Unix IPC and SIGKILL tests",
+    "Production entrypoint fail-closed isolation check"
+  ],
+  "unproven": ["full-disk rollback", "privileged host attacker", "same-service-UID MAC isolation", "independent production supervisors", "power failure"],
+  "physical_operation": "NO-GO"
+}

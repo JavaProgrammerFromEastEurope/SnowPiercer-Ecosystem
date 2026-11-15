@@ -1,0 +1,89 @@
+[
+  {
+    "stage": "RAIL-TRUST-013",
+    "run": 1,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "/mnt/data/rail_build_013/railsystem",
+    "exit_code": 0,
+    "elapsed_seconds": 6.187,
+    "reported_test_count": 292,
+    "reported_test_seconds": 5.156,
+    "timeout": false,
+    "stdout_file": "evidence/RailSystem_v0.23_regression_1_stdout.txt",
+    "stderr_file": "evidence/RailSystem_v0.23_regression_1_stderr.txt",
+    "status": "PASS",
+    "warning_filters": [
+      "error::ResourceWarning",
+      "error::DeprecationWarning"
+    ],
+    "utc_ended": "2026-11-15T09:29:43.762539+00:00"
+  },
+  {
+    "stage": "RAIL-TRUST-013",
+    "run": 2,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "/mnt/data/rail_build_013/railsystem",
+    "exit_code": 0,
+    "elapsed_seconds": 5.9241,
+    "reported_test_count": 292,
+    "reported_test_seconds": 5.101,
+    "timeout": false,
+    "stdout_file": "evidence/RailSystem_v0.23_regression_2_stdout.txt",
+    "stderr_file": "evidence/RailSystem_v0.23_regression_2_stderr.txt",
+    "status": "PASS",
+    "warning_filters": [
+      "error::ResourceWarning",
+      "error::DeprecationWarning"
+    ],
+    "utc_ended": "2026-11-15T09:29:49.686922+00:00"
+  },
+  {
+    "stage": "RAIL-TRUST-013",
+    "run": 3,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "/mnt/data/rail_build_013/railsystem",
+    "exit_code": 0,
+    "elapsed_seconds": 5.9564,
+    "reported_test_count": 292,
+    "reported_test_seconds": 5.144,
+    "timeout": false,
+    "stdout_file": "evidence/RailSystem_v0.23_regression_3_stdout.txt",
+    "stderr_file": "evidence/RailSystem_v0.23_regression_3_stderr.txt",
+    "status": "PASS",
+    "warning_filters": [
+      "error::ResourceWarning",
+      "error::DeprecationWarning"
+    ],
+    "utc_ended": "2026-11-15T09:29:55.643569+00:00"
+  }
+]

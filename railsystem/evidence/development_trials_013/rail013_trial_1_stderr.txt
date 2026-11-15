@@ -1,0 +1,17 @@
+test_authorized_uid_cannot_submit_legacy_write (test_write_authority_013.WriteAuthorityTests.test_authorized_uid_cannot_submit_legacy_write) ... ok
+test_authorized_uid_cannot_supply_policy_and_unapproved_admission_fails (test_write_authority_013.WriteAuthorityTests.test_authorized_uid_cannot_supply_policy_and_unapproved_admission_fails) ... ok
+test_client_cannot_directly_open_or_replace_protected_state (test_write_authority_013.WriteAuthorityTests.test_client_cannot_directly_open_or_replace_protected_state) ... ok
+test_credential_symlink_and_permissions_are_denied (test_write_authority_013.WriteAuthorityTests.test_credential_symlink_and_permissions_are_denied) ... ok
+test_missing_witness_or_ledger_blocks_publication (test_write_authority_013.WriteAuthorityTests.test_missing_witness_or_ledger_blocks_publication) ... ok
+test_os_owner_tampering_detected (test_write_authority_013.WriteAuthorityTests.test_os_owner_tampering_detected) ... ok
+test_prepared_recovery_blocks_publication (test_write_authority_013.WriteAuthorityTests.test_prepared_recovery_blocks_publication) ... ok
+test_socket_substitution_is_detected_and_not_removed (test_write_authority_013.WriteAuthorityTests.test_socket_substitution_is_detected_and_not_removed) ... ok
+test_stale_socket_after_sigkill_blocks_restart (test_write_authority_013.WriteAuthorityTests.test_stale_socket_after_sigkill_blocks_restart) ... ok
+test_two_simultaneous_startups_one_rejected (test_write_authority_013.WriteAuthorityTests.test_two_simultaneous_startups_one_rejected) ... ok
+test_unauthorized_uid_denied_with_kernel_credentials (test_write_authority_013.WriteAuthorityTests.test_unauthorized_uid_denied_with_kernel_credentials) ... ok
+test_wrong_role_uid_denied (test_write_authority_013.WriteAuthorityTests.test_wrong_role_uid_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.259s
+
+OK

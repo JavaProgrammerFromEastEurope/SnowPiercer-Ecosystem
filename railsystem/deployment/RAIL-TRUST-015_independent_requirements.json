@@ -1,0 +1,26 @@
+{
+  "stage": "RAIL-TRUST-015",
+  "deployable": false,
+  "schema_version": 1,
+  "status": "BLOCKED",
+  "physical_operation": "NO-GO",
+  "mandatory_independent_proofs": [
+    "pinned and independently enrolled remote or hardware-backed root key protected outside host rollback domain",
+    "independently durable monotonic root CAS and consumed-permit ledger with rollback rejection",
+    "independently installed and tested MAC/LSM subject-object confinement preventing arbitrary same-UID legacy write access",
+    "OS supervisor independent of application UID, with bounded crash reconciliation and authorization",
+    "four real UIDs, concurrent startup, SIGTERM and SIGKILL with provider and IPC faults",
+    "complete negative end-to-end rollback and tamper matrix, independent operator approval"
+  ],
+  "locally_implemented": [
+    "Ed25519 challenge-response root quote verification without production authorization",
+    "fail-closed production release, write and recovery CLI guards",
+    "diagnostic OS MAC/service-manager probe without positive self-attestation",
+    "previous durable laboratory cross-UID services and crash tests"
+  ],
+  "unproven": [
+    "whole-host rollback resistance", "same-UID legacy write isolation",
+    "independent permit custody", "live production manager restart",
+    "remote root certification", "physical rail safety assurance"
+  ]
+}

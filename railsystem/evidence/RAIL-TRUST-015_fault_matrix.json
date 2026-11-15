@@ -1,0 +1,177 @@
+{
+  "not_verified": [
+    "remote independent root true durable monotonic CAS over host-wide snapshot rollback",
+    "independent consumed-permit custody after whole-host rollback",
+    "MAC/LSM denial of direct writes by arbitrary same-service-UID code",
+    "service-manager controlled SIGKILL restart and reconciliation in deployed environment",
+    "power-loss and storage device durability tests",
+    "every instruction-level SQLite/CAS/IPC transition in a production environment",
+    "full credentials, socket and file substitution with external production authority"
+  ],
+  "physical_operation": "NO-GO",
+  "production_admission": "BLOCKED",
+  "scope": "Linux local software failure injection only; not exhaustive production crash matrix",
+  "source": "exact successful cumulative unittest logs",
+  "stage": "RAIL-TRUST-015",
+  "verified_local_test_names": {
+    "cross_uid": [
+      "test_client_cannot_read_witness_and_permit_databases (test_isolated_authorities_014.IsolatedAuthorityTests.test_client_cannot_read_witness_and_permit_databases)",
+      "test_cross_uid_write_authority_uses_durable_providers_and_blocks_invalid_admission (test_isolated_authorities_014.IsolatedAuthorityTests.test_cross_uid_write_authority_uses_durable_providers_and_blocks_invalid_admission)",
+      "test_two_independent_uid_services_and_clients (test_isolated_authorities_014.IsolatedAuthorityTests.test_two_independent_uid_services_and_clients)",
+      "test_unauthorized_uid_denied_by_kernel_peercred (test_isolated_authorities_014.IsolatedAuthorityTests.test_unauthorized_uid_denied_by_kernel_peercred)",
+      "test_unauthorized_uid_denied_with_kernel_credentials (test_write_authority_013.WriteAuthorityTests.test_unauthorized_uid_denied_with_kernel_credentials)"
+    ],
+    "mac_guard": [
+      "test_concurrent_prod_fencing_is_stably_blocked (test_mac_fencing_015.MACConfinementTests.test_concurrent_prod_fencing_is_stably_blocked)",
+      "test_environment_flags_do_not_override_kernel_gate (test_mac_fencing_015.MACConfinementTests.test_environment_flags_do_not_override_kernel_gate)",
+      "test_fake_enforcing_label_and_systemd_comm_never_authorize (test_mac_fencing_015.MACConfinementTests.test_fake_enforcing_label_and_systemd_comm_never_authorize)",
+      "test_legacy_importable_but_production_never_enabled (test_mac_fencing_015.MACConfinementTests.test_legacy_importable_but_production_never_enabled)",
+      "test_missing_procfs_unsafe_not_permissive (test_mac_fencing_015.MACConfinementTests.test_missing_procfs_unsafe_not_permissive)",
+      "test_mocked_positive_diagnostics_cannot_authorize (test_mac_fencing_015.MACConfinementTests.test_mocked_positive_diagnostics_cannot_authorize)",
+      "test_real_environment_is_not_independently_attested (test_mac_fencing_015.MACConfinementTests.test_real_environment_is_not_independently_attested)",
+      "test_recovery_entrypoint_does_not_run_without_isolation (test_mac_fencing_015.MACConfinementTests.test_recovery_entrypoint_does_not_run_without_isolation)",
+      "test_release_cli_even_with_provider_mock_is_blocked (test_mac_fencing_015.MACConfinementTests.test_release_cli_even_with_provider_mock_is_blocked)",
+      "test_write_entrypoint_does_not_call_service_when_unattested (test_mac_fencing_015.MACConfinementTests.test_write_entrypoint_does_not_call_service_when_unattested)"
+    ],
+    "replay_rollback": [
+      "test_short_permit (test_anchored_admission.AnchorTests.test_short_permit)",
+      "test_replay (test_integration.IntegrationTests.test_replay)",
+      "test_client_cannot_read_witness_and_permit_databases (test_isolated_authorities_014.IsolatedAuthorityTests.test_client_cannot_read_witness_and_permit_databases)",
+      "test_kill_during_witness_before_commit_rollback (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_witness_before_commit_rollback)",
+      "test_local_store_rollback_remains_unsolved (test_isolated_authorities_014.IsolatedAuthorityTests.test_local_store_rollback_remains_unsolved)",
+      "test_witness_persists_sigkill_and_rejects_replay (test_isolated_authorities_014.IsolatedAuthorityTests.test_witness_persists_sigkill_and_rejects_replay)",
+      "test_challenge_replay_rejected (test_monotonic_root_015.RootProtocolTests.test_challenge_replay_rejected)",
+      "test_policy_rollback_floor_rejected (test_monotonic_root_015.RootProtocolTests.test_policy_rollback_floor_rejected)",
+      "test_sigkill_after_remote_permit_consumption_burns_permit (test_os_boundary_012.Boundary012Tests.test_sigkill_after_remote_permit_consumption_burns_permit)",
+      "test_external_consumption_blocks_local_rollback_replay (test_privileged_recovery.RecoveryStage011.test_external_consumption_blocks_local_rollback_replay)",
+      "test_tampered_or_wrong_scope_permit_does_not_consume (test_privileged_recovery.RecoveryStage011.test_tampered_or_wrong_scope_permit_does_not_consume)",
+      "test_external_rollback_or_advance_denied (test_production_fencing.ProductionFencingTests.test_external_rollback_or_advance_denied)",
+      "test_forged_permit_denied (test_production_fencing.ProductionFencingTests.test_forged_permit_denied)",
+      "test_signed_recovery_and_replay (test_production_fencing.ProductionFencingTests.test_signed_recovery_and_replay)",
+      "test_cas_success_and_rollback_rejected (test_provider_ipc_012.ProviderIPC012Tests.test_cas_success_and_rollback_rejected)",
+      "test_ledger_replay (test_provider_ipc_012.ProviderIPC012Tests.test_ledger_replay)",
+      "test_deterministic_replay (test_simulation.SimulationTests.test_deterministic_replay)",
+      "test_replay (test_trust.TrustTests.test_replay)",
+      "test_rollback (test_trust.TrustTests.test_rollback)",
+      "test_replay_fails (test_trusted_admission.AdmissionTests.test_replay_fails)",
+      "test_rollback_fails (test_trusted_admission.AdmissionTests.test_rollback_fails)",
+      "test_sigkill_rollback (test_trusted_admission.AdmissionTests.test_sigkill_rollback)",
+      "test_permit_provider_crash_during_live_ipc_fails_closed (test_write_authority_013.WriteAuthorityTests.test_permit_provider_crash_during_live_ipc_fails_closed)"
+    ],
+    "root_protocol": [
+      "test_challenge_replay_rejected (test_monotonic_root_015.RootProtocolTests.test_challenge_replay_rejected)",
+      "test_even_a_valid_quote_cannot_enable_production (test_monotonic_root_015.RootProtocolTests.test_even_a_valid_quote_cannot_enable_production)",
+      "test_exact_floor_accepted_but_not_independently_durable (test_monotonic_root_015.RootProtocolTests.test_exact_floor_accepted_but_not_independently_durable)",
+      "test_extra_fields_and_downgrade_rejected (test_monotonic_root_015.RootProtocolTests.test_extra_fields_and_downgrade_rejected)",
+      "test_invalid_policy_values_rejected (test_monotonic_root_015.RootProtocolTests.test_invalid_policy_values_rejected)",
+      "test_invalid_sequence_and_nonce_rejected (test_monotonic_root_015.RootProtocolTests.test_invalid_sequence_and_nonce_rejected)",
+      "test_malformed_base64_rejected (test_monotonic_root_015.RootProtocolTests.test_malformed_base64_rejected)",
+      "test_policy_rollback_floor_rejected (test_monotonic_root_015.RootProtocolTests.test_policy_rollback_floor_rejected)",
+      "test_revoked_pinned_key_rejected (test_monotonic_root_015.RootProtocolTests.test_revoked_pinned_key_rejected)",
+      "test_tampered_signed_fields_rejected (test_monotonic_root_015.RootProtocolTests.test_tampered_signed_fields_rejected)",
+      "test_unique_unpredictable_challenges (test_monotonic_root_015.RootProtocolTests.test_unique_unpredictable_challenges)",
+      "test_unpinned_signer_rejected (test_monotonic_root_015.RootProtocolTests.test_unpinned_signer_rejected)",
+      "test_valid_signature_only_proves_cryptography (test_monotonic_root_015.RootProtocolTests.test_valid_signature_only_proves_cryptography)",
+      "test_wrong_key_id_rejected (test_monotonic_root_015.RootProtocolTests.test_wrong_key_id_rejected)",
+      "test_wrong_root_rejected (test_monotonic_root_015.RootProtocolTests.test_wrong_root_rejected)"
+    ],
+    "sigkill": [
+      "test_sigkill_lock_holder_releases_fence (test_atomic_startup.AtomicStartupTests.test_sigkill_lock_holder_releases_fence)",
+      "test_durable_consumption_survives_sigkill (test_isolated_authorities_014.IsolatedAuthorityTests.test_durable_consumption_survives_sigkill)",
+      "test_kill_during_ledger_after_commit_consumed (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_ledger_after_commit_consumed)",
+      "test_kill_during_ledger_before_commit_not_consumed (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_ledger_before_commit_not_consumed)",
+      "test_kill_during_witness_after_commit_persists_without_reply (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_witness_after_commit_persists_without_reply)",
+      "test_kill_during_witness_before_commit_rollback (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_witness_before_commit_rollback)",
+      "test_witness_persists_sigkill_and_rejects_replay (test_isolated_authorities_014.IsolatedAuthorityTests.test_witness_persists_sigkill_and_rejects_replay)",
+      "test_sigkill_releases_lifecycle_lock (test_lifecycle_lock_009.Lifecycle009.test_sigkill_releases_lifecycle_lock)",
+      "test_service_sigkill_stale_socket_blocks_restart (test_os_boundary_012.Boundary012Tests.test_service_sigkill_stale_socket_blocks_restart)",
+      "test_sigkill_after_remote_cas_then_recover (test_os_boundary_012.Boundary012Tests.test_sigkill_after_remote_cas_then_recover)",
+      "test_sigkill_after_remote_permit_consumption_burns_permit (test_os_boundary_012.Boundary012Tests.test_sigkill_after_remote_permit_consumption_burns_permit)",
+      "test_sigkill_admission_sqlite_external_anchor_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_admission_sqlite_external_anchor_matrix)",
+      "test_sigkill_broker_leaves_stale_socket_fail_closed (test_privileged_recovery.RecoveryStage011.test_sigkill_broker_leaves_stale_socket_fail_closed)",
+      "test_sigkill_lifecycle_lock_released (test_privileged_recovery.RecoveryStage011.test_sigkill_lifecycle_lock_released)",
+      "test_sigkill_recovery_matrix (test_privileged_recovery.RecoveryStage011.test_sigkill_recovery_matrix)",
+      "test_sigkill_rollback (test_trusted_admission.AdmissionTests.test_sigkill_rollback)",
+      "test_ipc_sigkill_mid_request_leaves_stale_path (test_write_authority_013.WriteAuthorityTests.test_ipc_sigkill_mid_request_leaves_stale_path)",
+      "test_permit_provider_crash_during_live_ipc_fails_closed (test_write_authority_013.WriteAuthorityTests.test_permit_provider_crash_during_live_ipc_fails_closed)",
+      "test_stale_socket_after_sigkill_blocks_restart (test_write_authority_013.WriteAuthorityTests.test_stale_socket_after_sigkill_blocks_restart)"
+    ],
+    "socket_tamper": [
+      "test_socket_symlink_refused (test_atomic_startup.AtomicStartupTests.test_socket_symlink_refused)",
+      "test_symlink_database_denied_without_publication (test_isolated_authorities_014.IsolatedAuthorityTests.test_symlink_database_denied_without_publication)",
+      "test_replaced_socket_not_served (test_lifecycle_fencing.LifecycleTests.test_replaced_socket_not_served)",
+      "test_service_sigkill_stale_socket_blocks_restart (test_os_boundary_012.Boundary012Tests.test_service_sigkill_stale_socket_blocks_restart)",
+      "test_existing_path_and_socket_substitution (test_privileged_recovery.RecoveryStage011.test_existing_path_and_socket_substitution)",
+      "test_sigkill_broker_leaves_stale_socket_fail_closed (test_privileged_recovery.RecoveryStage011.test_sigkill_broker_leaves_stale_socket_fail_closed)",
+      "test_existing_socket_refused (test_recovery_boundary.BoundaryTests.test_existing_socket_refused)",
+      "test_socket_replacement_detected_and_not_deleted (test_recovery_boundary.BoundaryTests.test_socket_replacement_detected_and_not_deleted)",
+      "test_socket_substitution_is_detected (test_recovery_broker.RecoveryBrokerTests.test_socket_substitution_is_detected)",
+      "test_socket_substitution_is_detected_and_not_removed (test_write_authority_013.WriteAuthorityTests.test_socket_substitution_is_detected_and_not_removed)",
+      "test_stale_socket_after_sigkill_blocks_restart (test_write_authority_013.WriteAuthorityTests.test_stale_socket_after_sigkill_blocks_restart)"
+    ],
+    "startup_concurrency": [
+      "test_concurrent_cas_exactly_one_success (test_isolated_authorities_014.IsolatedAuthorityTests.test_concurrent_cas_exactly_one_success)",
+      "test_concurrent_prod_fencing_is_stably_blocked (test_mac_fencing_015.MACConfinementTests.test_concurrent_prod_fencing_is_stably_blocked)",
+      "test_concurrent_start_refuses_second_broker (test_privileged_recovery.RecoveryStage011.test_concurrent_start_refuses_second_broker)",
+      "test_real_concurrent_startup_processes (test_privileged_recovery.RecoveryStage011.test_real_concurrent_startup_processes)",
+      "test_concurrent_same_attestation_one_wins (test_trusted_admission.AdmissionTests.test_concurrent_same_attestation_one_wins)",
+      "test_two_simultaneous_startups_one_rejected (test_write_authority_013.WriteAuthorityTests.test_two_simultaneous_startups_one_rejected)"
+    ]
+  },
+  "verified_os_observations": [
+    {
+      "check": "pid1",
+      "command": [
+        "cat",
+        "/proc/1/comm"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "supervisord\n",
+      "timed_out": false
+    },
+    {
+      "check": "lsm_label",
+      "command": [
+        "cat",
+        "/proc/self/attr/current"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "kernel\u0000",
+      "timed_out": false
+    },
+    {
+      "check": "lsm_inventory",
+      "command": [
+        "cat",
+        "/sys/kernel/security/lsm"
+      ],
+      "exit_code": 1,
+      "stderr": "cat: /sys/kernel/security/lsm: No such file or directory\n",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "check": "apparmor_status",
+      "command": [
+        "aa-status"
+      ],
+      "exit_code": 1,
+      "stderr": "apparmor not present.\n",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "check": "systemd_status",
+      "command": [
+        "systemctl",
+        "is-system-running"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": "offline\n",
+      "timed_out": false
+    }
+  ]
+}

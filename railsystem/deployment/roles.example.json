@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "uids": {"client": 62581, "service": 62582, "witness": 62583, "recovery": 62584},
+  "transport_gid": 62580,
+  "state_dir": "/var/lib/railsystem",
+  "ipc_dir": "/run/railsystem-recovery",
+  "witness_socket": "/run/railsystem-witness/provider.sock",
+  "permit_socket": "/run/railsystem-permits/provider.sock",
+  "recovery_public_key_file": "/run/credentials/railsystem-recovery.service/recovery-public.key",
+  "permit_file": "/run/credentials/railsystem-recovery.service/recovery-permit.json"
+}

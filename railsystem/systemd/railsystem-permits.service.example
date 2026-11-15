@@ -1,0 +1,15 @@
+# NOT FUNCTIONAL WITHOUT A SEPARATELY PROVIDED, independently protected permit ledger.
+[Unit]
+Description=External independent RailSystem permit authority (UNPROVISIONED)
+[Service]
+Type=simple
+User=rail-recovery
+Group=rail-ipc
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+CapabilityBoundingSet=
+RuntimeDirectory=railsystem-permits
+RuntimeDirectoryMode=0750
+ExecStart=/usr/local/libexec/railsystem-independent-permit-authority
+Restart=no

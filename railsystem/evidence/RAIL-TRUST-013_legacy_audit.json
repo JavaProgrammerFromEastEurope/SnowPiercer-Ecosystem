@@ -1,0 +1,52 @@
+{
+  "stage": "RAIL-TRUST-013",
+  "scope": "static source code entrypoint inventory, not global OS MAC policy proof",
+  "legacy_library_api_retained": true,
+  "cross_uid_dac_fencing_tested": true,
+  "same_uid_legacy_fencing_proven": false,
+  "independent_monotonic_anchor_provisioned": false,
+  "durable_permit_provider_provisioned": false,
+  "status": "BLOCKED",
+  "entries": [
+    {
+      "entrypoint": "trusted_admission.admit",
+      "risk": "separate SQLite replay db; service UID direct call still possible",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "anchored_admission.admit_anchored",
+      "risk": "local anchor only",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "anchored_admission.recover",
+      "risk": "legacy local recovery",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "production_fencing.recover_with_attestation",
+      "risk": "signed permit but lacks independent permit ledger",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "unified_admission.admit",
+      "risk": "provider argument injectable from same service UID",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "unified_admission.recover",
+      "risk": "permit store optional for library compatibility",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "anchored_admission.initialize",
+      "risk": "provisions new local state; not production API",
+      "allowed_for_production": false
+    },
+    {
+      "entrypoint": "release_cli.main",
+      "risk": "old CLI exposed; default provider fails closed",
+      "allowed_for_production": false
+    }
+  ]
+}

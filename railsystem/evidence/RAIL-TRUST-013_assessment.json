@@ -1,0 +1,10 @@
+{
+  "stage": "RAIL-TRUST-013",
+  "version": "v0.23",
+  "status": "PARTIAL",
+  "production_release": "BLOCKED",
+  "physical_operation": "NO-GO",
+  "reason": "unprovisioned independent monotonic witness / durable permit authority; same-UID legacy bypass; no production OS supervisor",
+  "end_to_end_proven": false,
+  "independent_certification": false
+}

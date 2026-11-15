@@ -1,0 +1,386 @@
+{
+  "build": {
+    "SO_PEERCRED": true,
+    "cryptography_version": "46.0.4",
+    "euid": 0,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "test_only_client_uids": [
+      63081,
+      63082
+    ],
+    "test_only_transport_gid": 63080
+  },
+  "development_evidence": [
+    {
+      "name": "rail011_newtests_0.log",
+      "note": "all exploratory runs retained, including FAIL/warning occurrences",
+      "sha256": "46296be004db2efa0ddaf5122860724bac209148108646e3860f5488d2a344b7"
+    },
+    {
+      "name": "rail011_newtests_1.log",
+      "note": "all exploratory runs retained, including FAIL/warning occurrences",
+      "sha256": "a734d43b81675cef313fc86a3d80586580051bcd3874f3b73cd03c14e18d2440"
+    },
+    {
+      "name": "rail011_newtests_2.log",
+      "note": "all exploratory runs retained, including FAIL/warning occurrences",
+      "sha256": "b77f5a9e475e45541d617fe2b3aabdf13ccfe8774cdcaf4e1298316c8b7aff64"
+    },
+    {
+      "name": "rail011_newtests_3.log",
+      "note": "all exploratory runs retained, including FAIL/warning occurrences",
+      "sha256": "28fb9e927e82d920b427e296ae53783cf1f59e3144cdfc74d15ff9d220581152"
+    },
+    {
+      "name": "rail011_newtests_4.log",
+      "note": "all exploratory runs retained, including FAIL/warning occurrences",
+      "sha256": "7c275a91753c8db21cbea327f75f97c7601dfba38fcc502f3f7594af68407f32"
+    }
+  ],
+  "fault_injection_matrix": {
+    "admission_sigkill": [
+      "before_prepare",
+      "after_prepare",
+      "before_external",
+      "after_external",
+      "before_local",
+      "after_local",
+      "before_final_commit",
+      "after_final_commit"
+    ],
+    "cross_uid": [
+      "two_real_distinct_numeric_UIDs_Linux_SO_PEERCRED",
+      "state_not_accessible_to_client_UIDs"
+    ],
+    "ipc_sigkill": [
+      "broker_killed_with_socket_published_then_restart_fail_closed"
+    ],
+    "lock_sigkill": [
+      "process_killed_holding_flock_then_lock_reacquired"
+    ],
+    "process_startup": [
+      "two_real_concurrent_processes_only_one_can_publish_socket"
+    ],
+    "recovery_sigkill": [
+      "before_permit_consume",
+      "after_permit_consume",
+      "after_recovery_anchor",
+      "before_recovery_commit",
+      "after_recovery_commit"
+    ],
+    "tamper": [
+      "socket_inode_replacement",
+      "socket_mode",
+      "transport_group",
+      "permit_signature",
+      "SQLite_local_permit_ledger_rewind"
+    ]
+  },
+  "generated_at_utc": "2026-11-15T08:59:02.562670Z",
+  "legacy_production_entrypoint_inventory": [
+    {
+      "path": "railsystem.release_gate.evaluate",
+      "status": "available library API; no independent attestation enforced"
+    },
+    {
+      "path": "railsystem.trusted_admission.admit",
+      "status": "available library API; no independent anchor enforced"
+    },
+    {
+      "path": "railsystem.anchored_admission.admit_anchored",
+      "status": "available library API; local anchor only"
+    },
+    {
+      "path": "railsystem.anchored_admission.recover",
+      "status": "available library API; local permit only"
+    },
+    {
+      "path": "railsystem.production_fencing.recover_with_attestation",
+      "status": "available library API; local permit ledger"
+    },
+    {
+      "path": "railsystem.unified_admission.recover without permit_store",
+      "status": "available library API; local permit ledger only"
+    },
+    {
+      "path": "railsystem.recovery_broker.RecoveryBroker",
+      "status": "experimental earlier same-UID service; not independently protected permit ledger"
+    },
+    {
+      "path": "railsystem.recovery_boundary.ProductionBoundary",
+      "status": "experimental software release IPC service; lacks OS global production fencing"
+    }
+  ],
+  "open_safety_hazards": [
+    "lack of independently trusted anchor and permit ledger",
+    "legacy callable release/recovery APIs for compatibility",
+    "OS service manager/deployment and principal isolation not independently certified",
+    "path/namespace attacks by privileged attacker, power loss and remote CAS timeouts unproven",
+    "no hardware integration, HIL, independent safety approval or physical operational authorization"
+  ],
+  "physical_rail_operations": "NO-GO",
+  "project": "SnowPiercer RailSystem",
+  "release": "0.21.0",
+  "schema_version": 1,
+  "software_production_release": "BLOCKED",
+  "source_archive": {
+    "entries": 72,
+    "filename": "RailSystem_v0.20_RAIL-TRUST-010.zip",
+    "sha256": "ce67019e720d2183368b46205086c9b7f158117acdd8ce88bc335e11fad5bad5"
+  },
+  "source_manifest": {
+    "algorithm": "sha256",
+    "files": {
+      "architecture/registry.json": "770eff2c267d5da523b4f386c1a9b5611f06b99b3dce619e9e4a80dcb1964ad4",
+      "docs/ARCHITECTURE.md": "117bbb4a52a44d71bdd04ae5f940840e5e887fad4f980afa1c46e83da0da0121",
+      "docs/RAIL-ARCH-001.md": "543a5b539b92d98df7105c41fd6f8852c6a48e0c90319537d421ac021c709ee9",
+      "docs/RAIL-CI-001.md": "d02b946ccde9bfb8ac60261cf7e71d84e06043c9c5d8c14b9ce4d9b3562cc8e1",
+      "docs/RAIL-EVID-001.md": "2f64dd88a2ad2bd4033e736c2a8a5ace13d8fcdb239b4436b32af996f58e32a1",
+      "docs/RAIL-IF-001.md": "7d78154439eb38eacef2f99d3ee453e1f5d244c44717db4bb004f8930d9fb254",
+      "docs/RAIL-OPS-001.md": "0b32d1b6b197dc94ed043ed5563ee794ceb176d0d83f930db66c99bf953448c1",
+      "docs/RAIL-REQ-001.md": "14bdfce928f933b049d33a0383422cfd2ff507d11c02781a823851a06e2bf52f",
+      "docs/RAIL-SAFE-001.md": "32b400686b99526af398d69b98ccfa4a8fcd0ca6063d91071badd6e028de1b7c",
+      "docs/RAIL-SIM-001.md": "9878789c90ddd925af661b12a0b6487d86c5cc1a4f73935f372d07f75f4762f9",
+      "docs/RAIL-TRUST-001.md": "5d4bd0bf2c573e4ab6652c7679f6c06d8aa271dc68f7367cae251e654792df50",
+      "docs/RAIL-TRUST-002.md": "ce88af1cb52dfa209f35a3db0c3218af94c285e22b3e93fa17af77d893fdd35f",
+      "docs/RAIL-TRUST-003.md": "62980d14b0e94f62edfa277aab6d7ac1ab3bb66a84a0beaa355bf1002cd11f89",
+      "docs/RAIL-TRUST-004.md": "7dfac1aaa0627ae377476cdd85bcce2645888a808b20b83f0959d53382b30621",
+      "docs/RAIL-TRUST-005.md": "f54047769176fbd96b295226312b6d9350162fcf9845301b0519d7df7453d7a8",
+      "docs/RAIL-TRUST-006.md": "622770304a06fd656faa51778360170b97937dff468cd59d58b4887f1ba98953",
+      "docs/RAIL-TRUST-007.md": "bafe2e3be6fccccb26538f89be20f888cad90c4cbf17f72e9c821de9d18ab971",
+      "docs/RAIL-TRUST-008.md": "c0837573968459017aa03227ac6aad9bd53f6494e74141f3a82205e84843c652",
+      "docs/RAIL-TRUST-009.md": "b6c152903a44a5b6b0fe7cdcf8335eaa8f769f161598cf2712d25c4656fc6fc4",
+      "docs/RAIL-TRUST-010.md": "22a07f23685b02e55897dbe4aebf4c030c272e50952595ec612af589d8207196",
+      "docs/RAIL-TRUST-011.md": "59af0d2859a2fc2ea56d1fb923bfb20957197597d04de2575b457a9577918e4d",
+      "docs/RAIL-VER-001.md": "92b90b73ceaaa35dc7a5e834e1b36a8281e627d39826afb90ba9569955c3343f",
+      "docs/ROADMAP.md": "e70b52a55428060ff7253c0a1f6b8893d94cce45cdbf346b5afc01b42ca6e700",
+      "interfaces/trainos_v1.json": "4826fa660e377439e2a47a8f67d7502c357329baa9e64dfdfeba9683828f5fb1",
+      "railsystem/__init__.py": "4d75d2ac47994f66526f974a386e8bbbc6cfd3837080d62e75850a8cb2aed79a",
+      "railsystem/anchored_admission.py": "1326e972a9f0ebe0b0a94cb2a152b83954018be033c788760b36da71f884a720",
+      "railsystem/architecture.py": "2e9011a2faa4ab1068a8b511a1a881a9e5a7f47848282edac30a1243e98a2f43",
+      "railsystem/contracts.py": "292cb37dc73b332ceb260150b19e0fbdd3ad55c338eb78c3589d387d8119cce7",
+      "railsystem/durable_permits.py": "06c73938dd1b50d9f8e9f6579a68f162b446fadc66a285e639e33dc808ea7bde",
+      "railsystem/integration.py": "612da401a1ea0e8c562dc5d6c40b7937ac26840dad92eb870fb2af679afd830a",
+      "railsystem/operations.py": "2b2b5b1e71357ee48a9e16ae218252d24176b947e0cc2c396e0bd47f553049a4",
+      "railsystem/privileged_recovery.py": "d02d7374385ccba63a7f0c6e09c2b07c1b60cf98c20a8e17430aad21ba99300c",
+      "railsystem/production_fencing.py": "92bc9ab8233f941ba30123f17bbb7b08e59d6640e35e810c00cbefebee2753ef",
+      "railsystem/provenance.py": "9f90a7c5146bb98313e8bfbc1180a7233d423ee495cf85bf36f4f3d40835df81",
+      "railsystem/recovery_boundary.py": "965714b74f5042a2b2908038b459cf37caceda1baae5b4d820fd995cc8266536",
+      "railsystem/recovery_broker.py": "011f999f156b02f8df769f70f8ba92ae7c9aa59ec4037b7d883fceea17c46182",
+      "railsystem/release_cli.py": "30d879d152526302bff9bc2d65a473d01bb79170624cc93383e373a00b42697c",
+      "railsystem/release_gate.py": "5d006820a221e8724f93d75b82ce0c0e8e3440553d3f90fea10d11be52cec01b",
+      "railsystem/requirements.py": "d8360c9f19aa363c0d11f3cbdcd29d559305a3a488f18418c4728527cec20c42",
+      "railsystem/safety.py": "9b0100610cd2698cc0f83620c64997d9f6096de1785c739988e9a88460e8ad5e",
+      "railsystem/simulation.py": "cd6882c039986122dea5abd330f448d50953fb1ac5df87de5aec48f341caa649",
+      "railsystem/trust.py": "7485e2c22a4568d0ad9e87c7172c4a384001c25c49c9122ebf70ac6ece123971",
+      "railsystem/trust_cli.py": "e7296b094563b157039f1d1e7460d621ac475d1c3a68fa720b52eb458f202979",
+      "railsystem/trusted_admission.py": "c7d92a1eff25bd9b302bc7dceb3583306a67a2139769f4d50bb2a2754fd2dda6",
+      "railsystem/unified_admission.py": "3c5d14abf76700d146475f02c1d1738907028c6287816dbe2f4f087ef069b8a8",
+      "railsystem/verification.py": "369d418e7b9d2878ac2911c069c288cc0489b4b15e286fc973f209ec6bd75569",
+      "railsystem/verify_cli.py": "179125b2b4ad0a706a06c8bb038f1ba47c7153ce75dca2d2f22c0be30defc1e8",
+      "requirements/registry.json": "0981c15cb964adf21c1e3b6fb7711f8be867da5334bea5bb1254eb67337a531b",
+      "safety/hazards.json": "5d61994762ccbe3b5437754f2fc8a6790321c9267c49874b0965cb1bbd6113ed",
+      "tests/test_anchored_admission.py": "42dc5430e614681129d09b367926177ae0b3376033f58058ef4b0403b2bbe7f4",
+      "tests/test_architecture.py": "385a628f53efd98841f7238c1255ad9856abeceacd564ad38c592a1f05b1418c",
+      "tests/test_atomic_startup.py": "610913c1d41191cb1e8fb78f67016ea62708a64685da114affcca0ae43ad5097",
+      "tests/test_contracts.py": "600c8e739023414913c9357d32d26c349aa153ac29220c97ffe73e0ad9acc33d",
+      "tests/test_integration.py": "c556b58053dfc88faffffea44bd61363ac7e477bacd035e4f8325354c8d5c0a9",
+      "tests/test_lifecycle_fencing.py": "1bb95bf7a4a967863c5851264b88cfee39c94f94738f510c224084b0ed6dc3ce",
+      "tests/test_lifecycle_lock_009.py": "94e1df4c6d0bd2fa8a2aed3eae0cb341bd53c17706363b599eb0c965289d6b01",
+      "tests/test_operations.py": "33c5be8a13d93c57ab0511faaa9fa9dddb2f974bb817e1a721dfefbb9d61993d",
+      "tests/test_privileged_recovery.py": "9f9ad1e347f2a504edb0c56929c9ff603bdbf3f45d7b9b3887b04856708fd64e",
+      "tests/test_production_fencing.py": "30f0aadee1382efaa83a715c676b0a3cc429b5f48f034ba46d61ccbe39134ed0",
+      "tests/test_provenance.py": "bd5a5aeadffb6a006c8f5aa8f37c57501e740c0bf5a421a166c5d60a06592f29",
+      "tests/test_recovery_boundary.py": "35863a4a6da7f753e11678ec5e3f63fcd2a1f573cb6dfdb65a6642a78eb176ae",
+      "tests/test_recovery_broker.py": "a04dfa8d0c7c6953b9019087c6ec2cf576223465c2b51edc9ff36fa6bb397509",
+      "tests/test_release_gate.py": "e81e87c316e820bb5dc8c18b73f376d08abc82944276511309c1f2b239db65b4",
+      "tests/test_requirements.py": "48dcaed816f4f7c56c606738a9e6a75481d76c2ffab182a56c93afb35cb5f5de",
+      "tests/test_safety.py": "c468ce897d9551b941cf324ac0cdc361b2635b461bd2f798e1acb5f41e30b02c",
+      "tests/test_simulation.py": "64d63506bb27ce0216fdae2f9b50e7f984b86f59f372d1c583bf1ee92f38e85e",
+      "tests/test_trust.py": "4d71de4729282aef8cbf42d23e4f3b42c037715c4d140822a55517c6c3f01c2e",
+      "tests/test_trusted_admission.py": "3bc1b98bfa0bed9db5d4079dbd582c77fcfd04d6243b33dfd7c55e5d466c74a5",
+      "tests/test_unified_admission.py": "e3eee2c87795f6fd47dbfb8456a0a2664d6f2feaed7a617fd883f1d2fcaa3868",
+      "tests/test_verification.py": "7898e9abb280d0b5cf2a1e53148ad531ca97b46c750585db6590c1778fd840d7"
+    }
+  },
+  "stage": "RAIL-TRUST-011",
+  "stage_status": "PARTIAL",
+  "stage_test_registry": {
+    "RAIL-ARCH-001": [
+      "test_architecture.py",
+      "test_contracts.py"
+    ],
+    "RAIL-CI-001": [
+      "test_release_gate.py"
+    ],
+    "RAIL-EVID-001": [
+      "test_provenance.py"
+    ],
+    "RAIL-IF-001": [
+      "test_integration.py"
+    ],
+    "RAIL-OPS-001": [
+      "test_operations.py"
+    ],
+    "RAIL-REQ-001": [
+      "test_requirements.py"
+    ],
+    "RAIL-SAFE-001": [
+      "test_safety.py"
+    ],
+    "RAIL-SIM-001": [
+      "test_simulation.py"
+    ],
+    "RAIL-TRUST-001": [
+      "test_trust.py"
+    ],
+    "RAIL-TRUST-002": [
+      "test_trusted_admission.py"
+    ],
+    "RAIL-TRUST-003": [
+      "test_anchored_admission.py"
+    ],
+    "RAIL-TRUST-004": [
+      "test_production_fencing.py"
+    ],
+    "RAIL-TRUST-005": [
+      "test_unified_admission.py"
+    ],
+    "RAIL-TRUST-006": [
+      "test_recovery_boundary.py"
+    ],
+    "RAIL-TRUST-007": [
+      "test_atomic_startup.py"
+    ],
+    "RAIL-TRUST-008": [
+      "test_lifecycle_fencing.py"
+    ],
+    "RAIL-TRUST-009": [
+      "test_lifecycle_lock_009.py"
+    ],
+    "RAIL-TRUST-010": [
+      "test_recovery_broker.py"
+    ],
+    "RAIL-TRUST-011": [
+      "test_privileged_recovery.py"
+    ],
+    "RAIL-VER-001": [
+      "test_verification.py"
+    ]
+  },
+  "test_results": {
+    "full_regression_count": 3,
+    "new_tests": 17,
+    "prior_tests": 241,
+    "run_records": [
+      {
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "elapsed_seconds": 2.8705,
+        "report": "RailSystem_v0.21_regression_1.txt",
+        "report_sha256": "63a0c5cf90db8e234c6fc36582e251b230177d66a088c1dc9390453db5b14d95",
+        "result": "OK",
+        "returncode": 0,
+        "run": 1,
+        "stderr_sha256": "460ef6ac220bb03de44a03f97054cbe7cbbf48d8f8fde2130ca45e11fb886e90",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests_run": 258,
+        "timed_out": false
+      },
+      {
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "elapsed_seconds": 2.4044,
+        "report": "RailSystem_v0.21_regression_2.txt",
+        "report_sha256": "f0bf9c192dc9a7049b8ea7302faee4dbd6633dff8645b08916094bee0daaa33d",
+        "result": "OK",
+        "returncode": 0,
+        "run": 2,
+        "stderr_sha256": "049d8ec465180af0f77e56bdcce7f3b91471b3992a40d9533365888abf131fcb",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests_run": 258,
+        "timed_out": false
+      },
+      {
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "elapsed_seconds": 2.588,
+        "report": "RailSystem_v0.21_regression_3.txt",
+        "report_sha256": "bd7a7916810df1afa521c93fe961f8f55be95f59b25ac81966bb30e08c521dde",
+        "result": "OK",
+        "returncode": 0,
+        "run": 3,
+        "stderr_sha256": "81791c3054e2e32aa528a81a6470a5dd1c5379fc861174fd112b595b6c9d0275",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests_run": 258,
+        "timed_out": false
+      }
+    ],
+    "skip_count": 0,
+    "status": "PASS",
+    "total_test_executions": 774,
+    "unique_tests": 258,
+    "warning_policy": [
+      "ResourceWarning=error",
+      "DeprecationWarning=error"
+    ]
+  },
+  "test_scope_limits": [
+    "SIGKILL is real and forked; external CAS and permit ledger are same-host test-file doubles, NOT remote/hardware trust stores",
+    "No independent monotonic provider, hardware witness, power-fail simulation, or production watchdog",
+    "Cross UID checks exercise root-host lab permissions, NOT a deployed dedicated non-root service manager",
+    "Legacy Python APIs callable by service owner; OS enforced fencing across every production entrypoint not proven",
+    "An external consumed permit may remain burned if crash occurs before SQLite commit; new permit needed"
+  ],
+  "title": "Privileged Recovery Broker & Durable Permit Consumption",
+  "verified_software_properties": [
+    "Source contents of v0.20 preserved and 17 new tests registered in cumulative suite",
+    "Linux SO_PEERCRED with real different client UIDs and closed state directory",
+    "Kernel group-gated 0750 directory and 0660 socket; strict UID allowlist",
+    "Broker fails closed with unavailable/malformed anchor or independent permit ledger",
+    "One-use permit check occurs before local anchor/SQLite commit in broker path",
+    "Shared lifecycle lock without recursive flock in broker -> recovery",
+    "Real SIGKILL test crash-point matrix and stale socket fail-closed behavior",
+    "Local rollback of permit table does not undo separately stored test-double consumed marker"
+  ]
+}

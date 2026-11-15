@@ -1,0 +1,16 @@
+# NOT FUNCTIONAL WITHOUT A SEPARATELY PROVIDED, independently protected CAS backend.
+# Do not install unless an independently assessed executable and durable storage exist.
+[Unit]
+Description=External independent RailSystem monotonic witness (UNPROVISIONED)
+[Service]
+Type=simple
+User=rail-witness
+Group=rail-ipc
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+CapabilityBoundingSet=
+RuntimeDirectory=railsystem-witness
+RuntimeDirectoryMode=0750
+ExecStart=/usr/local/libexec/railsystem-independent-witness
+Restart=no

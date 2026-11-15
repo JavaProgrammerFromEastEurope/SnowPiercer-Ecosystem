@@ -1,0 +1,23 @@
+test_client_cannot_read_witness_and_permit_databases (test_isolated_authorities_014.IsolatedAuthorityTests.test_client_cannot_read_witness_and_permit_databases) ... ok
+test_concurrent_cas_exactly_one_success (test_isolated_authorities_014.IsolatedAuthorityTests.test_concurrent_cas_exactly_one_success) ... ok
+test_duplicate_provision_denied (test_isolated_authorities_014.IsolatedAuthorityTests.test_duplicate_provision_denied) ... ok
+test_durable_consumption_survives_sigkill (test_isolated_authorities_014.IsolatedAuthorityTests.test_durable_consumption_survives_sigkill) ... ok
+test_kill_during_ledger_after_commit_consumed (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_ledger_after_commit_consumed) ... ok
+test_kill_during_ledger_before_commit_not_consumed (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_ledger_before_commit_not_consumed) ... ok
+test_kill_during_witness_after_commit_persists_without_reply (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_witness_after_commit_persists_without_reply) ... ok
+test_kill_during_witness_before_commit_rollback (test_isolated_authorities_014.IsolatedAuthorityTests.test_kill_during_witness_before_commit_rollback) ... ok
+test_local_store_rollback_remains_unsolved (test_isolated_authorities_014.IsolatedAuthorityTests.test_local_store_rollback_remains_unsolved) ... ok
+test_not_autoprovisioned_after_database_removed (test_isolated_authorities_014.IsolatedAuthorityTests.test_not_autoprovisioned_after_database_removed) ... ok
+test_symlink_database_denied_without_publication (test_isolated_authorities_014.IsolatedAuthorityTests.test_symlink_database_denied_without_publication) ... ok
+test_two_independent_uid_services_and_clients (test_isolated_authorities_014.IsolatedAuthorityTests.test_two_independent_uid_services_and_clients) ... ok
+test_unauthorized_uid_denied_by_kernel_peercred (test_isolated_authorities_014.IsolatedAuthorityTests.test_unauthorized_uid_denied_by_kernel_peercred) ... ok
+test_witness_persists_sigkill_and_rejects_replay (test_isolated_authorities_014.IsolatedAuthorityTests.test_witness_persists_sigkill_and_rejects_replay) ... ok
+test_production_cli_fails_closed_even_with_fake_providers (test_isolated_authorities_014.OSProductionGuardTests.test_production_cli_fails_closed_even_with_fake_providers) ... RAIL-TRUST-013 BLOCKED: DeploymentDenied
+RAIL-TRUST-012 BLOCKED: DeploymentDenied
+ok
+test_same_uid_legacy_and_monotonic_root_not_attested (test_isolated_authorities_014.OSProductionGuardTests.test_same_uid_legacy_and_monotonic_root_not_attested) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.343s
+
+OK

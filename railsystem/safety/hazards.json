@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "stage": "RAIL-SAFE-001",
+  "hazards": [
+    {
+      "id": "RAIL-HAZ-0001",
+      "title": "Unintended movement authority",
+      "component": "traffic",
+      "cause": "Incorrect planning output is interpreted as permission to move",
+      "consequence": "Potential collision or derailment",
+      "severity": "catastrophic",
+      "likelihood": "unknown",
+      "detection": "Contract boundary inspection",
+      "controls": [
+        "Independent authority boundary; reject advisory command paths"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0007"
+      ],
+      "owner_role": "safety engineering",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    },
+    {
+      "id": "RAIL-HAZ-0002",
+      "title": "Unsafe interlocking dependency",
+      "component": "signaling_safety",
+      "cause": "AI advice bypasses interlocking decision",
+      "consequence": "Conflicting train movements",
+      "severity": "catastrophic",
+      "likelihood": "unknown",
+      "detection": "Architecture review",
+      "controls": [
+        "Independent interlocking; no AI actuation"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0008"
+      ],
+      "owner_role": "signaling safety",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    },
+    {
+      "id": "RAIL-HAZ-0003",
+      "title": "Unexpected traction or brake actuation",
+      "component": "traction_braking",
+      "cause": "Software abstraction exposes live actuator control",
+      "consequence": "Loss of speed control",
+      "severity": "catastrophic",
+      "likelihood": "unknown",
+      "detection": "Interface inspection",
+      "controls": [
+        "No hardware actuation in initial scope"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0009"
+      ],
+      "owner_role": "rolling stock safety",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    },
+    {
+      "id": "RAIL-HAZ-0004",
+      "title": "Digital twin leakage into operations",
+      "component": "digital_twin",
+      "cause": "Simulation messages routed to production",
+      "consequence": "Unintended operational command",
+      "severity": "critical",
+      "likelihood": "unknown",
+      "detection": "Isolation test plan",
+      "controls": [
+        "Isolated simulation transport and credentials"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0011"
+      ],
+      "owner_role": "simulation safety",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    },
+    {
+      "id": "RAIL-HAZ-0005",
+      "title": "Unsafe external control interface",
+      "component": "signaling_safety",
+      "cause": "Untrusted integration requests actuation",
+      "consequence": "Unsafe infrastructure action",
+      "severity": "critical",
+      "likelihood": "unknown",
+      "detection": "Contract test plan",
+      "controls": [
+        "Reject all actuation requests by default"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0003"
+      ],
+      "owner_role": "interface safety",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    },
+    {
+      "id": "RAIL-HAZ-0006",
+      "title": "Stale or ambiguous rolling-stock telemetry",
+      "component": "rolling_stock",
+      "cause": "Missing provenance or timestamp",
+      "consequence": "Incorrect advisory decisions",
+      "severity": "critical",
+      "likelihood": "unknown",
+      "detection": "Telemetry unit test plan",
+      "controls": [
+        "Source and timestamp validation; do not use for authority"
+      ],
+      "requirement_ids": [
+        "RAIL-REQ-0006",
+        "RAIL-REQ-0007"
+      ],
+      "owner_role": "vehicle systems",
+      "status": "open",
+      "closure_evidence": [],
+      "operational_authorization": false
+    }
+  ]
+}

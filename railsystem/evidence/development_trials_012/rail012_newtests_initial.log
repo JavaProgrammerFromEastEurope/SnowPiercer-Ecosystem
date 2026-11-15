@@ -1,0 +1,17 @@
+test_config_tamper_and_missing_credential_denied (test_os_boundary_012.Boundary012Tests.test_config_tamper_and_missing_credential_denied) ... ok
+test_four_uid_schema_rejects_collision_root_or_wrong_owner (test_os_boundary_012.Boundary012Tests.test_four_uid_schema_rejects_collision_root_or_wrong_owner) ... ok
+test_providers_required_at_startup_and_absence_blocks (test_os_boundary_012.Boundary012Tests.test_providers_required_at_startup_and_absence_blocks) ... ok
+test_real_four_uid_recovery_and_isolation (test_os_boundary_012.Boundary012Tests.test_real_four_uid_recovery_and_isolation) ... ok
+test_service_sigkill_stale_socket_blocks_restart (test_os_boundary_012.Boundary012Tests.test_service_sigkill_stale_socket_blocks_restart) ... ok
+test_uid_legacy_direct_access_denied (test_os_boundary_012.Boundary012Tests.test_uid_legacy_direct_access_denied) ... ok
+test_cas_success_and_rollback_rejected (test_provider_ipc_012.ProviderIPC012Tests.test_cas_success_and_rollback_rejected) ... ok
+test_invalid_contract_denied (test_provider_ipc_012.ProviderIPC012Tests.test_invalid_contract_denied) ... ok
+test_ledger_replay (test_provider_ipc_012.ProviderIPC012Tests.test_ledger_replay) ... ok
+test_unavailable_provider_fails_closed (test_provider_ipc_012.ProviderIPC012Tests.test_unavailable_provider_fails_closed) ... ok
+test_unsafe_path_and_symlink_denied (test_provider_ipc_012.ProviderIPC012Tests.test_unsafe_path_and_symlink_denied) ... ok
+test_wrong_peer_uid_denied (test_provider_ipc_012.ProviderIPC012Tests.test_wrong_peer_uid_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.232s
+
+OK

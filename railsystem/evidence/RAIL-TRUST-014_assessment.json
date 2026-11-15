@@ -1,0 +1,14 @@
+{
+  "end_to_end_proven": false,
+  "independent_monotonic_root": false,
+  "physical_operation": "NO-GO",
+  "production_release": "BLOCKED",
+  "reason": "local SQLite providers not rollback resistant, same UID legacy access and service manager not isolated",
+  "safety_certified": false,
+  "same_uid_legacy_os_fenced": false,
+  "service_manager_operational": false,
+  "software_regressions": "3 * 310 PASS, zero final FAIL",
+  "stage": "RAIL-TRUST-014",
+  "status": "PARTIAL",
+  "version": "v0.24"
+}

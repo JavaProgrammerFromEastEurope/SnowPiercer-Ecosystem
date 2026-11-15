@@ -1,0 +1,183 @@
+{
+  "cumulative_tests": 335,
+  "date_utc": "2026-11-15T09:54:43.590760+00:00",
+  "evidence_scope": "local Linux test environment; cannot independently certify OS/HSM/physical safety",
+  "known_hazards": [
+    "remote independent root true durable monotonic CAS over host-wide snapshot rollback",
+    "independent consumed-permit custody after whole-host rollback",
+    "MAC/LSM denial of direct writes by arbitrary same-service-UID code",
+    "service-manager controlled SIGKILL restart and reconciliation in deployed environment",
+    "power-loss and storage device durability tests",
+    "every instruction-level SQLite/CAS/IPC transition in a production environment",
+    "full credentials, socket and file substitution with external production authority"
+  ],
+  "legacy_bypass": "OPEN for same-UID library invocations; production CLI fail closed",
+  "mac_status": "no enforceable independently verified same UID LSM policy",
+  "modified_previous_files": [
+    "railsystem/README.md",
+    "railsystem/railsystem/os_managed_fencing.py",
+    "railsystem/railsystem/release_cli.py",
+    "railsystem/railsystem/verification.py"
+  ],
+  "new_test_modules": [
+    "test_monotonic_root_015.py",
+    "test_mac_fencing_015.py"
+  ],
+  "new_tests": 25,
+  "os_management_probe": {
+    "blockers": [
+      "independently audited monotonic root not connected",
+      "no verified MAC/LSM policy denying same-UID legacy writes",
+      "no deployed independent service-manager lifecycle evidence",
+      "no independently protected durable permit custody",
+      "no independently verified end-to-end crash/rollback matrix"
+    ],
+    "dedicated_systemd_pid1": false,
+    "durable_permit_custody_verified": false,
+    "effective_capabilities": "00000000800405fb",
+    "independent_monotonic_root_proven": false,
+    "independent_service_manager_verified": false,
+    "lsm_inventory": null,
+    "lsm_label": "kernel",
+    "mac_profile_proven": false,
+    "no_new_privileges": "0",
+    "pid1": "supervisord",
+    "reason": "independently audited monotonic root not connected; no verified MAC/LSM policy denying same-UID legacy writes; no deployed independent service-manager lifecycle evidence; no independently protected durable permit custody; no independently verified end-to-end crash/rollback matrix",
+    "same_uid_legacy_fenced": false,
+    "scope": "diagnostic only; no authorization from /proc or self-attestation",
+    "seccomp_mode": "0",
+    "status": "BLOCKED"
+  },
+  "physical_operation": "NO-GO",
+  "preserved_byte_identical": 175,
+  "prior_artifact": "RailSystem_v0.24_RAIL-TRUST-014.zip",
+  "prior_entries": 179,
+  "prior_tests_reported": 310,
+  "production_release": "BLOCKED",
+  "provider_status": "previous SQLite laboratory services; no independent nonrollbackable production providers",
+  "root_protocol": "cryptographic quote verification only; no actual remote/HSM root",
+  "stage": "RAIL-TRUST-015",
+  "stage_status": "PARTIAL",
+  "three_strict_regressions": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "duration_seconds": 6.757,
+      "exit_code": 0,
+      "files": {
+        "stderr": {
+          "bytes": 36161,
+          "path": "RailSystem_v0.25_regression_1_stderr.txt",
+          "sha256": "16f374c69e635f645e48ebf1d0e7ec3e7ffd021510281aa66f4f078ce99ca8f5"
+        },
+        "stdout": {
+          "bytes": 44,
+          "path": "RailSystem_v0.25_regression_1_stdout.txt",
+          "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+        }
+      },
+      "python": "3.13.5",
+      "run": 1,
+      "started_at_utc": "2026-11-15T09:51:49.237660+00:00",
+      "status": "PASS",
+      "tests_expected": 335,
+      "tests_observed": 335,
+      "timed_out": false,
+      "timeout_seconds": 90,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "duration_seconds": 6.783,
+      "exit_code": 0,
+      "files": {
+        "stderr": {
+          "bytes": 36161,
+          "path": "RailSystem_v0.25_regression_2_stderr.txt",
+          "sha256": "2b98ecc1e43a5a58facd22fda533151fedb5deb1b55ba32cd5d1fb9103109635"
+        },
+        "stdout": {
+          "bytes": 44,
+          "path": "RailSystem_v0.25_regression_2_stdout.txt",
+          "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+        }
+      },
+      "python": "3.13.5",
+      "run": 2,
+      "started_at_utc": "2026-11-15T09:51:55.995534+00:00",
+      "status": "PASS",
+      "tests_expected": 335,
+      "tests_observed": 335,
+      "timed_out": false,
+      "timeout_seconds": 90,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "duration_seconds": 6.307,
+      "exit_code": 0,
+      "files": {
+        "stderr": {
+          "bytes": 36161,
+          "path": "RailSystem_v0.25_regression_3_stderr.txt",
+          "sha256": "4208dfabf86f5725b170bab21e14e202b0b8f2d00a2e0ec7f29edb06b800e69f"
+        },
+        "stdout": {
+          "bytes": 44,
+          "path": "RailSystem_v0.25_regression_3_stdout.txt",
+          "sha256": "88aa9c95ffba346597526fbe44326403e7486ed1349f079ef36b90f70394fc96"
+        }
+      },
+      "python": "3.13.5",
+      "run": 3,
+      "started_at_utc": "2026-11-15T09:52:02.779168+00:00",
+      "status": "PASS",
+      "tests_expected": 335,
+      "tests_observed": 335,
+      "timed_out": false,
+      "timeout_seconds": 90,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "title": "Independent Monotonic Root & Verified MAC Confinement",
+  "total_test_executions": 1005,
+  "version": "v0.25"
+}

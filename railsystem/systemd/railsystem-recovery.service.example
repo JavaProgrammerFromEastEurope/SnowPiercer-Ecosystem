@@ -1,0 +1,41 @@
+# EXAMPLE ONLY; NOT INSTALLED OR ACTIVATED BY THIS STAGE.
+# Requires four operator-provisioned distinct non-root users and independent
+# witness/permit services. With no providers the command exits BLOCKED (2).
+[Unit]
+Description=SnowPiercer RailSystem recovery broker - NOT rail actuation
+After=network.target railsystem-witness.service railsystem-permits.service
+Requires=railsystem-witness.service railsystem-permits.service
+
+[Service]
+Type=simple
+User=rail-service
+Group=rail-ipc
+WorkingDirectory=/opt/railsystem
+Environment=PYTHONPATH=/opt/railsystem
+LoadCredential=production.json:/etc/railsystem/production.json
+LoadCredential=recovery-permit.json:/etc/railsystem/recovery-permit.json
+LoadCredential=recovery-public.key:/etc/railsystem/recovery-public.key
+ExecStart=/usr/bin/python3 -m railsystem.service_runtime --config ${CREDENTIALS_DIRECTORY}/production.json
+Restart=no
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=
+AmbientCapabilities=
+ReadWritePaths=/var/lib/railsystem /run/railsystem-recovery
+StateDirectory=railsystem
+StateDirectoryMode=0700
+RuntimeDirectory=railsystem-recovery
+RuntimeDirectoryMode=0750
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "stage": "RAIL-REQ-001",
+  "requirements": [
+    {
+      "id": "RAIL-REQ-0001",
+      "statement": "Architecture inventory must have unique component IDs",
+      "category": "architecture",
+      "component": "rolling_stock",
+      "priority": "high",
+      "verification_method": "inspection",
+      "planned_stage": "RAIL-ARCH-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0002",
+      "statement": "All architecture dependencies must resolve and be acyclic",
+      "category": "architecture",
+      "component": "infrastructure",
+      "priority": "high",
+      "verification_method": "automated_test",
+      "planned_stage": "RAIL-ARCH-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0003",
+      "statement": "External integrations must reject actuation in the initial boundary",
+      "category": "safety",
+      "component": "signaling_safety",
+      "priority": "critical",
+      "verification_method": "automated_test",
+      "planned_stage": "RAIL-ARCH-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0004",
+      "statement": "TrainOS integration must define versioned authentication and audit contracts",
+      "category": "integration",
+      "component": "operations",
+      "priority": "high",
+      "verification_method": "contract_test",
+      "planned_stage": "RAIL-IF-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0005",
+      "statement": "Track topology must represent assets with stable identifiers",
+      "category": "functional",
+      "component": "infrastructure",
+      "priority": "high",
+      "verification_method": "simulation_test",
+      "planned_stage": "RAIL-SIM-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0006",
+      "statement": "Rolling stock telemetry models must identify source and timestamp",
+      "category": "functional",
+      "component": "rolling_stock",
+      "priority": "high",
+      "verification_method": "unit_test",
+      "planned_stage": "RAIL-SIM-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0007",
+      "statement": "Traffic planning must not grant movement authority",
+      "category": "safety",
+      "component": "traffic",
+      "priority": "critical",
+      "verification_method": "safety_review",
+      "planned_stage": "RAIL-SAFE-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0008",
+      "statement": "Safety interlocking must remain independent of advisory AI",
+      "category": "safety",
+      "component": "signaling_safety",
+      "priority": "critical",
+      "verification_method": "safety_review",
+      "planned_stage": "RAIL-SAFE-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0009",
+      "statement": "Traction and braking abstractions must not actuate hardware",
+      "category": "safety",
+      "component": "traction_braking",
+      "priority": "critical",
+      "verification_method": "contract_test",
+      "planned_stage": "RAIL-IF-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0010",
+      "statement": "Maintenance events must be traceable to an asset",
+      "category": "functional",
+      "component": "maintenance",
+      "priority": "medium",
+      "verification_method": "unit_test",
+      "planned_stage": "RAIL-OPS-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0011",
+      "statement": "Digital twin must run isolated from operational command paths",
+      "category": "safety",
+      "component": "digital_twin",
+      "priority": "critical",
+      "verification_method": "integration_test",
+      "planned_stage": "RAIL-SIM-001",
+      "status": "proposed",
+      "verification_evidence": []
+    },
+    {
+      "id": "RAIL-REQ-0012",
+      "statement": "Operations must retain auditable operator action records",
+      "category": "quality",
+      "component": "operations",
+      "priority": "high",
+      "verification_method": "integration_test",
+      "planned_stage": "RAIL-OPS-001",
+      "status": "proposed",
+      "verification_evidence": []
+    }
+  ]
+}

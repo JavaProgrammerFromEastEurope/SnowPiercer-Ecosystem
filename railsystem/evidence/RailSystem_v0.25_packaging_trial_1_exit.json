@@ -1,0 +1,1 @@
+{"stage":"RAIL-TRUST-015","operation":"packaging_trial_1","exit_code":1,"status":"FAIL","reason":"log parser assumed no interleaved stderr from nested tests"}
