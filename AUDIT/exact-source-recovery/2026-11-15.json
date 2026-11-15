@@ -1,0 +1,104 @@
+{
+  "schema": "snowpiercer.orchestrator.exact-source-recovery/1",
+  "audit_date_utc": "2026-11-15",
+  "task": "Exact Source Recovery & Complete Module Enrollment (no numeric Stage)",
+  "repository": "JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem",
+  "default_branch": "SnowPiercer-Development-Orchestrator",
+  "default_head_before_audit": "b76eaf0e9b59d0206194dde8f9b4ed3bbd205770",
+  "overall_decision": "BLOCKED/NO-GO",
+  "source_import_commit_count": 0,
+  "new_functional_stage_count": 0,
+  "module_branch_force_push": false,
+  "tests_executed_for_requested_sources": 0,
+  "gate_policy": "Obtain original release ZIP bytes and independently verify SHA-256, archive integrity, exact version, safe paths, file manifests and strict regressions before fast-forward Git CAS publication.",
+  "modules": {
+    "trainos": {
+      "target_release": "TrainOS v107",
+      "branch": "module/trainos",
+      "observed_head": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+      "library_path": "/SnowPiercer/TrainOS-v107-source.zip",
+      "library_file_id": "file_00000000f37481f4908b22ad9f100313",
+      "listed_zip_size_bytes": 11495800,
+      "published_checksum_sha256": "661c0346721f7aa3ace1572430f4259d78bba722c3c4eab540de05eaa36ac284",
+      "published_checksum_provenance": "/SnowPiercer/TrainOS-v107-source.sha256",
+      "source_sha256_independently_recomputed": false,
+      "raw_bytes_access": "DENIED: This Project file does not have an authorized raw-byte materialization path.",
+      "zip_integrity": "NOT_RUN",
+      "manifest_reconciliation": "NOT_RUN",
+      "strict_regression": "NOT_RUN_ON_REQUESTED_SOURCE",
+      "import_status": "SOURCE_BLOCKED",
+      "historical_release_assessment": "Stored TrainOS v107 assessment states strict_full: 6 attempts/3 PASS/3 FAIL; combined: 3 PASS; runner results include complete serial and 4-worker runs, with one earlier batch failure. This is secondary release evidence, not a verified run during this audit."
+    },
+    "rail_system": {
+      "target_release": "RAIL-TRUST-016",
+      "branch": "module/rail-system",
+      "observed_head": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+      "exact_source_zip": "NOT_FOUND_IN_CHECKED_LIBRARY",
+      "older_source_candidate": "/SnowPiercer/RailSystem_v0.25_RAIL-TRUST-015.zip",
+      "source_substitution_permitted": false,
+      "source_sha256_independently_recomputed": false,
+      "zip_integrity": "NOT_RUN",
+      "manifest_reconciliation": "NOT_RUN",
+      "strict_regression": "NOT_RUN_ON_REQUESTED_SOURCE",
+      "import_status": "SOURCE_BLOCKED"
+    },
+    "island": {
+      "target_release": "ISLAND-GEO-022",
+      "branch": "module/island",
+      "observed_head": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+      "library_path": "/SnowPiercer/SnowPiercer-Island-v0.23.0-ISLAND-GEO-022.zip",
+      "library_file_id": "file_00000000afb881f495c6871a817cb09b",
+      "listed_zip_size_bytes": 591028,
+      "source_sha256_independently_recomputed": false,
+      "raw_bytes_access": "DENIED: This Project file does not have an authorized raw-byte materialization path.",
+      "zip_integrity": "NOT_RUN",
+      "manifest_reconciliation": "NOT_RUN",
+      "strict_regression": "NOT_RUN_ON_REQUESTED_SOURCE",
+      "import_status": "SOURCE_BLOCKED"
+    }
+  },
+  "git_lineage": {
+    "baseline_commit": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+    "branch_heads_verified_via_git_refs": true,
+    "pending_branches_match_baseline": [
+      "module/trainos",
+      "module/rail-system",
+      "module/island"
+    ],
+    "already_imported": {
+      "module/energy": {
+        "commit": "30cea21f3c91edfa52261f3fc7135d4d2a206aea",
+        "parent": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+        "release": "ENERGY-CORE-020"
+      },
+      "module/ai-cognition": {
+        "commit": "35344d9ad0cd06ba2e244d09ff026169dbce923e",
+        "parent": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+        "release": "AI-CORE-021"
+      },
+      "module/life-support": {
+        "commit": "6d7629627ab4dd56dfcd51e5a991912cd5e5eed0",
+        "parent": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+        "release": "LIFE-CORE-021"
+      },
+      "module/logistics": {
+        "commit": "686fbe5ec001fa8a38849c374cf6b11b48f03104",
+        "parent": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+        "release": "LOG-CORE-021"
+      }
+    },
+    "signature_status": "Four imported commits were unsigned; Git lineage is verified, signer identity is not cryptographically verified."
+  },
+  "evidence_scope": "GitHub API commit/ref metadata, ChatGPT Library filename and checksum text, materialization denial. No release ZIP bytes, no live source regressions or production e2e.",
+  "production_status": "BLOCKED/NO-GO",
+  "admission_requirements": [
+    "Original raw ZIP bytes for exact three target releases",
+    "Independently calculated source ZIP SHA-256 matching trusted manifest",
+    "Safe extraction (CRC, limits, path traversal, symlinks, duplicates, file types)",
+    "Diff/reconciliation to manifest, version and cumulative history",
+    "Three strict source regressions with stdout/stderr/exit codes and failures preserved",
+    "Create fast-forward-only child commit with the previous branch HEAD as parent",
+    "Git update_ref with expected_sha and force=false, verify new refs and parent after publication"
+  ],
+  "not_a_new_stage": true
+}
