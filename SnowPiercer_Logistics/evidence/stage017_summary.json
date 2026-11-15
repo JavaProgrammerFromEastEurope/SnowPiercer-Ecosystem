@@ -1,0 +1,27 @@
+{
+  "stage": "LOG-CORE-017",
+  "version": "0.17.0",
+  "regressions": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "summary": "80 passed, 4 subtests passed in 26.16s"
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "summary": "80 passed, 4 subtests passed in 26.44s"
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "summary": "80 passed, 4 subtests passed in 25.82s"
+    }
+  ],
+  "production": "BLOCKED/NO-GO",
+  "limitations": [
+    "no integrated four UID E2E",
+    "no exhaustive SIGKILL matrix",
+    "no OS-enforced legacy fencing"
+  ]
+}

@@ -1,0 +1,4 @@
+# Architecture
+Client -> Unix-domain Logistics socket (kernel peer UID) -> ClientBoundLogisticsService -> independent Unix-domain ClientBoundPermitAuthority (kernel verifies service UID) -> SQLite BEGIN IMMEDIATE / conditional UPDATE / COMMIT.
+Operator issues a random 256-bit permit for an explicit client UID and scope. Authority persists only SHA-256 digest. Authority validates its peer as operator for issuance and service for consumption. Service checks its client's role and local consistency before consumption. No automatic repair of SQLite/checkpoint/witness mismatches.
+The authority relies on the service to truthfully forward kernel-derived client UID. Separate UID deployment, directory permissions, MAC policy and privilege separation are not supplied by this Python module. Existing legacy APIs remain callable for compatibility, so mandatory production fencing is NOT established.

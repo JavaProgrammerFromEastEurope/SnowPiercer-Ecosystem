@@ -1,0 +1,33 @@
+{
+  "regressions": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "test_summary": [
+        "Ran 23 tests in 3.360s",
+        "OK"
+      ],
+      "warning_mentions": []
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "test_summary": [
+        "Ran 23 tests in 3.364s",
+        "OK"
+      ],
+      "warning_mentions": []
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "test_summary": [
+        "Ran 23 tests in 3.337s",
+        "OK"
+      ],
+      "warning_mentions": []
+    }
+  ],
+  "scope": "local Linux same UID; one SIGKILL postcommit test; not exhaustive",
+  "production": "NO-GO"
+}

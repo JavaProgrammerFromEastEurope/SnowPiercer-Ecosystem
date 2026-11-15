@@ -1,0 +1,2 @@
+# Safety analysis and NO-GO
+Confirmed only: local rejection of invalid deployment layouts and socket conditions, plus inherited regression behavior. Not confirmed: cross-UID E2E, independent client UID attestation, mandatory production IPC, OS-enforced legacy fencing, rollback-to-genesis resistance, exhaustive SIGKILL crash windows, privileged adversaries, inherited file descriptors, and filesystem TOCTOU. Do not enable production. Status BLOCKED/NO-GO.

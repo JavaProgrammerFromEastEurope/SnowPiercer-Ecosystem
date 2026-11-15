@@ -1,0 +1,38 @@
+{
+  "stage": "LOG-CORE-020",
+  "version": "0.20.0",
+  "production": "BLOCKED/NO-GO",
+  "pytest_full": [
+    {
+      "run": 1,
+      "passed": true
+    },
+    {
+      "run": 2,
+      "passed": true
+    },
+    {
+      "run": 3,
+      "passed": true
+    }
+  ],
+  "unittest_full": [
+    {
+      "run": 1,
+      "passed": true
+    },
+    {
+      "run": 2,
+      "passed": true
+    },
+    {
+      "run": 3,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "no integrated four UID transaction",
+    "no exhaustive SIGKILL",
+    "no OS enforced legacy fencing"
+  ]
+}

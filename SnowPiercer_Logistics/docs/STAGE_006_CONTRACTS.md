@@ -1,0 +1,2 @@
+# Stage 006 contracts
+`recover_after_witness_cas(root, witness_socket, *, permit, uid, permit_digest, witness_uid=None, timeout=2.0) -> dict` is experimental. `uid` must equal effective UID; `permit_digest` must match SHA256(permit); marker consumed before reconciliation. `witness_uid` is reserved and NOT enforced. Caller-supplied `permit_digest` does not authenticate an independent issuer. Existing package APIs are not modified.

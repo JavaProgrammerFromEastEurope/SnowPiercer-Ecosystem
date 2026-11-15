@@ -1,0 +1,7 @@
+$ python -W error::ResourceWarning -W error::DeprecationWarning -m unittest discover -s tests -q
+----------------------------------------------------------------------
+Ran 56 tests in 8.756s
+
+OK
+
+exit=0

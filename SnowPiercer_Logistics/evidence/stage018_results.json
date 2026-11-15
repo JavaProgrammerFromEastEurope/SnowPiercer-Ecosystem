@@ -1,0 +1,46 @@
+{
+  "stage": "LOG-CORE-018",
+  "production": "BLOCKED/NO-GO",
+  "pytest_passes": 3,
+  "pytest_tests_per_pass": 85,
+  "pytest_subtests_per_pass": 13,
+  "warning_policy": "error::ResourceWarning,error::DeprecationWarning",
+  "logs": [
+    {
+      "name": "stage018_pytest_1.log",
+      "bytes": 187,
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "name": "stage018_pytest_2.log",
+      "bytes": 187,
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "name": "stage018_pytest_3.log",
+      "bytes": 43,
+      "completed": false,
+      "result": "INTERRUPTED_BY_TOOL_TIMEOUT"
+    },
+    {
+      "name": "stage018_pytest_3_retry.log",
+      "bytes": 187,
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "name": "stage018_regression_1.log",
+      "bytes": 6835,
+      "completed": true,
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "No integrated four-UID E2E",
+    "No transaction boundary SIGKILL matrix",
+    "No OS-enforced legacy fencing",
+    "No rollback-to-genesis proof"
+  ]
+}

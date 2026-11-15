@@ -1,0 +1,2 @@
+# Stage 003 Contracts
+Existing public LogisticsLedger, SecureLogisticsService and request signatures remain unchanged. Phase file fields: before={events:int,head_hash:str}, key:str, uid:int. Recovery roll-forward is allowed only for a single committed event matching phase.key and previous anchor hash. No recovery permit is needed for automatic crash reconciliation; the existing IPC recover action merely consumes a permit and does not repair mismatches.

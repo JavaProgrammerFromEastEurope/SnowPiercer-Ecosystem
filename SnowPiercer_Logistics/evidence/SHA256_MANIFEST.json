@@ -1,0 +1,16 @@
+{
+  "README.md": "ba27bc8643f6757863017fe66f15fe487dc6e57a6ff0e9f18c0e3bb739597906",
+  "docs/ARCHITECTURE.md": "ec8d4121544f519770a152552f5ed7070000411db86f1b14215c031f6afb270d",
+  "docs/CONTRACTS.md": "355a5f925aed54446bb99c1889cb28dacfdc5c86f8392846acafecb56d14a845",
+  "docs/REQUIREMENTS.md": "2fcdcf27f31d4e10a673600f4c9b22750a675674c197959e6692d9bac098bc32",
+  "docs/SAFETY.md": "09d37ae410fe283b0ef38fe8a909fd5e0e2cdf5c415bf60b243c7cf5837cc600",
+  "evidence/RESULTS.json": "1e3c2a4e3b2ea01600eeaee2447d82ea5798603e18c6b72e00f71839ec04540f",
+  "evidence/regression_1.log": "9476a8e44925d28b29b96961d8723bef960eab4a4040450f8c81fd07ab5d592a",
+  "evidence/strict_regression_1.log": "8aa4c0d29e1c056aa13d54b62ee22036be506366d9bc7deba397af0a1b6a9d11",
+  "evidence/strict_regression_2.log": "5a9a981e9ebc155516b38608e47ea751234eecfc5069e908a66f58f9f6e797a9",
+  "evidence/strict_regression_3.log": "4ef45e30f64410ccaf0f78bcf132d78c88a5c03b489253e1a8fdb7ca9eec1e59",
+  "pyproject.toml": "c0c75810b1f0930564e546bc670ba16633333191cbbc02899edca5e15af549f1",
+  "snowpiercer_logistics/__init__.py": "b2f0a9fa8c1b3cc0ad4a8a7f50c5988dcb8431dcdfe6dce72c559329a14abe4a",
+  "snowpiercer_logistics/core.py": "abe15347299bd56d299151f2aadf317b3776c3bf43f2706d55b22adaf55b9304",
+  "tests/test_core.py": "db6f79721a4a744a2b76bf421489e12351ca4ad5e3d3e1192d336e8f99c10272"
+}

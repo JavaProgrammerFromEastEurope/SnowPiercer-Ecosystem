@@ -1,0 +1,28 @@
+{
+  "stage": "LOG-CORE-005",
+  "version": "0.5.0",
+  "regressions": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "test_count": 33,
+      "log": "stage005_strict_regression_1.log"
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "test_count": 33,
+      "log": "stage005_strict_regression_2.log"
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "test_count": 33,
+      "log": "stage005_strict_regression_3.log"
+    }
+  ],
+  "production": "BLOCKED/NO-GO",
+  "cross_uid_e2e": false,
+  "legacy_os_fencing": false,
+  "exhaustive_sigkill": false
+}

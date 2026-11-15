@@ -1,0 +1,23 @@
+{
+  "stage": "LOG-CORE-014",
+  "version": "0.14.0",
+  "status": "BLOCKED / NO-GO",
+  "regressions": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "summary": "69 passed, 4 subtests passed in 22.18s"
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "summary": "69 passed, 4 subtests passed in 21.91s"
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "summary": "69 passed, 4 subtests passed in 21.16s"
+    }
+  ],
+  "environment": "Linux root; test-only synthetic four-UID IPC"
+}

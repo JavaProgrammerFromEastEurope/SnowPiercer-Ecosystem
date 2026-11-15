@@ -1,0 +1,2 @@
+# Architecture
+Opt-in EvidenceGatedLogisticsService extends QuarantinedTransactionService. It samples the ledger checkpoint, local anchor, witness anchor and safe-read phase journal. Pure classify_recovery() returns a typed RecoveryDecision; only a fully matching triple without phase is COMMITTED. All incomplete transitions are quarantined; no reconciliation is attempted. The service inherits nonproduction IPC APIs. This is NOT an atomic commit protocol and NOT a four-UID orchestration harness. Check-then-use races and trust in witness transport remain.

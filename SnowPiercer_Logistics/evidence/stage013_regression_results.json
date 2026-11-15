@@ -1,0 +1,20 @@
+[
+  {
+    "run": 1,
+    "returncode": 0,
+    "summary": "STDERR:",
+    "warning_policy": "error::ResourceWarning,error::DeprecationWarning"
+  },
+  {
+    "run": 2,
+    "returncode": 0,
+    "summary": "STDERR:",
+    "warning_policy": "error::ResourceWarning,error::DeprecationWarning"
+  },
+  {
+    "run": 3,
+    "returncode": 0,
+    "summary": "66 passed, 4 subtests passed in 15.52s",
+    "warning_policy": "error::ResourceWarning,error::DeprecationWarning"
+  }
+]

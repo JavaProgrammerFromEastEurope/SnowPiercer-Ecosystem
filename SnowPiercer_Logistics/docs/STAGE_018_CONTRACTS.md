@@ -1,0 +1,2 @@
+# Contracts
+classify_recovery(ledger, checkpoint, witness, phase=None) -> RecoveryDecision. Each anchor has exactly {events:int>=0, head_hash:lowercase 64-hex}. Phase has exactly {before, key, uid}; invalid inputs raise AdmissionError. permitted is true only for COMMITTED. EvidenceGatedLogisticsService.recovery_decision() observes state; _assert_consistent() raises AdmissionError on quarantine; production_admission() always raises AdmissionError. No automatic repair, CAS, permit consumption or phase deletion is authorized by this Stage.

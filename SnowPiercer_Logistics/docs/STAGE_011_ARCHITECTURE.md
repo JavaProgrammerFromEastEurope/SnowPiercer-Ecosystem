@@ -1,0 +1,2 @@
+# Architecture
+Stage011 provides a non-mutating deployment preflight. `DeploymentLayout` binds trusted roots and socket paths to the Stage010 `IsolationPolicy`. `verify_deployment` checks expected UID, socket inode type, path placement, and permission bits. `verify_legacy_denied` is a non-privileged access-denial probe only. Legacy library APIs remain unchanged. These checks are not a mandatory production entrypoint and are subject to TOCTOU; no full OS isolation guarantee is claimed.

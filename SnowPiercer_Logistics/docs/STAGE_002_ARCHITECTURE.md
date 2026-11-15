@@ -1,0 +1,4 @@
+# LOG-CORE-002 Architecture
+Client -> AF_UNIX socket -> SO_PEERCRED/getpeereid -> UID-role mapping -> dispatch -> legacy LogisticsLedger -> SQLite WAL -> JSON checkpoint (fsync/rename/dir fsync).
+Private service root 0700 and socket 0600; service lock uses flock during startup. Each command serially handled in service loop. The SQLite transaction commits before checkpoint publication: if killed between these steps, subsequent startup detects a mismatch and refuses service. There is **no automatic reconciliation**. Offline recovery with independent trust witness is NOT implemented.
+Legacy direct LogisticsLedger is intentionally preserved for compatibility; it is a bypass of secure production admission and MUST NOT be exposed to untrusted production clients. No system-level UID separation was provisioned in tests. No independent trusted anchor is present. The checkpoint is mutable by its owner and is NOT rollback-resistant against a privileged adversary.

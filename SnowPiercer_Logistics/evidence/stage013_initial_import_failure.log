@@ -1,0 +1,148 @@
+
+==================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_core.py ______________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_core.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_core.py:7: in <module>
+    from snowpiercer_logistics import *
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+____________________ ERROR collecting tests/test_secure.py _____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_secure.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_secure.py:8: in <module>
+    from snowpiercer_logistics import SecureLogisticsService, AdmissionError, request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage003.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage003.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage003.py:6: in <module>
+    from snowpiercer_logistics import SecureLogisticsService, AdmissionError, request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage004.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage004.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage004.py:8: in <module>
+    from snowpiercer_logistics import SecureLogisticsService, AdmissionError, request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage005.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage005.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage005.py:5: in <module>
+    from snowpiercer_logistics.witness import WitnessAuthority, witness_request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage006.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage006.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage006.py:6: in <module>
+    from snowpiercer_logistics.stage006 import recover_after_witness_cas
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage007.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage007.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage007.py:5: in <module>
+    from snowpiercer_logistics.permit_authority import RecoveryPermitAuthority, permit_request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage008.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage008.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage008.py:5: in <module>
+    from snowpiercer_logistics.stage008 import MandatoryAdmissionLogisticsService
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage009.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage009.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage009.py:5: in <module>
+    from snowpiercer_logistics.stage009 import ClientBoundPermitAuthority, ClientBoundLogisticsService, client_permit_request
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage010.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage010.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage010.py:5: in <module>
+    from snowpiercer_logistics.stage010 import (IsolationPolicy, require_private_directory,
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage011.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage011.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage011.py:6: in <module>
+    from snowpiercer_logistics.stage011 import DeploymentLayout, verify_deployment, verify_legacy_denied
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage012.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage012.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage012.py:5: in <module>
+    from snowpiercer_logistics.stage010 import IsolationPolicy
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+___________________ ERROR collecting tests/test_stage013.py ____________________
+ImportError while importing test module '/mnt/data/log013_work/SnowPiercer_Logistics/tests/test_stage013.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_stage013.py:7: in <module>
+    from snowpiercer_logistics.stage013 import (run_as_uid, assert_kernel_uid,
+E   ModuleNotFoundError: No module named 'snowpiercer_logistics'
+=========================== short test summary info ============================
+ERROR tests/test_core.py
+ERROR tests/test_secure.py
+ERROR tests/test_stage003.py
+ERROR tests/test_stage004.py
+ERROR tests/test_stage005.py
+ERROR tests/test_stage006.py
+ERROR tests/test_stage007.py
+ERROR tests/test_stage008.py
+ERROR tests/test_stage009.py
+ERROR tests/test_stage010.py
+ERROR tests/test_stage011.py
+ERROR tests/test_stage012.py
+ERROR tests/test_stage013.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!
+13 errors in 0.18s

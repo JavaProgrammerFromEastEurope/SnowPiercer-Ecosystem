@@ -1,0 +1,2 @@
+# Stage 003 Architecture
+Service writes phase.json atomically with fsync+directory fsync before command transaction. SQLite commits one event and idempotency record. Service then atomically publishes checkpoint.json and removes phase.json. Startup reconciles only unchanged DB or exactly one append with matching command key, prior hash and head hash. All other mismatches fail closed. A phase journal is not cryptographically authenticated or protected from same-UID attackers.

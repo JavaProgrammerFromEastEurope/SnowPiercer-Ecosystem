@@ -1,0 +1,81 @@
+{
+  "stage": "LOG-CORE-019",
+  "production": "BLOCKED / NO-GO",
+  "strict_warning_filters": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "pytest_passes": [
+    89,
+    89,
+    89
+  ],
+  "pytest_subtests": [
+    13,
+    13,
+    13
+  ],
+  "unittest_passes": [
+    73,
+    73,
+    73
+  ],
+  "limits": [
+    "no integrated four-UID E2E",
+    "no exhaustive crash matrix",
+    "no OS-enforced production fencing"
+  ],
+  "logs": {
+    "stage019_pytest_1.log": {
+      "sha256": "27bc73d29079afd8ecf144955ae94fe3ed8076a9906dd73bcdf65a41d98ee6be",
+      "last_lines": [
+        ".................................................................... [ 76%]",
+        ".....................                                           [100%]",
+        "89 passed, 13 subtests passed in 26.17s"
+      ]
+    },
+    "stage019_pytest_2.log": {
+      "sha256": "dd2d16a60aa8d278f461213a0f14563ff94e34bf3205aa34d30514c712bf27c2",
+      "last_lines": [
+        ".................................................................... [ 76%]",
+        ".....................                                           [100%]",
+        "89 passed, 13 subtests passed in 25.65s"
+      ]
+    },
+    "stage019_pytest_3.log": {
+      "sha256": "15a81ef9819c8062ae986e90b3b68a0f8f189b16fcee1eadd34f5619dff45b25",
+      "last_lines": [
+        ".................................................................... [ 76%]",
+        ".....................                                           [100%]",
+        "89 passed, 13 subtests passed in 26.19s"
+      ]
+    },
+    "stage019_regression_1.log": {
+      "sha256": "8e147f95c3ede33d4bd0a64e378708dbb9bb4b4a28b21a6b51c69085e1a78932",
+      "last_lines": [
+        "----------------------------------------------------------------------",
+        "Ran 73 tests in 8.759s",
+        "",
+        "OK"
+      ]
+    },
+    "stage019_regression_2.log": {
+      "sha256": "7754b083aff2e860ab53b78d1da4ee3704fd21113a3a52382e9e33f45c26ebbc",
+      "last_lines": [
+        "----------------------------------------------------------------------",
+        "Ran 73 tests in 8.590s",
+        "",
+        "OK"
+      ]
+    },
+    "stage019_regression_3.log": {
+      "sha256": "4acf2886d074a557f384ecc1e2124fcf27c5e58d865bc15c0f2858ac66b92945",
+      "last_lines": [
+        "----------------------------------------------------------------------",
+        "Ran 73 tests in 8.721s",
+        "",
+        "OK"
+      ]
+    }
+  }
+}

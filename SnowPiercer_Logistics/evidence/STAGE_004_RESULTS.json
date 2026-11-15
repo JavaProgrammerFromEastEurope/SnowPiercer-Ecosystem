@@ -1,0 +1,49 @@
+{
+  "stage": "LOG-CORE-004",
+  "version": "0.4.0",
+  "runs": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "log": "stage004_strict_regression_1.log",
+      "test_count": 28,
+      "warning_filter": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "log": "stage004_strict_regression_2.log",
+      "test_count": 28,
+      "warning_filter": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "log": "stage004_strict_regression_3.log",
+      "test_count": 28,
+      "warning_filter": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    }
+  ],
+  "status": "BLOCKED/NO-GO",
+  "verified": [
+    "28 local tests per run",
+    "nonblocking lifetime lock",
+    "metadata checks for selected tampering"
+  ],
+  "not_verified": [
+    "independent trust anchor",
+    "OS-enforced legacy fencing",
+    "different UID E2E",
+    "exhaustive SIGKILL boundaries",
+    "coordinated rollback resistance"
+  ]
+}

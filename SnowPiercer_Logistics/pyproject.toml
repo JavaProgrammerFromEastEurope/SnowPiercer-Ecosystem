@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "snowpiercer-logistics"
+version = "0.21.0"
+requires-python = ">=3.9"
+description = "SnowPiercer Logistics deterministic cargo ledger foundation"
+[tool.setuptools.packages.find]
+include = ["snowpiercer_logistics*"]

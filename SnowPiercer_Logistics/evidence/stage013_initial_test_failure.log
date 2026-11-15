@@ -1,0 +1,39 @@
+...............................................................F..   [100%]
+=================================== FAILURES ===================================
+__________________________ test_real_uid_legacy_fence __________________________
+
+    @pytest.mark.skipif(os.geteuid()!=0 or not hasattr(os,'setuid'),reason='requires POSIX root')
+    def test_real_uid_legacy_fence():
+        with tempfile.TemporaryDirectory(prefix='log013_',dir='/tmp') as root:
+            target=Path(root)/'private.sqlite'
+            target.write_bytes(b'ledger')
+            os.chmod(root,0o700)
+            os.chmod(target,0o600)
+>           assert len(assert_legacy_fenced(target,(12002,12003,12004)))==3
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stage013.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/tmp/log013_1mf9284c/private.sqlite')
+denied_uids = (12002, 12003, 12004)
+
+    def assert_legacy_fenced(path, denied_uids):
+        """Prove denial of direct open for specified real unprivileged UIDs."""
+        script = ('import os,sys; '
+                  'p=sys.argv[1]; '
+                  'exec("try:\n fd=os.open(p,os.O_RDONLY); os.close(fd); sys.exit(2)\n"'
+                  '"except PermissionError: sys.exit(0)\n"'
+                  '"except OSError: sys.exit(3)")')
+        results = []
+        for uid in denied_uids:
+            result = run_as_uid(uid, script, path)
+            results.append(result)
+            if result['returncode'] != 0:
+>               raise AdmissionError('legacy direct access not proven denied')
+E               snowpiercer_logistics.secure.AdmissionError: legacy direct access not proven denied
+
+snowpiercer_logistics/stage013.py:60: AdmissionError
+=========================== short test summary info ============================
+FAILED tests/test_stage013.py::test_real_uid_legacy_fence - snowpiercer_logistics.secure.AdmissionError: legacy direct access not proven denied
+1 failed, 65 passed, 4 subtests passed in 14.82s

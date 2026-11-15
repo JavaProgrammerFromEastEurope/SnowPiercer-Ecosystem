@@ -1,0 +1,122 @@
+{
+  "id": "logistics",
+  "moduleId": "SP-LOG",
+  "sourceStage": "LOG-CORE-020",
+  "targetStage": "LOG-CORE-021",
+  "versionBefore": "0.20.0",
+  "versionAfter": "0.21.0",
+  "capabilityRu": "Команды TrainOS → Logistics: TTL, атомарная ревизия и идемпотентность конверта",
+  "summaryRu": "Добавлен opt-in TimedLogisticsLedger: закрытая схема команд, отдельный доверенный Principal, проверка срока до/после SQLite lock, атомарный expected_events, durable replay-receipt и отсутствие повторного эффекта. Ядро физическим оборудованием не управляет.",
+  "tests": {
+    "command": "/workspace/work/trainos-venv/bin/python -m pytest -q -W error::ResourceWarning -W error::DeprecationWarning -W error::pytest.PytestUnraisableExceptionWarning tests",
+    "baselinePassed": 87,
+    "baselineSkipped": 6,
+    "passed": 120,
+    "added": 33,
+    "failed": 0,
+    "skipped": 6,
+    "subtestsPassed": 13,
+    "durationSeconds": 9.29,
+    "log": "/workspace/work/ecosystem/logistics/SnowPiercer_Logistics/evidence/stage021_pytest.log",
+    "baselineLog": "/workspace/work/ecosystem/logistics/SnowPiercer_Logistics/evidence/stage021_baseline.log",
+    "skipReason": "Earlier UID/privilege-specific tests retain their original skip conditions; skipped scenarios are not counted as verified."
+  },
+  "sourceIntegrity": {
+    "status": "VERIFIED_CURRENT_STAGE_MANIFEST",
+    "manifests": [
+      {
+        "manifest": "SHA256_MANIFEST.json",
+        "entries": 211,
+        "matches": 209,
+        "mismatches": [
+          "pyproject.toml",
+          "snowpiercer_logistics/__init__.py"
+        ],
+        "missing": []
+      },
+      {
+        "manifest": "evidence/stage020_manifest.json",
+        "entries": 242,
+        "matches": 242,
+        "mismatches": [],
+        "missing": []
+      }
+    ],
+    "note": "All 242 entries of current stage020 manifest matched; older root manifest has two stale version entries, retained as historical evidence."
+  },
+  "status": "SOFTWARE_VERIFIED",
+  "readiness": "NO_GO",
+  "limits": [
+    "Локальная программная модель, без подключения роботов, дронов или физической логистики.",
+    "Четырёх-UID production транзакция ledger/witness/authority/client не реализована и не принята.",
+    "Нет полной OS-изоляции legacy API, защиты от root/владельца SQLite или отката файла.",
+    "Principal и clock_ms — доверенные зависимости хоста; удалённая аутентификация и синхронизация времени не подтверждены.",
+    "TTL проверяет начало локальной операции, а не гарантирует срок физического завершения.",
+    "6 прежних привилегированных сценариев skipped; их прохождение не заявляется."
+  ],
+  "changes": [
+    "snowpiercer_logistics/core.py",
+    "snowpiercer_logistics/stage021.py",
+    "snowpiercer_logistics/__init__.py",
+    "pyproject.toml",
+    "tests/test_stage021.py",
+    "integration_probe.py",
+    "README.md",
+    "docs/STAGE_021_REQUIREMENTS.md",
+    "docs/STAGE_021_ARCHITECTURE.md",
+    "docs/STAGE_021_CONTRACTS.md",
+    "docs/STAGE_021_SAFETY.md",
+    "evidence/stage021_results.json",
+    "evidence/stage021_manifest.json",
+    "evidence/stage021_baseline.log",
+    "evidence/stage021_pytest.log",
+    "evidence/stage021_probe.json"
+  ],
+  "requirements": [
+    {
+      "id": "R-021-01",
+      "criterion": "Закрытая схема конверта и запрет роли/идентичности, заявленной клиентом",
+      "evidence": "tests/test_stage021.py::test_client_identity_field_rejected"
+    },
+    {
+      "id": "R-021-02",
+      "criterion": "Отказ просроченных/будущих команд; повторная проверка после захвата SQLite lock",
+      "evidence": "tests/test_stage021.py::test_expiry_rechecked_after_transaction_lock_acquisition"
+    },
+    {
+      "id": "R-021-03",
+      "criterion": "Атомарная ревизия между независимыми SQLite-соединениями",
+      "evidence": "tests/test_stage021.py::test_independent_connections_compare_revision_atomically"
+    },
+    {
+      "id": "R-021-04",
+      "criterion": "Единственный эффект точного replay, сохранение после reopen и гонки",
+      "evidence": "tests/test_stage021.py::test_concurrent_duplicate_across_connections_has_single_effect"
+    },
+    {
+      "id": "R-021-05",
+      "criterion": "Текущие права проверяются повторно, обход конверта запрещён на opt-in ledger",
+      "evidence": "tests/test_stage021.py::test_revoked_role_cannot_replay_committed_result"
+    },
+    {
+      "id": "R-021-06",
+      "criterion": "Неуспешная операция откатывает receipt; legacy key не импортируется незаметно",
+      "evidence": "tests/test_stage021.py::test_failed_mutation_rolls_back_receipt_and_allows_valid_retry"
+    },
+    {
+      "id": "R-021-07",
+      "criterion": "Совместимость полной регрессии; production по-прежнему NO-GO",
+      "evidence": "evidence/stage021_pytest.log"
+    }
+  ],
+  "integrationProbe": {
+    "command": [
+      "/workspace/work/trainos-venv/bin/python",
+      "/workspace/work/ecosystem/logistics/SnowPiercer_Logistics/integration_probe.py"
+    ],
+    "schema": "snowpiercer.integration-probe.v1",
+    "checks": 5,
+    "passed": true,
+    "report": "/workspace/work/ecosystem/logistics/SnowPiercer_Logistics/evidence/stage021_probe.json"
+  }
+}

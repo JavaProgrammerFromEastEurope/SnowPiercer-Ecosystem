@@ -1,0 +1,37 @@
+{
+  "stage": "LOG-CORE-006",
+  "version": "0.6.0",
+  "regressions": [
+    {
+      "file": "stage006_regression_1.log",
+      "passed": true,
+      "tests": 37,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "file": "stage006_regression_2.log",
+      "passed": true,
+      "tests": 37,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "file": "stage006_regression_3.log",
+      "passed": true,
+      "tests": 37,
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "cross_uid_e2e": false,
+  "exhaustive_sigkill": false,
+  "os_enforced_legacy_fencing": false,
+  "production": "BLOCKED/NO-GO"
+}

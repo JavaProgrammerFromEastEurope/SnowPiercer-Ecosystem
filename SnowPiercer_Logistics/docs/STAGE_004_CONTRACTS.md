@@ -1,0 +1,2 @@
+# Contracts
+Public imports and method signatures inherited from 001-003 remain unchanged. `SecureLogisticsService(root, uid_roles, timeout=2.0)` and `request(socket_path, action, args=None, timeout=2.0)` are preserved. A second service on the same lock path fails with AdmissionError instead of waiting. IPC responses remain JSON lines with `ok`, `result` or `error`/`message`. Recovery permits are UID-bound in SQLite but cannot repair an inconsistent anchor. Legacy `LogisticsLedger` remains callable directly: this is NOT mandatory production fencing.

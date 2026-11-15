@@ -1,0 +1,33 @@
+{
+  "stage": "LOG-CORE-002",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "strict_regressions": [
+    {
+      "run": 1,
+      "tests": 18,
+      "exit_code": 0,
+      "passed": true,
+      "ignored_resource_warning": true
+    },
+    {
+      "run": 2,
+      "tests": 18,
+      "exit_code": 0,
+      "passed": true,
+      "ignored_resource_warning": true
+    },
+    {
+      "run": 3,
+      "tests": 18,
+      "exit_code": 0,
+      "passed": true,
+      "ignored_resource_warning": true
+    }
+  ],
+  "tests": 18,
+  "known_issue": "Unraisable ResourceWarning reported by sqlite3 finalizer in some runs despite process exit 0; strict warning policy did not convert it into test failure.",
+  "production": "NO-GO",
+  "cross_uid_e2e": false,
+  "sigkill_matrix_exhaustive": false
+}

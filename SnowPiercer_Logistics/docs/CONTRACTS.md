@@ -1,0 +1,4 @@
+# Public contracts
+`LogisticsLedger(path)` supports context manager and explicit `close()`.
+`add_container(admin,key,Container)`, `add_location(admin,key,Location)`, `register_cargo(operator,key,Cargo)`, `transition_cargo(operator,key,id,CargoState)`, `create_mission(operator,key,Mission)`, `transition_mission(operator,key,id,MissionState)`, `record_transfer(operator,key,Transfer)`, `get_cargo(read_principal,id)`, `verify(read_principal)`.
+All command keys are globally unique per database. Successful replay returns the original JSON-compatible dict. A different fingerprint raises `ConflictError`. Failed mutations roll back and do not reserve keys. Database constraints can raise `sqlite3.IntegrityError`. Transfer records movement from current location while cargo is IN_TRANSIT and returns cargo to STORED at destination. Transfer is **ledger accounting**, not proof of physical movement.

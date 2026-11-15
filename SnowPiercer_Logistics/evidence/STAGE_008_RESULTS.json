@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "file": "evidence/stage008_regression_1.log",
+      "passed": true,
+      "warning_lines": []
+    },
+    {
+      "file": "evidence/stage008_regression_2.log",
+      "passed": true,
+      "warning_lines": []
+    },
+    {
+      "file": "evidence/stage008_regression_3.log",
+      "passed": true,
+      "warning_lines": []
+    }
+  ],
+  "limitations": "local UID only; no exhaustive SIGKILL or OS fencing"
+}

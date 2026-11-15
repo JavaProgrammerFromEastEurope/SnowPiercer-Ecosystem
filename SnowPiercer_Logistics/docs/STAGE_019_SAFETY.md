@@ -1,0 +1,3 @@
+# LOG-CORE-019 Safety analysis
+
+BLOCKED / NO-GO. Confirmed: local socket type/symlink/mode validation; local fail-closed legacy issuance; inherited state quarantine; 3 full strict pytest regressions. Unconfirmed: four-UID integrated transaction; OS-enforced legacy fencing; independent server attestation; atomic SQLite/witness protocol; replay/rollback-to-genesis defense; exhaustive file/socket substitution; SIGKILL across SQLite commit, witness CAS, permit consumption, IPC. Residual risks: TOCTOU on path checks, socket replacement, rollback of authority DB and witness files, denial of service, absence of trusted monotonic anchor. Earlier single-UID tests cannot substitute for E2E proof. Never use for production actuation.

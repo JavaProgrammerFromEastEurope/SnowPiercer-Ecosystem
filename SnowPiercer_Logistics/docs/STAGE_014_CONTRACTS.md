@@ -1,0 +1,2 @@
+# LOG-CORE-014 Contracts
+`four_uid_ipc_probe(policy, timeout=5)` requires Linux root, SO_PEERCRED and validated distinct UID policy. Returns six records with role, caller_uid, accepted, server_uid; raises AdmissionError on startup, IPC or identity failure. `production_admission(...)` unconditionally raises AdmissionError. No claim of signed independent attestation. Temporary paths are removed and child processes terminated even after failures.

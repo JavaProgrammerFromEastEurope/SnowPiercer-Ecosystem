@@ -1,0 +1,7 @@
+{
+  "stage":"LOG-CORE-016", "version":"0.16.0", "production":"BLOCKED/NO-GO",
+  "regression_command":"PYTHONWARNINGS=error::ResourceWarning,error::DeprecationWarning python -m pytest -q -o asyncio_default_fixture_loop_scope=function tests",
+  "passing_runs":[{"run":1,"tests":76,"subtests":4,"exit":0},{"run":2,"tests":76,"subtests":4,"exit":0},{"run":3,"tests":76,"subtests":4,"exit":0}],
+  "failed_runs":[{"count":3,"reason":"pytest-asyncio configuration DeprecationWarning promoted to error","logs":"evidence/stage016_regression_{1,2,3}.log"}],
+  "unverified":["integrated four UID ledger/witness/permit E2E","full SIGKILL matrix","tamper matrix","rollback-to-genesis","mandatory OS fencing"]
+}

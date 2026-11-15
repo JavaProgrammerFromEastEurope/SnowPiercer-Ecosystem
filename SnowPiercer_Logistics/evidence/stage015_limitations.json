@@ -1,0 +1,17 @@
+{
+  "stage": "LOG-CORE-015",
+  "production": "BLOCKED / NO-GO",
+  "full_four_uid_ledger_e2e": false,
+  "sigkill_exhaustive": false,
+  "rollback_genesis_protected": false,
+  "failed_attempts": [
+    {
+      "kind": "pytest startup",
+      "detail": "pytest-asyncio emits deprecation warning with strict warnings when default_fixture_loop_scope unset; fixed by explicit pytest override"
+    },
+    {
+      "kind": "smoke resource warning",
+      "detail": "sqlite3 context manager did not close connection; fixed explicit close"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# LOG-CORE-007 Architecture
+`RecoveryPermitAuthority` listens on an AF_UNIX socket and obtains peer UID from the OS via the inherited `_peer_uid` helper. Operator issues 256-bit random bearer permits scoped to a recovery root and service UID. Authority stores SHA-256 digest, scope, target UID and used flag in its own SQLite database. Service consumes by atomic `BEGIN IMMEDIATE; UPDATE ... used=0; COMMIT` before running the existing conservative recovery. A separate protected OS account and directory are required for real independence, but not established in this test environment.
+
+Broker is not wired into mandatory production startup; existing direct `recover_after_witness_cas` remains accessible. No claim of OS-enforced production fencing. Broker state and witness anchor are not protected against privileged rollback. Socket permission 0600 requires explicit ACL/group configuration for genuine cross-UID use.

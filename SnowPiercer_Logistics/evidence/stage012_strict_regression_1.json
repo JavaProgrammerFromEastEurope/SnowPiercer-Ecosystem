@@ -1,0 +1,9 @@
+{
+  "run": 1,
+  "exit_code": 0,
+  "warning_policy": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning"
+  ],
+  "scope": "local unittest discovery"
+}

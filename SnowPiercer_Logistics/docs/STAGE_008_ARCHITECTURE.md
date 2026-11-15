@@ -1,0 +1,2 @@
+# LOG-CORE-008 Architecture
+MandatoryAdmissionLogisticsService extends WitnessBackedLogisticsService and requires both witness and permit broker. The service process is the broker's kernel-authenticated peer; client UID is authenticated separately at the logistics IPC. The broker authorizes the service UID, not the originating client UID; this is an important trust boundary and does not implement client-bound permits. Recovery is admission-only. The design does not sandbox legacy library access.

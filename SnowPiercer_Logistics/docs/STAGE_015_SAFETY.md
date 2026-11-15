@@ -1,0 +1,5 @@
+# LOG-CORE-015 Safety assessment
+**BLOCKED / NO-GO**. Verified: real Linux kernel UID on broker connections; direct client attestation; conditional single-use update; replay denial; legacy protocol rejection; 3 full regressions.
+Not verified: actual four-UID Logistics/witness/authority ledger transaction, mandatory production entrypoint, OS-enforced fencing against privileged or legacy access, SQLite/witness CAS atomic crash recovery, independent monotonic storage, rollback to genesis, tampering matrix, all SIGKILL boundaries, independent E2E certification.
+Authority in the cross-UID test runs as root, not a distinct non-root authority UID. Broker test exposes a world-connectable socket intentionally to exercise peer checks; not a production deployment prescription.
+A client-attested bearer permit may be stolen or transferred; its use is not cryptographically tied to a transaction, and authority SQLite rollback can resurrect consumed permits. Fail closed on unverifiable production guarantees.

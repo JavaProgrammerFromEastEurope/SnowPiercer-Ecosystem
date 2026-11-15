@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-q"
+  ],
+  "exit_code": 0,
+  "output": "----------------------------------------------------------------------\nRan 56 tests in 8.690s\n\nOK\n",
+  "strict_warnings": true
+}

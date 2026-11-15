@@ -1,0 +1,25 @@
+test_authorization (test_core.LedgerTests.test_authorization) ... ok
+test_concurrent_duplicate (test_core.LedgerTests.test_concurrent_duplicate) ... ok
+test_crash_after_commit_replay (test_core.LedgerTests.test_crash_after_commit_replay) ... ok
+test_detect_hash_corruption (test_core.LedgerTests.test_detect_hash_corruption) ... ok
+test_invalid_references (test_core.LedgerTests.test_invalid_references) ... ok
+test_invalid_transitions_rollback (test_core.LedgerTests.test_invalid_transitions_rollback) ... ok
+test_mission_fsm (test_core.LedgerTests.test_mission_fsm) ... ok
+test_reopen_replay (test_core.LedgerTests.test_reopen_replay) ... ok
+test_transfer_and_idempotency (test_core.LedgerTests.test_transfer_and_idempotency) ... ok
+test_admission_replay_and_permissions (test_secure.SecureTests.test_admission_replay_and_permissions) ... ok
+test_missing_anchor_denied (test_secure.SecureTests.test_missing_anchor_denied) ... ok
+test_permit_one_time (test_secure.SecureTests.test_permit_one_time) ... ok
+test_rollback_detected (test_secure.SecureTests.test_rollback_detected) ... ok
+test_second_server_denied (test_secure.SecureTests.test_second_server_denied) ... ok
+test_sigkill_commit_before_anchor (test_secure.SecureTests.test_sigkill_commit_before_anchor) ... ok
+test_socket_substitution_denied (test_secure.SecureTests.test_socket_substitution_denied) ... ok
+test_symlink_db_denied (test_secure.SecureTests.test_symlink_db_denied) ... ok
+test_unmapped_uid_denied (test_secure.SecureTests.test_unmapped_uid_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.436s
+
+OK
+Exception ignored in: <sqlite3.Connection object at 0x7f772da9ef20>
+ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f772da9ef20>

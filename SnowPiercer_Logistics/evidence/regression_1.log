@@ -1,0 +1,16 @@
+test_authorization (test_core.LedgerTests.test_authorization) ... ok
+test_concurrent_duplicate (test_core.LedgerTests.test_concurrent_duplicate) ... ok
+test_crash_after_commit_replay (test_core.LedgerTests.test_crash_after_commit_replay) ... /usr/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=393) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+ok
+test_detect_hash_corruption (test_core.LedgerTests.test_detect_hash_corruption) ... ok
+test_invalid_references (test_core.LedgerTests.test_invalid_references) ... ok
+test_invalid_transitions_rollback (test_core.LedgerTests.test_invalid_transitions_rollback) ... ok
+test_mission_fsm (test_core.LedgerTests.test_mission_fsm) ... ok
+test_reopen_replay (test_core.LedgerTests.test_reopen_replay) ... ok
+test_transfer_and_idempotency (test_core.LedgerTests.test_transfer_and_idempotency) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.109s
+
+OK
