@@ -18,7 +18,7 @@ Run the archived HTML locally with a static file server if you want the app's na
 
 | Subsystem | Branch | Requested source baseline | Current state |
 |---|---|---|---|
-| TrainOS | [`module/trainos`](https://github.com/JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem/tree/module/trainos) | `v107` | SOURCE_RECOVERED / IMPORT_PENDING — v107 ZIP bytes and manifest verified; full current-host suite incomplete |
+| TrainOS | [`module/trainos`](https://github.com/JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem/tree/module/trainos) | `v107` | SOURCE_TESTED / IMPORT_PENDING — v107 ZIP, manifest and 3×1,533 complete strict regressions PASS; no source push |
 | RailSystem | [`module/rail-system`](https://github.com/JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem/tree/module/rail-system) | `RAIL-TRUST-016` | SOURCE_BLOCKED — precise snapshot unavailable |
 | Energy | [`module/energy`](https://github.com/JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem/tree/module/energy) | `ENERGY-CORE-020 / v0.20.0` | SOURCE_IMPORTED / PRODUCTION_NO_GO |
 | Life Support | [`module/life-support`](https://github.com/JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem/tree/module/life-support) | `LIFE-CORE-021 / v0.21.0` | SOURCE_IMPORTED / PRODUCTION_NO_GO |
@@ -30,7 +30,7 @@ Run the archived HTML locally with a static file server if you want the app's na
 
 **Source import** is not a new functional Stage. Four imported source trees were checked for ZIP CRC, path traversal, duplicate paths, symlinks, UTF-8 validity, and Python syntax. Their import commits preserve parent history and include `IMPORT_PROVENANCE.json` with ZIP SHA-256 per file. Historical evidence within archives is not a live test result from this host.
 
-**Source recovery update (16 November 2026):** The exact user-uploaded TrainOS v107 and ISLAND-GEO-022 ZIP bytes have now been recovered and verified locally against their cumulative file manifests. TrainOS v107 SHA-256 `661c0346721f7aa3ace1572430f4259d78bba722c3c4eab540de05eaa36ac284`; Island 022 SHA-256 `e71d3d78c79dcea71e151c9d34d10b460a61b0a782eb927042f1c286dab42ce9`. The GitHub module branches have **not** yet been updated with these sources. RAIL-TRUST-016 exact ZIP remains unavailable; RAIL-TRUST-015 is not a substitute. Current-host TrainOS full strict regression remains incomplete. All production is NO-GO. See [source recovery evidence](AUDIT/exact-source-recovery/2026-11-16.md).
+**Source recovery update (16 November 2026):** The exact user-uploaded TrainOS v107 and ISLAND-GEO-022 ZIP bytes have now been recovered and verified locally against their cumulative file manifests. TrainOS v107 SHA-256 `661c0346721f7aa3ace1572430f4259d78bba722c3c4eab540de05eaa36ac284`; Island 022 SHA-256 `e71d3d78c79dcea71e151c9d34d10b460a61b0a782eb927042f1c286dab42ce9`. The GitHub module branches have **not** yet been updated with these sources. RAIL-TRUST-016 exact ZIP remains unavailable; RAIL-TRUST-015 is not a substitute. Full current-host TrainOS strict regressions now show 3×1,533 PASS after preserving two diagnostic harness FAILs and one interrupted attempt; the corresponding Git module source import is still PENDING. All production is NO-GO. See [source recovery evidence](AUDIT/exact-source-recovery/2026-11-16.md) and [complete full-suite evidence](AUDIT/exact-source-recovery/2026-11-16-complete-regression.md).
 
 ## Правила разработки
 

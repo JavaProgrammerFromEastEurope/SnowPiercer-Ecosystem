@@ -1,0 +1,115 @@
+{
+  "schema": "snowpiercer.orchestrator.complete-source-enrollment-audit/1",
+  "date": "2026-11-16",
+  "repository": "JavaProgrammerFromEastEurope/SnowPiercer-Ecosystem",
+  "pre_audit_default_head": "ac9af2605f88bb75b05a4523b728a99237863ae0",
+  "functional_numeric_stages_created": 0,
+  "source_import_commits_created": 0,
+  "target_branches_unchanged": true,
+  "git_module_cas_executed": false,
+  "git_force_push": false,
+  "sources": {
+    "trainos": {
+      "target_version": "v107",
+      "sha256": "661c0346721f7aa3ace1572430f4259d78bba722c3c4eab540de05eaa36ac284",
+      "zip_member_count": 5207,
+      "sha_manifest_entries": 5206,
+      "python_ast_parsed": 3165,
+      "python_ast_errors": 0,
+      "zip_crc": "PASS",
+      "strict_full_regressions": [
+        {
+          "run": 1,
+          "exit_code": 0,
+          "tests_passed": 1533,
+          "tests_failed": 0,
+          "duration_seconds": 108.53,
+          "stdout_sha256": "02fa9ef58b011cb9944d520bc5781c6405c6de338d89f300822496c4f98c96f3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "run": 2,
+          "exit_code": 0,
+          "tests_passed": 1533,
+          "tests_failed": 0,
+          "duration_seconds": 105.31,
+          "stdout_sha256": "b082720881fedca798d7e870702b8756916611da153495603e334c5c83025569",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "run": 3,
+          "exit_code": 0,
+          "tests_passed": 1533,
+          "tests_failed": 0,
+          "duration_seconds": 106.69,
+          "stdout_sha256": "7a6e79115477f3c23130f77196db731600440c5d68ed71f3f9087be159b091b1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "strict_current_host": "PASS_3_COMPLETE_1533_EACH",
+      "legacy_diagnostic_attempts": [
+        {
+          "attempt": 1,
+          "exit_code": 1,
+          "passed": 1531,
+          "failed": 2,
+          "reason": "extracted execute bits not restored; cross-UID path traversability"
+        },
+        {
+          "attempt": 2,
+          "exit_code": 1,
+          "passed": 1531,
+          "failed": 2,
+          "reason": "same extraction harness defect"
+        },
+        {
+          "attempt": 3,
+          "exit_code": 143,
+          "status": "INTERRUPTED_BY_AUDITOR_NOT_COMPLETED",
+          "reason": "diagnostic harness stopped after repeated failures"
+        }
+      ],
+      "source_published_in_module_branch": false,
+      "import_status": "SOURCE_TESTED_IMPORT_PENDING"
+    },
+    "island": {
+      "target": "ISLAND-GEO-022",
+      "sha256": "e71d3d78c79dcea71e151c9d34d10b460a61b0a782eb927042f1c286dab42ce9",
+      "zip_member_count": 968,
+      "sha_manifest_entries": 967,
+      "python_ast_parsed": 64,
+      "python_ast_errors": 0,
+      "zip_crc": "PASS",
+      "strict_regression": "PASS_3_COMPLETE_200_EACH",
+      "source_published_in_module_branch": false,
+      "import_status": "SOURCE_TESTED_IMPORT_PENDING"
+    },
+    "rail": {
+      "target": "RAIL-TRUST-016",
+      "exact_source": "NOT_FOUND_IN_LIBRARY_OR_CURRENT_UPLOADS",
+      "older_source": "RAIL-TRUST-015",
+      "older_sha256": "9c9109458736cd5af9963238a23f3a076fe4b149cbfca444eda841ab6014169b",
+      "substitution_allowed": false,
+      "import_status": "SOURCE_BLOCKED"
+    }
+  },
+  "github_verified_heads_before_audit": {
+    "default": "ac9af2605f88bb75b05a4523b728a99237863ae0",
+    "module/trainos": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+    "module/island": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75",
+    "module/rail-system": "0331a2b91762bbe29fcfdeb6b4704a82182b0b75"
+  },
+  "offline_handoff": {
+    "filename": "SnowPiercer_Exact_Source_Recovery_Complete_Enrollment_2026-11-16.zip",
+    "sha256": "33dfa035323d7d4de9042d2cf0fdc031234023904d671e72abbf689f2980d263",
+    "file_count": 88,
+    "size_bytes": 11779027,
+    "source_archive_count": 5,
+    "verified_regression_log_digests": 42,
+    "uploaded_to_github": false
+  },
+  "publication_limit": "Local Git is unable to resolve github.com and connector cannot consume the local ZIP. No upload of module source tree or Git CAS update_ref has occurred.",
+  "next_gate": "Use authorized Git network runner to stage candidate source child commit then GitHub update_ref with expected_sha=0331a2b9... and force=false, verify actual parent and complete tree; exact Rail 016 ZIP must be found or created as a future distinct functional Stage, not silently substituted.",
+  "production_status": "BLOCKED/NO-GO",
+  "release_import_is_not_functional_stage": true
+}
