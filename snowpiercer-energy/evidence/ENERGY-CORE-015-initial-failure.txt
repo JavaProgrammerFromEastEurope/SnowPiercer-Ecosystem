@@ -1,0 +1,1 @@
+Initial focused test run: 4 passed, 1 failed. test_cas_failure_retains_journal expected PendingWitnessTransaction, but parent initialization raised AdmissionDenied for witness divergence before journal check. Fixed by checking journal before superclass initialization. Follow-up focused run: 5 passed.

@@ -1,0 +1,32 @@
+........................................................................ [ 51%]
+.......................F...........................................      [100%]
+=================================== FAILURES ===================================
+_____________________________ test_ipc_uid_denial ______________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_ipc_uid_denial0')
+
+    @pytest.mark.skipif(not hasattr(socket,'SO_PEERCRED'),reason='Linux SO_PEERCRED required')
+    def test_ipc_uid_denial(tmp_path):
+        adm,broker=make(tmp_path,[os.geteuid()+99999])
+        with broker:
+            t=threading.Thread(target=broker.serve_one);t.start()
+>           assert not broker_request(broker.path,{'action':'issue'})['ok']
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_recovery_broker.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/tmp/pytest-of-root/pytest-38/test_ipc_uid_denial0/private/broker.sock')
+request = {'action': 'issue'}
+
+    def broker_request(path, request):
+        with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as conn:
+            conn.settimeout(5)
+            conn.connect(str(path))
+>           conn.sendall((json.dumps(request,allow_nan=False)+'\n').encode())
+E           BrokenPipeError: [Errno 32] Broken pipe
+
+energy/recovery_broker.py:147: BrokenPipeError
+=========================== short test summary info ============================
+FAILED tests/test_recovery_broker.py::test_ipc_uid_denial - BrokenPipeError: [Errno 32] Broken pipe
+1 failed, 138 passed in 12.84s
