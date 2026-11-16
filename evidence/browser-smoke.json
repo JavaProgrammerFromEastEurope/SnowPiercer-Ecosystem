@@ -1,0 +1,7 @@
+{
+  "engine": "chromium headless",
+  "mode": "file:// fallback due local web denied",
+  "checks": [],
+  "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/security_workspace_source/SnowPiercer/dist/index.html#ecosystem\nCall log:\n  - navigating to \"file:///mnt/data/security_workspace_source/SnowPiercer/dist/index.html#ecosystem\", waiting until \"load\"\n",
+  "status": "blocked"
+}

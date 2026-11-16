@@ -1,0 +1,93 @@
+{
+  "schema": "snowpiercer.security-v0.1.0.evidence.v1",
+  "moduleId": "SP-SAFE",
+  "release": "0.1.0",
+  "operationalReady": false,
+  "productionStatus": "BLOCKED_NO_GO",
+  "securityRegressions": [
+    {
+      "run": 1,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "exitCode": 0,
+      "stdout": "evidence/regression-1.stdout.log",
+      "stderr": "evidence/regression-1.stderr.log",
+      "testSuiteNote": "local simulation only; test 36 explicitly demonstrates full rollback after restart is undetectable"
+    },
+    {
+      "run": 2,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "exitCode": 0,
+      "stdout": "evidence/regression-2.stdout.log",
+      "stderr": "evidence/regression-2.stderr.log"
+    },
+    {
+      "run": 3,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "exitCode": 0,
+      "stdout": "evidence/regression-3.stdout.log",
+      "stderr": "evidence/regression-3.stderr.log"
+    }
+  ],
+  "integrationSeven": [
+    {
+      "run": 1,
+      "status": "passed",
+      "modules": 7,
+      "checks": 27,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "status": "passed",
+      "modules": 7,
+      "checks": 27,
+      "exitCode": 0
+    },
+    {
+      "run": 3,
+      "status": "passed",
+      "modules": 7,
+      "checks": 27,
+      "exitCode": 0
+    }
+  ],
+  "baselineSix": {
+    "status": "passed",
+    "modules": 6,
+    "checks": 23,
+    "exitCode": 0
+  },
+  "workspaceUnitTests": {
+    "status": "passed",
+    "tests": 16,
+    "file": "evidence/workspace-python.stderr.log"
+  },
+  "ui": {
+    "stageEngine": "PASS_12_TESTS",
+    "jsdomDOM": "BLOCKED_DEPENDENCY_MISSING",
+    "npmInstall": "FAILED_EAI_AGAIN",
+    "stdout": "evidence/workspace-node.stdout.log",
+    "stderr": "evidence/workspace-node.stderr.log",
+    "stageEngineLog": "evidence/node-stage-engine.stdout.log",
+    "browserSmoke": "BLOCKED_BY_ADMINISTRATOR: localhost and file navigation",
+    "browserSmokeLog": "evidence/browser-smoke.json"
+  },
+  "limitations": [
+    "No four-real-UID test; no independent OS MAC/LSM confinement",
+    "Full database rollback on restart is not detectable by local HMAC; deliberate weakness test",
+    "No remote witness, hardware root, production permits, independent lifecycle manager",
+    "No TrainOS full kernel regression performed against v101 or a later release",
+    "No physical integration, independent safety acceptance, or production authorization"
+  ],
+  "sourceSnapshot": {
+    "archiveName": "TrainOS_Workspace(5).zip",
+    "sha256": "03e45fde2f0fe558b9fbbdd6e7432a0e0b5dc880ad7b45727141591e0053a0f6",
+    "note": "Contained TrainOS v101 historical snapshot, not the latest user module version"
+  }
+}

@@ -1,0 +1,41 @@
+test_01_exact_read_is_audited_nonexecutable (test_admission.AdmissionTests.test_01_exact_read_is_audited_nonexecutable) ... ok
+test_02_absent_policy_match_denied (test_admission.AdmissionTests.test_02_absent_policy_match_denied) ... ok
+test_03_principal_mismatch_denied (test_admission.AdmissionTests.test_03_principal_mismatch_denied) ... ok
+test_04_explicit_critical_actions_all_denied (test_admission.AdmissionTests.test_04_explicit_critical_actions_all_denied) ... ok
+test_05_energy_simulation_not_executable (test_admission.AdmissionTests.test_05_energy_simulation_not_executable) ... ok
+test_06_auditor_role_limited_to_its_resource (test_admission.AdmissionTests.test_06_auditor_role_limited_to_its_resource) ... ok
+test_07_request_replay_is_rejected (test_admission.AdmissionTests.test_07_request_replay_is_rejected) ... ok
+test_08_replay_across_two_instances_is_rejected (test_admission.AdmissionTests.test_08_replay_across_two_instances_is_rejected) ... ok
+test_09_new_request_does_not_change_old_audit_record (test_admission.AdmissionTests.test_09_new_request_does_not_change_old_audit_record) ... ok
+test_10_modified_payload_detected (test_admission.AdmissionTests.test_10_modified_payload_detected) ... ok
+test_11_modified_chain_link_detected (test_admission.AdmissionTests.test_11_modified_chain_link_detected) ... ok
+test_12_truncated_chain_detected_by_live_process_tip (test_admission.AdmissionTests.test_12_truncated_chain_detected_by_live_process_tip) ... ok
+test_13_new_instance_detects_tampered_body (test_admission.AdmissionTests.test_13_new_instance_detects_tampered_body) ... ok
+test_14_rotated_key_blocks_existing_audit (test_admission.AdmissionTests.test_14_rotated_key_blocks_existing_audit) ... ok
+test_15_missing_database_live_process_fails_closed (test_admission.AdmissionTests.test_15_missing_database_live_process_fails_closed) ... ok
+test_16_policy_version_pinned (test_admission.AdmissionTests.test_16_policy_version_pinned) ... ok
+test_17_unknown_policy_disabled (test_admission.AdmissionTests.test_17_unknown_policy_disabled) ... ok
+test_18_production_fence_not_affected_by_environment (test_admission.AdmissionTests.test_18_production_fence_not_affected_by_environment) ... ok
+test_19_key_length (test_admission.AdmissionTests.test_19_key_length) ... ok
+test_20_concurrent_unique_requests_all_logged (test_admission.AdmissionTests.test_20_concurrent_unique_requests_all_logged) ... ok
+test_21_concurrent_replay_exactly_one_accepted (test_admission.AdmissionTests.test_21_concurrent_replay_exactly_one_accepted) ... ok
+test_22_read_only_db_fails_closed_via_corruption (test_admission.AdmissionTests.test_22_read_only_db_fails_closed_via_corruption) ... ok
+test_23_unknown_request_fields_rejected (test_admission.AdmissionTests.test_23_unknown_request_fields_rejected) ... ok
+test_24_missing_fields_rejected (test_admission.AdmissionTests.test_24_missing_fields_rejected) ... ok
+test_25_wrong_request_types_rejected (test_admission.AdmissionTests.test_25_wrong_request_types_rejected) ... ok
+test_26_non_uuid_or_noncanonical_uuid_rejected (test_admission.AdmissionTests.test_26_non_uuid_or_noncanonical_uuid_rejected) ... ok
+test_27_malformed_resource_rejected (test_admission.AdmissionTests.test_27_malformed_resource_rejected) ... ok
+test_28_unknown_action_rejected (test_admission.AdmissionTests.test_28_unknown_action_rejected) ... ok
+test_29_json_duplicate_key_rejected (test_admission.AdmissionTests.test_29_json_duplicate_key_rejected) ... ok
+test_30_json_oversize_and_invalid_utf8_rejected (test_admission.AdmissionTests.test_30_json_oversize_and_invalid_utf8_rejected) ... ok
+test_31_json_roundtrip_valid (test_admission.AdmissionTests.test_31_json_roundtrip_valid) ... ok
+test_32_no_audit_on_malformed_input (test_admission.AdmissionTests.test_32_no_audit_on_malformed_input) ... ok
+test_33_missing_ledger_parent_refused (test_admission.AdmissionTests.test_33_missing_ledger_parent_refused) ... ok
+test_34_bad_json_numeric_constant_refused (test_admission.AdmissionTests.test_34_bad_json_numeric_constant_refused) ... ok
+test_35_audit_write_failure_cannot_return_allow (test_admission.AdmissionTests.test_35_audit_write_failure_cannot_return_allow) ... ok
+test_36_full_database_rollback_after_restart_is_not_protected (test_admission.AdmissionTests.test_36_full_database_rollback_after_restart_is_not_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.254s
+
+OK

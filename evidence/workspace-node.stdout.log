@@ -1,0 +1,86 @@
+
+> snowpiercer-workspace@1.1.0 test
+> node --test tests/stage-engine.test.cjs && node tests/interface.test.cjs
+
+TAP version 13
+# Subtest: all six verified software directions permit inventory-to-architecture for this iteration only
+ok 1 - all six verified software directions permit inventory-to-architecture for this iteration only
+  ---
+  duration_ms: 2.387626
+  type: 'test'
+  ...
+# Subtest: a personal task completion cannot approve architecture or operation
+ok 2 - a personal task completion cannot approve architecture or operation
+  ---
+  duration_ms: 1.815253
+  type: 'test'
+  ...
+# Subtest: missing direction and duplicate IDs block inventory
+ok 3 - missing direction and duplicate IDs block inventory
+  ---
+  duration_ms: 0.183436
+  type: 'test'
+  ...
+# Subtest: unknown registry dependencies block transition
+ok 4 - unknown registry dependencies block transition
+  ---
+  duration_ms: 0.203106
+  type: 'test'
+  ...
+# Subtest: a failed or absent regression cannot be substituted by a stage number
+ok 5 - a failed or absent regression cannot be substituted by a stage number
+  ---
+  duration_ms: 0.22586
+  type: 'test'
+  ...
+# Subtest: skipped tests are explicit counts, never accepted as passed
+ok 6 - skipped tests are explicit counts, never accepted as passed
+  ---
+  duration_ms: 0.18619
+  type: 'test'
+  ...
+# Subtest: correlation mismatch and any claim of operational readiness fail closed
+ok 7 - correlation mismatch and any claim of operational readiness fail closed
+  ---
+  duration_ms: 0.200612
+  type: 'test'
+  ...
+# Subtest: repeat click and stale evidence revision cannot skip a stage
+ok 8 - repeat click and stale evidence revision cannot skip a stage
+  ---
+  duration_ms: 0.259761
+  type: 'test'
+  ...
+# Subtest: a probe from an older stage cannot satisfy a newer module stage
+ok 9 - a probe from an older stage cannot satisfy a newer module stage
+  ---
+  duration_ms: 0.350298
+  type: 'test'
+  ...
+# Subtest: corrupted local history, fractional stages and foreign iterations are rejected
+ok 10 - corrupted local history, fractional stages and foreign iterations are rejected
+  ---
+  duration_ms: 0.350979
+  type: 'test'
+  ...
+# Subtest: unreviewed documents, invented approvals, missing hashes do not open architecture gate
+ok 11 - unreviewed documents, invented approvals, missing hashes do not open architecture gate
+  ---
+  duration_ms: 0.266211
+  type: 'test'
+  ...
+# Subtest: all later stages require named accepted evidence and stop at VIII
+ok 12 - all later stages require named accepted evidence and stop at VIII
+  ---
+  duration_ms: 1.598608
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 68.427474

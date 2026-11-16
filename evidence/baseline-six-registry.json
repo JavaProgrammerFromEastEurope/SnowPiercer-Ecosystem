@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rail",
+    "moduleId": "SP-RAIL",
+    "stageId": "RAIL-TRUST-011",
+    "directory": "subsystems/rail"
+  },
+  {
+    "id": "life",
+    "moduleId": "SP-LIFE",
+    "stageId": "LIFE-CORE-021",
+    "directory": "subsystems/life"
+  },
+  {
+    "id": "ai",
+    "moduleId": "SP-AI",
+    "stageId": "AI-CORE-021",
+    "directory": "subsystems/ai"
+  },
+  {
+    "id": "logistics",
+    "moduleId": "SP-LOG",
+    "stageId": "LOG-CORE-021",
+    "directory": "subsystems/logistics"
+  },
+  {
+    "id": "energy",
+    "moduleId": "SP-ENERGY",
+    "stageId": "ENERGY-CORE-021",
+    "directory": "subsystems/energy"
+  },
+  {
+    "id": "island",
+    "moduleId": "SP-ISLAND",
+    "stageId": "ISLAND-GEO-021",
+    "directory": "subsystems/island"
+  }
+]

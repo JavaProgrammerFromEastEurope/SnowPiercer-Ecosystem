@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "snowpiercer.sp-ic-004.security.v0.1",
+  "title": "Simulation-only Security admission request; draft integration interface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["request_id", "principal_id", "resource", "action", "policy_version", "correlation_id"],
+  "properties": {
+    "request_id": {"type": "string", "format": "uuid", "maxLength": 36},
+    "principal_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]{0,127}$"},
+    "resource": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]{0,127}$"},
+    "action": {"enum": ["read", "observe", "simulate", "issue", "recover", "override", "actuate", "configure", "admin"]},
+    "policy_version": {"const": "SEC-POLICY-0.1"},
+    "correlation_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"}
+  },
+  "x-security-status": "DRAFT_NON_OPERATIONAL_NO_GO",
+  "x-notes": "A response can be ALLOW but is non-executable and has operationalReady=false; production requires an independently enforced separate protocol."
+}
