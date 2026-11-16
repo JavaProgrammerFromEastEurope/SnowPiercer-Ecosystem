@@ -1,0 +1,6 @@
+..........                                                               [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage17/test_constitution_conflict_resolution.py::test_constitution_conflict_resolution
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+10 passed in 0.11s

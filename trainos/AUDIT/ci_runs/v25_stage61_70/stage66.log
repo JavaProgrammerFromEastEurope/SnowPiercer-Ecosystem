@@ -1,0 +1,6 @@
+.........                                                                [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage66/test_interrupted_task_reconciliation.py::test_confirmed_not_started_recommends_reviewed_retry_without_mutation
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+9 passed in 0.17s

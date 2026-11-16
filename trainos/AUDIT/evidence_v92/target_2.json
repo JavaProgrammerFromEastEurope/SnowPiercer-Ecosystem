@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/domains/recovery/test_recovery_fault_sequences.py",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning"
+  ],
+  "returncode": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,26 @@
+{
+  "release": "v99",
+  "base": "v98",
+  "decision": "BLOCKED/NO-GO",
+  "last_started_v98": "tests/domains/ci_release/test_stage542_atomic_report_has_no_temp_residue.py::test_execution_report_is_valid_json_and_atomic_write_leaves_no_temp",
+  "isolated_stage542": {
+    "result": "PASS",
+    "count": 1,
+    "exit_code": 0
+  },
+  "combined_attempt_1": {
+    "pytest_summary": "1 failed, 396 passed in 50.21s",
+    "runner_exit_code": "UNKNOWN",
+    "runner_report": "MISSING",
+    "observed_failure": "test_retry_after_failure_requires_explicit_new_checkpoint_authorization",
+    "warning_count_observed": 6
+  },
+  "combined_attempts_2_3": "NOT_RUN",
+  "full_strict": "NOT_RUN",
+  "minimum_reproducer": "NOT_IDENTIFIED",
+  "sqlite_root_cause": "NOT_IDENTIFIED",
+  "orphan_free": "NOT_PROVEN",
+  "kernel_runner": "NOT_VERIFIED",
+  "regression_selector": "NOT_VERIFIED",
+  "notes": "Outer execution interrupted before bounded runner persisted report; no PASS asserted."
+}

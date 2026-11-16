@@ -1,0 +1,22 @@
+{
+  "result": "INCOMPLETE_TIMEOUT",
+  "tests_collected": 1366,
+  "attempts": [
+    {
+      "command": "python -m pytest -q",
+      "timeout_seconds": 180,
+      "observed_progress": "approximately 15%",
+      "outcome": "TOOL_TIMEOUT_NO_FINAL_PYTEST_SUMMARY"
+    },
+    {
+      "command": "python -m pytest -q",
+      "timeout_seconds": 300,
+      "observed_progress": "approximately 21%",
+      "outcome": "TOOL_TIMEOUT_NO_FINAL_PYTEST_SUMMARY"
+    }
+  ],
+  "passed": null,
+  "failed": null,
+  "exit_code": null,
+  "note": "Do not interpret partial progress dots as a test pass; investigate slow or blocking tests with the per-stage runner."
+}

@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "passed": 10,
+  "failed": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 3.391,
+  "selection": [
+    "tests/stage548",
+    "tests/stage549",
+    "tests/stage550",
+    "tests/stage551",
+    "tests/stage552",
+    "tests/stage553",
+    "tests/stage554",
+    "tests/stage555",
+    "tests/stage556",
+    "tests/stage557"
+  ],
+  "stdout": "..........                                                               [100%]\n10 passed in 1.46s",
+  "stderr": ""
+}

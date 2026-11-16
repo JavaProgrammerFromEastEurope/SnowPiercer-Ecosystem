@@ -1,0 +1,87 @@
+{
+  "aggregator_exit_code": 0,
+  "counts": {
+    "FAIL": 0,
+    "PASS": 10,
+    "TIMEOUT": 0
+  },
+  "pytest_tests_passed": 100,
+  "run_scope": "stages 1-10 only; bounded diagnostic, not full suite",
+  "runner_exit_code": 0,
+  "source": "summary.tsv",
+  "stage_count": 10,
+  "stages": [
+    {
+      "exit_code": 0,
+      "log": "stage1.log",
+      "seconds": 2,
+      "stage": 1,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage2.log",
+      "seconds": 2,
+      "stage": 2,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage3.log",
+      "seconds": 3,
+      "stage": 3,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage4.log",
+      "seconds": 1,
+      "stage": 4,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage5.log",
+      "seconds": 3,
+      "stage": 5,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage6.log",
+      "seconds": 3,
+      "stage": 6,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage7.log",
+      "seconds": 5,
+      "stage": 7,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage8.log",
+      "seconds": 2,
+      "stage": 8,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage9.log",
+      "seconds": 2,
+      "stage": 9,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage10.log",
+      "seconds": 3,
+      "stage": 10,
+      "status": "PASS"
+    }
+  ],
+  "successful": true,
+  "total_seconds": 26
+}

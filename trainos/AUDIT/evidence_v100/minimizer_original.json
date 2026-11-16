@@ -1,0 +1,26 @@
+{
+  "schema": "trainos.ddmin.v2",
+  "initial_reproduced": true,
+  "minimal_candidate": [
+    "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+  ],
+  "attempts": [
+    {
+      "nodes": [
+        "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+        "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+      ],
+      "status": "reproduced",
+      "returncode": 1,
+      "seconds": 2.204
+    },
+    {
+      "nodes": [
+        "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+      ],
+      "status": "reproduced",
+      "returncode": 1,
+      "seconds": 15.184
+    }
+  ]
+}

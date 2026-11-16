@@ -1,0 +1,4 @@
+{
+  "result": "PASS",
+  "workflow": ".github/workflows/trainos-tests.yml"
+}

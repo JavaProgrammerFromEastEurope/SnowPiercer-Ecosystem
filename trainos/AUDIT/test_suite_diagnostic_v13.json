@@ -1,0 +1,31 @@
+{
+  "version": "v13",
+  "date": "2026-10-24",
+  "scope": "test diagnostics and CI sharding only; no runtime changes",
+  "collected_tests": 973,
+  "collection_seconds": 1.9,
+  "fresh_monolithic_run": {
+    "plugin_disabled": "ddtrace",
+    "timeout_seconds": 75,
+    "progress_at_termination_percent_approx": 20,
+    "status": "unresolved_timeout",
+    "root_cause_confirmed": false
+  },
+  "isolated_case": {
+    "nodeid": "tests/stage135/test_recovery_owner_identity_consistency.py::test_unknown_or_invalid_pid_cannot_authorize_takeover[0]",
+    "passed": 1,
+    "duration_seconds": 0.14
+  },
+  "stage_130_140_shard": {
+    "passed": 28,
+    "duration_seconds": 8.9
+  },
+  "historical_v12_direct_shards": {
+    "passed": 973,
+    "duration_seconds_sum": 70.33,
+    "note": "Separate invocations; not a monolithic suite pass"
+  },
+  "ci_workflow_added": ".github/workflows/trainos-tests.yml",
+  "ci_executed_in_this_environment": false,
+  "real_payment_integration": "NO_GO"
+}

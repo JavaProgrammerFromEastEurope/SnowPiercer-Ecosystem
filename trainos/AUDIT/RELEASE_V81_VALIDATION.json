@@ -1,0 +1,12 @@
+{
+  "schema": "trainos.release-validation.v1",
+  "release": "v81",
+  "base": "v80",
+  "changes": ["10 pinned recovery schema tests migrated into tests/domains/recovery", "bounded pytest runner with process-group termination and retained logs", "4 regression contract tests"],
+  "combined_targeted_regression": {"status": "PASS", "evidence": "AUDIT/v81_evidence/combined_final.json"},
+  "test_collection": {"count": 1469, "errors": 0, "evidence": "AUDIT/v81_evidence/collection.log"},
+  "strict_warnings_regression": {"status": "INCOMPLETE", "note": "Observed pytest summary of 288 passed with 66 warnings in interrupted parent invocation; no bounded runner JSON persisted; not credited as validated run", "evidence": "AUDIT/v81_evidence/targeted_1.pytest.log"},
+  "full_suite": "NOT_RUN",
+  "github_ci": "NOT_RUN",
+  "root_cause_of_v80_hang": "NOT_ESTABLISHED; combined regression completes here"
+}

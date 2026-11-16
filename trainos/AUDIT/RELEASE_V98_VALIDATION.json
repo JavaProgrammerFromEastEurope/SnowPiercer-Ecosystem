@@ -1,0 +1,73 @@
+{
+  "release": "v98",
+  "status": "BLOCKED/NO-GO",
+  "basis": "v97 cumulative tree",
+  "confirmed": {
+    "process_contracts": "5 passed in 10.64s",
+    "lifecycle_probe": "1 passed in 1.81s"
+  },
+  "combined_strict": "INCOMPLETE; failure marker observed; no valid summary/exit code",
+  "full_strict": "NOT_RUN",
+  "sqlite_minimal_reproducer": "NOT_IDENTIFIED",
+  "kernel_runner": "NOT_VERIFIED",
+  "regression_selector": "NOT_VERIFIED",
+  "orphan_absence": "NOT_PROVEN",
+  "notes": "External tool timeouts interrupted combined attempts. Orphan pytest processes observed and SIGKILL cleanup attempted. No production SQLite change without established cause.",
+  "evidence": [
+    {
+      "file": "combined_1.events.jsonl",
+      "bytes": 148722,
+      "sha256": "2921c35f1f51a9f6b5bc35b0615f9145fd7b67a025d4a601a8709ae6e8944faf"
+    },
+    {
+      "file": "combined_1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "combined_1.stdout.log",
+      "bytes": 389,
+      "sha256": "237e336687160efe9e5ecb6cf2e0e73650c8c33a9a2596ba8dd1ba501566d53e"
+    },
+    {
+      "file": "probe_contract.exitcode",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "probe_contract.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "probe_contract.stdout.log",
+      "bytes": 98,
+      "sha256": "117fc97efab587b02a2738f5b524caed8febb1be274d8e11bdb4e245c4ebed78"
+    },
+    {
+      "file": "process_contracts.exitcode",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "process_contracts.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "process_contracts.stdout.log",
+      "bytes": 99,
+      "sha256": "737bf82bbb4df07ec23274e39e631e7a79fc72eb90e51221897c8cbc63761407"
+    },
+    {
+      "file": "strict_1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "strict_1.stdout.log",
+      "bytes": 272,
+      "sha256": "7ff13d7e0f3cb8f9cbb51f9779aa114825ee39ca958cc14f4f6fa48f1eda0458"
+    }
+  ]
+}

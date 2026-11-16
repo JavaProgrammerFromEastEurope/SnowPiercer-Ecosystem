@@ -1,0 +1,940 @@
+........................................................................ [ 25%]
+........................................................................ [ 50%]
+........................................................................ [ 75%]
+........................................................................ [100%]
+=============================== warnings summary ===============================
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2020>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2020>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1990>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1990>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1b70>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1b70>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1d50>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1d50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d18a0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d18a0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1a80>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1a80>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d0d60>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d0d60>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d17b0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d17b0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d16c0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d16c0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d15d0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d15d0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d14e0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d14e0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d13f0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d13f0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1300>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1300>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1210>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1210>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1120>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1120>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1030>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1030>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d0f40>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d0f40>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d0b80>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d0b80>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd49fb50>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd49fb50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d34c0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d34c0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3e20>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3e20>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d33d0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d33d0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d36a0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d36a0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3a60>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3a60>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3880>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3880>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d31f0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d31f0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2980>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2980>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2e30>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2e30>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3100>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3100>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2110>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2110>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1d50>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1d50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d14e0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d14e0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d17b0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d17b0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_recovery_owner_leases.py::test_lease_renewal_is_visible_across_independent_store_connections
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1b70>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 321, in get
+      row = self._connection.execute(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+          "SELECT * FROM recovery_attempts WHERE attempt_key = ?", (key,),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ).fetchone()
+      ^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1b70>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2b60>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2b60>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d32e0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d32e0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2c50>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2c50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3100>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3100>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3c40>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3c40>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2980>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2980>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3b50>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3b50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d31f0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d31f0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3880>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3880>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3f10>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3f10>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d33d0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d33d0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3a60>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3a60>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d36a0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d36a0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3e20>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3e20>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3790>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3790>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3d30>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3d30>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py::test_non_active_status_with_stale_owner_metadata_fails_closed[succeeded-owner_run_id-stale-owner-uuid]
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d34c0>
+  
+  Traceback (most recent call last):
+    File "/mnt/data/v81work/trainos/kernel/command/events/event_log_recovery_attempt_store.py", line 167, in _from_row
+      if not isinstance(value, str) or not value.strip():
+                                           ~~~~~~~~~~~^^
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d34c0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d35b0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d0f40>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d0f40>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1030>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1030>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2c50>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2c50>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d2b60>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d2b60>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d1f30>
+
+Traceback (most recent call last):
+  File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    gc.collect()
+    ~~~~~~~~~~^^
+ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d1f30>
+
+Enable tracemalloc to get traceback where the object was allocated.
+See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+  warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3970>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3970>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d32e0>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d32e0>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+tests/domains/ci_release/test_stage530_timeout_evidence.py::test_timeout_is_reported_as_124_and_persisted
+  /opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 714, in __getitem__
+  KeyError: b'COLUMNS'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "<frozen os>", line 717, in __getitem__
+  ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0bbd2d3010>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+288 passed, 66 warnings in 37.30s

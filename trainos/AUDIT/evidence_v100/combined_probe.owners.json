@@ -1,0 +1,1412 @@
+{
+  "schema": "trainos.sqlite-owners.v100",
+  "exitstatus": 1,
+  "records": [
+    {
+      "sequence": 4,
+      "database": "/tmp/pytest-of-root/pytest-99/test_restart_restore_assessmen0/restart.db",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_checkpoint_recovery_boundaries.py\", line 14, in test_restart_restore_assessment_returns_fresh_instances\n    with DiagnosticInvestigationStore(path) as store:\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/diagnostic_investigation_store.py\", line 75, in __init__\n    self._connection = sqlite3.connect(raw_path, timeout=5.0, isolation_level=None, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_restart_restore_assessment_returns_fresh_instances",
+      "collected": true
+    },
+    {
+      "sequence": 3,
+      "database": "/tmp/pytest-of-root/pytest-99/test_ambiguous_retry_authoriza0/ambiguous-retry-authorization.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_ambiguous_retry_authorization_commit.py\", line 91, in test_ambiguous_retry_authorization_is_resolved_from_durable_row\n    restarted = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_ambiguous_retry_authorization_commit.py::test_ambiguous_retry_authorization_is_resolved_from_durable_row",
+      "collected": true
+    },
+    {
+      "sequence": 6,
+      "database": "/tmp/pytest-of-root/pytest-99/test_bad_transition_timestamp_0/invalid-history.db",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_checkpoint_recovery_boundaries.py\", line 32, in test_bad_transition_timestamp_rejects_restore_without_partial_objects\n    with DiagnosticInvestigationStore(tmp_path / \"invalid-history.db\") as store:\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/diagnostic_investigation_store.py\", line 75, in __init__\n    self._connection = sqlite3.connect(raw_path, timeout=5.0, isolation_level=None, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_bad_transition_timestamp_rejects_restore_without_partial_objects",
+      "collected": true
+    },
+    {
+      "sequence": 186,
+      "database": "/tmp/pytest-of-root/pytest-99/test_restored_event_database_w0/restored-events.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py\", line 53, in test_restored_event_database_with_missing_anchor_fails_closed\n    events = CommandEventStore(tmp_path / \"restored-events.sqlite\")\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/command_event_store.py\", line 30, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": false,
+      "created_at_test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed",
+      "collected": true
+    },
+    {
+      "sequence": 16,
+      "database": "/tmp/pytest-of-root/pytest-99/test_durable_commit_with_lost_0/durable-lost-ack.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_commit_failure_recovery_and_connection_reuse.py\", line 85, in test_durable_commit_with_lost_ack_is_resolved_without_second_transition\n    finished = store.finish_success(\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 521, in finish_success\n    return self._finish(attempt_key, RecoveryAttemptStatus.SUCCEEDED, None, owner_run_id, fencing_token)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 623, in _finish\n    self._commit_or_resolve_ambiguous_result(key, dict(expected_row))\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 551, in _commit_or_resolve_ambiguous_result\n    verifier = sqlite3.connect(self.database_path, timeout=0.25)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_commit_failure_recovery_and_connection_reuse.py::test_durable_commit_with_lost_ack_is_resolved_without_second_transition",
+      "collected": true
+    },
+    {
+      "sequence": 183,
+      "database": "/tmp/pytest-of-root/pytest-99/test_crash_after_re_reservatio0/crash-after-rereserve.sqlite3",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_reconciled_dispatch_crash_recovery.py\", line 71, in test_crash_after_re_reservation_preserves_generation_and_blocks_replay\n    reopened = CommandIdempotencyStore(path)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/execution/command_idempotency_store.py\", line 64, in __init__\n    self._connection = sqlite3.connect(\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_reconciled_dispatch_crash_recovery.py::test_crash_after_re_reservation_preserves_generation_and_blocks_replay",
+      "collected": true
+    },
+    {
+      "sequence": 187,
+      "database": "/tmp/pytest-of-root/pytest-99/test_restored_event_database_w0/empty-anchors.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py\", line 55, in test_restored_event_database_with_missing_anchor_fails_closed\n    anchors = EventIntegrityAnchorStore(tmp_path / \"empty-anchors.sqlite\")\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py\", line 37, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": false,
+      "created_at_test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed",
+      "collected": true
+    },
+    {
+      "sequence": 88,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo6/corrupt-max_attempts-0.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 30, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-0-attempt limits-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 176,
+      "database": "/tmp/pytest-of-root/pytest-99/test_reconciliation_racing_wit0/stage160-race.sqlite3",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_reconcile_vs_reclaim_after_restart.py\", line 38, in test_reconciliation_racing_with_reclaim_never_creates_second_operation\n    seed = CommandIdempotencyStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/execution/command_idempotency_store.py\", line 64, in __init__\n    self._connection = sqlite3.connect(\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_reconcile_vs_reclaim_after_restart.py::test_reconciliation_racing_with_reclaim_never_creates_second_operation",
+      "collected": true
+    },
+    {
+      "sequence": 78,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo2/corrupt-started_at-None.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 39, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    reopened = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[started_at-None-missing started_at-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 85,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo5/corrupt-updated_at-'2026-01-01T00:00:00'.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 30, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[updated_at-2026-01-01T00:00:00-timezone-naive updated_at-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 33,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_counters_block_re0/corrupt-attempt_count-0.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_journal_invariants.py\", line 30, in test_corrupt_counters_block_reads_and_transitions\n    with closing(sqlite3.connect(database)) as connection, connection:\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_corrupt_counters_block_reads_and_transitions[attempt_count-0-invalid attempt_count]",
+      "collected": true
+    },
+    {
+      "sequence": 58,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_modern_owner_pid_2/corrupt-modern-owner.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py\", line 16, in test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[0]",
+      "collected": true
+    },
+    {
+      "sequence": 185,
+      "database": "/tmp/pytest-of-root/pytest-99/test_assessment_uses_one_event0/anchors.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py\", line 23, in test_assessment_uses_one_event_snapshot_and_one_anchor_read\n    anchors = EventIntegrityAnchorStore(tmp_path / \"anchors.sqlite\")\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py\", line 37, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": false,
+      "created_at_test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+      "collected": true
+    },
+    {
+      "sequence": 82,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo4/corrupt-updated_at-'2026-99-99T00:00:00+00:00'.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 30, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[updated_at-2026-99-99T00:00:00+00:00-invalid updated_at-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 91,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo7/corrupt-max_attempts-'three'.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 30, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 184,
+      "database": "/tmp/pytest-of-root/pytest-99/test_assessment_uses_one_event0/events.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py\", line 22, in test_assessment_uses_one_event_snapshot_and_one_anchor_read\n    events = CommandEventStore(tmp_path / \"events.sqlite\")\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/command_event_store.py\", line 30, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": false,
+      "created_at_test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+      "collected": true
+    },
+    {
+      "sequence": 61,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_modern_owner_pid_3/corrupt-modern-owner.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py\", line 16, in test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row\n    store = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[None]",
+      "collected": true
+    },
+    {
+      "sequence": 108,
+      "database": "/tmp/pytest-of-root/pytest-99/test_restart_after_reservation0/idem.sqlite3",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_dispatch_reservation_crash_recovery.py\", line 45, in test_restart_after_reservation_before_callback_requires_reconciliation\n    idem = CommandIdempotencyStore(idem_path)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/execution/command_idempotency_store.py\", line 64, in __init__\n    self._connection = sqlite3.connect(\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_dispatch_reservation_crash_recovery.py::test_restart_after_reservation_before_callback_requires_reconciliation",
+      "collected": true
+    },
+    {
+      "sequence": 136,
+      "database": "/tmp/pytest-of-root/pytest-99/test_recovery_marks_running_ex0/recovery.sqlite3",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_execution_recovery.py\", line 18, in test_recovery_marks_running_execution_without_retrying\n    with ExecutionAuditStore(path) as store:\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/execution/execution_audit_store.py\", line 26, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_marks_running_execution_without_retrying",
+      "collected": true
+    },
+    {
+      "sequence": 75,
+      "database": "/tmp/pytest-of-root/pytest-99/test_corrupt_record_fields_blo1/corrupt-reason-<memory at 0x7f6a4decd9c0>.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py\", line 39, in test_corrupt_record_fields_block_reads_and_transitions_without_repair\n    reopened = EventLogRecoveryAttemptStore(database)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/event_log_recovery_attempt_store.py\", line 58, in __init__\n    self._connection = sqlite3.connect(self.database_path, timeout=5.0, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[reason-value1-invalid reason-corrupt-field-key]",
+      "collected": true
+    },
+    {
+      "sequence": 126,
+      "database": "/tmp/pytest-of-root/pytest-99/test_tampered_log_is_damaged_a0/events.sqlite",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_event_log_recovery_gate.py\", line 44, in test_tampered_log_is_damaged_and_fails_closed\n    events, anchors = stores(tmp_path)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_event_log_recovery_gate.py\", line 19, in stores\n    return (CommandEventStore(tmp_path / \"events.sqlite\"),\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/events/command_event_store.py\", line 30, in __init__\n    self._connection = sqlite3.connect(self._database_path, check_same_thread=False)\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_tampered_log_is_damaged_and_fails_closed",
+      "collected": true
+    },
+    {
+      "sequence": 161,
+      "database": "/tmp/pytest-of-root/pytest-99/test_closed_idempotency_store_0/idempotency.sqlite3",
+      "allocation_stack": [
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py\", line 396, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 118, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 137, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 244, in call_and_report\n    call = CallInfo.from_call(\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 353, in from_call\n    result: TResult | None = func()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 245, in <lambda>\n    lambda: runtest_hook(item=item, **kwds),\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py\", line 179, in pytest_runtest_call\n    item.runtest()\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 1720, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py\", line 512, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n",
+        "  File \"/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py\", line 166, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n",
+        "  File \"/mnt/data/v93work/trainos/tests/domains/recovery/test_journal_availability_recovery.py\", line 54, in test_closed_idempotency_store_fails_closed_then_reopen_preserves_unknown\n    idem = CommandIdempotencyStore(idem_path)\n",
+        "  File \"/mnt/data/trainos_v100/kernel/command/execution/command_idempotency_store.py\", line 64, in __init__\n    self._connection = sqlite3.connect(\n",
+        "  File \"/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py\", line 38, in _connect\n    'allocation_stack': traceback.format_stack(limit=22), 'explicit_close': False,\n"
+      ],
+      "explicit_close": true,
+      "created_at_test": "tests/domains/recovery/test_journal_availability_recovery.py::test_closed_idempotency_store_fails_closed_then_reopen_preserves_unknown",
+      "collected": true
+    }
+  ],
+  "boundaries": [
+    {
+      "test": "tests/domains/recovery/test_ambiguous_retry_authorization_commit.py::test_ambiguous_retry_authorization_is_resolved_from_durable_row",
+      "gc_collected": 4159,
+      "unclosed_collected": [],
+      "tracked": 2,
+      "time": 9372.459591319
+    },
+    {
+      "test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_restart_restore_assessment_returns_fresh_instances",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 3,
+      "time": 9372.595928238
+    },
+    {
+      "test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_bad_transition_timestamp_rejects_restore_without_partial_objects",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 3,
+      "time": 9372.715040007
+    },
+    {
+      "test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_database_payload_tampering_is_detected_after_reopen",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 6,
+      "time": 9372.838941006
+    },
+    {
+      "test": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py::test_restore_capacity_failure_does_not_return_partial_state",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 6,
+      "time": 9372.948545294
+    },
+    {
+      "test": "tests/domains/recovery/test_command_event_store_constructor_cleanup.py::test_constructor_closes_connection_after_schema_failure",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 6,
+      "time": 9373.138253712
+    },
+    {
+      "test": "tests/domains/recovery/test_commit_failure_recovery_and_connection_reuse.py::test_precommit_io_error_rolls_back_and_store_can_finish_later",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 6,
+      "time": 9373.260740162
+    },
+    {
+      "test": "tests/domains/recovery/test_commit_failure_recovery_and_connection_reuse.py::test_durable_commit_with_lost_ack_is_resolved_without_second_transition",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 6,
+      "time": 9373.379852622
+    },
+    {
+      "test": "tests/domains/recovery/test_competing_retry_authorization_and_attempt_start.py::test_competing_authorizations_and_starters_consume_one_retry_once",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 8,
+      "time": 9375.758604977
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_claim_recovery_after_lost_commit_ack.py::test_competing_processes_reuse_claim_after_lost_commit_ack",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 8,
+      "time": 9376.716372257
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_claim_recovery_after_lost_commit_ack.py::test_competing_mismatch_after_lost_commit_ack_cannot_replace_durable_claim",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 8,
+      "time": 9377.699249055
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_multi_command_recovery.py::test_concurrent_recovery_of_many_running_commands_appends_one_recovery_each",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 8,
+      "time": 9377.869518107
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_multi_command_recovery.py::test_corrupt_execution_record_does_not_prevent_independent_command_recovery",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 10,
+      "time": 9377.992049534
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_multi_command_recovery.py::test_recovery_only_changes_running_commands_and_preserves_terminal_history",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 10,
+      "time": 9378.123618315
+    },
+    {
+      "test": "tests/domains/recovery/test_concurrent_retry_limit_exhaustion.py::test_concurrent_authorize_and_begin_cannot_bypass_exhausted_limit",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 11,
+      "time": 9379.897107595
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_corrupt_counters_block_reads_and_transitions[attempt_count-0-invalid attempt_count]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 13,
+      "time": 9380.020350149
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_corrupt_counters_block_reads_and_transitions[max_attempts-0-inconsistent attempt limits]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 14,
+      "time": 9380.147994003
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_corrupt_counters_block_reads_and_transitions[fencing_token--1-inconsistent fencing token]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 14,
+      "time": 9380.277286198
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_corrupt_counters_block_reads_and_transitions[fencing_token-2-inconsistent fencing token]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 15,
+      "time": 9380.397140306
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_inconsistent_active_ownership_metadata_blocks_transition",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 16,
+      "time": 9380.516627251
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py::test_interrupted_attempt_clears_pid_and_lease_but_retains_owner_for_audit",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 16,
+      "time": 9380.626225271
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_status.py::test_unknown_persisted_status_blocks_reads_and_new_attempts",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 16,
+      "time": 9380.798043205
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_journal_status.py::test_known_terminal_status_cannot_be_restarted_under_same_key",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 16,
+      "time": 9380.903014931
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[-1]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 16,
+      "time": 9381.018581174
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[-999]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 17,
+      "time": 9381.14396078
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[0]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 18,
+      "time": 9381.29538432
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[None]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 19,
+      "time": 9381.413358027
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[not-a-pid]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 20,
+      "time": 9381.530300192
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py::test_corrupt_modern_owner_pid_blocks_read_and_preserves_durable_row[3.5]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 20,
+      "time": 9381.653297421
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[reason-   -invalid reason-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 20,
+      "time": 9381.786501685
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[reason-value1-invalid reason-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9381.91343514
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[started_at-None-missing started_at-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.050883422
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[started_at-not-a-time-invalid started_at-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.177626565
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[updated_at-2026-99-99T00:00:00+00:00-invalid updated_at-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.306881174
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[updated_at-2026-01-01T00:00:00-timezone-naive updated_at-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.435660928
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-0-attempt limits-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.559773576
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_corrupt_record_fields_block_reads_and_transitions_without_repair[max_attempts-three-attempt limits-corrupt-field-key]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.681190988
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_blank_persisted_key_blocks_absent_key_lookup_and_new_attempt",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.84216223
+    },
+    {
+      "test": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py::test_valid_record_fields_still_support_normal_lifecycle",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9382.947821585
+    },
+    {
+      "test": "tests/domains/recovery/test_crash_before_commit_retry_transaction.py::test_crash_after_retry_update_before_commit_rolls_back_and_retry_is_recoverable",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9383.645052746
+    },
+    {
+      "test": "tests/domains/recovery/test_crash_before_commit_retry_transaction.py::test_crash_after_first_attempt_insert_before_commit_leaves_no_partial_row",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9384.351558243
+    },
+    {
+      "test": "tests/domains/recovery/test_crash_during_retry_authorization_and_start.py::test_restart_reconciles_crash_after_retry_authorization_commit",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9385.114700827
+    },
+    {
+      "test": "tests/domains/recovery/test_crash_during_retry_authorization_and_start.py::test_restart_reconciles_crash_after_new_attempt_commit_before_return",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9386.070081865
+    },
+    {
+      "test": "tests/domains/recovery/test_dispatch_reservation_crash_recovery.py::test_restart_after_reservation_before_callback_requires_reconciliation",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9386.219166234
+    },
+    {
+      "test": "tests/domains/recovery/test_dispatch_reservation_crash_recovery.py::test_crashed_reservation_does_not_block_independent_command",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 21,
+      "time": 9386.372240002
+    },
+    {
+      "test": "tests/domains/recovery/test_dispatch_reservation_crash_recovery.py::test_unknown_reserved_attempt_remains_blocked",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9386.512297213
+    },
+    {
+      "test": "tests/domains/recovery/test_duplicate_execution_binding_recovery.py::test_duplicate_execution_binding_in_corrupted_ledger_blocks_both_commands",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9386.644222772
+    },
+    {
+      "test": "tests/domains/recovery/test_duplicate_execution_binding_recovery.py::test_normal_api_prevents_duplicate_execution_binding_before_recovery",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9386.769164638
+    },
+    {
+      "test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_clean_restored_log_is_verified",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9386.889405018
+    },
+    {
+      "test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_missing_anchor_means_insufficient_data_and_fails_closed",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.052779928
+    },
+    {
+      "test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_tampered_log_is_damaged_and_fails_closed",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.186306688
+    },
+    {
+      "test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_rolled_back_log_is_damaged",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.31493922
+    },
+    {
+      "test": "tests/domains/recovery/test_event_log_recovery_gate.py::test_invalid_store_arguments_rejected",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.424420534
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_valid_recovery_history_is_consistent",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.516288143
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_explicit_recovery_resolution_is_recorded_and_consistent",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.601037638
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_missing_recovery_entry_is_reported",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.689435334
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_recovery_exit_without_decision_note_is_reported",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.778219993
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_transition_timestamp_requires_timezone",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.867777485
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_state_counts_and_transition_sequence_are_checked",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9387.953529439
+    },
+    {
+      "test": "tests/domains/recovery/test_evidence_recovery_integrity.py::test_rejects_wrong_snapshot_type",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.038571634
+    },
+    {
+      "test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_marks_running_execution_without_retrying",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.15389983
+    },
+    {
+      "test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_does_not_touch_terminal_executions",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.273001616
+    },
+    {
+      "test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_is_idempotent",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.390419497
+    },
+    {
+      "test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_keeps_other_running_executions_independent",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.522793332
+    },
+    {
+      "test": "tests/domains/recovery/test_execution_recovery.py::test_recovery_required_is_terminal_for_ordinary_transitions",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 22,
+      "time": 9388.648985521
+    },
+    {
+      "test": "tests/domains/recovery/test_expired_lease_recovery_contention.py::test_expired_lease_cannot_be_resurrected_and_only_one_retry_owner_wins",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9390.739372629
+    },
+    {
+      "test": "tests/domains/recovery/test_idempotency_claim_commit_crash_recovery.py::test_claim_commit_failure_before_durability_rolls_back_and_can_be_claimed",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9390.866928061
+    },
+    {
+      "test": "tests/domains/recovery/test_idempotency_claim_commit_crash_recovery.py::test_lost_commit_acknowledgement_after_durable_claim_reuses_existing_record",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9391.000984749
+    },
+    {
+      "test": "tests/domains/recovery/test_inspection_state_change_races.py::test_idempotency_transition_during_inspection_invalidates_dispatch_report",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9391.165149134
+    },
+    {
+      "test": "tests/domains/recovery/test_inspection_state_change_races.py::test_audit_transition_during_inspection_invalidates_stale_created_snapshot",
+      "gc_collected": 18,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9391.306673603
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_attempt_retry_authorization_race.py::test_interrupted_attempt_reconciliation_races_retry_authorization",
+      "gc_collected": 22,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9392.560728915
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_restart_marks_interrupted_task_recovery_required_without_retry",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9392.652667462
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_explicit_retry_decision_returns_task_to_pending",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9392.758678903
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_explicit_block_decision_blocks_task",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9392.85207277
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_retry_is_refused_when_attempt_limit_exhausted",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9392.946290528
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_invalid_decision_does_not_mutate_task",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9393.055963661
+    },
+    {
+      "test": "tests/domains/recovery/test_interrupted_task_recovery.py::test_recovery_state_survives_checkpoint_restore",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9393.208135117
+    },
+    {
+      "test": "tests/domains/recovery/test_journal_availability_recovery.py::test_closed_audit_store_fails_closed_then_reopened_store_recovers",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9393.377133459
+    },
+    {
+      "test": "tests/domains/recovery/test_journal_availability_recovery.py::test_closed_idempotency_store_fails_closed_then_reopen_preserves_unknown",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9393.532606981
+    },
+    {
+      "test": "tests/domains/recovery/test_lease_renewal_process_crash.py::test_restart_reconciles_lease_state_after_process_crash[before_commit-74-False]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9394.361417124
+    },
+    {
+      "test": "tests/domains/recovery/test_lease_renewal_process_crash.py::test_restart_reconciles_lease_state_after_process_crash[after_commit-75-True]",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9395.045000164
+    },
+    {
+      "test": "tests/domains/recovery/test_partial_audit_write_recovery.py::test_invalid_partial_progress_is_skipped_and_independent_execution_recovers",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9395.286895328
+    },
+    {
+      "test": "tests/domains/recovery/test_partial_audit_write_recovery.py::test_uncommitted_partial_transition_disappears_after_rollback_and_reopen",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9395.42015746
+    },
+    {
+      "test": "tests/domains/recovery/test_partial_audit_write_recovery.py::test_integrity_report_identifies_unknown_status_without_dispatch_repair",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9395.537049054
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v76.py::test_recovery_migration_v76_has_exact_ownership",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9396.650033358
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v76.py::test_recovery_migration_v76_registry_has_no_stale_paths",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9396.804289673
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v77.py::test_v77_migration_paths_and_unique_ownership",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9397.980978657
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v77.py::test_v77_registry_has_no_stale_migration_paths",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9398.140371043
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v78.py::test_v78_migrated_modules_have_single_recovery_owner",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9399.488485101
+    },
+    {
+      "test": "tests/domains/recovery/test_physical_migration_v78.py::test_v78_migration_does_not_leave_stale_assignments",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9399.659374749
+    },
+    {
+      "test": "tests/domains/recovery/test_reconcile_after_verification_outage.py::test_restart_reconciles_durable_finish_after_verification_outage",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9399.797648215
+    },
+    {
+      "test": "tests/domains/recovery/test_reconcile_after_verification_outage.py::test_restart_reconciles_durable_retry_authorization_after_verification_outage",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9399.942258839
+    },
+    {
+      "test": "tests/domains/recovery/test_reconcile_vs_reclaim_after_restart.py::test_reconciliation_racing_with_reclaim_never_creates_second_operation",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9401.223980501
+    },
+    {
+      "test": "tests/domains/recovery/test_reconcile_vs_reclaim_after_restart.py::test_completed_command_claim_after_restart_returns_existing_result",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9401.36664735
+    },
+    {
+      "test": "tests/domains/recovery/test_reconciled_dispatch_crash_recovery.py::test_old_not_executed_evidence_cannot_be_reused_after_new_dispatch",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9401.521285439
+    },
+    {
+      "test": "tests/domains/recovery/test_reconciled_dispatch_crash_recovery.py::test_crash_after_re_reservation_preserves_generation_and_blocks_replay",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9401.639338396
+    },
+    {
+      "test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+      "gc_collected": 0,
+      "unclosed_collected": [],
+      "tracked": 23,
+      "time": 9401.75818689
+    },
+    {
+      "test": "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed",
+      "gc_collected": 118,
+      "unclosed_collected": [
+        186,
+        187,
+        185,
+        184
+      ],
+      "tracked": 23,
+      "time": 9401.880393109
+    }
+  ]
+}

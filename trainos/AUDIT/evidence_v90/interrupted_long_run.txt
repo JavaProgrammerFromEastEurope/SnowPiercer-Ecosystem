@@ -1,0 +1,1 @@
+Initial combined strict attempt was externally interrupted before bounded runner emitted JSON; partial stdout saved as combined_1.stdout.log. A pytest process with PPID=1 was observed and terminated by process-group signal. No PASS.

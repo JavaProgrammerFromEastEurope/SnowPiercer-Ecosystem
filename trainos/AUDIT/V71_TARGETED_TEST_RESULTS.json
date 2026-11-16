@@ -1,0 +1,6 @@
+{
+  "command": "/opt/pyvenv/bin/python -m pytest -q tests/domains/pytest_diagnostics tests/domains/ci_release",
+  "exit_code": 0,
+  "output_tail": "...................................................                      [100%]\n51 passed in 1.29s\n",
+  "full_regression": "NOT_RUN"
+}

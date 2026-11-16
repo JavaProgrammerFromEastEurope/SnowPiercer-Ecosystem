@@ -1,0 +1,136 @@
+{
+  "schema": "trainos.v106-concurrent-admission-negative",
+  "status": "PASS_NEGATIVE_CONTROL",
+  "attempts": 16,
+  "production_e2e_certified": false,
+  "results": [
+    {
+      "iteration": 0,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 1,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 2,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 3,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 4,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 5,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 6,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 7,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 8,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 9,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 10,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 11,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 12,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 13,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 14,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    },
+    {
+      "iteration": 15,
+      "exitcode": 125,
+      "marker_created": false,
+      "report_written": true,
+      "admitted": false,
+      "error": "AdmissionDenied: delegated cgroup root must be an existing absolute non-symlink directory"
+    }
+  ]
+}

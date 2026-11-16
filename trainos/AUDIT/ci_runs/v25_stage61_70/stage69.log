@@ -1,0 +1,10 @@
+....                                                                     [100%]
+============================= slowest 10 durations =============================
+0.04s setup    tests/stage69/test_checkpoint_restore_assessment.py::test_assessed_restore_returns_integrity_report_for_valid_checkpoint
+0.01s call     tests/stage69/test_checkpoint_restore_assessment.py::test_assessed_restore_returns_integrity_report_for_valid_checkpoint
+0.01s call     tests/stage69/test_checkpoint_restore_assessment.py::test_assessed_restore_reports_missing_checkpoint_without_throwing
+0.01s call     tests/stage69/test_checkpoint_restore_assessment.py::test_assessed_restore_rejects_corrupt_checkpoint_with_structured_code
+0.01s call     tests/stage69/test_checkpoint_restore_assessment.py::test_assessed_restore_rejects_blank_id_as_programmer_error
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+4 passed in 0.18s

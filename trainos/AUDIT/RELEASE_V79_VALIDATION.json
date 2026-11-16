@@ -1,0 +1,8 @@
+{
+  "release": "v79",
+  "target": "229 passed in 30.17s",
+  "collection_status": 0,
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN",
+  "migrated_modules": 10
+}

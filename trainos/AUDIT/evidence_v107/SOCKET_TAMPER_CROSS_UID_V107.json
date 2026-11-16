@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.v107.socket-tamper",
+  "status": "PASS_NEGATIVE_CONTROL",
+  "production_admitted": false,
+  "observations": {
+    "tamper_exitcode": 0,
+    "tamper": {
+      "unlink": "13",
+      "read": "13"
+    },
+    "request_exitcode": 125,
+    "request_response": {
+      "status": "DENIED",
+      "reason": "CONTAINMENT_NOT_CERTIFIED"
+    },
+    "server_exitcode": 0,
+    "server_stderr": ""
+  }
+}

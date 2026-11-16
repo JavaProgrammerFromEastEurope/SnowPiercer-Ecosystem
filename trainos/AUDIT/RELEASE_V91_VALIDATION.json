@@ -1,0 +1,37 @@
+{
+  "release": "v91",
+  "base": "v90",
+  "readiness": "BLOCKED/NO-GO",
+  "strict_runs": {
+    "strict_1": {
+      "status": "timeout",
+      "returncode": -15,
+      "group_absence_verified": true
+    },
+    "strict_2": {
+      "status": "timeout",
+      "returncode": -15,
+      "group_absence_verified": true
+    },
+    "strict_3": {
+      "status": "timeout",
+      "returncode": -15,
+      "group_absence_verified": true
+    },
+    "full_suite": {
+      "status": "timeout",
+      "returncode": -15,
+      "group_absence_verified": true
+    }
+  },
+  "targeted_runner_contract": "4 passed",
+  "combined_initial": "1 failed (SQLite PytestUnraisableExceptionWarning), pytest leader orphaned after parent interrupted; manually terminated",
+  "limitations": [
+    "No three successful combined regressions",
+    "No completed full suite",
+    "No complete SQLite ownership trace",
+    "Process-group absence verified only for bounded runs",
+    "Kernel Runner and regression selector not verified"
+  ],
+  "source_archive": "TrainOS_v90_SQLite_Process_Audit_BLOCKED.zip"
+}

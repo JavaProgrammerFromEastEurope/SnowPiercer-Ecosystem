@@ -1,0 +1,72 @@
+
+=== stage568 (timeout 180s) ===
+stage568: PASS (exit=0, 2s)
+0.02s setup    tests/stage568/test_stage568_pytest_diagnostic.py::test_collection_count_is_read_in_both_pytest_summary_orders
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage569 (timeout 180s) ===
+stage569: PASS (exit=0, 2s)
+0.02s setup    tests/stage569/test_stage569_pytest_diagnostic.py::test_progress_distinguishes_observed_from_completed_test
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage570 (timeout 180s) ===
+stage570: PASS (exit=0, 2s)
+0.02s setup    tests/stage570/test_stage570_pytest_diagnostic.py::test_outcome_counts_are_exact_and_initialized
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.10s
+
+=== stage571 (timeout 180s) ===
+stage571: PASS (exit=0, 1s)
+0.02s setup    tests/stage571/test_stage571_pytest_diagnostic.py::test_tail_lines_is_bounded_and_keeps_latest_lines
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage572 (timeout 180s) ===
+stage572: PASS (exit=0, 2s)
+0.02s setup    tests/stage572/test_stage572_pytest_diagnostic.py::test_tail_lines_rejects_nonpositive_values
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage573 (timeout 180s) ===
+stage573: PASS (exit=0, 2s)
+0.02s setup    tests/stage573/test_stage573_pytest_diagnostic.py::test_atomic_json_replaces_target_with_valid_json
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage574 (timeout 180s) ===
+stage574: PASS (exit=0, 2s)
+0.02s setup    tests/stage574/test_stage574_pytest_diagnostic.py::test_timeout_report_remains_incomplete_and_preserves_exit_code
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.10s
+
+=== stage575 (timeout 180s) ===
+stage575: PASS (exit=0, 1s)
+0.02s setup    tests/stage575/test_stage575_pytest_diagnostic.py::test_workflow_range_and_diagnostic_tail_option_are_covered
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage576 (timeout 180s) ===
+stage576: PASS (exit=0, 2s)
+0.02s setup    tests/stage576/test_stage576_pytest_diagnostic.py::test_report_contains_collected_count_even_without_test_lines
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage577 (timeout 180s) ===
+stage577: PASS (exit=0, 3s)
+0.02s setup    tests/stage577/test_stage577_pytest_diagnostic.py::test_invalid_tail_lines_argument_is_documented_in_cli
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.77s
+
+Stage summary: docs/release_evidence/v66/stage_matrix_568_577/summary.tsv (10 stage directories)

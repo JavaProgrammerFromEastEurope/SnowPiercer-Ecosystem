@@ -1,0 +1,8 @@
+{
+  "name": "collect_all",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "duration_seconds": 6.5,
+  "summary": "1474 tests collected in 3.68s",
+  "log": "AUDIT/evidence_v85/collect_all.log"
+}

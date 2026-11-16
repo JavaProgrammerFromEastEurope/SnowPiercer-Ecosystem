@@ -1,0 +1,63 @@
+{
+  "schema": "trainos.process-supervisor.v105",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "tests.kernel_runner"
+  ],
+  "supervisor_pid": 82127,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "pidfd_required": true,
+  "pidfd_available": true,
+  "production_admitted": false,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 82157
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116502,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116559,
+      "wait_status": 9
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116597,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116792,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116831,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 116842,
+      "wait_status": 15
+    }
+  ],
+  "status": "PASS",
+  "runner_pid": 82157,
+  "residual_at_runner_exit": [],
+  "runner_exitcode": 0,
+  "supervisor_signal": null,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 0,
+  "supervisor_exitcode": 0,
+  "cleanup_complete": true,
+  "duration_seconds": 2167.846
+}

@@ -1,0 +1,3 @@
+strict_1 shell_exit=124
+strict_2 shell_exit=124
+strict_3 shell_exit=124

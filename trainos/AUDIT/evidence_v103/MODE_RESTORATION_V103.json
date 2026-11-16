@@ -1,0 +1,24 @@
+{
+  "base": "TrainOS-v102-source.zip",
+  "executables": [
+    {
+      "path": "AUDIT/evidence_v100/run_matrix.sh",
+      "base_mode": "0o755",
+      "v103_mode": "0o755",
+      "matching": true
+    },
+    {
+      "path": "AUDIT/evidence_v101/run_matrix.sh",
+      "base_mode": "0o755",
+      "v103_mode": "0o755",
+      "matching": true
+    },
+    {
+      "path": "scripts/ci/run_stage_matrix.sh",
+      "base_mode": "0o755",
+      "v103_mode": "0o755",
+      "matching": true
+    }
+  ],
+  "all_restored": true
+}

@@ -1,0 +1,155 @@
+{
+  "release": "v96",
+  "base": "v95",
+  "status": "BLOCKED/NO-GO",
+  "confirmed": [
+    "order minimizer strict contracts: 2 passed",
+    "bounded runner v81 strict contracts: 4 passed",
+    "combined pytest nodeid collection: 394 nodes",
+    "regression selector CLI invoked"
+  ],
+  "unconfirmed": [
+    "minimal SQLite warning reproduction",
+    "SQLite leak root cause",
+    "three completed strict combined regressions",
+    "full strict suite PASS",
+    "Kernel Runner compatibility",
+    "no orphan process guarantee"
+  ],
+  "runs": {
+    "combined_1": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "tests/domains/recovery",
+        "tests/domains/ci_release",
+        "tests/domains/pytest_diagnostics"
+      ],
+      "timeout_seconds": 22.0,
+      "duration_seconds": 22.57,
+      "status": "timeout",
+      "timed_out": true,
+      "returncode": -15,
+      "stdout": "AUDIT/evidence_v96/combined_1.stdout.log",
+      "stderr": "AUDIT/evidence_v96/combined_1.stderr.log",
+      "group_cleanup": [
+        "timeout",
+        "group_sigterm",
+        "group_sigterm",
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "runner_error": null
+    },
+    "combined_2": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "tests/domains/recovery",
+        "tests/domains/ci_release",
+        "tests/domains/pytest_diagnostics"
+      ],
+      "timeout_seconds": 12.0,
+      "duration_seconds": 12.473,
+      "status": "timeout",
+      "timed_out": true,
+      "returncode": -15,
+      "stdout": "AUDIT/evidence_v96/combined_2.stdout.log",
+      "stderr": "AUDIT/evidence_v96/combined_2.stderr.log",
+      "group_cleanup": [
+        "timeout",
+        "group_sigterm",
+        "group_sigterm",
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "runner_error": null
+    },
+    "combined_3": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "tests/domains/recovery",
+        "tests/domains/ci_release",
+        "tests/domains/pytest_diagnostics"
+      ],
+      "timeout_seconds": 12.0,
+      "duration_seconds": 13.268,
+      "status": "timeout",
+      "timed_out": true,
+      "returncode": -15,
+      "stdout": "AUDIT/evidence_v96/combined_3.stdout.log",
+      "stderr": "AUDIT/evidence_v96/combined_3.stderr.log",
+      "group_cleanup": [
+        "timeout",
+        "group_sigterm",
+        "group_sigterm",
+        "group_sigkill",
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "runner_error": null
+    },
+    "full_suite": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning"
+      ],
+      "timeout_seconds": 12.0,
+      "duration_seconds": 12.017,
+      "status": "timeout",
+      "timed_out": true,
+      "returncode": -15,
+      "stdout": "AUDIT/evidence_v96/full_suite.stdout.log",
+      "stderr": "AUDIT/evidence_v96/full_suite.stderr.log",
+      "group_cleanup": [
+        "timeout",
+        "group_sigterm",
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "runner_error": null
+    }
+  },
+  "limitations": "Timed-out probes are inconclusive. No production SQLite changes made without verified root cause. Do not count timeouts as PASS."
+}

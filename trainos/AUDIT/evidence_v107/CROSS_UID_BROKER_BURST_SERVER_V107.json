@@ -1,0 +1,126 @@
+{
+  "schema": "trainos.uid-broker.v107",
+  "production_admitted": false,
+  "requests": [
+    {
+      "pid": 9631,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "CONTAINMENT_NOT_CERTIFIED"
+    },
+    {
+      "pid": 9633,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9648,
+      "uid": 65533,
+      "status": "DENIED",
+      "reason": "INVALID_PEER"
+    },
+    {
+      "pid": 9637,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9642,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9645,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9635,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9639,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9641,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9632,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9636,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9646,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9638,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9634,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9640,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9644,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9643,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    {
+      "pid": 9650,
+      "uid": 65533,
+      "status": "DENIED",
+      "reason": "INVALID_PEER"
+    },
+    {
+      "pid": 9647,
+      "uid": 65533,
+      "status": "DENIED",
+      "reason": "INVALID_PEER"
+    },
+    {
+      "pid": 9649,
+      "uid": 65533,
+      "status": "DENIED",
+      "reason": "INVALID_PEER"
+    }
+  ]
+}

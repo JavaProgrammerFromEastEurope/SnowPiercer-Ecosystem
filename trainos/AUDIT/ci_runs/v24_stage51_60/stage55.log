@@ -1,0 +1,6 @@
+......                                                                   [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage55/test_diagnostic_hypothesis_registry.py::test_registration_creates_pending_hypothesis_and_is_idempotent
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+6 passed in 0.16s

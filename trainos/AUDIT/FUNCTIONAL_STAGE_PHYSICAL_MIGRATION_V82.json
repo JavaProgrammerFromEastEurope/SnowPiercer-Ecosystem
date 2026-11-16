@@ -1,0 +1,45 @@
+{
+  "schema": "trainos.functional-migration.v82",
+  "moves": [
+    {
+      "from": "tests/stage408/test_stage408_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage408_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage409/test_stage409_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage409_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage410/test_stage410_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage410_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage411/test_stage411_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage411_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage412/test_stage412_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage412_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage413/test_stage413_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage413_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage414/test_stage414_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage414_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage415/test_stage415_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage415_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage416/test_stage416_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage416_schema_recovery.py"
+    },
+    {
+      "from": "tests/stage417/test_stage417_schema_recovery.py",
+      "to": "tests/domains/recovery/test_stage417_schema_recovery.py"
+    }
+  ]
+}

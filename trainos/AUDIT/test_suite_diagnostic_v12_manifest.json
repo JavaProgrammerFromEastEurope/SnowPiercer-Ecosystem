@@ -1,0 +1,59 @@
+{
+  "artifact": "TrainOS Financial Ledger Contract v12 \u2014 Test Suite Diagnostic",
+  "date": "2026-10-24",
+  "canonical_root": "TrainOS/",
+  "status": "isolated_prototype_no_go_for_production_payments",
+  "collected_test_cases": 973,
+  "grouped_test_results": [
+    {
+      "group": "stages_1_49",
+      "passed": 439,
+      "duration_seconds": 2.25,
+      "result": "passed"
+    },
+    {
+      "group": "stages_50_99",
+      "passed": 240,
+      "duration_seconds": 4.19,
+      "result": "passed"
+    },
+    {
+      "group": "stages_100_124",
+      "passed": 62,
+      "duration_seconds": 22.56,
+      "result": "passed"
+    },
+    {
+      "group": "stages_125_149",
+      "passed": 78,
+      "duration_seconds": 14.67,
+      "result": "passed"
+    },
+    {
+      "group": "stages_150_177",
+      "passed": 90,
+      "duration_seconds": 20.47,
+      "result": "passed"
+    },
+    {
+      "group": "ledger_contract",
+      "passed": 64,
+      "duration_seconds": 6.19,
+      "result": "passed"
+    }
+  ],
+  "grouped_total_passed": 973,
+  "grouped_runs_sum_duration_seconds": 70.33,
+  "monolithic_suite": {
+    "result": "timed_out",
+    "timeout_seconds": 300,
+    "approx_progress_percent": 16,
+    "root_cause": "unresolved"
+  },
+  "automated_wrapper": "not_adopted_intermitently_stalled_while_direct_group_reruns_passed",
+  "python_files": 2667,
+  "python_ast_parse_errors": 0,
+  "source_file_count": 2832,
+  "source_tree_sha256": "b646a7e306c48e770fa2730c8fd2d5e2268c745fca322ef5539c665bcc4a6597",
+  "production_gate": "no_go"
+}

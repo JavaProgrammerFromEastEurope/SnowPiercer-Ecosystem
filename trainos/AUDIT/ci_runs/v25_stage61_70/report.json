@@ -1,0 +1,106 @@
+{
+  "aggregator_log_validation": "PASS",
+  "aggregator_unit_tests": "6 passed",
+  "ci_shell_regression": "PASS: PASS/FAIL/TIMEOUT classification",
+  "counts": {
+    "FAIL": 0,
+    "PASS": 10,
+    "TIMEOUT": 0
+  },
+  "executed_stages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "full_suite": "NOT_CONFIRMED_ROOT_CAUSE_UNRESOLVED",
+  "github_actions_executed_here": false,
+  "missing_stages": [],
+  "pytest_cases_reported": 64,
+  "real_payment_integration": "NO_GO",
+  "requested_stage_range": "61-70",
+  "source": "summary.tsv",
+  "stage_count": 10,
+  "stage_matrix_runner": "PASS",
+  "stages": [
+    {
+      "exit_code": 0,
+      "log": "stage61.log",
+      "seconds": 3,
+      "stage": 61,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage62.log",
+      "seconds": 2,
+      "stage": 62,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage63.log",
+      "seconds": 3,
+      "stage": 63,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage64.log",
+      "seconds": 2,
+      "stage": 64,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage65.log",
+      "seconds": 2,
+      "stage": 65,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage66.log",
+      "seconds": 3,
+      "stage": 66,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage67.log",
+      "seconds": 2,
+      "stage": 67,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage68.log",
+      "seconds": 2,
+      "stage": 68,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage69.log",
+      "seconds": 3,
+      "stage": 69,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage70.log",
+      "seconds": 2,
+      "stage": 70,
+      "status": "PASS"
+    }
+  ],
+  "successful": true,
+  "total_seconds": 24,
+  "version": "v25"
+}

@@ -1,0 +1,4 @@
+.............                                                            [100%]
+13 passed in 0.23s
+Regression stages 83-85: PASS | files=3 | 2.599s
+Evidence report: /mnt/data/trainos_v101/AUDIT/evidence_v101/selector.json

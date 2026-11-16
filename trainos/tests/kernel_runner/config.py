@@ -1,6 +1,12 @@
-# tests/kernel_runner/config.py
+"""Functional-stage registry for TrainOS.
 
+Legacy tests retain their original paths; stages are now domain-oriented. New
+checks belong in tests/domains/<domain>/test_*.py, not numbered directories.
+"""
 from dataclasses import dataclass
+from pathlib import Path
+import re
+import json
 
 
 @dataclass(frozen=True, slots=True)
@@ -9,347 +15,102 @@ class StageConfig:
     tests: list[str]
 
 
-STAGES: list[StageConfig] = [
-    # #
-    # # Stage 1
-    # #
-    # StageConfig(
-    #     name="stage1_kernel_core",
-    #     tests=[
-    #         "tests/stage1",
-    #     ],
-    # ),
-    # #
-    # # Stage 2
-    # #
-    # StageConfig(
-    #     name="stage2_runtime",
-    #     tests=[
-    #         "tests/stage2",
-    #     ],
-    # ),
-    # #
-    # # Stage 3
-    # #
-    # StageConfig(
-    #     name="stage3_reactive",
-    #     tests=[
-    #         "tests/stage3",
-    #     ],
-    # ),
-    # #
-    # # Stage 4
-    # #
-    # StageConfig(
-    #     name="stage4_command_execution",
-    #     tests=[
-    #         "tests/stage4",
-    #     ],
-    # ),
-    # #
-    # # Stage 5
-    # #
-    # StageConfig(
-    #     name="stage5_decision_engine",
-    #     tests=[
-    #         "tests/stage5",
-    #     ],
-    # ),
-    # #
-    # # Stage 6
-    # #
-    # StageConfig(
-    #     name="stage6_environment_test",
-    #     tests=[
-    #         "tests/stage6",
-    #     ],
-    # ),
-    # #
-    # # Stage 7
-    # #
-    # StageConfig(
-    #     name="stage7_cognitive_layer",
-    #     tests=[
-    #         "tests/stage7",
-    #     ],
-    # ),
-    # #
-    # # Stage 8
-    # #
-    # StageConfig(
-    #     name="stage8_self_improving_system",
-    #     tests=[
-    #         "tests/stage8",
-    #     ],
-    # ),
-    # #
-    # # Stage 9
-    # #
-    # StageConfig(
-    #     name="stage9_institution_registry",
-    #     tests=[
-    #         "tests/stage9",
-    #     ],
-    # ),
-    # #
-    # # Stage 10
-    # #
-    # StageConfig(
-    #     name="stage10_civilization_layer",
-    #     tests=[
-    #         "tests/stage10",
-    #     ],
-    # ),
-    # #
-    # # Stage 11
-    # #
-    # StageConfig(
-    #     name="stage11_metacivilization_layer",
-    #     tests=[
-    #         "tests/stage11",
-    #     ],
-    # ),
-    # #
-    # # Stage 12
-    # #
-    # StageConfig(
-    #     name="stage12_recursive_runtime_level",
-    #     tests=[
-    #         "tests/stage12",
-    #     ],
-    # ),
-    # #
-    # # Stage 13
-    # #
-    # StageConfig(
-    #     name="stage13_some_level",
-    #     tests=[
-    #         "tests/stage13",
-    #     ],
-    # ),
-    # #
-    # # Stage 14
-    # #
-    # StageConfig(
-    #     name="stage14_coverage_level",
-    #     tests=[
-    #         "tests/stage14",
-    #     ],
-    # ),
-    # #
-    # # Stage 15
-    # #
-    # StageConfig(
-    #     name="stage15_Arbitration_level",
-    #     tests=[
-    #         "tests/stage15",
-    #     ],
-    # ),
-    # #
-    # # Stage 16
-    # #
-    # StageConfig(
-    #     name="stage16_Principles_level",
-    #     tests=[
-    #         "tests/stage16",
-    #     ],
-    # ),
-    # #
-    # # Stage 17
-    # #
-    # StageConfig(
-    #     name="stage17_constitutional_level",
-    #     tests=[
-    #         "tests/stage17",
-    #     ],
-    # ),
-    # #
-    # # Stage 18
-    # #
-    # StageConfig(
-    #     name="stage18_constitutional_audit_level",
-    #     tests=[
-    #         "tests/stage18",
-    #     ],
-    # ),
-    # #
-    # # Stage 19
-    # #
-    # StageConfig(
-    #     name="stage19_institutional_level",
-    #     tests=[
-    #         "tests/stage19",
-    #     ],
-    # ),
-    # #
-    # # Stage 20
-    # #
-    # StageConfig(
-    #     name="stage20_citizen_level",
-    #     tests=[
-    #         "tests/stage20",
-    #     ],
-    # ),
-    # #
-    # # Stage 21
-    # #
-    # StageConfig(
-    #     name="stage21_budget_level",
-    #     tests=[
-    #         "tests/stage21",
-    #     ],
-    # ),
-    # #
-    # # Stage 22
-    # #
-    # StageConfig(
-    #     name="stage22_inventory_engine_level",
-    #     tests=[
-    #         "tests/stage22",
-    #     ],
-    # ),
-    # #
-    # # Stage 23
-    # #
-    # StageConfig(
-    #     name="stage23_production_job_level",
-    #     tests=[
-    #         "tests/stage23",
-    #     ],
-    # ),
-    # #
-    # # Stage 24
-    # #
-    # StageConfig(
-    #     name="stage24_logistics_level",
-    #     tests=[
-    #         "tests/stage24",
-    #     ],
-    # ),
-    # #
-    # # Stage 25
-    # #
-    # StageConfig(
-    #     name="stage25_consumption_snapshot_level",
-    #     tests=[
-    #         "tests/stage25",
-    #     ],
-    # ),
-    # #
-    # # Stage 26
-    # #
-    # StageConfig(
-    #     name="stage26_population_definition_level",
-    #     tests=[
-    #         "tests/stage26",
-    #     ],
-    # ),
-    # #
-    # # Stage 27
-    # #
-    # StageConfig(
-    #     name="stage27_healthcare_level",
-    #     tests=[
-    #         "tests/stage27",
-    #     ],
-    # ),
-    # #
-    # # Stage 28
-    # #
-    # StageConfig(
-    #     name="stage28_educational_level",
-    #     tests=[
-    #         "tests/stage28",
-    #     ],
-    # ),
-    # #
-    # # Stage 29
-    # #
-    # StageConfig(
-    #     name="stage29_security_level",
-    #     tests=[
-    #         "tests/stage29",
-    #     ],
-    # ),
-    # #
-    # # Stage 30
-    # #
-    # StageConfig(
-    #     name="stage30_governance_level",
-    #     tests=[
-    #         "tests/stage30",
-    #     ],
-    # ),
-    # #
-    # # Stage 31
-    # #
-    # StageConfig(
-    #     name="stage31_simulation_level",
-    #     tests=[
-    #         "tests/stage31",
-    #     ],
-    # ),
-    # #
-    # # Stage 32
-    # #
-    # StageConfig(
-    #     name="stage32_integration_level",
-    #     tests=[
-    #         "tests/stage32",
-    #     ],
-    # ),
-    # #
-    # # Stage 33
-    # #
-    # StageConfig(
-    #     name="stage33_persistence_level",
-    #     tests=[
-    #         "tests/stage33",
-    #     ],
-    # ),
-    # #
-    # # Stage 34
-    # #
-    # StageConfig(
-    #     name="stage34_configuration_layer",
-    #     tests=[
-    #         "tests/stage34",
-    #     ],
-    # ),
-    # #
-    # # Stage 35
-    # #
-    # StageConfig(
-    #     name="stage35_scheduling_layer",
-    #     tests=[
-    #         "tests/stage35",
-    #     ],
-    # ),
-    # #
-    # # Stage 36
-    # #
-    # StageConfig(
-    #     name="stage36_event_bus_layer",
-    #     tests=[
-    #         "tests/stage36",
-    #     ],
-    # ),
-    # #
-    # # Stage 37
-    # #
-    # StageConfig(
-    #     name="stage37_workflow_layer",
-    #     tests=[
-    #         "tests/stage37",
-    #     ],
-    # ),
-    #
-		# Stage 38
-		#
-		StageConfig(
-				name="stage38_command_layer",
-				tests=[
-						"tests/stage38",
-				],
-		),
-]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+TESTS_ROOT = PROJECT_ROOT / 'tests'
+LEGACY_STAGE_PATTERN = re.compile(r'^stage\d+$')
+
+# Ordered by specificity. Classifications are based on test module names;
+# ambiguous cases are placed in legacy_contracts for explicit review.
+DOMAIN_KEYWORDS = (
+    ('pytest_diagnostics', ('pytest_diagnostic', 'pytest_diagnose', 'full_suite_diagnostic')),
+    ('financial_ledger', ('ledger', 'reconciliation', 'financial', 'accounting')),
+    ('recovery', ('recovery', 'crash', 'retry', 'interrupted', 'lease')),
+    ('backup_restore', ('backup', 'restore', 'snapshot')),
+    ('security_governance', ('security', 'governance', 'constitution', 'constitutional', 'authorization', 'identity')),
+    ('execution_scheduler', ('scheduler', 'execution', 'dispatch', 'task_queue', 'worker')),
+    ('events_commands', ('command', 'event', 'journal')),
+    ('registry_schema', ('registry', 'schema', 'register')),
+    ('ci_release', ('release', 'regression', 'workflow', 'ci_', 'stage_matrix', 'evidence')),
+    ('audit_integrity', ('audit', 'integrity', 'validation')),
+    ('runtime_kernel', ('runtime', 'kernel', 'engine')),
+    ('education', ('education', 'institution')),
+    ('healthcare', ('healthcare', 'medical')),
+    ('simulation', ('simulation',)),
+    ('transactions', ('transaction', 'commit', 'idempotency')),
+)
+DOMAIN_NAMES = tuple(name for name, _ in DOMAIN_KEYWORDS) + (
+    'cognition_learning',
+    'society_governance',
+    'economy_resources',
+    'communication_persistence',
+    'orchestration_control',
+    'simulation_agents',
+    'knowledge_culture',
+    'population_services',
+    'diagnostic_investigation',
+    'legacy_contracts',
+)
+ASSIGNMENTS_PATH = PROJECT_ROOT / 'tests' / 'kernel_runner' / 'legacy_domain_assignments.json'
+
+
+def load_assignments() -> dict[str, str]:
+    """Load pinned legacy ownership; reject invalid and duplicate assignments."""
+    data = json.loads(ASSIGNMENTS_PATH.read_text(encoding='utf-8'))
+    if data.get('schema') != 'trainos.functional-stage-assignments.v1':
+        raise ValueError('Unsupported functional stage assignment schema')
+    assignments = data.get('assignments')
+    if not isinstance(assignments, dict):
+        raise ValueError('Expected assignments object')
+    for path, domain in assignments.items():
+        if not isinstance(path, str) or not path.startswith('tests/stage') or '/test_' not in path or '..' in Path(path).parts:
+            raise ValueError(f'Invalid legacy test path: {path!r}')
+        if domain not in DOMAIN_NAMES:
+            raise ValueError(f'Unknown functional stage for {path}: {domain}')
+    return assignments
+
+
+
+def classify_legacy_test(path: Path) -> str:
+    name = path.stem.lower()
+    for domain, keywords in DOMAIN_KEYWORDS:
+        if any(keyword in name for keyword in keywords):
+            return domain
+    return 'legacy_contracts'
+
+
+def discover_stages() -> list[StageConfig]:
+    if not TESTS_ROOT.is_dir():
+        raise FileNotFoundError(f'Tests directory not found: {TESTS_ROOT}')
+    groups: dict[str, set[str]] = {name: set() for name in DOMAIN_NAMES}
+    assignments = load_assignments()
+    discovered_legacy: set[str] = set()
+    # Legacy layout is retained because old tests and scripts may reference it.
+    for directory in TESTS_ROOT.iterdir():
+        if directory.is_dir() and LEGACY_STAGE_PATTERN.fullmatch(directory.name):
+            for test_file in directory.rglob('test_*.py'):
+                relative = test_file.relative_to(PROJECT_ROOT).as_posix()
+                discovered_legacy.add(relative)
+                if relative not in assignments:
+                    raise ValueError(f'Unassigned legacy test: {relative}; update legacy_domain_assignments.json')
+                groups[assignments[relative]].add(relative)
+    stale = set(assignments) - discovered_legacy
+    if stale:
+        raise ValueError(f'Stale legacy test assignments: {sorted(stale)[:5]}')
+    # The permanent location for all future tests.
+    domain_root = TESTS_ROOT / 'domains'
+    if domain_root.is_dir():
+        for directory in domain_root.iterdir():
+            if not directory.is_dir():
+                continue
+            if directory.name not in groups:
+                raise ValueError(f'Unregistered functional stage: {directory.name}')
+            for test_file in directory.rglob('test_*.py'):
+                groups[directory.name].add(test_file.relative_to(PROJECT_ROOT).as_posix())
+    stages = [StageConfig(name=name, tests=sorted(groups[name]))
+              for name in DOMAIN_NAMES if groups[name]]
+    if not stages:
+        raise RuntimeError(f'No test stages found in: {TESTS_ROOT}')
+    return stages
+
+
+STAGES: list[StageConfig] = discover_stages()

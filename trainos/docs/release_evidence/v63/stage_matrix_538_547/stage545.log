@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage545/test_stage545_register_and_baseline_are_machine_readable.py::test_register_and_baseline_json_parse
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s

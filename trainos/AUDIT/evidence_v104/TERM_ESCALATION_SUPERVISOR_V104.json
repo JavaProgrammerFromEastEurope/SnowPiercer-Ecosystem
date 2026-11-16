@@ -1,0 +1,38 @@
+{
+  "schema": "trainos.process-supervisor.v104",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-c",
+    "import pathlib,os,signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);pathlib.Path('/tmp/trainos-v104-escalation-uu_de2er/runner.pid').write_text(str(os.getpid()));time.sleep(60)"
+  ],
+  "supervisor_pid": 63502,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 63520
+    },
+    {
+      "event": "supervisor_signal",
+      "signal": 15
+    },
+    {
+      "event": "runner_terminate",
+      "signal": 15
+    }
+  ],
+  "status": "FAIL",
+  "runner_pid": 63520,
+  "residual_at_runner_exit": [],
+  "runner_exitcode": -9,
+  "supervisor_signal": 15,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 0,
+  "supervisor_exitcode": 143,
+  "cleanup_complete": true,
+  "duration_seconds": 1.471
+}

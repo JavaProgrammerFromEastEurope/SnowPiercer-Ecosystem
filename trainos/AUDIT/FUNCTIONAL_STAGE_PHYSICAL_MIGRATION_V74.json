@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v74",
+  "domain": "ci_release",
+  "moved": {
+    "tests/stage518/test_stage518_release_contract.py": "tests/domains/ci_release/test_stage518_release_contract.py",
+    "tests/stage519/test_stage519_release_contract.py": "tests/domains/ci_release/test_stage519_release_contract.py",
+    "tests/stage520/test_stage520_release_contract.py": "tests/domains/ci_release/test_stage520_release_contract.py",
+    "tests/stage521/test_stage521_release_contract.py": "tests/domains/ci_release/test_stage521_release_contract.py",
+    "tests/stage522/test_stage522_release_contract.py": "tests/domains/ci_release/test_stage522_release_contract.py",
+    "tests/stage523/test_stage523_release_contract.py": "tests/domains/ci_release/test_stage523_release_contract.py",
+    "tests/stage524/test_stage524_release_contract.py": "tests/domains/ci_release/test_stage524_release_contract.py",
+    "tests/stage525/test_stage525_release_contract.py": "tests/domains/ci_release/test_stage525_release_contract.py",
+    "tests/stage526/test_stage526_release_contract.py": "tests/domains/ci_release/test_stage526_release_contract.py",
+    "tests/stage527/test_stage527_release_contract.py": "tests/domains/ci_release/test_stage527_release_contract.py"
+  },
+  "collection_fix": "pytest.ini: --import-mode=importlib",
+  "source_release": "v73"
+}

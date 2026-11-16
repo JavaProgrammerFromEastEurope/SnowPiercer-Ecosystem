@@ -1,0 +1,341 @@
+{
+  "schema": "trainos.release-validation.v101",
+  "release": "v101",
+  "base": "v100",
+  "decision": "BLOCKED/NO-GO",
+  "decision_reason": "The default per-file full Kernel Runner was interrupted (143); the opt-in full batch mode passed. No universal orphan-process absence claim; prior unbounded owner-tracer attempts were inconclusive.",
+  "changes": [
+    "pytest-owned SQLite stores with guaranteed teardown in tests/stage83, stage84, stage85 (13 tests)",
+    "opt-in TRAINOS_KERNEL_BATCH=1 for complete functional Kernel Runner; default per-file semantics retained",
+    "per-test optional SQLite GC/owner diagnostic plugin with tracemalloc and stacks",
+    "two kernel runner compatibility contract tests"
+  ],
+  "sqlite": {
+    "v100_full_failure": "23 PytestUnraisableExceptionWarning",
+    "identified_sources": [
+      "tests/stage83/test_direct_store_trusted_reads.py",
+      "tests/stage84/test_trusted_read_snapshot.py",
+      "tests/stage85/test_atomic_integrity_snapshot.py"
+    ],
+    "stores_without_guaranteed_close_in_original_tests": 23,
+    "strict_targeted_after_fix": {
+      "exitcode": 0,
+      "pytest_summary": [
+        "13",
+        "",
+        "2.80"
+      ],
+      "stdout": "AUDIT/evidence_v101/confirmed_23.stdout.log",
+      "stderr": "AUDIT/evidence_v101/confirmed_23.stderr.log"
+    },
+    "owner_tracer_after_fix": "8 traced connections, 0 not explicitly closed (instrumentation does not capture every alias)",
+    "original_owner_trace": "INCONCLUSIVE: external timeout; logs preserved",
+    "production_sqlite_changes": "none; test ownership was the confirmed defect"
+  },
+  "strict_combined": [
+    {
+      "run": 1,
+      "exitcode": 0,
+      "pytest_summary": [
+        "397",
+        "",
+        "52.98"
+      ],
+      "stdout": "AUDIT/evidence_v101/combined_1.stdout.log",
+      "stderr": "AUDIT/evidence_v101/combined_1.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 105.0,
+        "duration_seconds": 55.476,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v101/combined_1.stdout.log",
+        "stderr": "AUDIT/evidence_v101/combined_1.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "run": 2,
+      "exitcode": 0,
+      "pytest_summary": [
+        "397",
+        "",
+        "52.07"
+      ],
+      "stdout": "AUDIT/evidence_v101/combined_2.stdout.log",
+      "stderr": "AUDIT/evidence_v101/combined_2.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 105.0,
+        "duration_seconds": 54.37,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v101/combined_2.stdout.log",
+        "stderr": "AUDIT/evidence_v101/combined_2.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "run": 3,
+      "exitcode": 0,
+      "pytest_summary": [
+        "397",
+        "",
+        "54.36"
+      ],
+      "stdout": "AUDIT/evidence_v101/combined_3.stdout.log",
+      "stderr": "AUDIT/evidence_v101/combined_3.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 105.0,
+        "duration_seconds": 56.559,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v101/combined_3.stdout.log",
+        "stderr": "AUDIT/evidence_v101/combined_3.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    }
+  ],
+  "strict_full": [
+    {
+      "name": "full",
+      "exitcode": 1,
+      "pytest_summary": [
+        "1484",
+        "",
+        "74.65"
+      ],
+      "stdout": "AUDIT/evidence_v101/full.stdout.log",
+      "stderr": "AUDIT/evidence_v101/full.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ],
+        "timeout_seconds": 140.0,
+        "duration_seconds": 77.789,
+        "status": "failed",
+        "timed_out": false,
+        "returncode": 1,
+        "stdout": "AUDIT/evidence_v101/full.stdout.log",
+        "stderr": "AUDIT/evidence_v101/full.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "name": "full_after",
+      "exitcode": 0,
+      "pytest_summary": [
+        "1485",
+        "",
+        "73.88"
+      ],
+      "stdout": "AUDIT/evidence_v101/full_after.stdout.log",
+      "stderr": "AUDIT/evidence_v101/full_after.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ],
+        "timeout_seconds": 155.0,
+        "duration_seconds": 77.223,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v101/full_after.stdout.log",
+        "stderr": "AUDIT/evidence_v101/full_after.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "name": "full_final",
+      "exitcode": 0,
+      "pytest_summary": [
+        "1487",
+        "",
+        "80.33"
+      ],
+      "stdout": "AUDIT/evidence_v101/full_final.stdout.log",
+      "stderr": "AUDIT/evidence_v101/full_final.stderr.log",
+      "bounded": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ],
+        "timeout_seconds": 155.0,
+        "duration_seconds": 83.315,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v101/full_final.stdout.log",
+        "stderr": "AUDIT/evidence_v101/full_final.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    }
+  ],
+  "process_contracts": {
+    "exitcode": 0,
+    "pytest_summary": [
+      "9",
+      "",
+      "16.67"
+    ],
+    "stdout": "AUDIT/evidence_v101/process_all.stdout.log",
+    "stderr": "AUDIT/evidence_v101/process_all.stderr.log"
+  },
+  "kernel_runner": {
+    "default_full": {
+      "exitcode": 143,
+      "status": "INTERRUPTED_BY_SIGTERM",
+      "stdout": "AUDIT/evidence_v101/kernel_full.stdout.log",
+      "stderr": "AUDIT/evidence_v101/kernel_full.stderr.log"
+    },
+    "opt_in_batch_full": {
+      "exitcode": 0,
+      "status": "PASS",
+      "stdout": "AUDIT/evidence_v101/kernel_batch.stdout.log",
+      "stderr": "AUDIT/evidence_v101/kernel_batch.stderr.log"
+    },
+    "batch_contracts": {
+      "exitcode": 0,
+      "pytest_summary": [
+        "2",
+        "",
+        "0.10"
+      ],
+      "stdout": "AUDIT/evidence_v101/kernel_batch_contract.stdout.log",
+      "stderr": "AUDIT/evidence_v101/kernel_batch_contract.stderr.log"
+    }
+  },
+  "regression_selector": {
+    "exitcode": 0,
+    "pytest_summary": [
+      "13",
+      "",
+      "0.23"
+    ],
+    "stdout": "AUDIT/evidence_v101/selector.stdout.log",
+    "stderr": "AUDIT/evidence_v101/selector.stderr.log"
+  },
+  "limits": [
+    "Kernel batch run is not equivalent to the default per-file execution model.",
+    "Group absence is verified for bounded pytest executions, not for all possible system processes.",
+    "Unbounded owner tracing of original 23 test cases timed out; only direct source ownership audit and post-fix strict evidence are complete.",
+    "No new numbered Stage identifiers created."
+  ]
+}

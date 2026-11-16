@@ -1,0 +1,45 @@
+{
+  "schema": "trainos.migration.v86",
+  "moved": [
+    {
+      "from": "tests/stage5/test_recovery_engine.py",
+      "to": "tests/domains/recovery/test_recovery_engine.py"
+    },
+    {
+      "from": "tests/stage37/test_retry_policy.py",
+      "to": "tests/domains/recovery/test_retry_policy.py"
+    },
+    {
+      "from": "tests/stage44/test_execution_recovery.py",
+      "to": "tests/domains/recovery/test_execution_recovery.py"
+    },
+    {
+      "from": "tests/stage65/test_interrupted_task_recovery.py",
+      "to": "tests/domains/recovery/test_interrupted_task_recovery.py"
+    },
+    {
+      "from": "tests/stage67/test_recovery_blocks_investigation_closure.py",
+      "to": "tests/domains/recovery/test_recovery_blocks_investigation_closure.py"
+    },
+    {
+      "from": "tests/stage68/test_evidence_recovery_integrity.py",
+      "to": "tests/domains/recovery/test_evidence_recovery_integrity.py"
+    },
+    {
+      "from": "tests/stage70/test_checkpoint_recovery_boundaries.py",
+      "to": "tests/domains/recovery/test_checkpoint_recovery_boundaries.py"
+    },
+    {
+      "from": "tests/stage71/test_recovery_restart_integration.py",
+      "to": "tests/domains/recovery/test_recovery_restart_integration.py"
+    },
+    {
+      "from": "tests/stage81/test_event_log_recovery_gate.py",
+      "to": "tests/domains/recovery/test_event_log_recovery_gate.py"
+    },
+    {
+      "from": "tests/stage86/test_recovery_assessment_snapshot.py",
+      "to": "tests/domains/recovery/test_recovery_assessment_snapshot.py"
+    }
+  ]
+}

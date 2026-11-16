@@ -1,0 +1,18 @@
+{
+  "schema": "trainos.bounded-pytest.v1",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/domains/recovery",
+    "tests/domains/ci_release",
+    "tests/domains/pytest_diagnostics"
+  ],
+  "timeout_seconds": 100.0,
+  "duration_seconds": 37.731,
+  "status": "passed",
+  "timed_out": false,
+  "returncode": 0,
+  "log": "AUDIT/v81_evidence/combined_final.pytest.log"
+}

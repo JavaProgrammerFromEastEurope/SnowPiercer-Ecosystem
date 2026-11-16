@@ -1,0 +1,222 @@
+..E
+==================================== ERRORS ====================================
+_ ERROR at teardown of test_restored_event_database_with_missing_anchor_fails_closed _
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/logging.py", line 858, in pytest_runtest_teardown
+  |     yield
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/capture.py", line 905, in pytest_runtest_teardown
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 163, in pytest_runtest_teardown
+  |     collect_unraisable(item.config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (4 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 51, in pytest_runtest_teardown
+    |     collected = gc.collect()
+    | ResourceWarning: unclosed database in <__main__.OwnedConnection object at 0x7f70ea5b1d50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.OwnedConnection object at 0x7f70ea5b1d50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 244
+    |     call = CallInfo.from_call(
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353
+    |     result: TResult | None = func()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245
+    |     lambda: runtest_hook(item=item, **kwds),
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py", line 55
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "empty-anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 33
+    |     conn = _original(*args, **kwargs)
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 51, in pytest_runtest_teardown
+    |     collected = gc.collect()
+    | ResourceWarning: unclosed database in <__main__.OwnedConnection object at 0x7f70ea5b1c50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.OwnedConnection object at 0x7f70ea5b1c50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 244
+    |     call = CallInfo.from_call(
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353
+    |     result: TResult | None = func()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245
+    |     lambda: runtest_hook(item=item, **kwds),
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py", line 53
+    |     events = CommandEventStore(tmp_path / "restored-events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 33
+    |     conn = _original(*args, **kwargs)
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 51, in pytest_runtest_teardown
+    |     collected = gc.collect()
+    | ResourceWarning: unclosed database in <__main__.OwnedConnection object at 0x7f70ea5b1050>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.OwnedConnection object at 0x7f70ea5b1050>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 244
+    |     call = CallInfo.from_call(
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353
+    |     result: TResult | None = func()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245
+    |     lambda: runtest_hook(item=item, **kwds),
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py", line 22
+    |     events = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 33
+    |     conn = _original(*args, **kwargs)
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 51, in pytest_runtest_teardown
+    |     collected = gc.collect()
+    | ResourceWarning: unclosed database in <__main__.OwnedConnection object at 0x7f70ea5b1b50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.OwnedConnection object at 0x7f70ea5b1b50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 244
+    |     call = CallInfo.from_call(
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353
+    |     result: TResult | None = func()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245
+    |     lambda: runtest_hook(item=item, **kwds),
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/domains/recovery/test_recovery_assessment_snapshot.py", line 23
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/sqlite_owner_boundaries.py", line 33
+    |     conn = _original(*args, **kwargs)
+    +------------------------------------
+=========================== short test summary info ============================
+ERROR tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed - ExceptionGroup: multiple unraisable exception warnings (4 sub-exceptions)
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+2 passed, 1 error in 3.90s

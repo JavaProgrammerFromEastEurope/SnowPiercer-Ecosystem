@@ -1,0 +1,12 @@
+{
+  "schema": "trainos.uid-broker.v107",
+  "production_admitted": false,
+  "requests": [
+    {
+      "pid": 39852,
+      "uid": 65534,
+      "status": "DENIED",
+      "reason": "CONTAINMENT_NOT_CERTIFIED"
+    }
+  ]
+}

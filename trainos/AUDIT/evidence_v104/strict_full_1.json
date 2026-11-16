@@ -1,0 +1,53 @@
+{
+  "schema": "trainos.verification.v104",
+  "case": "strict_full",
+  "iteration": 1,
+  "started_at": "2026-11-14T22:54:52+0000",
+  "duration_seconds": 97.52,
+  "timeout_seconds": 900.0,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "/mnt/data/trainos_v104_work/trainos/scripts/ci/run_with_subreaper.py",
+    "--",
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "tests"
+  ],
+  "cwd": "/mnt/data/trainos_v104_work/trainos",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "source_sha256": {
+    "tests/kernel_runner/runner.py": "fb4dad397e3d59b75ffe46352618e8c6f0795087f78c7711d4355ff595da8580",
+    "scripts/ci/process_supervisor_v104.py": "70bc5fe84dcc4760b5f4f1fce2a25ba4e290148656ea4e7a9b294ee1e28e1d59",
+    "scripts/ci/verify_v104.py": "bec11cab7af67d67b884c1bdfa0b78684d715d6e6a0d2979e59094dba969917a",
+    "tests/domains/ci_release/test_process_supervisor_v104.py": "934141ab50b570118b9d924085bc0a4716bb16199703650a0bbf6b3deb3a53a1"
+  },
+  "warnings": "error::ResourceWarning,error::DeprecationWarning",
+  "pytest_addopts": "-c /mnt/data/trainos_v104_work/trainos/pytest.ini",
+  "pytest_explicit_warning_filters": [
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning"
+  ],
+  "supervisor": false,
+  "kernel_workers": "1",
+  "kernel_batch": false,
+  "exitcode": 0,
+  "timed_out": false,
+  "actions": [],
+  "error": null,
+  "stdout": "strict_full_1.stdout.log",
+  "stderr": "strict_full_1.stderr.log",
+  "status": "PASS"
+}

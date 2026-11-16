@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/trainos_v107_work/trainos/scripts/ci/build_v107_archive.py", line 191, in <module>
+    if __name__=='__main__':raise SystemExit(build())
+                                             ~~~~~^^
+  File "/mnt/data/trainos_v107_work/trainos/scripts/ci/build_v107_archive.py", line 178, in build
+    if sha(z.read(name))!=digest:raise RuntimeError('v107 SHA mismatch: '+name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: v107 SHA mismatch: trainos/AUDIT/evidence_v107/combined_2.stdout.log

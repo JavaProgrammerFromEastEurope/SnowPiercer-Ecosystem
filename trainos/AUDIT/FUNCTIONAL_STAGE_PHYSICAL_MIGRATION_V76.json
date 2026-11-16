@@ -1,0 +1,18 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v76",
+  "source_release": "v75",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage368/test_stage368_crash_recovery.py": "tests/domains/recovery/test_stage368_crash_recovery.py",
+    "tests/stage369/test_stage369_crash_recovery.py": "tests/domains/recovery/test_stage369_crash_recovery.py",
+    "tests/stage370/test_stage370_crash_recovery.py": "tests/domains/recovery/test_stage370_crash_recovery.py",
+    "tests/stage371/test_stage371_crash_recovery.py": "tests/domains/recovery/test_stage371_crash_recovery.py",
+    "tests/stage372/test_stage372_crash_recovery.py": "tests/domains/recovery/test_stage372_crash_recovery.py",
+    "tests/stage373/test_stage373_crash_recovery.py": "tests/domains/recovery/test_stage373_crash_recovery.py",
+    "tests/stage374/test_stage374_crash_recovery.py": "tests/domains/recovery/test_stage374_crash_recovery.py",
+    "tests/stage375/test_stage375_crash_recovery.py": "tests/domains/recovery/test_stage375_crash_recovery.py",
+    "tests/stage376/test_stage376_crash_recovery.py": "tests/domains/recovery/test_stage376_crash_recovery.py",
+    "tests/stage377/test_stage377_crash_recovery.py": "tests/domains/recovery/test_stage377_crash_recovery.py"
+  }
+}

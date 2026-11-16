@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v81",
+  "source_release": "v80",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage398/test_stage398_schema_recovery.py": "tests/domains/recovery/test_stage398_schema_recovery.py",
+    "tests/stage399/test_stage399_schema_recovery.py": "tests/domains/recovery/test_stage399_schema_recovery.py",
+    "tests/stage400/test_stage400_schema_recovery.py": "tests/domains/recovery/test_stage400_schema_recovery.py",
+    "tests/stage401/test_stage401_schema_recovery.py": "tests/domains/recovery/test_stage401_schema_recovery.py",
+    "tests/stage402/test_stage402_schema_recovery.py": "tests/domains/recovery/test_stage402_schema_recovery.py",
+    "tests/stage403/test_stage403_schema_recovery.py": "tests/domains/recovery/test_stage403_schema_recovery.py",
+    "tests/stage404/test_stage404_schema_recovery.py": "tests/domains/recovery/test_stage404_schema_recovery.py",
+    "tests/stage405/test_stage405_schema_recovery.py": "tests/domains/recovery/test_stage405_schema_recovery.py",
+    "tests/stage406/test_stage406_schema_recovery.py": "tests/domains/recovery/test_stage406_schema_recovery.py",
+    "tests/stage407/test_stage407_schema_recovery.py": "tests/domains/recovery/test_stage407_schema_recovery.py"
+  },
+  "notes": "Ten schema recovery tests moved to pinned functional ownership; no numeric stages created."
+}

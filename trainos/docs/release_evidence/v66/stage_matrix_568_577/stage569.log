@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage569/test_stage569_pytest_diagnostic.py::test_progress_distinguishes_observed_from_completed_test
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s

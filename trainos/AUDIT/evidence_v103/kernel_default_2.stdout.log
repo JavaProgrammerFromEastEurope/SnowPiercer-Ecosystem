@@ -1,0 +1,360 @@
+[KERNEL-TEST 0.0000] BOOTING TRAINOS TEST KERNEL
+
+============================================================
+[STAGE START] pytest_diagnostics
+============================================================
+
+[KERNEL-TEST 0.0001] RUN: tests/domains/pytest_diagnostics/test_domain_registry.py
+....                                                                     [100%]
+4 passed in 0.27s
+[KERNEL-TEST 2.5439] RUN: tests/domains/pytest_diagnostics/test_stage568_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.19s
+[KERNEL-TEST 4.8453] RUN: tests/domains/pytest_diagnostics/test_stage569_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 7.2995] RUN: tests/domains/pytest_diagnostics/test_stage570_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 9.1491] RUN: tests/domains/pytest_diagnostics/test_stage571_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 11.0478] RUN: tests/domains/pytest_diagnostics/test_stage572_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 13.1665] RUN: tests/domains/pytest_diagnostics/test_stage573_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.11s
+[KERNEL-TEST 15.5411] RUN: tests/domains/pytest_diagnostics/test_stage574_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 17.6609] RUN: tests/domains/pytest_diagnostics/test_stage575_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 19.5998] RUN: tests/domains/pytest_diagnostics/test_stage576_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 21.5369] RUN: tests/domains/pytest_diagnostics/test_stage577_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.76s
+[KERNEL-TEST 24.2409] RUN: tests/domains/pytest_diagnostics/test_stage578_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 26.2728] RUN: tests/domains/pytest_diagnostics/test_stage579_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 28.3555] RUN: tests/domains/pytest_diagnostics/test_stage580_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 30.6329] RUN: tests/domains/pytest_diagnostics/test_stage581_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 32.5591] RUN: tests/domains/pytest_diagnostics/test_stage582_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 34.4059] RUN: tests/domains/pytest_diagnostics/test_stage583_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 36.3438] RUN: tests/domains/pytest_diagnostics/test_stage584_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 38.2679] RUN: tests/domains/pytest_diagnostics/test_stage585_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 40.2529] RUN: tests/domains/pytest_diagnostics/test_stage586_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 42.1309] RUN: tests/domains/pytest_diagnostics/test_stage587_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 43.8483] RUN: tests/stage558/test_stage558_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 45.9889] RUN: tests/stage559/test_stage559_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 48.1379] RUN: tests/stage560/test_stage560_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 50.0456] RUN: tests/stage561/test_stage561_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 51.9663] RUN: tests/stage562/test_stage562_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 53.9477] RUN: tests/stage563/test_stage563_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.06s
+[KERNEL-TEST 55.7693] RUN: tests/stage564/test_stage564_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 57.6392] RUN: tests/stage565/test_stage565_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.81s
+[KERNEL-TEST 60.3589] RUN: tests/stage566/test_stage566_pytest_diagnostic.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 62.3015] RUN: tests/stage567/test_stage567_pytest_diagnostic.py
+..                                                                       [100%]
+2 passed in 0.07s
+
+============================================================
+[STAGE START] financial_ledger
+============================================================
+
+[KERNEL-TEST 64.2406] RUN: tests/stage103/test_recovery_live_owner_reconciliation.py
+..                                                                       [100%]
+2 passed in 0.15s
+[KERNEL-TEST 66.3918] RUN: tests/stage136/test_competing_interrupted_owner_reconciliation.py
+.                                                                        [100%]
+1 passed in 1.37s
+[KERNEL-TEST 69.9648] RUN: tests/stage151/test_unknown_external_outcome_requires_reconciliation.py
+......                                                                   [100%]
+6 passed in 0.14s
+[KERNEL-TEST 72.1675] RUN: tests/stage159/test_concurrent_completion_reconciliation_race.py
+..                                                                       [100%]
+2 passed in 1.94s
+[KERNEL-TEST 76.3268] RUN: tests/stage161/test_cross_journal_restart_reconciliation.py
+...                                                                      [100%]
+3 passed in 0.14s
+[KERNEL-TEST 78.3999] RUN: tests/stage172/test_explicit_unknown_outcome_reconciliation.py
+....                                                                     [100%]
+4 passed in 0.10s
+[KERNEL-TEST 80.3932] RUN: tests/stage173/test_reconciliation_restart_windows.py
+...                                                                      [100%]
+3 passed in 0.09s
+[KERNEL-TEST 82.2903] RUN: tests/stage176/test_cross_process_reconciliation_reservation_race.py
+..                                                                       [100%]
+2 passed in 4.29s
+[KERNEL-TEST 88.6501] RUN: tests/stage178/test_completed_reconciliation_generation_audit.py
+.                                                                        [100%]
+1 passed in 0.16s
+[KERNEL-TEST 91.0080] RUN: tests/stage179/test_completed_reconciliation_restart.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 93.0491] RUN: tests/stage180/test_execution_binding_reconciliation.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 95.1987] RUN: tests/stage181/test_reconciliation_evidence_validation.py
+...                                                                      [100%]
+3 passed in 0.09s
+[KERNEL-TEST 97.3394] RUN: tests/stage185/test_legacy_reconciliation_table_migration.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 99.2618] RUN: tests/stage188/test_empty_reconciliation_evidence_is_rejected.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 101.1979] RUN: tests/stage197/test_unknown_outcome_requires_explicit_reconciliation_before_reservation.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 103.2217] RUN: tests/stage205/test_reconciliation_audit_persists.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 105.3077] RUN: tests/stage208/test_stage208_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 107.3537] RUN: tests/stage209/test_stage209_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 109.1709] RUN: tests/stage210/test_stage210_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 111.0028] RUN: tests/stage211/test_stage211_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 112.8367] RUN: tests/stage212/test_stage212_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 114.7468] RUN: tests/stage213/test_stage213_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 116.6707] RUN: tests/stage214/test_stage214_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 118.5456] RUN: tests/stage215/test_stage215_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 120.4230] RUN: tests/stage216/test_stage216_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 122.3495] RUN: tests/stage217/test_stage217_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 124.2298] RUN: tests/stage218/test_stage218_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 126.0507] RUN: tests/stage219/test_stage219_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 128.0862] RUN: tests/stage220/test_stage220_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 129.8584] RUN: tests/stage221/test_stage221_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.11s
+[KERNEL-TEST 131.9654] RUN: tests/stage222/test_stage222_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 134.3570] RUN: tests/stage223/test_stage223_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.19s
+[KERNEL-TEST 136.6536] RUN: tests/stage224/test_stage224_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 138.7432] RUN: tests/stage225/test_stage225_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 140.9744] RUN: tests/stage226/test_stage226_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 143.1688] RUN: tests/stage227/test_stage227_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 145.3049] RUN: tests/stage228/test_stage228_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 147.2383] RUN: tests/stage229/test_stage229_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 149.1684] RUN: tests/stage230/test_stage230_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 151.0495] RUN: tests/stage231/test_stage231_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 153.0500] RUN: tests/stage232/test_stage232_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 155.0526] RUN: tests/stage233/test_stage233_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 156.9725] RUN: tests/stage234/test_stage234_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 158.6904] RUN: tests/stage235/test_stage235_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 160.5647] RUN: tests/stage236/test_stage236_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 162.3887] RUN: tests/stage237/test_stage237_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 164.2163] RUN: tests/stage238/test_stage238_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 166.0953] RUN: tests/stage239/test_stage239_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 168.1176] RUN: tests/stage240/test_stage240_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 170.0405] RUN: tests/stage241/test_stage241_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.15s
+[KERNEL-TEST 172.0529] RUN: tests/stage242/test_stage242_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 173.9854] RUN: tests/stage243/test_stage243_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 175.9711] RUN: tests/stage244/test_stage244_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 177.9491] RUN: tests/stage245/test_stage245_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 179.8931] RUN: tests/stage246/test_stage246_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 181.9266] RUN: tests/stage247/test_stage247_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 184.0646] RUN: tests/stage248/test_stage248_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 186.0425] RUN: tests/stage249/test_stage249_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 188.0188] RUN: tests/stage250/test_stage250_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 189.9427] RUN: tests/stage251/test_stage251_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 191.6677] RUN: tests/stage252/test_stage252_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 193.5913] RUN: tests/stage253/test_stage253_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.15s
+[KERNEL-TEST 195.6153] RUN: tests/stage254/test_stage254_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 197.6012] RUN: tests/stage255/test_stage255_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 199.3892] RUN: tests/stage256/test_stage256_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 201.0716] RUN: tests/stage257/test_stage257_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 202.9502] RUN: tests/stage258/test_stage258_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 204.9948] RUN: tests/stage259/test_stage259_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 207.1386] RUN: tests/stage260/test_stage260_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.12s
+[KERNEL-TEST 209.2006] RUN: tests/stage261/test_stage261_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.09s
+[KERNEL-TEST 211.2569] RUN: tests/stage262/test_stage262_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 213.1507] RUN: tests/stage263/test_stage263_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 215.0099] RUN: tests/stage264/test_stage264_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 216.9931] RUN: tests/stage265/test_stage265_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 218.8946] RUN: tests/stage266/test_stage266_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 220.9915] RUN: tests/stage267/test_stage267_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 222.9626] RUN: tests/stage268/test_stage268_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 224.8894] RUN: tests/stage269/test_stage269_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.08s
+[KERNEL-TEST 226.9206] RUN: tests/stage270/test_stage270_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.10s
+[KERNEL-TEST 229.1099] RUN: tests/stage271/test_stage271_ledger_contract.py
+..                                                                       [100%]
+2 passed in 0.08s
+[KERNEL-TEST 231.3629] RUN: tests/stage272/test_stage272_ledger_contract.py
+...                                                                      [100%]
+3 passed in 0.08s
+[KERNEL-TEST 233.2598] RUN: tests/stage273/test_stage273_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 235.0945] RUN: tests/stage274/test_stage274_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 237.1387] RUN: tests/stage275/test_stage275_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 239.0184] RUN: tests/stage276/test_stage276_ledger_contract.py
+.                                                                        [100%]
+1 passed in 0.07s
+[KERNEL-TEST 241.0537] RUN: tests/stage277/test_stage277_ledger_contract.py

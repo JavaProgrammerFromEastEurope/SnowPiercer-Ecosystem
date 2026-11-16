@@ -1,0 +1,9 @@
+...                                                                      [100%]
+============================= slowest 10 durations =============================
+0.04s setup    tests/stage71/test_recovery_restart_integration.py::test_recovery_required_survives_database_restart_and_assessed_restore
+0.01s call     tests/stage71/test_recovery_restart_integration.py::test_recovery_required_survives_database_restart_and_assessed_restore
+0.01s call     tests/stage71/test_recovery_restart_integration.py::test_recovery_required_after_restart_prevents_closure_readiness
+0.01s call     tests/stage71/test_recovery_restart_integration.py::test_explicit_block_decision_after_restart_is_recorded_and_closes_recovery_gate
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+3 passed in 0.42s

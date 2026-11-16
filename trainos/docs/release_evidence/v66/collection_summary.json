@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "tests_collected": 1397,
+  "elapsed_seconds": 3.31,
+  "exit_code": 0,
+  "evidence": "docs/release_evidence/v66/collection.log"
+}

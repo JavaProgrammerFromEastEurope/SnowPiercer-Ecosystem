@@ -1,0 +1,79 @@
+{
+  "v101": {
+    "source_sha256": "63df844e7b6f5950ef8e8e70c51696989ae18b50396612ca13525d7d76d54f50",
+    "zip_entries": 6721,
+    "zip_crc_bad_entry": null,
+    "manifest_entries": 6720,
+    "manifest_missing": [],
+    "manifest_mismatch": [],
+    "unlisted_archive_entries": [
+      "trainos/AUDIT/SHA256_MANIFEST_V101.json"
+    ]
+  },
+  "v102": {
+    "source_sha256": "232a59341379a6d92d3fac42fd2183cdb1b6b38112865f51ed493f34426d5b17",
+    "zip_entries": 4631,
+    "zip_crc_bad_entry": null,
+    "manifest_entries": 4630,
+    "manifest_missing": [],
+    "manifest_mismatch": [],
+    "unlisted_archive_entries": [
+      "trainos/AUDIT/evidence_v102/SHA256_MANIFEST.json"
+    ]
+  },
+  "codex_v101_evidence": {
+    "files": [
+      "RELEASE_V101_NOTES.md",
+      "kernel-default.json",
+      "strict-full-final.json",
+      "strict-full-final.stdout.log",
+      "strict-full-final.stderr.log",
+      "kernel-default.stdout.log",
+      "kernel-default.stderr.log",
+      "run_with_subreaper.py"
+    ],
+    "source": "TrainOS_Workspace.zip: SnowPiercer/dist/evidence/",
+    "strict_full_final": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/workspace/work/trainos-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "tests"
+      ],
+      "timeout_seconds": 240.0,
+      "duration_seconds": 24.117,
+      "status": "passed",
+      "timed_out": false,
+      "returncode": 0,
+      "stdout": "/workspace/work/verification/strict-full-final.stdout.log",
+      "stderr": "/workspace/work/verification/strict-full-final.stderr.log",
+      "group_cleanup": [
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "unexpected_residual_group": false,
+      "runner_error": null
+    },
+    "kernel_default": {
+      "schema": "trainos.workspace.kernel-verification.v1",
+      "mode": "default-per-file",
+      "TRAINOS_KERNEL_BATCH": "unset",
+      "timeout_seconds": 600,
+      "duration_seconds": 251.438,
+      "returncode": 0,
+      "status": "passed",
+      "stdout": "kernel-default.stdout.log",
+      "stderr": "kernel-default.stderr.log",
+      "supervision": "Linux PR_SET_CHILD_SUBREAPER; no production or test code changes"
+    }
+  }
+}

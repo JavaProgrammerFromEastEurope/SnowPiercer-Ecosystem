@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "passed": 70,
+  "failed": 0,
+  "selection": "tests/ci and tests/ledger_contract",
+  "evidence": "docs/release_evidence/v66/supporting_checks.log"
+}

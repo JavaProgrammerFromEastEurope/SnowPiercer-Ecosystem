@@ -1,0 +1,14 @@
+{
+  "release": "v72",
+  "source": "v71",
+  "migration_domain": "ci_release",
+  "migrated_modules": 10,
+  "targeted_test_result": {
+    "ci_release": "43 passed",
+    "ci_release_and_pytest_diagnostics": "67 passed"
+  },
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN",
+  "functional_stages": 24,
+  "discovered_test_modules": 930
+}

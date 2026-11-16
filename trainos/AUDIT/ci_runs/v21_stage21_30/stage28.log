@@ -1,0 +1,6 @@
+..........                                                               [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage28/test_education_audit.py::test_education_audit
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+10 passed in 0.13s

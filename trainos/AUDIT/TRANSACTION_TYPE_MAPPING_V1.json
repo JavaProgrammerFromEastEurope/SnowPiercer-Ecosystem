@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "audit_baseline_not_approved_for_production",
+  "source": "kernel/economy/transactions/transaction_type.py",
+  "adapter": "kernel/economy/ledger_contract/legacy_adapter.py",
+  "supported_types": ["transfer"],
+  "unsupported_types": ["deposit", "withdraw", "tax", "salary", "reward", "fine", "grant"],
+  "policy": "Unsupported types must fail closed; do not infer account semantics or silently convert them to transfers.",
+  "currency_policy": "Currency mapping and minor-unit exponent must be explicit; no implicit rounding.",
+  "approval_required_before_integration": true
+}

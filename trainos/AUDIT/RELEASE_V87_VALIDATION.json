@@ -1,0 +1,32 @@
+{
+  "release": "v87",
+  "status": "BLOCKED/NO-GO",
+  "basis": "v86 cumulative archive",
+  "changes": [
+    "bounded runner split stdout/stderr, process group cleanup and legacy pytest.log compatibility",
+    "regression selector supports dict and list migration manifests"
+  ],
+  "confirmed": {
+    "runner_contracts": "4 passed",
+    "selector_target": "1 passed"
+  },
+  "strict_combined_three_runs": "NOT_CONFIRMED",
+  "full_suite": "NOT_CONFIRMED",
+  "sqlite_leak_elimination": "NOT_PROVEN",
+  "orphan_processes": "observed after external execution timeout; terminated explicitly",
+  "evidence": [
+    "probe.log",
+    "strict_combined_1.stdout.log",
+    "strict_combined_1.stderr.log",
+    "combined_direct_1.stdout.log",
+    "combined_direct_1.stderr.log",
+    "combined_direct_1.exitcode",
+    "runner_contracts.log",
+    "selector_target.log"
+  ],
+  "notes": [
+    "First combined run 2 failed 384 passed; unraisable SQLite warnings and legacy bounded runner log contract. Legacy contract fixed.",
+    "Subsequent strict run encountered SQLite unraisable warnings and did not finish within execution environment.",
+    "No claims of three completed strict runs or full-suite PASS."
+  ]
+}

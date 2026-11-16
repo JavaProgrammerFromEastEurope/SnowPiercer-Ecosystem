@@ -1,0 +1,6 @@
+{
+  "status": "INTERRUPTED_EXTERNAL_TIMEOUT",
+  "pytest_summary": null,
+  "exit_code": null,
+  "note": "External execution timeout interrupted runner before JSON report. Progress showed F. Orphaned pytest leader PID 40312 and child PID 40949 were observed and signalled; no absence guarantee."
+}

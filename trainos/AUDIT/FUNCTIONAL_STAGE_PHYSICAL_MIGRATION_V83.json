@@ -1,0 +1,46 @@
+{
+  "release": "v83",
+  "domain": "recovery",
+  "moves": [
+    {
+      "old": "tests/stage157/test_idempotency_claim_commit_crash_recovery.py",
+      "new": "tests/domains/recovery/test_idempotency_claim_commit_crash_recovery.py"
+    },
+    {
+      "old": "tests/stage158/test_concurrent_claim_recovery_after_lost_commit_ack.py",
+      "new": "tests/domains/recovery/test_concurrent_claim_recovery_after_lost_commit_ack.py"
+    },
+    {
+      "old": "tests/stage160/test_reconcile_vs_reclaim_after_restart.py",
+      "new": "tests/domains/recovery/test_reconcile_vs_reclaim_after_restart.py"
+    },
+    {
+      "old": "tests/stage162/test_duplicate_execution_binding_recovery.py",
+      "new": "tests/domains/recovery/test_duplicate_execution_binding_recovery.py"
+    },
+    {
+      "old": "tests/stage163/test_concurrent_multi_command_recovery.py",
+      "new": "tests/domains/recovery/test_concurrent_multi_command_recovery.py"
+    },
+    {
+      "old": "tests/stage164/test_partial_audit_write_recovery.py",
+      "new": "tests/domains/recovery/test_partial_audit_write_recovery.py"
+    },
+    {
+      "old": "tests/stage166/test_journal_availability_recovery.py",
+      "new": "tests/domains/recovery/test_journal_availability_recovery.py"
+    },
+    {
+      "old": "tests/stage168/test_inspection_state_change_races.py",
+      "new": "tests/domains/recovery/test_inspection_state_change_races.py"
+    },
+    {
+      "old": "tests/stage171/test_dispatch_reservation_crash_recovery.py",
+      "new": "tests/domains/recovery/test_dispatch_reservation_crash_recovery.py"
+    },
+    {
+      "old": "tests/stage174/test_reconciled_dispatch_crash_recovery.py",
+      "new": "tests/domains/recovery/test_reconciled_dispatch_crash_recovery.py"
+    }
+  ]
+}

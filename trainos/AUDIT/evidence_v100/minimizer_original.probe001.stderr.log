@@ -1,0 +1,77 @@
+  + Exception Group Traceback (most recent call last):
+  |   File "<frozen runpy>", line 198, in _run_module_as_main
+  |   File "<frozen runpy>", line 88, in _run_code
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pytest/__main__.py", line 9, in <module>
+  |     raise SystemExit(pytest.console_main())
+  |                      ~~~~~~~~~~~~~~~~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 223, in console_main
+  |     code = main()
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 199, in main
+  |     ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 365, in pytest_cmdline_main
+  |     return wrap_session(config, _main)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 360, in wrap_session
+  |     config._ensure_unconfigure()
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1171, in _ensure_unconfigure
+  |     self._cleanup_stack.close()
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 627, in close
+  |     self.__exit__(None, None, None)
+  |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 619, in __exit__
+  |     raise exc
+  |   File "/usr/lib/python3.13/contextlib.py", line 604, in __exit__
+  |     if cb(*exc_details):
+  |        ~~^^^^^^^^^^^^^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 482, in _exit_wrapper
+  |     callback(*args, **kwds)
+  |     ~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 95, in cleanup
+  |     collect_unraisable(config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v99/scripts/ci/sqlite_gc_probe.py", line 18, in pytest_runtest_teardown
+    |     unreachable = gc.collect()
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f781a406a70>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f781a406a70>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v99/scripts/ci/sqlite_gc_probe.py", line 18, in pytest_runtest_teardown
+    |     unreachable = gc.collect()
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f781a406980>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f781a406980>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +------------------------------------

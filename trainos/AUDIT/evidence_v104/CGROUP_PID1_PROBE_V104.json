@@ -1,0 +1,13 @@
+{
+  "schema": "trainos.v104.os-boundary.v1",
+  "platform": "linux",
+  "uid": 0,
+  "pid1_comm": "supervisord",
+  "cgroup_controllers": "cpuset cpu io memory hugetlb pids",
+  "cgroup": "/proc/self/cgroup",
+  "cgroup_membership": "0::/",
+  "mkdir_exitcode": 1,
+  "mkdir_stdout": "",
+  "mkdir_stderr": "mkdir: cannot create directory \u2018/sys/fs/cgroup/trainos-v104-test-47466\u2019: Read-only file system\n",
+  "cgroup_write_verified": false
+}

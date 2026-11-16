@@ -1,0 +1,30 @@
+[Unit]
+Description=TrainOS independent cgroup lifecycle watchdog (EXPERIMENTAL; require certification)
+After=local-fs.target
+RequiresMountsFor=/sys/fs/cgroup
+StartLimitIntervalSec=0
+
+[Service]
+Type=exec
+User=root
+Group=root
+UMask=0077
+RuntimeDirectory=trainos-v107
+RuntimeDirectoryMode=0700
+ExecStartPre=/usr/bin/test -w /sys/fs/cgroup/trainos-authority
+# Authorized installation MUST substitute configured distinct service/client UIDs,
+# dedicated cgroup path, command and evidence paths; this prototype deliberately
+# uses invalid -1 defaults and thus cannot be installed as a working production unit.
+ExecStart=/usr/bin/python3 -m scripts.ci.cgroup_watchdog_v107 --production --delegated-root /sys/fs/cgroup/trainos-authority --state-dir /run/trainos-v107 --service-uid -1 --client-uid -1 --report /run/trainos-v107/watchdog-report.json
+Restart=always
+RestartSec=1s
+KillMode=control-group
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/sys/fs/cgroup/trainos-authority /run/trainos-v107
+ProtectHome=yes
+PrivateTmp=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

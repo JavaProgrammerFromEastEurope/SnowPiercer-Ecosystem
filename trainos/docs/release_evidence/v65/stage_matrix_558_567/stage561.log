@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage561/test_stage561_pytest_diagnostic.py::test_progress_parser_rejects_nonpositive_tail_limit
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s

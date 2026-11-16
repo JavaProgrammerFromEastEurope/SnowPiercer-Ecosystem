@@ -1,0 +1,212 @@
+{
+  "schema": "trainos.release-validation.v100",
+  "release": "v100",
+  "base": "v99",
+  "decision": "BLOCKED/NO-GO",
+  "strict_combined": [
+    {
+      "run": 1,
+      "exitcode": "0",
+      "report": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 95.0,
+        "duration_seconds": 55.826,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v100/combined_1.stdout.log",
+        "stderr": "AUDIT/evidence_v100/combined_1.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "run": 2,
+      "exitcode": "0",
+      "report": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 95.0,
+        "duration_seconds": 53.571,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v100/combined_2.stdout.log",
+        "stderr": "AUDIT/evidence_v100/combined_2.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    },
+    {
+      "run": 3,
+      "exitcode": "0",
+      "report": {
+        "schema": "trainos.bounded-pytest.v2",
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ],
+        "timeout_seconds": 95.0,
+        "duration_seconds": 53.602,
+        "status": "passed",
+        "timed_out": false,
+        "returncode": 0,
+        "stdout": "AUDIT/evidence_v100/combined_3.stdout.log",
+        "stderr": "AUDIT/evidence_v100/combined_3.stderr.log",
+        "group_cleanup": [
+          "group_absent"
+        ],
+        "group_absence_verified": true,
+        "leader_reaped": true,
+        "unexpected_residual_group": false,
+        "runner_error": null
+      }
+    }
+  ],
+  "strict_full": {
+    "exitcode": "1",
+    "report": {
+      "schema": "trainos.bounded-pytest.v2",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "tests"
+      ],
+      "timeout_seconds": 125.0,
+      "duration_seconds": 81.159,
+      "status": "failed",
+      "timed_out": false,
+      "returncode": 1,
+      "stdout": "AUDIT/evidence_v100/full.stdout.log",
+      "stderr": "AUDIT/evidence_v100/full.stderr.log",
+      "group_cleanup": [
+        "group_absent"
+      ],
+      "group_absence_verified": true,
+      "leader_reaped": true,
+      "unexpected_residual_group": false,
+      "runner_error": null
+    },
+    "summary": "1484 passed, 1 failed in 77.52s; 23 unraisable sqlite warnings"
+  },
+  "minimizer": {
+    "original": {
+      "schema": "trainos.ddmin.v2",
+      "initial_reproduced": true,
+      "minimal_candidate": [
+        "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+      ],
+      "attempts": [
+        {
+          "nodes": [
+            "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+            "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+          ],
+          "status": "reproduced",
+          "returncode": 1,
+          "seconds": 2.204
+        },
+        {
+          "nodes": [
+            "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+          ],
+          "status": "reproduced",
+          "returncode": 1,
+          "seconds": 15.184
+        }
+      ]
+    },
+    "fixed": {
+      "schema": "trainos.ddmin.v2",
+      "initial_reproduced": false,
+      "minimal_candidate": null,
+      "attempts": [
+        {
+          "nodes": [
+            "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_assessment_uses_one_event_snapshot_and_one_anchor_read",
+            "tests/domains/recovery/test_recovery_assessment_snapshot.py::test_restored_event_database_with_missing_anchor_fails_closed"
+          ],
+          "status": "not_reproduced",
+          "returncode": 0,
+          "seconds": 2.384
+        }
+      ]
+    }
+  },
+  "targeted": {
+    "fixed_snapshot": "0",
+    "process_suite": "0",
+    "kernel_runner": "0",
+    "selector_actual": "0",
+    "bounded_contracts": "0",
+    "minimizer_contracts": "0"
+  },
+  "confirmed_cause": "Four unclosed test-owned sqlite connections in recovery assessment snapshot module",
+  "remaining_blocker": "Full strict suite fails with 23 SQLite PytestUnraisableExceptionWarning subexceptions",
+  "kernel_runner_full": "NOT_RUN",
+  "all_orphans_absent": "NOT_PROVEN",
+  "full_owner_probe": {
+    "status": "TIMEOUT_INCONCLUSIVE",
+    "exitcode": 124,
+    "timeout_seconds": 160,
+    "owner_report": "NOT_EMITTED_ON_SIGTERM"
+  }
+}

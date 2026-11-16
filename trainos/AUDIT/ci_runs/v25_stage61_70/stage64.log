@@ -1,0 +1,14 @@
+........                                                                 [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage64/test_diagnostic_investigation_restore.py::test_restore_returns_fresh_typed_instances_and_preserves_state
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_returns_fresh_typed_instances_and_preserves_state
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restored_instances_continue_without_replaying_in_progress_task
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_rejects_discontinuous_transition_history
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_missing_checkpoint_returns_none
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_rejects_invalid_restore_options
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_rejects_checkpoint_exceeding_configured_capacity
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_rejects_attempt_count_mismatch_with_transition_history
+0.01s call     tests/stage64/test_diagnostic_investigation_restore.py::test_restore_rejects_hypothesis_assessment_disposition_mismatch
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+8 passed in 0.22s

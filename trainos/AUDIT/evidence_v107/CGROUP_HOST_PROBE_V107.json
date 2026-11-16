@@ -1,0 +1,21 @@
+{
+  "schema": "trainos.v107.real-host-containment-probe",
+  "pid1": "supervisord",
+  "path": "/sys/fs/cgroup/trainos-authority",
+  "cgroup2_mount": true,
+  "parent_writable": false,
+  "production_admitted": false,
+  "errors": [
+    "delegated subtree missing",
+    "delegated subtree not writable"
+  ],
+  "mount_readonly": true,
+  "manager_verification": "DENIED: dedicated systemd watchdog service cgroup not verified",
+  "real_create": "OSError errno=30 (EROFS)",
+  "production_certified": false,
+  "kernel_capabilities": {
+    "CapEff": "00000000800405fb",
+    "CapBnd": "00000000800405fb"
+  },
+  "cap_sys_admin_effective": false
+}

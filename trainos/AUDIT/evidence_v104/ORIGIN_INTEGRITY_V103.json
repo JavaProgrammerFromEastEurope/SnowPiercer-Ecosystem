@@ -1,0 +1,11 @@
+{
+  "schema": "trainos.v104.origin-integrity.v1",
+  "source_zip": "TrainOS-v103-source.zip",
+  "source_sha256": "c105dd67a18779ac391c67cbbfe994b3014fbc7318dac996592c428a2af3ba9a",
+  "source_manifest_members": 4761,
+  "members_preserved_exactly": 4761,
+  "missing": [],
+  "changed": [],
+  "source_manifest_sha256": "b42dd0869ed602e405b20b00ee08671ff73e06bbf438a79557fb59ce23af88b2",
+  "verify_zip_crc": true
+}

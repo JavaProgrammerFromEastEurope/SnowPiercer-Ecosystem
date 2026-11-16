@@ -1,0 +1,11 @@
+stage	status	exit_code	seconds	log
+21	PASS	0	2	stage21.log
+22	PASS	0	2	stage22.log
+23	PASS	0	3	stage23.log
+24	PASS	0	2	stage24.log
+25	PASS	0	2	stage25.log
+26	PASS	0	2	stage26.log
+27	PASS	0	3	stage27.log
+28	PASS	0	1	stage28.log
+29	PASS	0	3	stage29.log
+30	PASS	0	2	stage30.log

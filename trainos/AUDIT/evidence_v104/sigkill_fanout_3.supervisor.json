@@ -1,0 +1,119 @@
+{
+  "schema": "trainos.process-supervisor.v104",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-c",
+    "import subprocess,sys,time,json,pathlib;p=[subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)'],start_new_session=True) for _ in range(8)];pathlib.Path('/tmp/trainos-v104-stress-ic6s_epq/pids.json').write_text(json.dumps([c.pid for c in p]));time.sleep(60)"
+  ],
+  "supervisor_pid": 46290,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 46326
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46368,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46369,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46370,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46363,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46364,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46365,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46367,
+      "signal": 15
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 46371,
+      "signal": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46363,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46364,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46365,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46367,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46368,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46369,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46370,
+      "wait_status": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 46371,
+      "wait_status": 15
+    }
+  ],
+  "status": "FAIL",
+  "runner_pid": 46326,
+  "residual_at_runner_exit": [
+    46363,
+    46364,
+    46365,
+    46367,
+    46368,
+    46369,
+    46370,
+    46371
+  ],
+  "runner_exitcode": -9,
+  "supervisor_signal": null,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 8,
+  "supervisor_exitcode": 137,
+  "cleanup_complete": true,
+  "duration_seconds": 1.133
+}

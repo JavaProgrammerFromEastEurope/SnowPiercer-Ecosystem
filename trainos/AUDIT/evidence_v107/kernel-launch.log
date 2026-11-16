@@ -1,0 +1,25 @@
+BEGIN kernel_batch
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/trainos_v107_work/trainos/scripts/ci/verify_v107.py", line 130, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/data/trainos_v107_work/trainos/scripts/ci/verify_v107.py", line 126, in main
+    return run_case(args.case,args.iteration,args.timeout)
+  File "/mnt/data/trainos_v107_work/trainos/scripts/ci/verify_v107.py", line 105, in run_case
+    'source_sha256':{name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+                                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_authority_v107.py'
+END kernel_batch exit=1
+BEGIN kernel_workers
+END kernel_workers exit=0
+BEGIN kernel_default
+END kernel_default exit=0
+KERNEL_DONE

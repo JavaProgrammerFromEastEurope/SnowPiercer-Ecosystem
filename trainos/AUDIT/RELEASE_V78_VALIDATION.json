@@ -1,0 +1,13 @@
+{
+  "release": "v78",
+  "source_release": "v77",
+  "targeted_test_result": "200 passed in 24.22s",
+  "targeted_domains": [
+    "recovery",
+    "ci_release",
+    "pytest_diagnostics"
+  ],
+  "collection_summary": "1461 tests collected in 3.50s",
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN"
+}

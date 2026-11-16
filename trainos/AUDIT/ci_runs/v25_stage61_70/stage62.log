@@ -1,0 +1,13 @@
+..........                                                               [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage62/test_diagnostic_investigation_store.py::test_create_update_and_history_form_a_checksum_chain
+0.02s call     tests/stage62/test_diagnostic_investigation_store.py::test_checksum_corruption_is_reported_and_never_silently_loaded
+0.02s call     tests/stage62/test_diagnostic_investigation_store.py::test_missing_middle_revision_is_detected
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_invalid_payload_and_revision_are_rejected_without_mutation
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_record_ids_are_isolated_and_unknown_records_return_none
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_create_update_and_history_form_a_checksum_chain
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_optimistic_concurrency_rejects_stale_revision
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_data_survives_close_and_reopen
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_separate_store_instances_use_revision_guard_to_prevent_lost_updates
+0.01s call     tests/stage62/test_diagnostic_investigation_store.py::test_unicode_and_nested_json_round_trip
+10 passed in 0.28s

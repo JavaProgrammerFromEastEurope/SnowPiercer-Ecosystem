@@ -1,0 +1,22 @@
+{
+  "schema": "trainos.bounded-pytest.v2",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/domains/recovery/test_recovery_fault_sequences.py"
+  ],
+  "timeout_seconds": 8.0,
+  "duration_seconds": 2.132,
+  "status": "passed",
+  "timed_out": false,
+  "returncode": 0,
+  "stdout": "AUDIT/evidence_v90/smoke.stdout.log",
+  "stderr": "AUDIT/evidence_v90/smoke.stderr.log",
+  "group_cleanup": [
+    "group_absent"
+  ],
+  "group_absence_verified": true,
+  "runner_error": null
+}

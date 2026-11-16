@@ -1,0 +1,5 @@
+{
+  "command": "/opt/pyvenv/bin/python -m pytest -q tests/domains/ci_release/test_physical_domain_migration_v70.py tests/domains/ci_release/test_legacy_reclassification_v69.py tests/domains/ci_release/test_functional_stage_assignments.py tests/domains/pytest_diagnostics",
+  "returncode": 0,
+  "output": "...................................                                      [100%]\n35 passed in 0.39s\n"
+}

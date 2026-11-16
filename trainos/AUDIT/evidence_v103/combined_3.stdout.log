@@ -1,0 +1,175 @@
+........................................................................ [ 17%]
+........................................................................ [ 35%]
+........................................................................ [ 53%]
+........................................................................ [ 71%]
+........................................................................ [ 88%]
+.............................................                            [100%]
+405 passed in 59.79s
+============== FAILURES ===================================
+_________________________ test_bounded_runner_success __________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_bounded_runner_success0')
+
+    def test_bounded_runner_success(tmp_path):
+        test_file = tmp_path/'test_ok.py'
+        test_file.write_text('def test_ok(): assert True\n')
+        report = tmp_path/'success.json'
+>       assert MODULE.run_bounded([str(test_file),'-q'],20,report)==0
+E       AssertionError: assert 3 == 0
+E        +  where 3 = <function run_bounded at 0x7f6da1920ae0>(['/tmp/pytest-of-root/pytest-38/test_bounded_runner_success0/test_ok.py', '-q'], 20, PosixPath('/tmp/pytest-of-root/pytest-38/test_bounded_runner_success0/success.json'))
+E        +    where <function run_bounded at 0x7f6da1920ae0> = MODULE.run_bounded
+
+tests/domains/ci_release/test_bounded_pytest_v81.py:16: AssertionError
+____________________ test_timeout_kills_child_process_group ____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_timeout_kills_child_proce0')
+
+    @pytest.mark.skipif(os.name != "posix", reason="POSIX process groups required")
+    def test_timeout_kills_child_process_group(tmp_path):
+        child_pid = tmp_path / "child.pid"
+        test_file = tmp_path / "test_child.py"
+        test_file.write_text("import subprocess,sys,time\n"
+            "def test_spawn():\n"
+            f"    child=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)'])\n"
+            f"    open({str(child_pid)!r},'w').write(str(child.pid))\n"
+            "    time.sleep(60)\n")
+        report = tmp_path / "timeout.json"
+>       assert RUNNER.run_bounded([str(test_file), "-q"], 2.0, report, grace=0.5) == 124
+E       AssertionError: assert 3 == 124
+E        +  where 3 = <function run_bounded at 0x7f6da1760680>(['/tmp/pytest-of-root/pytest-38/test_timeout_kills_child_proce0/test_child.py', '-q'], 2.0, PosixPath('/tmp/pytest-of-root/pytest-38/test_timeout_kills_child_proce0/timeout.json'), grace=0.5)
+E        +    where <function run_bounded at 0x7f6da1760680> = RUNNER.run_bounded
+
+tests/domains/ci_release/test_bounded_pytest_v93.py:25: AssertionError
+_______________ test_sigkill_escalation_for_term_resistant_child _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_sigkill_escalation_for_te0')
+
+    @pytest.mark.skipif(os.name != 'posix', reason='POSIX only')
+    def test_sigkill_escalation_for_term_resistant_child(tmp_path):
+        script = tmp_path / 'test_stubborn.py'
+        script.write_text('import signal, subprocess, sys, time\n'
+            'def test_stubborn():\n'
+            '    subprocess.Popen([sys.executable,"-c",'
+            '"import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); time.sleep(60)"])\n'
+            '    signal.signal(signal.SIGTERM,signal.SIG_IGN)\n'
+            '    time.sleep(60)\n')
+        report = tmp_path / 'stubborn.json'
+>       assert RUNNER.run_bounded([str(script), '-q'], timeout=2.0, report=report, grace=0.3) == 124
+E       AssertionError: assert 3 == 124
+E        +  where 3 = <function run_bounded at 0x7f6da1761080>(['/tmp/pytest-of-root/pytest-38/test_sigkill_escalation_for_te0/test_stubborn.py', '-q'], timeout=2.0, report=PosixPath('/tmp/pytest-of-root/pytest-38/test_sigkill_escalation_for_te0/stubborn.json'), grace=0.3)
+E        +    where <function run_bounded at 0x7f6da1761080> = RUNNER.run_bounded
+
+tests/domains/ci_release/test_bounded_pytest_v94.py:23: AssertionError
+____________ test_successful_leader_with_residual_child_is_not_pass ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_successful_leader_with_re0')
+
+    @pytest.mark.skipif(os.name != 'posix', reason='POSIX only')
+    def test_successful_leader_with_residual_child_is_not_pass(tmp_path):
+        test_file = tmp_path / 'test_detached.py'
+        test_file.write_text(
+            'import subprocess,sys\n'
+            'def test_spawn_child():\n'
+            '    subprocess.Popen([sys.executable,"-c","import time;time.sleep(30)"], '
+            'stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)\n'
+        )
+        report = tmp_path / 'residual.json'
+>       assert RUNNER.run_bounded([str(test_file), '-q'], 12, report, grace=0.5) == 125
+E       AssertionError: assert 3 == 125
+E        +  where 3 = <function run_bounded at 0x7f6da1761a80>(['/tmp/pytest-of-root/pytest-38/test_successful_leader_with_re0/test_detached.py', '-q'], 12, PosixPath('/tmp/pytest-of-root/pytest-38/test_successful_leader_with_re0/residual.json'), grace=0.5)
+E        +    where <function run_bounded at 0x7f6da1761a80> = RUNNER.run_bounded
+
+tests/domains/ci_release/test_bounded_pytest_v97.py:23: AssertionError
+____________________ test_clean_pytest_process_reports_pass ____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_clean_pytest_process_repo0')
+
+    def test_clean_pytest_process_reports_pass(tmp_path):
+        test_file = tmp_path / 'test_clean.py'
+        test_file.write_text('def test_ok(): assert True\n')
+        report = tmp_path / 'clean.json'
+>       assert RUNNER.run_bounded([str(test_file), '-q'], 12, report) == 0
+E       AssertionError: assert 3 == 0
+E        +  where 3 = <function run_bounded at 0x7f6da1761a80>(['/tmp/pytest-of-root/pytest-38/test_clean_pytest_process_repo0/test_clean.py', '-q'], 12, PosixPath('/tmp/pytest-of-root/pytest-38/test_clean_pytest_process_repo0/clean.json'))
+E        +    where <function run_bounded at 0x7f6da1761a80> = RUNNER.run_bounded
+
+tests/domains/ci_release/test_bounded_pytest_v97.py:33: AssertionError
+______________________ test_lifecycle_events_are_balanced ______________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-38/test_lifecycle_events_are_bala0')
+
+    def test_lifecycle_events_are_balanced(tmp_path):
+        test_file = tmp_path / 'test_ok.py'
+        test_file.write_text('def test_ok(): assert True\n')
+        events = tmp_path / 'events.jsonl'
+        import os
+        env = {**os.environ, 'TRAINOS_PYTEST_LIFECYCLE_LOG': str(events)}
+        p = subprocess.run([sys.executable, '-m', 'pytest', '-q', '-p', 'scripts.ci.pytest_lifecycle_probe', str(test_file)], cwd=ROOT, env=env, capture_output=True, text=True, timeout=20)
+>       assert p.returncode == 0, p.stdout + p.stderr
+E       AssertionError: INTERNALERROR> Traceback (most recent call last):
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 314, in wrap_session
+E         INTERNALERROR>     config._do_configure()
+E         INTERNALERROR>     ~~~~~~~~~~~~~~~~~~~~^^
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1159, in _do_configure
+E         INTERNALERROR>     self.hook.pytest_configure.call_historic(kwargs=dict(config=self))
+E         INTERNALERROR>     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 534, in call_historic
+E         INTERNALERROR>     res = self._hookexec(self.name, self._hookimpls.copy(), kwargs, False)
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+E         INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+E         INTERNALERROR>            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+E         INTERNALERROR>     raise exception
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+E         INTERNALERROR>     res = hook_impl.function(*args)
+E         INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pytest_asyncio/plugin.py", line 247, in pytest_configure
+E         INTERNALERROR>     warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+E         INTERNALERROR>     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         INTERNALERROR> pytest.PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+E         INTERNALERROR> The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+E         
+E       assert 3 == 0
+E        +  where 3 = CompletedProcess(args=['/opt/pyvenv/bin/python', '-m', 'pytest', '-q', '-p', 'scripts.ci.pytest_lifecycle_probe', '/tm...expected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"\n').returncode
+
+tests/domains/ci_release/test_lifecycle_probe_v98.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED tests/domains/ci_release/test_bounded_pytest_v81.py::test_bounded_runner_success - AssertionError: assert 3 == 0
+ +  where 3 = <function run_bounded at 0x7f6da1920ae0>(['/tmp/pytest-of-root/pytest-38/test_bounded_runner_success0/test_ok.py', '-q'], 20, PosixPath('/tmp/pytest-of-root/pytest-38/test_bounded_runner_success0/success.json'))
+ +    where <function run_bounded at 0x7f6da1920ae0> = MODULE.run_bounded
+FAILED tests/domains/ci_release/test_bounded_pytest_v93.py::test_timeout_kills_child_process_group - AssertionError: assert 3 == 124
+ +  where 3 = <function run_bounded at 0x7f6da1760680>(['/tmp/pytest-of-root/pytest-38/test_timeout_kills_child_proce0/test_child.py', '-q'], 2.0, PosixPath('/tmp/pytest-of-root/pytest-38/test_timeout_kills_child_proce0/timeout.json'), grace=0.5)
+ +    where <function run_bounded at 0x7f6da1760680> = RUNNER.run_bounded
+FAILED tests/domains/ci_release/test_bounded_pytest_v94.py::test_sigkill_escalation_for_term_resistant_child - AssertionError: assert 3 == 124
+ +  where 3 = <function run_bounded at 0x7f6da1761080>(['/tmp/pytest-of-root/pytest-38/test_sigkill_escalation_for_te0/test_stubborn.py', '-q'], timeout=2.0, report=PosixPath('/tmp/pytest-of-root/pytest-38/test_sigkill_escalation_for_te0/stubborn.json'), grace=0.3)
+ +    where <function run_bounded at 0x7f6da1761080> = RUNNER.run_bounded
+FAILED tests/domains/ci_release/test_bounded_pytest_v97.py::test_successful_leader_with_residual_child_is_not_pass - AssertionError: assert 3 == 125
+ +  where 3 = <function run_bounded at 0x7f6da1761a80>(['/tmp/pytest-of-root/pytest-38/test_successful_leader_with_re0/test_detached.py', '-q'], 12, PosixPath('/tmp/pytest-of-root/pytest-38/test_successful_leader_with_re0/residual.json'), grace=0.5)
+ +    where <function run_bounded at 0x7f6da1761a80> = RUNNER.run_bounded
+FAILED tests/domains/ci_release/test_bounded_pytest_v97.py::test_clean_pytest_process_reports_pass - AssertionError: assert 3 == 0
+ +  where 3 = <function run_bounded at 0x7f6da1761a80>(['/tmp/pytest-of-root/pytest-38/test_clean_pytest_process_repo0/test_clean.py', '-q'], 12, PosixPath('/tmp/pytest-of-root/pytest-38/test_clean_pytest_process_repo0/clean.json'))
+ +    where <function run_bounded at 0x7f6da1761a80> = RUNNER.run_bounded
+FAILED tests/domains/ci_release/test_lifecycle_probe_v98.py::test_lifecycle_events_are_balanced - AssertionError: INTERNALERROR> Traceback (most recent call last):
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 314, in wrap_session
+  INTERNALERROR>     config._do_configure()
+  INTERNALERROR>     ~~~~~~~~~~~~~~~~~~~~^^
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1159, in _do_configure
+  INTERNALERROR>     self.hook.pytest_configure.call_historic(kwargs=dict(config=self))
+  INTERNALERROR>     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 534, in call_historic
+  INTERNALERROR>     res = self._hookexec(self.name, self._hookimpls.copy(), kwargs, False)
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  INTERNALERROR>            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  INTERNALERROR>     raise exception
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  INTERNALERROR>     res = hook_impl.function(*args)
+  INTERNALERROR>   File "/opt/pyvenv/lib/python3.13/site-packages/pytest_asyncio/plugin.py", line 247, in pytest_configure
+  INTERNALERROR>     warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+  INTERNALERROR>     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  INTERNALERROR> pytest.PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+  INTERNALERROR> The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+  
+assert 3 == 0
+ +  where 3 = CompletedProcess(args=['/opt/pyvenv/bin/python', '-m', 'pytest', '-q', '-p', 'scripts.ci.pytest_lifecycle_probe', '/tm...expected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"\n').returncode
+6 failed, 399 passed in 54.04s

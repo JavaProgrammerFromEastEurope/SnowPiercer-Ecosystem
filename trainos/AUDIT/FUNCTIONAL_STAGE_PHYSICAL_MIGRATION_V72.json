@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v72",
+  "domain": "ci_release",
+  "moved": {
+    "tests/stage548/test_stage548_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage548_diagnose_stage_matrix.py",
+    "tests/stage549/test_stage549_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage549_diagnose_stage_matrix.py",
+    "tests/stage550/test_stage550_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage550_diagnose_stage_matrix.py",
+    "tests/stage551/test_stage551_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage551_diagnose_stage_matrix.py",
+    "tests/stage552/test_stage552_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage552_diagnose_stage_matrix.py",
+    "tests/stage553/test_stage553_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage553_diagnose_stage_matrix.py",
+    "tests/stage554/test_stage554_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage554_diagnose_stage_matrix.py",
+    "tests/stage555/test_stage555_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage555_diagnose_stage_matrix.py",
+    "tests/stage556/test_stage556_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage556_diagnose_stage_matrix.py",
+    "tests/stage557/test_stage557_diagnose_stage_matrix.py": "tests/domains/ci_release/test_stage557_diagnose_stage_matrix.py"
+  },
+  "source_release": "v71",
+  "method": "physical relocation with repository root path adjustment"
+}

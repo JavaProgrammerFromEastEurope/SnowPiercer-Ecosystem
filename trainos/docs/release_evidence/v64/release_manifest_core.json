@@ -1,0 +1,93 @@
+{
+  "project": "TrainOS / SnowPiercer",
+  "release": "v64",
+  "snapshot_date": "2026-10-28",
+  "stage_range": {
+    "start": 548,
+    "end": 557,
+    "count": 10
+  },
+  "focus": "Per-stage regression diagnostics, deterministic slow-stage ranking, coverage checks, CI diagnostic artifacts, and order-sensitive full-suite slowdown investigation.",
+  "verification": {
+    "targeted_stages_548_557": {
+      "result": "PASS",
+      "passed": 10,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v64/targeted_548_557.json"
+    },
+    "regression_stages_170_557": {
+      "result": "PASS",
+      "passed": 418,
+      "failed": 0,
+      "test_files_selected": 388,
+      "elapsed_seconds": 19.03,
+      "evidence": "docs/release_evidence/v64/regression_170_557.json"
+    },
+    "supporting_checks": {
+      "result": "PASS",
+      "passed": 70,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v64/supporting_checks.json"
+    },
+    "stage_matrix_548_557": {
+      "result": "PASS",
+      "stages_passed": 10,
+      "failed": 0,
+      "timeouts": 0,
+      "evidence": "docs/release_evidence/v64/stage_matrix_diagnostics_548_557.json"
+    },
+    "pytest_collection": {
+      "result": "PASS",
+      "tests_collected": 1376,
+      "exit_code": 0,
+      "evidence": "docs/release_evidence/v64/collection_summary.json"
+    },
+    "full_project_suite": {
+      "result": "INCOMPLETE_TIMEOUT",
+      "tests_collected": 1376,
+      "passed": null,
+      "failed": null,
+      "evidence": "docs/release_evidence/v64/full_pytest_summary.json"
+    },
+    "python_ast_audit": {
+      "result": "PASS",
+      "files_scanned": 3052,
+      "syntax_errors": 0,
+      "evidence": "docs/release_evidence/v64/python_ast_audit.json"
+    },
+    "workflow_yaml_parse": "PASS",
+    "zip_integrity": "PASS",
+    "cache_exclusion": "PASS",
+    "github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED",
+    "workflow_matrix_coverage": "PASS: stages 1-557 covered exactly once"
+  },
+  "changes": [
+    "Added stages 548-557 with tests and stage documentation.",
+    "Added diagnose_stage_matrix.py to validate summary consistency, rank slow stages, identify missing stages, verify referenced logs and emit atomic JSON.",
+    "Extended GitHub Actions stage matrix and unified regression evidence to stage 557; added diagnostic artifact generation.",
+    "Updated SnowPiercer Work Register v23 and Deliverable Baseline v4.",
+    "Full suite remains incomplete; verbose run reached a slowdown around stage137 in full-suite order. Isolated/grouped passes do not establish root cause."
+  ],
+  "limitations": [
+    "Full pytest suite remains INCOMPLETE_TIMEOUT; 1,376 tests collected, final pass/fail counts unavailable.",
+    "GitHub Actions hosted workflow not run.",
+    "External payment sandbox, backup authenticity, off-host durability, distributed exactly-once execution and RPO/RTO unverified.",
+    "Physical subsystem readiness requires independent engineering and safety evidence."
+  ],
+  "ecosystem_register": {
+    "markdown": "SNOWPIERCER/ECOSYSTEM_WORK_REGISTER_V23.md",
+    "json": "SNOWPIERCER/ECOSYSTEM_WORK_REGISTER_V23.json",
+    "deliverable_baseline": "SNOWPIERCER/ECOSYSTEM_DELIVERABLE_BASELINE_V4.json",
+    "ecosystem_completion_percent": null
+  },
+  "archive": {
+    "filename": "TrainOS_Financial_Ledger_Contract_v64.zip",
+    "sha256": "See external release manifest",
+    "size_bytes": "See external release manifest",
+    "entries": "See external release manifest",
+    "zip_integrity": "PASS",
+    "cache_exclusion": "PASS",
+    "cache_entries": []
+  }
+}

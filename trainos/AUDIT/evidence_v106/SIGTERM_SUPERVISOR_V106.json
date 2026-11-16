@@ -1,0 +1,41 @@
+{
+  "schema": "trainos.process-supervisor.v105",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-c",
+    "import os,time,pathlib;pathlib.Path('/tmp/trainos-v106-probe-tbc8h90y/ready.pid').write_text(str(os.getpid()));time.sleep(60)"
+  ],
+  "supervisor_pid": 124797,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "pidfd_required": true,
+  "pidfd_available": true,
+  "production_admitted": false,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 124820
+    },
+    {
+      "event": "supervisor_signal",
+      "signal": 15
+    },
+    {
+      "event": "runner_terminate",
+      "signal": 15
+    }
+  ],
+  "status": "FAIL",
+  "runner_pid": 124820,
+  "residual_at_runner_exit": [],
+  "runner_exitcode": -15,
+  "supervisor_signal": 15,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 0,
+  "supervisor_exitcode": 143,
+  "cleanup_complete": true,
+  "duration_seconds": 0.585
+}

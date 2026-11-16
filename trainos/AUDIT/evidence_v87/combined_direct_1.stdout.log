@@ -1,0 +1,148 @@
+........................................................................ [ 18%]
+...................................F.................................... [ 37%]
+........................................................................ [ 55%]
+........................................................................ [ 74%]
+........................................................................ [ 93%]
+..........................                                               [100%]
+=================================== FAILURES ===================================
+_____ test_backup_change_after_publication_interrupt_blocks_reconciliation _____
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+  |     yield
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 158, in pytest_runtest_call
+  |     collect_unraisable(item.config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85f9a74400>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85f9a74400>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85f9a762f0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85f9a762f0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85f9a75e40>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85f9a75e40>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85f9a763e0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85f9a763e0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85f9a764d0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85f9a764d0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v87work/trainos/kernel/command/events/command_event_store.py", line 44, in __init__
+    |     columns = {row["name"] for row in self._connection.execute("PRAGMA table_info(command_events)")}
+    |                ~~~^^^^^^^^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f85fa259b70>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f85fa259b70>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED tests/domains/recovery/test_recovery_fault_sequences.py::test_backup_change_after_publication_interrupt_blocks_reconciliation - ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+1 failed, 385 passed in 37.52s

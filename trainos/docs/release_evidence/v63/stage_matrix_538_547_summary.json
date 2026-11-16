@@ -1,0 +1,83 @@
+{
+  "counts": {
+    "FAIL": 0,
+    "PASS": 10,
+    "TIMEOUT": 0
+  },
+  "source": "summary.tsv",
+  "stage_count": 10,
+  "stages": [
+    {
+      "exit_code": 0,
+      "log": "stage538.log",
+      "seconds": 2,
+      "stage": 538,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage539.log",
+      "seconds": 3,
+      "stage": 539,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage540.log",
+      "seconds": 3,
+      "stage": 540,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage541.log",
+      "seconds": 3,
+      "stage": 541,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage542.log",
+      "seconds": 6,
+      "stage": 542,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage543.log",
+      "seconds": 1,
+      "stage": 543,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage544.log",
+      "seconds": 2,
+      "stage": 544,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage545.log",
+      "seconds": 2,
+      "stage": 545,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage546.log",
+      "seconds": 2,
+      "stage": 546,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage547.log",
+      "seconds": 2,
+      "stage": 547,
+      "status": "PASS"
+    }
+  ],
+  "successful": true,
+  "total_seconds": 26
+}

@@ -1,0 +1,18 @@
+{
+  "release": "v71",
+  "domain": "pytest_diagnostics",
+  "moved": {
+    "tests/stage568/test_stage568_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage568_pytest_diagnostic.py",
+    "tests/stage569/test_stage569_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage569_pytest_diagnostic.py",
+    "tests/stage570/test_stage570_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage570_pytest_diagnostic.py",
+    "tests/stage571/test_stage571_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage571_pytest_diagnostic.py",
+    "tests/stage572/test_stage572_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage572_pytest_diagnostic.py",
+    "tests/stage573/test_stage573_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage573_pytest_diagnostic.py",
+    "tests/stage574/test_stage574_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage574_pytest_diagnostic.py",
+    "tests/stage575/test_stage575_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage575_pytest_diagnostic.py",
+    "tests/stage576/test_stage576_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage576_pytest_diagnostic.py",
+    "tests/stage577/test_stage577_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage577_pytest_diagnostic.py"
+  },
+  "preserved_historical_file_names": true,
+  "full_regression": "NOT_RUN"
+}

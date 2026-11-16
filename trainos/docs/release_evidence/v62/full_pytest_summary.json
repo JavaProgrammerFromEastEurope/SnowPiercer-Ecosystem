@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "command": "python -m pytest -q",
+  "result": "PASS",
+  "exit_code": 0,
+  "passed": 1356,
+  "failed": 0,
+  "elapsed_seconds": 60.95,
+  "evidence": "docs/release_evidence/v62/full_pytest.log"
+}

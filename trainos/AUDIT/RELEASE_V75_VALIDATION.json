@@ -1,0 +1,15 @@
+{
+  "schema": "trainos.release-validation.v1",
+  "release": "v75",
+  "source_release": "v74",
+  "domain": "ci_release",
+  "migration_modules": 10,
+  "targeted_tests": 135,
+  "targeted_result": "PASS",
+  "collection_tests": 1455,
+  "collection_errors": 0,
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN",
+  "targeted_log": "135 passed in 8.77s",
+  "collection_log": "1455 tests collected in 3.95s"
+}

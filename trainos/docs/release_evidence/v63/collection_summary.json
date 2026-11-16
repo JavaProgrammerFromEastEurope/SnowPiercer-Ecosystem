@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "tests_collected": 1366,
+  "exit_code": 0,
+  "command": "python -m pytest --collect-only -q",
+  "stdout_tail": "tests/stage98/test_recovery_fault_sequences.py::test_retry_after_failure_requires_explicit_new_checkpoint_authorization\ntests/stage99/test_recovery_cross_process_ownership.py::test_second_process_cannot_mark_a_live_attempt_as_interrupted\ntests/stage99/test_recovery_cross_process_ownership.py::test_dead_owner_requires_explicit_retry_authorization\n\n1366 tests collected in 1.86s",
+  "stderr": ""
+}

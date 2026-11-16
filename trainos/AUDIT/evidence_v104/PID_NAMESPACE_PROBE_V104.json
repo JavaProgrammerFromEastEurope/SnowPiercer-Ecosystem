@@ -1,0 +1,13 @@
+{
+  "command": [
+    "unshare",
+    "--pid",
+    "--fork",
+    "--mount-proc",
+    "true"
+  ],
+  "exitcode": 1,
+  "stdout": "",
+  "stderr": "unshare: unshare failed: Operation not permitted\n",
+  "independent_pid_namespace_e2e_proven": false
+}

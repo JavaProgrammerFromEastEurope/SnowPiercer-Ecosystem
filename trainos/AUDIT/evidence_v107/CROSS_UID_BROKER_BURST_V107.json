@@ -1,0 +1,237 @@
+{
+  "schema": "trainos.v107.real-crossuid-ipc-burst",
+  "production_admitted": false,
+  "cases": [
+    {
+      "request": 0,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "CONTAINMENT_NOT_CERTIFIED"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"CONTAINMENT_NOT_CERTIFIED\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 1,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 2,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 3,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 4,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 5,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 6,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 7,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 8,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 9,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 10,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 11,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 12,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 13,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 14,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 15,
+      "uid": 65534,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "REPLAY"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 16,
+      "uid": 65533,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "INVALID_PEER"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 17,
+      "uid": 65533,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "INVALID_PEER"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 18,
+      "uid": 65533,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "INVALID_PEER"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+      "stderr": ""
+    },
+    {
+      "request": 19,
+      "uid": 65533,
+      "exitcode": 125,
+      "response": {
+        "status": "DENIED",
+        "reason": "INVALID_PEER"
+      },
+      "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS_NEGATIVE_CONTROL",
+  "kernel_so_peercred": true,
+  "first_server_code": 0,
+  "restart_replay": {
+    "response": {
+      "status": "DENIED",
+      "reason": "REPLAY"
+    },
+    "exitcode": 125,
+    "server_exitcode": 0
+  }
+}

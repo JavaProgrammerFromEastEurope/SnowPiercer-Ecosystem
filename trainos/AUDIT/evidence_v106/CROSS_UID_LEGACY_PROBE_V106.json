@@ -1,0 +1,56 @@
+{
+  "schema": "trainos.v106-cross-uid-negative-probes",
+  "status": "PASS_NEGATIVE_CONTROL",
+  "independent_production_cross_uid_certified": false,
+  "os_enforced_legacy_fencing": false,
+  "results": [
+    {
+      "uid": 65534,
+      "case": "authority_production",
+      "exitcode": 125,
+      "stdout": "",
+      "stderr": "",
+      "expected": "blocked"
+    },
+    {
+      "uid": 65534,
+      "case": "direct_legacy_development",
+      "exitcode": 0,
+      "stdout": "LIBRARY_CONSTRUCTED\n",
+      "stderr": "",
+      "expected": "legacy API remains invocable"
+    },
+    {
+      "uid": 65534,
+      "case": "direct_legacy_production",
+      "exitcode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from tests.kernel_runner.runner import KernelTestRunner;KernelTestRunner();print(\"LIBRARY_CONSTRUCTED\")\n                                                            ~~~~~~~~~~~~~~~~^^\n  File \"/mnt/data/trainos_v106_work/trainos/tests/kernel_runner/runner.py\", line 30, in __init__\n    raise RuntimeError('TrainOS production Runner admission unavailable: independent OS cgroup authority required')\nRuntimeError: TrainOS production Runner admission unavailable: independent OS cgroup authority required\n",
+      "expected": "blocked"
+    },
+    {
+      "uid": 65533,
+      "case": "authority_production",
+      "exitcode": 125,
+      "stdout": "",
+      "stderr": "",
+      "expected": "blocked"
+    },
+    {
+      "uid": 65533,
+      "case": "direct_legacy_development",
+      "exitcode": 0,
+      "stdout": "LIBRARY_CONSTRUCTED\n",
+      "stderr": "",
+      "expected": "legacy API remains invocable"
+    },
+    {
+      "uid": 65533,
+      "case": "direct_legacy_production",
+      "exitcode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from tests.kernel_runner.runner import KernelTestRunner;KernelTestRunner();print(\"LIBRARY_CONSTRUCTED\")\n                                                            ~~~~~~~~~~~~~~~~^^\n  File \"/mnt/data/trainos_v106_work/trainos/tests/kernel_runner/runner.py\", line 30, in __init__\n    raise RuntimeError('TrainOS production Runner admission unavailable: independent OS cgroup authority required')\nRuntimeError: TrainOS production Runner admission unavailable: independent OS cgroup authority required\n",
+      "expected": "blocked"
+    }
+  ]
+}

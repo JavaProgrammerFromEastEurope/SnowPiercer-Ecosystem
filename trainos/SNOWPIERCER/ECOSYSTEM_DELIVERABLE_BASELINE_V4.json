@@ -1,0 +1,388 @@
+{
+  "schema_version": 2,
+  "baseline_id": "SP-BASELINE-004",
+  "snapshot_date": "2026-10-28",
+  "policy": {
+    "completion_percent": "not calculated until scope, weights, acceptance criteria, and evidence are approved",
+    "stage_count_is_progress_metric": false,
+    "software_tests_prove_physical_readiness": false,
+    "unknown_status": "NOT_ASSESSED",
+    "critical_gates_require_evidence": true,
+    "evidence_must_be_linked_to_acceptance_criteria": true,
+    "dependency_statuses_must_not_be_inferred": true,
+    "require_diagnostic_evidence_for_timeout": true,
+    "per_stage_diagnostics_required_for_full_suite_blockers": true
+  },
+  "modules": [
+    {
+      "id": "SP-SW",
+      "name": "TrainOS and software platform",
+      "deliverables": [
+        "versioned source and release archive",
+        "deterministic regression selection and evidence manifest",
+        "financial ledger and idempotency contracts",
+        "backup/restore integrity checks",
+        "CI and full-suite test evidence",
+        "per-stage duration and outcome diagnostics (PASS/FAIL/TIMEOUT)",
+        "reproducible investigation record for order-sensitive full-suite slowdowns"
+      ],
+      "status": "ACTIVE_IMPLEMENTATION",
+      "acceptance_evidence_required": [
+        "reproducible build/archive hash",
+        "full pytest result",
+        "CI run URL or explicit NOT_RUN",
+        "security and payment sandbox evidence",
+        "per-stage diagnostic JSON and referenced logs",
+        "full-suite result or explicit incomplete/timeout evidence with last observed test"
+      ],
+      "critical_gates": [
+        "external payment sandbox before real-money processing",
+        "backup authenticity and off-host restore drill"
+      ],
+      "dependencies": [],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-AI",
+      "name": "AI, autonomy, coordination and diagnostics",
+      "deliverables": [
+        "system requirements and decision boundaries",
+        "model inventory and evaluation plan",
+        "monitoring, fallback, operator override",
+        "simulation and failure-injection evidence"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "approved requirements",
+        "evaluation dataset/protocol",
+        "measured test results",
+        "human override and fail-safe tests"
+      ],
+      "critical_gates": [
+        "no unbounded autonomous authority over safety-critical controls"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-RAIL",
+      "name": "Trains, rolling stock, coupling and railway infrastructure",
+      "deliverables": [
+        "operational concept",
+        "traction/braking/coupling requirements",
+        "track and route constraints",
+        "maintenance and inspection model",
+        "prototype and integration tests"
+      ],
+      "status": "ENGINEERING_EVIDENCE_PENDING",
+      "acceptance_evidence_required": [
+        "qualified engineering design",
+        "hazard analysis",
+        "simulation and physical test reports",
+        "independent safety review"
+      ],
+      "critical_gates": [
+        "certified braking, structural, fire, evacuation and railway safety"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-ENERGY",
+      "name": "Energy generation, storage and distribution",
+      "deliverables": [
+        "load model and energy budget",
+        "generation/storage architecture",
+        "distribution and protection",
+        "degraded and emergency modes"
+      ],
+      "status": "FEASIBILITY_BASELINE_PENDING",
+      "acceptance_evidence_required": [
+        "validated load profiles",
+        "fault/current protection analysis",
+        "thermal/fire safety evidence",
+        "redundancy and endurance tests"
+      ],
+      "critical_gates": [
+        "safe shutdown and independently reviewed protection design"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-LIFE",
+      "name": "Life support, medical, food, water and habitat",
+      "deliverables": [
+        "water/air/waste balances",
+        "food and nutrition plan",
+        "medical capability",
+        "habitat environmental controls",
+        "consumables and resupply model"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "mass/energy balance",
+        "water/air quality validation",
+        "medical response plan",
+        "long-duration reliability tests"
+      ],
+      "critical_gates": [
+        "human life-support safety and emergency evacuation"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-LOG",
+      "name": "Logistics, inventory, robotics and drones",
+      "deliverables": [
+        "supply-chain model",
+        "inventory and traceability",
+        "robot/drone operational envelope",
+        "maintenance and charging",
+        "dispatch integration"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "end-to-end simulated workflows",
+        "collision/geofence tests",
+        "inventory reconciliation tests",
+        "human override tests"
+      ],
+      "critical_gates": [
+        "safe operation around people and transport infrastructure"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-AI",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-SAFE",
+      "name": "Cybersecurity, physical safety and emergency response",
+      "deliverables": [
+        "threat model and hazard register",
+        "access control and key management",
+        "incident response",
+        "fire/chemical/biological/radiological protection plans",
+        "security verification"
+      ],
+      "status": "SAFETY_BASELINE_PENDING",
+      "acceptance_evidence_required": [
+        "threat model review",
+        "penetration/security tests",
+        "hazard analysis",
+        "drills and corrective action closure"
+      ],
+      "critical_gates": [
+        "independent safety/security approval before operational deployment"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-ISLAND",
+      "name": "SnowPiercer Island and autonomous industrial facilities",
+      "deliverables": [
+        "site and utility requirements",
+        "industrial process inventory",
+        "environmental and permitting constraints",
+        "construction phases and interfaces"
+      ],
+      "status": "SCOPE_DECOMPOSITION_PENDING",
+      "acceptance_evidence_required": [
+        "site feasibility",
+        "engineering concept studies",
+        "permitting map",
+        "capital and operating estimates"
+      ],
+      "critical_gates": [
+        "land, environmental, industrial and public safety approvals"
+      ],
+      "dependencies": [
+        "SP-RAIL",
+        "SP-ENERGY",
+        "SP-LIFE",
+        "SP-LOG",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SP-OPS",
+      "name": "Operations, governance and lifecycle",
+      "deliverables": [
+        "operating model and roles",
+        "maintenance windows and spare parts",
+        "change management",
+        "training and incident procedures",
+        "lifecycle cost and audit trail"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "approved SOPs",
+        "training/drill results",
+        "maintenance metrics",
+        "auditable change approvals"
+      ],
+      "critical_gates": [
+        "named accountable owners and emergency command structure"
+      ],
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE"
+      ],
+      "acceptance_rule": "Every listed deliverable must have a named artifact, an acceptance criterion, and evidence; unknown remains NOT_ASSESSED.",
+      "evidence_status": "NOT_ASSESSED"
+    }
+  ],
+  "cross_system_workstreams": [
+    {
+      "id": "SP-X-001",
+      "name": "Release and evidence provenance",
+      "modules": [
+        "SP-SW",
+        "SP-OPS"
+      ],
+      "deliverable": "Every release has a reproducible archive hash, selected test list, result, and explicit unverified items.",
+      "acceptance_evidence_required": [
+        "release manifest",
+        "archive SHA-256",
+        "test selection report",
+        "hosted CI result or NOT_RUN"
+      ]
+    },
+    {
+      "id": "SP-X-002",
+      "name": "Safety case and hazard traceability",
+      "modules": [
+        "SP-AI",
+        "SP-RAIL",
+        "SP-ENERGY",
+        "SP-LIFE",
+        "SP-LOG",
+        "SP-SAFE",
+        "SP-ISLAND",
+        "SP-OPS"
+      ],
+      "deliverable": "Cross-module hazards link to requirements, mitigations, verification evidence, and an accountable reviewer.",
+      "acceptance_evidence_required": [
+        "hazard register",
+        "traceability matrix",
+        "independent review record"
+      ]
+    },
+    {
+      "id": "SP-X-003",
+      "name": "Autonomy and human override",
+      "modules": [
+        "SP-AI",
+        "SP-RAIL",
+        "SP-LOG",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "deliverable": "Safety-critical autonomous actions have bounded authority, monitoring, fallback, and tested operator override.",
+      "acceptance_evidence_required": [
+        "approved autonomy boundaries",
+        "fault injection report",
+        "operator override test"
+      ]
+    },
+    {
+      "id": "SP-X-004",
+      "name": "Resource and endurance balance",
+      "modules": [
+        "SP-ENERGY",
+        "SP-LIFE",
+        "SP-ISLAND",
+        "SP-OPS"
+      ],
+      "deliverable": "Energy, air, water, food, waste, maintenance, and emergency reserve requirements reconcile under normal and degraded scenarios.",
+      "acceptance_evidence_required": [
+        "quantified load/resource model",
+        "worst-case scenario report",
+        "emergency reserve analysis"
+      ]
+    },
+    {
+      "id": "XSW-REGRESSION-DIAGNOSTICS",
+      "name": "Regression evidence and slow-stage isolation",
+      "scope": [
+        "TrainOS test runner",
+        "CI stage matrix",
+        "release manifest",
+        "SnowPiercer work register"
+      ],
+      "acceptance_evidence_required": [
+        "validated stage summary",
+        "deterministically ranked slow stages",
+        "timeout status preserved as non-pass",
+        "CI artifact or explicit NOT_RUN status"
+      ],
+      "status": "ACTIVE"
+    }
+  ],
+  "current_blockers": [
+    "weighted scope baseline not approved",
+    "physical engineering evidence not inventoried",
+    "full end-to-end integration not demonstrated",
+    "external payment sandbox not verified",
+    "CI workflow execution not verified in GitHub-hosted runner",
+    "Unified full-suite execution must complete or have each timeout isolated and explained.",
+    "Hosted GitHub Actions result remains unverified until an actual workflow run is observed.",
+    "Payment provider sandbox and restore/off-host durability drills are not verified.",
+    "Physical engineering modules require domain-specific and independent evidence before readiness can be claimed.",
+    "Order-sensitive full-suite slowdown around stage137 requires root-cause isolation; isolated and grouped runs passed, full-suite remains incomplete.",
+    "New per-stage diagnostic summary has local evidence only; hosted GitHub Actions is not verified."
+  ],
+  "status_legend": {
+    "ACTIVE_IMPLEMENTATION": "implementation underway; not equivalent to completion",
+    "INVENTORY_PENDING": "deliverables and acceptance evidence not yet audited",
+    "ENGINEERING_EVIDENCE_PENDING": "requires engineering design and test evidence",
+    "FEASIBILITY_BASELINE_PENDING": "needs quantified feasibility and energy/resource balances",
+    "SAFETY_BASELINE_PENDING": "requires hazard analysis and independent acceptance",
+    "SCOPE_DECOMPOSITION_PENDING": "scope, interfaces, and phased deliverables not approved"
+  },
+  "baseline_version": 4,
+  "release_context": "TrainOS v64 / stages 548-557",
+  "evidence_policy": {
+    "require_artifact_sha256": true,
+    "require_selected_test_file_list": true,
+    "require_explicit_unverified_status": true,
+    "overall_completion_percent_without_approved_weights": null
+  }
+}

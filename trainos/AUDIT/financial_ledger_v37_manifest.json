@@ -1,0 +1,51 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v37.zip",
+  "version": "v37",
+  "base_version": "v36",
+  "requested_stage_range": [
+    278,
+    287
+  ],
+  "stages_added": [
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287
+  ],
+  "zip_integrity": "PENDING",
+  "excluded_cache_audit": "PENDING",
+  "cache_entries_found": [],
+  "verification": {
+    "new_stage_tests": "PASS: 10 passed",
+    "regression_tests_stages_170_287": "PASS: 138 passed",
+    "python_ast_audit": "PASS: 2779 Python files scanned, 0 syntax errors",
+    "full_project_test_suite": "NOT_RUN",
+    "github_actions": "NOT_RUN",
+    "external_payment_integration": "NO_GO_NOT_VERIFIED"
+  },
+  "stage_focus": {
+    "278": "Required identity normalization is idempotent across repeated claims.",
+    "279": "Reusing an idempotency key for a different payload preserves the original claim.",
+    "280": "Execution-ID uniqueness holds across independent store instances.",
+    "281": "Invalid completion results are rejected before state mutation.",
+    "282": "Unknown outcomes require reconciliation before completion.",
+    "283": "Completed reconciliation rolls back if the audit insert fails.",
+    "284": "Not-executed reconciliation rolls back if the audit insert fails.",
+    "285": "Completed result and dispatch generation survive database reopen.",
+    "286": "Dispatch generation increments only after explicit not-executed reconciliation and a new reservation.",
+    "287": "Corrupt persisted result JSON is detected on read."
+  },
+  "limitations": [
+    "Tests cover the local SQLite ledger contract only.",
+    "No external payment provider or physical command integration was executed.",
+    "Full project suite and GitHub Actions were not run."
+  ],
+  "syntax_errors": [],
+  "integrity_note": "Exact archive size, entry count, and SHA-256 are provided by the external sidecar manifest to avoid a self-referential digest."
+}

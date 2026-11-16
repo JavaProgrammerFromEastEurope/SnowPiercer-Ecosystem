@@ -1,0 +1,9 @@
+...                                                                      [100%]
+============================= slowest 10 durations =============================
+0.05s setup    tests/stage72/test_investigation_store_metadata_integrity.py::test_invalid_created_at_is_reported_and_record_cannot_be_loaded
+0.03s call     tests/stage72/test_investigation_store_metadata_integrity.py::test_reversed_revision_timestamp_is_reported_and_history_rejected
+0.03s call     tests/stage72/test_investigation_store_metadata_integrity.py::test_metadata_integrity_scan_is_read_only
+0.02s call     tests/stage72/test_investigation_store_metadata_integrity.py::test_invalid_created_at_is_reported_and_record_cannot_be_loaded
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+3 passed in 0.30s

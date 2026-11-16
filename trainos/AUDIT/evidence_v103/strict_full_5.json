@@ -1,0 +1,52 @@
+{
+  "schema": "trainos.verification.v103",
+  "case": "strict_full",
+  "iteration": 5,
+  "started_at": "2026-11-14T22:35:25+0000",
+  "source_sha256": {
+    "tests/kernel_runner/runner.py": "fb4dad397e3d59b75ffe46352618e8c6f0795087f78c7711d4355ff595da8580",
+    "tests/domains/ci_release/test_kernel_runner_v103.py": "94208b54d810cb7dcbceca3130046fc73f99065fd1504026483e17fdcd5c0a5c",
+    "tests/domains/ci_release/test_kernel_runner_workers_v103.py": "1c36f314605e4c5d5696db786da649242797b96a0e51613d8753e49def239edd"
+  },
+  "duration_seconds": 135.699,
+  "timeout_seconds": 600.0,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "/mnt/data/trainos_v103_work/trainos/scripts/ci/run_with_subreaper.py",
+    "--",
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "tests"
+  ],
+  "cwd": "/mnt/data/trainos_v103_work/trainos",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "strict_warnings": "error::ResourceWarning,error::DeprecationWarning",
+  "nested_pytest_addopts": "-c /mnt/data/trainos_v103_work/trainos/pytest.ini",
+  "kernel_workers": "1",
+  "pytest_warning_filter": [
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning"
+  ],
+  "subreaper": true,
+  "pid1_comm": "supervisord",
+  "exitcode": 0,
+  "timed_out": false,
+  "actions": [],
+  "error": null,
+  "stdout": "strict_full_5.stdout.log",
+  "stderr": "strict_full_5.stderr.log",
+  "status": "PASS"
+}

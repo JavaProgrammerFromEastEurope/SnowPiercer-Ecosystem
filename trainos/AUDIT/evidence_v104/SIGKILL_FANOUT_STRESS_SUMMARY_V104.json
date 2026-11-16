@@ -1,0 +1,147 @@
+[
+  {
+    "iteration": 1,
+    "fanout": 8,
+    "runner_pid": 46147,
+    "detached_pids": [
+      46187,
+      46188,
+      46189,
+      46190,
+      46191,
+      46192,
+      46193,
+      46194
+    ],
+    "signalled_pids": [
+      46187,
+      46188,
+      46189,
+      46190,
+      46191,
+      46192,
+      46193,
+      46194
+    ],
+    "unreaped_live": [],
+    "supervisor_exitcode": 137,
+    "reported_cleanup": true,
+    "result": "PASS"
+  },
+  {
+    "iteration": 2,
+    "fanout": 8,
+    "runner_pid": 46233,
+    "detached_pids": [
+      46273,
+      46274,
+      46275,
+      46276,
+      46277,
+      46278,
+      46279,
+      46280
+    ],
+    "signalled_pids": [
+      46273,
+      46274,
+      46275,
+      46276,
+      46277,
+      46278,
+      46279,
+      46280
+    ],
+    "unreaped_live": [],
+    "supervisor_exitcode": 137,
+    "reported_cleanup": true,
+    "result": "PASS"
+  },
+  {
+    "iteration": 3,
+    "fanout": 8,
+    "runner_pid": 46326,
+    "detached_pids": [
+      46363,
+      46364,
+      46365,
+      46367,
+      46368,
+      46369,
+      46370,
+      46371
+    ],
+    "signalled_pids": [
+      46363,
+      46364,
+      46365,
+      46367,
+      46368,
+      46369,
+      46370,
+      46371
+    ],
+    "unreaped_live": [],
+    "supervisor_exitcode": 137,
+    "reported_cleanup": true,
+    "result": "PASS"
+  },
+  {
+    "iteration": 4,
+    "fanout": 8,
+    "runner_pid": 46465,
+    "detached_pids": [
+      46490,
+      46491,
+      46492,
+      46493,
+      46494,
+      46495,
+      46496,
+      46497
+    ],
+    "signalled_pids": [
+      46490,
+      46491,
+      46492,
+      46493,
+      46494,
+      46495,
+      46496,
+      46497
+    ],
+    "unreaped_live": [],
+    "supervisor_exitcode": 137,
+    "reported_cleanup": true,
+    "result": "PASS"
+  },
+  {
+    "iteration": 5,
+    "fanout": 8,
+    "runner_pid": 46556,
+    "detached_pids": [
+      46578,
+      46579,
+      46580,
+      46581,
+      46582,
+      46583,
+      46584,
+      46585
+    ],
+    "signalled_pids": [
+      46578,
+      46579,
+      46580,
+      46581,
+      46582,
+      46583,
+      46584,
+      46585
+    ],
+    "unreaped_live": [],
+    "supervisor_exitcode": 137,
+    "reported_cleanup": true,
+    "result": "PASS"
+  }
+]

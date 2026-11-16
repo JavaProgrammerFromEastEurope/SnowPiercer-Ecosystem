@@ -1,0 +1,9 @@
+{
+  "status": "INTERRUPTED",
+  "pytest_summary": "1 failed, 388 passed in 38.15s",
+  "runner_report_missing": true,
+  "external_timeout": true,
+  "exit_code": "UNKNOWN",
+  "orphan_pid_observed": 31209,
+  "orphan_pid_terminated": true
+}

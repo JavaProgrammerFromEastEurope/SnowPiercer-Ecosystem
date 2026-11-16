@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/trainos_v105_work/trainos/tests/kernel_runner/__main__.py", line 11, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/trainos_v105_work/trainos/tests/kernel_runner/__main__.py", line 5, in main
+    runner = KernelTestRunner()
+  File "/mnt/data/trainos_v105_work/trainos/tests/kernel_runner/runner.py", line 30, in __init__
+    raise RuntimeError('TrainOS production Runner admission unavailable: independent OS cgroup authority required')
+RuntimeError: TrainOS production Runner admission unavailable: independent OS cgroup authority required

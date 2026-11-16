@@ -1,0 +1,70 @@
+{
+  "release": "v85",
+  "base": "v84",
+  "functional_migration": {
+    "tests/stage428/test_stage428_backup_recovery.py": "tests/domains/recovery/test_stage428_backup_recovery.py",
+    "tests/stage429/test_stage429_backup_recovery.py": "tests/domains/recovery/test_stage429_backup_recovery.py",
+    "tests/stage430/test_stage430_backup_recovery.py": "tests/domains/recovery/test_stage430_backup_recovery.py",
+    "tests/stage431/test_stage431_backup_recovery.py": "tests/domains/recovery/test_stage431_backup_recovery.py",
+    "tests/stage432/test_stage432_backup_recovery.py": "tests/domains/recovery/test_stage432_backup_recovery.py",
+    "tests/stage433/test_stage433_backup_recovery.py": "tests/domains/recovery/test_stage433_backup_recovery.py",
+    "tests/stage434/test_stage434_backup_recovery.py": "tests/domains/recovery/test_stage434_backup_recovery.py",
+    "tests/stage435/test_stage435_backup_recovery.py": "tests/domains/recovery/test_stage435_backup_recovery.py",
+    "tests/stage436/test_stage436_backup_recovery.py": "tests/domains/recovery/test_stage436_backup_recovery.py",
+    "tests/stage437/test_stage437_backup_recovery.py": "tests/domains/recovery/test_stage437_backup_recovery.py"
+  },
+  "strict_warning_policy": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning",
+    "error::pytest.PytestUnraisableExceptionWarning"
+  ],
+  "runs": [
+    {
+      "name": "strict_combined_1",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "duration_seconds": 39.83,
+      "summary": "347 passed in 37.73s",
+      "log": "AUDIT/evidence_v85/strict_combined_1.log"
+    },
+    {
+      "name": "strict_combined_2",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "duration_seconds": 39.35,
+      "summary": "347 passed in 37.04s",
+      "log": "AUDIT/evidence_v85/strict_combined_2.log"
+    },
+    {
+      "name": "strict_combined_3",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "duration_seconds": 38.03,
+      "summary": "347 passed in 35.91s",
+      "log": "AUDIT/evidence_v85/strict_combined_3.log"
+    },
+    {
+      "name": "collect_all",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "duration_seconds": 6.5,
+      "summary": "1474 tests collected in 3.68s",
+      "log": "AUDIT/evidence_v85/collect_all.log"
+    },
+    {
+      "name": "full_suite_bounded",
+      "status": "COMPLETED",
+      "exit_code": 1,
+      "duration_seconds": 68.49,
+      "summary": "9 failed, 1463 passed, 2 errors in 65.48s (0:01:05)",
+      "log": "AUDIT/evidence_v85/full_suite_bounded.log"
+    }
+  ],
+  "full_suite_status": "BLOCKED",
+  "hosted_ci": "NOT_RUN",
+  "limitations": [
+    "Successful collection does not prove full-suite pass",
+    "A bounded full-suite run may timeout; its partial results are not classified as PASS",
+    "Three combined domain runs do not establish complete system readiness"
+  ]
+}

@@ -1,0 +1,588 @@
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 62, in <module>
+  |     raise SystemExit(main())
+  |                      ~~~~^^
+  |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 54, in main
+  |     return int(pytest.main(args))
+  |                ~~~~~~~~~~~^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 199, in main
+  |     ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 365, in pytest_cmdline_main
+  |     return wrap_session(config, _main)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/main.py", line 360, in wrap_session
+  |     config._ensure_unconfigure()
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1171, in _ensure_unconfigure
+  |     self._cleanup_stack.close()
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 627, in close
+  |     self.__exit__(None, None, None)
+  |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 619, in __exit__
+  |     raise exc
+  |   File "/usr/lib/python3.13/contextlib.py", line 604, in __exit__
+  |     if cb(*exc_details):
+  |        ~~^^^^^^^^^^^^^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 482, in _exit_wrapper
+  |     callback(*args, **kwds)
+  |     ~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 95, in cleanup
+  |     collect_unraisable(config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (23 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286bd50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286bd50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 71
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286bb50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286bb50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 56
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b750>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b750>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 54
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b850>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b850>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 37
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b150>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b150>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 35
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b450>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b450>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage85/test_atomic_integrity_snapshot.py", line 21
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 7 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b250>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b250>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 63
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 8 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286b050>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286b050>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 56
+    |     store, _ = _trusted_stores(tmp_path)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 22
+    |     anchor_store = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 9 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286ad50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286ad50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 56
+    |     store, _ = _trusted_stores(tmp_path)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 21
+    |     event_store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 10 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286af50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286af50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 46
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 11 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286ac50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286ac50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 45
+    |     store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 12 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286ab50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286ab50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 30
+    |     store, _ = _trusted_stores(tmp_path)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 22
+    |     anchor_store = EventIntegrityAnchorStore(tmp_path / "anchors.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 13 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286aa50>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286aa50>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 30
+    |     store, _ = _trusted_stores(tmp_path)
+    |   File "/mnt/data/v93work/trainos/tests/stage84/test_trusted_read_snapshot.py", line 21
+    |     event_store = CommandEventStore(tmp_path / "events.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 14 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286a950>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286a950>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage83/test_direct_store_trusted_reads.py", line 64
+    |     anchors = EventIntegrityAnchorStore(tmp_path / "same.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/event_integrity_anchor_store.py", line 37
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- 15 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 33, in gc_collect_harder
+    |     gc.collect()
+    |     ~~~~~~~~~~^^
+    | ResourceWarning: unclosed database in <__main__.TracedConnection object at 0x7fb47286a850>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <__main__.TracedConnection object at 0x7fb47286a850>
+    | 
+    | Object allocated at:
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 179
+    |     item.runtest()
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 1720
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512
+    |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121
+    |     res = hook_impl.function(*args)
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/python.py", line 166
+    |     result = testfunction(**testargs)
+    |   File "/mnt/data/v93work/trainos/tests/stage83/test_direct_store_trusted_reads.py", line 63
+    |     store = CommandEventStore(tmp_path / "same.sqlite")
+    |   File "/mnt/data/trainos_v100/kernel/command/events/command_event_store.py", line 30
+    |     self._connection = sqlite3.connect(self._database_path, check_same_thread=False)
+    |   File "/mnt/data/trainos_v100/scripts/ci/trace_sqlite_owners.py", line 32
+    |     connection = _ORIGINAL(*args, **kwargs)
+    +---------------- ... ----------------
+    | and 8 more exceptions
+    +------------------------------------

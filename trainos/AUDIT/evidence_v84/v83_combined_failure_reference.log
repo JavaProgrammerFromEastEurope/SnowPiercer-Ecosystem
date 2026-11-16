@@ -1,0 +1,171 @@
+........................................................................ [ 22%]
+........................................................................ [ 44%]
+........................................................................ [ 66%]
+....................................................F................... [ 89%]
+...................................                                      [100%]
+=================================== FAILURES ===================================
+__________ test_multiple_keys_have_independent_valid_audit_histories ___________
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+  |     yield
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 158, in pytest_runtest_call
+  |     collect_unraisable(item.config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf223f10>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf223f10>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf2234c0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf2234c0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf223d30>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf223d30>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf223e20>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf223e20>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf223c40>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf223c40>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/v83work/trainos/kernel/command/execution/command_idempotency_store.py", line 929, in validate_backup
+    |     for row in connection.execute(
+    |                ~~~~~~~~~~~~~~~~~~^
+    |         "PRAGMA table_info(command_idempotency)"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchall()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f27cf524f40>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f27cf524f40>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED tests/domains/ci_release/test_stage524_release_contract.py::test_multiple_keys_have_independent_valid_audit_histories - ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+1 failed, 322 passed in 36.84s

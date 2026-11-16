@@ -1,0 +1,23 @@
+{
+  "schema": "trainos.v107.crossuid-legacy-negative",
+  "cases": [
+    {
+      "uid": 65534,
+      "flags": {},
+      "exitcode": 0,
+      "stdout": "LEGACY_CONSTRUCTOR_AVAILABLE\n",
+      "stderr": ""
+    },
+    {
+      "uid": 65533,
+      "flags": {
+        "TRAINOS_KERNEL_PRODUCTION": "1"
+      },
+      "exitcode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from tests.kernel_runner.runner import KernelTestRunner; KernelTestRunner(); print(\"LEGACY_CONSTRUCTOR_AVAILABLE\")\n                                                             ~~~~~~~~~~~~~~~~^^\n  File \"/mnt/data/trainos_v107_work/trainos/tests/kernel_runner/runner.py\", line 30, in __init__\n    raise RuntimeError('TrainOS production Runner admission unavailable: independent OS cgroup authority required')\nRuntimeError: TrainOS production Runner admission unavailable: independent OS cgroup authority required\n"
+    }
+  ],
+  "os_enforced_legacy_fence_verified": false,
+  "status": "NEGATIVE_CONTROL"
+}

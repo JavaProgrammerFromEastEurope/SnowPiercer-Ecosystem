@@ -1,0 +1,128 @@
+{
+  "schema": "trainos.v107.functional-domains",
+  "domain_count": 24,
+  "configured_total_files": 958,
+  "assignments_sha256": "366f240372bc5f08b25fbd8096f191182230d028b315fef823c6bca67be7b869",
+  "domains": [
+    {
+      "name": "pytest_diagnostics",
+      "configured_file_count": 31,
+      "test_files_sha256": "67730b56b742632bec818584b39c78fdfade7a4089cb178b24025bd9fd48b241"
+    },
+    {
+      "name": "financial_ledger",
+      "configured_file_count": 180,
+      "test_files_sha256": "fd01c3b02f0e784bbfa02190c3042d7fd38b298e1dc66baafcfc354209e08b05"
+    },
+    {
+      "name": "recovery",
+      "configured_file_count": 153,
+      "test_files_sha256": "36c495f4ea979bb743bbce672280b8d5a0c71013ab273db8cc35409ca7c2607c"
+    },
+    {
+      "name": "backup_restore",
+      "configured_file_count": 52,
+      "test_files_sha256": "9c506caf51ad8eceeecb71d20b95fda9feff19013d739e658a5f8baf0946102a"
+    },
+    {
+      "name": "security_governance",
+      "configured_file_count": 47,
+      "test_files_sha256": "0e6e9c8f79bdebe75a3d3a6f5b3803ad3aab6582e6f38206e9d746abd405efdf"
+    },
+    {
+      "name": "execution_scheduler",
+      "configured_file_count": 41,
+      "test_files_sha256": "00c551351e226d45d5055cddd3375bc6ee1b34b98e0ffb43731171dd6333a887"
+    },
+    {
+      "name": "events_commands",
+      "configured_file_count": 31,
+      "test_files_sha256": "73a9a320f4a63bc48e797da90657e7526aabd8da2c63e49f6ac30783a6acda22"
+    },
+    {
+      "name": "registry_schema",
+      "configured_file_count": 54,
+      "test_files_sha256": "da9180c4b750f26189f4f822bad78e127ffb9255485bdfb746aa45e01ce13df6"
+    },
+    {
+      "name": "ci_release",
+      "configured_file_count": 76,
+      "test_files_sha256": "a1a65ee869fbb5f0bbe08fb5b965ffe85c32f3fa0ecb35d38667c7c973b17d16"
+    },
+    {
+      "name": "audit_integrity",
+      "configured_file_count": 48,
+      "test_files_sha256": "00bb260e949674abe2461fabe6f8c9e824db19f15f402f0eec766b66ad819156"
+    },
+    {
+      "name": "runtime_kernel",
+      "configured_file_count": 86,
+      "test_files_sha256": "87523180786d764beb5eb05ac73f7d71f9169a6cca044b082f35893bbe4a581e"
+    },
+    {
+      "name": "education",
+      "configured_file_count": 4,
+      "test_files_sha256": "3f50499d5773f910ec7d1b1686921016eaef2d9dd2c4067be9da376d16403e93"
+    },
+    {
+      "name": "healthcare",
+      "configured_file_count": 2,
+      "test_files_sha256": "abd814f2192fc4299e45699906208aa69453030a6f0348ebc88e57baa5d7033b"
+    },
+    {
+      "name": "simulation",
+      "configured_file_count": 4,
+      "test_files_sha256": "796b224a4f09f06dae202330d1081f071249431412f19389f323da9d50f8ebbc"
+    },
+    {
+      "name": "transactions",
+      "configured_file_count": 30,
+      "test_files_sha256": "7c909939552b01d195f3ff62f95ca7aff749e08a4e2b7653035eee4847a394f0"
+    },
+    {
+      "name": "cognition_learning",
+      "configured_file_count": 22,
+      "test_files_sha256": "ac74b5727fc55713af35718a67815d58eb45610fffd9358faaa55b06a3748137"
+    },
+    {
+      "name": "society_governance",
+      "configured_file_count": 18,
+      "test_files_sha256": "1a8f08e9b056920810427df954121b332492925f9bccc8b94f11619fdcf19304"
+    },
+    {
+      "name": "economy_resources",
+      "configured_file_count": 13,
+      "test_files_sha256": "2f592caee4da0b31463b466873122fc19ec0773fb198585f5919ac07095191a5"
+    },
+    {
+      "name": "communication_persistence",
+      "configured_file_count": 19,
+      "test_files_sha256": "5b05b789bd4ff287eaf4cb93f1c0b82beddaa72c7cd78d314f66a5312c4ceb62"
+    },
+    {
+      "name": "orchestration_control",
+      "configured_file_count": 25,
+      "test_files_sha256": "127aa143f50bc433130e1f59071c38683936b0d8dc7acaf7d01d6a01dc90f321"
+    },
+    {
+      "name": "simulation_agents",
+      "configured_file_count": 7,
+      "test_files_sha256": "3e10955c2bc0b3941981aeb80c8291fd666974cf84bb3eaf908e5dc48e15342c"
+    },
+    {
+      "name": "knowledge_culture",
+      "configured_file_count": 7,
+      "test_files_sha256": "f6dbb9102ef8b269c567c0e394fb75f1ea09e3c93a3135d98cb38d25cd375120"
+    },
+    {
+      "name": "population_services",
+      "configured_file_count": 5,
+      "test_files_sha256": "9938d2b0fd2f0c57691ffa8e652777679275ce4f5813ef2d3d4f18b049b88279"
+    },
+    {
+      "name": "diagnostic_investigation",
+      "configured_file_count": 3,
+      "test_files_sha256": "dc4161ed04bd95c9e5d571c1a83e77fb12bc6c3607706666b1269a749a33cd36"
+    }
+  ]
+}

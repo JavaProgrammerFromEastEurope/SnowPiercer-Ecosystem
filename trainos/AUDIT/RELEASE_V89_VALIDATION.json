@@ -1,0 +1,24 @@
+{
+  "release": "v89",
+  "status": "BLOCKED/NO-GO",
+  "source": "v88 cumulative archive",
+  "changes": [
+    "constructor exception cleanup in EventLogRecoveryAttemptStore",
+    "constructor exception cleanup in EventIntegrityAnchorStore",
+    "two SQLite connection lifecycle contract tests"
+  ],
+  "tests": {
+    "constructor_contracts": "2 passed",
+    "combined_1": "386 passed, 1 failed; runner did not finish cleanly",
+    "combined_2": "not confirmed",
+    "combined_3": "not confirmed",
+    "full_suite": "not confirmed"
+  },
+  "limitations": [
+    "No three strict combined PASS",
+    "No complete strict full-suite PASS",
+    "Orphan-free process state not independently verified",
+    "SQLite resource warnings persist"
+  ],
+  "evidence": "AUDIT/evidence_v89"
+}

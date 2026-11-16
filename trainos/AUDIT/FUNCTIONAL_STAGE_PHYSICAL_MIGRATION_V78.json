@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v78",
+  "source_release": "v77",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage113/test_recovery_attempt_process_races.py": "tests/domains/recovery/test_recovery_attempt_process_races.py",
+    "tests/stage114/test_recovery_lease_finish_races.py": "tests/domains/recovery/test_recovery_lease_finish_races.py",
+    "tests/stage115/test_renew_lease_ambiguous_commit.py": "tests/domains/recovery/test_renew_lease_ambiguous_commit.py",
+    "tests/stage116/test_renew_finish_cross_process_race.py": "tests/domains/recovery/test_renew_finish_cross_process_race.py",
+    "tests/stage117/test_lease_renewal_process_crash.py": "tests/domains/recovery/test_lease_renewal_process_crash.py",
+    "tests/stage118/test_expired_lease_recovery_contention.py": "tests/domains/recovery/test_expired_lease_recovery_contention.py",
+    "tests/stage119/test_stale_fencing_token_after_takeover.py": "tests/domains/recovery/test_stale_fencing_token_after_takeover.py",
+    "tests/stage122/test_crash_during_retry_authorization_and_start.py": "tests/domains/recovery/test_crash_during_retry_authorization_and_start.py",
+    "tests/stage123/test_retry_limit_survives_repeated_crashes.py": "tests/domains/recovery/test_retry_limit_survives_repeated_crashes.py",
+    "tests/stage124/test_concurrent_retry_limit_exhaustion.py": "tests/domains/recovery/test_concurrent_retry_limit_exhaustion.py"
+  },
+  "notes": "Preserved top-level worker functions for multiprocessing spawn; stage identifiers in test data are unchanged."
+}

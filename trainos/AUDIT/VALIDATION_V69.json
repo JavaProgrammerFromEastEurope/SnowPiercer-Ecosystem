@@ -1,0 +1,6 @@
+{
+  "targeted_pytest": "PASS",
+  "command": "python -m pytest -q tests/domains/ci_release/test_functional_stage_assignments.py tests/domains/ci_release/test_legacy_reclassification_v69.py",
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN"
+}

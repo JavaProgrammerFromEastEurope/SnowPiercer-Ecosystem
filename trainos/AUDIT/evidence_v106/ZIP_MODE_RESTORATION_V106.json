@@ -1,0 +1,36 @@
+{
+  "schema": "trainos.zip-mode-restoration.v106",
+  "entries": [
+    {
+      "path": "trainos/AUDIT/evidence_v100/run_matrix.sh",
+      "archive_mode": "0o755",
+      "actual_mode": "0o755",
+      "restored_executable": true,
+      "byte_identical_to_v105": true
+    },
+    {
+      "path": "trainos/AUDIT/evidence_v101/run_matrix.sh",
+      "archive_mode": "0o755",
+      "actual_mode": "0o755",
+      "restored_executable": true,
+      "byte_identical_to_v105": true
+    },
+    {
+      "path": "trainos/scripts/ci/run_stage_matrix.sh",
+      "archive_mode": "0o755",
+      "actual_mode": "0o755",
+      "restored_executable": true,
+      "byte_identical_to_v105": true
+    },
+    {
+      "path": "trainos/scripts/ci/run_v104_matrix.sh",
+      "archive_mode": "0o755",
+      "actual_mode": "0o755",
+      "restored_executable": true,
+      "byte_identical_to_v105": true
+    }
+  ],
+  "first_strict_full_failed_before_restoration": true,
+  "first_strict_full_evidence": "strict_full_1.{json,stdout.log,stderr.log,exitcode}",
+  "note": "Python zipfile.extractall does not restore Unix executable mode"
+}

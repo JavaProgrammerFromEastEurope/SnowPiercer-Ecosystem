@@ -1,0 +1,24 @@
+{
+  "schema": "trainos.v107.warning-negative-control.v1",
+  "exitcode": 1,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-c",
+    "/mnt/data/trainos_v107_work/trainos/pytest.ini",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "/tmp/trainos-v107-warnings-2wlfi6wx/test_warning_policy.py"
+  ],
+  "resource_warn_raised_as_error": true,
+  "deprecation_warn_raised_as_error": true,
+  "two_expected_failures": true,
+  "test_status": "PASS",
+  "note": "Negative-control failure is expected; not a release regression failure."
+}

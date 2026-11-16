@@ -1,0 +1,6 @@
+{
+  "release": "v75",
+  "domain": "recovery",
+  "status": "PLANNED",
+  "policy": "Validate imports, fixtures, historical path references, and process-spawn semantics before physical migration."
+}

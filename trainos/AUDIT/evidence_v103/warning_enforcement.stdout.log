@@ -1,0 +1,20 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+________________________ test_resource_warning_is_error ________________________
+
+    def test_resource_warning_is_error():
+>       warnings.warn("resource probe", ResourceWarning)
+E       ResourceWarning: resource probe
+
+/tmp/tmpbfoa4k6m/test_warning_probe.py:3: ResourceWarning
+______________________ test_deprecation_warning_is_error _______________________
+
+    def test_deprecation_warning_is_error():
+>       warnings.warn("deprecated probe", DeprecationWarning)
+E       DeprecationWarning: deprecated probe
+
+/tmp/tmpbfoa4k6m/test_warning_probe.py:5: DeprecationWarning
+=========================== short test summary info ============================
+FAILED ::test_resource_warning_is_error - ResourceWarning: resource probe
+FAILED ::test_deprecation_warning_is_error - DeprecationWarning: deprecated probe
+2 failed in 0.12s

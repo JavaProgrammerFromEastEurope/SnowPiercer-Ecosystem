@@ -1,0 +1,54 @@
+{
+  "release": "v88",
+  "status": "BLOCKED/NO-GO",
+  "base": "v87",
+  "changes": [
+    "CommandEventStore constructor closes connection on failed schema initialization",
+    "Added strict constructor failure regression",
+    "Fixed test fixture SQLite connection leak",
+    "Bounded runner leader wait after SIGKILL"
+  ],
+  "checks": {
+    "fault_sequences": {
+      "stdout_exists": true,
+      "stdout_tail": "..                                                                       [100%]\n2 passed in 0.26s\n",
+      "stderr_exists": true,
+      "status": "PASS (2 passed, exit 0)"
+    },
+    "constructor": {
+      "stdout_exists": true,
+      "stdout_tail": ".                                                                        [100%]\n1 passed in 0.24s\n",
+      "stderr_exists": true,
+      "status": "FAIL (pytest teardown unraisable warning; test fixture leaked connection)"
+    },
+    "constructor_retry": {
+      "stdout_exists": true,
+      "stdout_tail": ".                                                                        [100%]\n1 passed in 0.27s\n",
+      "stderr_exists": true,
+      "status": "PASS (1 passed, exit 0)"
+    },
+    "combined_1": {
+      "stdout_exists": true,
+      "stdout_tail": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fddd41fdb70>\n    | Enable tracemalloc to get traceback where the object was allocated.\n    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.\n    +------------------------------------\n=========================== short test summary info ============================\nFAILED tests/domains/recovery/test_recovery_fault_sequences.py::test_backup_change_after_publication_interrupt_blocks_reconciliation - ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)\n1 failed, 385 passed in 37.88s\n",
+      "stderr_exists": true,
+      "status": "FAIL (1 failed, 385 passed; orphan process killed)"
+    },
+    "combined_2": {
+      "stdout_exists": true,
+      "stdout_tail": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fa20438db70>\n    | Enable tracemalloc to get traceback where the object was allocated.\n    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.\n    +------------------------------------\n=========================== short test summary info ============================\nFAILED tests/domains/recovery/test_recovery_fault_sequences.py::test_retry_after_failure_requires_explicit_new_checkpoint_authorization - ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)\n1 failed, 386 passed in 36.94s\n",
+      "stderr_exists": true,
+      "status": "INCOMPLETE (orphan process killed; no summary)"
+    }
+  },
+  "not_run": [
+    "third combined strict regression",
+    "full strict suite",
+    "Kernel Runner full compatibility"
+  ],
+  "known_limitations": [
+    "combined run still reports unraisable SQLite connections",
+    "runner may leave orphan pytest after outer execution termination",
+    "three strict combined passes not achieved"
+  ],
+  "migration": "No physical migration; reliability prioritized"
+}

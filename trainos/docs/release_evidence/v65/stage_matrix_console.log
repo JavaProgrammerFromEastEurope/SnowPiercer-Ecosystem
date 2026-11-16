@@ -1,0 +1,72 @@
+
+=== stage558 (timeout 60s) ===
+stage558: PASS (exit=0, 2s)
+0.02s setup    tests/stage558/test_stage558_pytest_diagnostic.py::test_progress_parser_records_last_observed_test
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage559 (timeout 60s) ===
+stage559: PASS (exit=0, 2s)
+0.02s setup    tests/stage559/test_stage559_pytest_diagnostic.py::test_progress_parser_counts_outcomes_without_calling_timeout_a_failure
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.10s
+
+=== stage560 (timeout 60s) ===
+stage560: PASS (exit=0, 1s)
+0.02s setup    tests/stage560/test_stage560_pytest_diagnostic.py::test_log_tail_is_bounded_and_keeps_latest_lines
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage561 (timeout 60s) ===
+stage561: PASS (exit=0, 3s)
+0.03s setup    tests/stage561/test_stage561_pytest_diagnostic.py::test_progress_parser_rejects_nonpositive_tail_limit
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage562 (timeout 60s) ===
+stage562: PASS (exit=0, 1s)
+0.02s setup    tests/stage562/test_stage562_pytest_diagnostic.py::test_timeout_report_is_explicitly_incomplete
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage563 (timeout 60s) ===
+stage563: PASS (exit=0, 2s)
+0.02s setup    tests/stage563/test_stage563_pytest_diagnostic.py::test_success_report_does_not_add_timeout_note
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage564 (timeout 60s) ===
+stage564: PASS (exit=0, 2s)
+0.02s setup    tests/stage564/test_stage564_pytest_diagnostic.py::test_atomic_json_writer_emits_valid_report
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage565 (timeout 60s) ===
+stage565: PASS (exit=0, 3s)
+0.02s setup    tests/stage565/test_stage565_pytest_diagnostic.py::test_cli_help_is_available
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.78s
+
+=== stage566 (timeout 60s) ===
+stage566: PASS (exit=0, 2s)
+0.02s setup    tests/stage566/test_stage566_pytest_diagnostic.py::test_ci_matrix_includes_latest_stage_range
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage567 (timeout 60s) ===
+stage567: PASS (exit=0, 2s)
+0.02s setup    tests/stage567/test_stage567_pytest_diagnostic.py::test_timeout_is_never_mislabeled_as_pass_or_assertion_failure
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+2 passed in 0.10s
+
+Stage summary: docs/release_evidence/v65/stage_matrix_558_567/summary.tsv (10 stage directories)

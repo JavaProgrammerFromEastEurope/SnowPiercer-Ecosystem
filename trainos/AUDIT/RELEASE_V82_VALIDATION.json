@@ -1,0 +1,54 @@
+{
+  "schema": "trainos.release-validation.v82",
+  "base": "v81",
+  "release": "v82",
+  "functional_stage": "recovery",
+  "migration": {
+    "from": "stage408-stage417",
+    "module_count": 10
+  },
+  "pytest_config": "explicit asyncio_default_fixture_loop_scope=function",
+  "strict_migrated_runs": [
+    {
+      "run": 1,
+      "status": "PASS",
+      "tests": 10
+    },
+    {
+      "run": 2,
+      "status": "PASS",
+      "tests": 10
+    },
+    {
+      "run": 3,
+      "status": "PASS",
+      "tests": 10
+    }
+  ],
+  "strict_recovery": {
+    "status": "FAIL",
+    "passed": 152,
+    "failed": 3,
+    "cause": "unclosed sqlite3 connections surfaced as PytestUnraisableExceptionWarning"
+  },
+  "combined_strict": {
+    "status": "INCOMPLETE",
+    "cause": "execution timeout; partial output includes a failure"
+  },
+  "collection": {
+    "status": "PASS",
+    "collected": 1471
+  },
+  "ci_hosted": "NOT_RUN",
+  "full_regression": "NOT_RUN",
+  "evidence": [
+    "strict_recovery_failed.log",
+    "strict_migrated_run_1.log",
+    "combined_incomplete.log",
+    "strict_migrated_run_2.log",
+    "collection.log",
+    "contract.log",
+    "strict_migrated_run_3.log"
+  ],
+  "notes": "A best-effort destructor was added for EventLogRecoveryAttemptStore; it does not solve all resource warnings. Explicit connection lifecycle is still required."
+}

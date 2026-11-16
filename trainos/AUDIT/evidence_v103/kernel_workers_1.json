@@ -1,0 +1,32 @@
+{
+  "schema": "trainos.verification.v103",
+  "case": "kernel_workers",
+  "iteration": 1,
+  "started_at": "2026-11-14T22:28:24+0000",
+  "duration_seconds": 766.351,
+  "timeout_seconds": 1200.0,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "/mnt/data/trainos_v103_work/trainos/scripts/ci/run_with_subreaper.py",
+    "--",
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "tests.kernel_runner"
+  ],
+  "cwd": "/mnt/data/trainos_v103_work/trainos",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "strict_warnings": "error::ResourceWarning,error::DeprecationWarning",
+  "nested_pytest_addopts": "-c /mnt/data/trainos_v103_work/trainos/pytest.ini",
+  "kernel_workers": "4",
+  "pytest_warning_filter": null,
+  "subreaper": true,
+  "pid1_comm": "supervisord",
+  "exitcode": 0,
+  "timed_out": false,
+  "actions": [],
+  "error": null,
+  "stdout": "kernel_workers_1.stdout.log",
+  "stderr": "kernel_workers_1.stderr.log",
+  "status": "PASS"
+}

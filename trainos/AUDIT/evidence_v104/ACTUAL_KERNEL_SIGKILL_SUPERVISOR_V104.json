@@ -1,0 +1,42 @@
+{
+  "schema": "trainos.process-supervisor.v104",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "tests.kernel_runner"
+  ],
+  "supervisor_pid": 66693,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 66731
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 66749,
+      "signal": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 66749,
+      "wait_status": 15
+    }
+  ],
+  "status": "FAIL",
+  "runner_pid": 66731,
+  "residual_at_runner_exit": [
+    66749
+  ],
+  "runner_exitcode": -9,
+  "supervisor_signal": null,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 1,
+  "supervisor_exitcode": 137,
+  "cleanup_complete": true,
+  "duration_seconds": 1.102
+}

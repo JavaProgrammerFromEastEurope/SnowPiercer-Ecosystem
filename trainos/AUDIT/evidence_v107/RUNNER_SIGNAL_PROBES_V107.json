@@ -1,0 +1,25 @@
+{
+  "schema": "trainos.v107-runner-signal-probes",
+  "results": [
+    {
+      "case": "sigterm",
+      "runner_signal": 15,
+      "supervisor_exitcode": 143,
+      "runner_pid": 20659,
+      "detached_child_pid": 20691,
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "case": "sigkill",
+      "runner_signal": 9,
+      "supervisor_exitcode": 137,
+      "runner_pid": 20744,
+      "detached_child_pid": 20784,
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "status": "PASS",
+  "production_containment_proved": false
+}

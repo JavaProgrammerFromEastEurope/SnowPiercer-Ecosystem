@@ -1,0 +1,23 @@
+{
+  "version": "v16",
+  "date": "2026-10-24",
+  "scope": "CI/test orchestration only; no runtime behavior changed",
+  "changes": [
+    "Reject invalid stage numbers and empty stage ranges",
+    "Add shell regression test for runner validation, status classification, logs, summary, and exit status",
+    "Run runner regression test in GitHub Actions stage shards"
+  ],
+  "validation": {
+    "shell_syntax": "PASS",
+    "runner_shell_regression": "PASS",
+    "real_stage_smoke": {
+      "command": "PYTHONPATH=. scripts/ci/run_stage_matrix.sh 117 118 <log-dir> 30",
+      "stage117": {"status": "PASS", "tests_passed": 2, "duration_seconds": 2.11},
+      "stage118": {"status": "PASS", "tests_passed": 1, "duration_seconds": 4.64}
+    },
+    "pytest_collection": {"status": "PASS", "tests_collected": 973, "duration_seconds": 6.07}
+  },
+  "full_suite": "NOT_RUN_IN_V16_ROOT_CAUSE_UNRESOLVED",
+  "github_actions_executed_here": false,
+  "real_payment_integration": "NO_GO"
+}

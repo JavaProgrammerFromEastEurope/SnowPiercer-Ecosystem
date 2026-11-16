@@ -1,0 +1,126 @@
+{
+  "schema": "trainos.certification-gates.v107",
+  "decision": "BLOCKED/NO-GO",
+  "cases": [
+    {
+      "id": "V107-CGROUP-01",
+      "requirement": "Real delegated writable cgroup2",
+      "status": "BLOCKED",
+      "evidence": "AUDIT/evidence_v107/CGROUP_HOST_PROBE_V107.json",
+      "notes": "EROFS / no delegated subtree"
+    },
+    {
+      "id": "V107-CGROUP-02",
+      "requirement": "Kernel cgroup.kill orphan cleanup",
+      "status": "NOT_EXECUTED",
+      "evidence": null,
+      "notes": "Real kernel cgroup unavailable"
+    },
+    {
+      "id": "V107-ADMISSION-01",
+      "requirement": "Fail closed before exec on unavailable OS manager",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/PRODUCTION_DENIAL_CROSS_UID_V107.json",
+      "notes": "No requested command executed"
+    },
+    {
+      "id": "V107-ADMISSION-02",
+      "requirement": "Positive cgroup-attached pre-exec release",
+      "status": "NOT_EXECUTED",
+      "evidence": null,
+      "notes": "Requires independent delegated kernel cgroup"
+    },
+    {
+      "id": "V107-WATCH-01",
+      "requirement": "Cross-process watchdog lock exclusion",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/WATCHDOG_LOCK_SIGKILL_V107.json",
+      "notes": "Actual flock exclusion and SIGKILL lock release, no cgroup"
+    },
+    {
+      "id": "V107-WATCH-02",
+      "requirement": "systemd restart after watchdog SIGKILL",
+      "status": "NOT_EXECUTED",
+      "evidence": null,
+      "notes": "PID1 supervisord"
+    },
+    {
+      "id": "V107-SUP-01",
+      "requirement": "SIGTERM Runner and detached child cleanup",
+      "status": "PASS_DEVELOPMENT_ONLY",
+      "evidence": "AUDIT/evidence_v107/RUNNER_SIGNAL_PROBES_V107.json",
+      "notes": "Real SIGTERM 143"
+    },
+    {
+      "id": "V107-SUP-02",
+      "requirement": "SIGKILL Runner and detached child cleanup",
+      "status": "PASS_DEVELOPMENT_ONLY",
+      "evidence": "AUDIT/evidence_v107/RUNNER_SIGNAL_PROBES_V107.json",
+      "notes": "Real SIGKILL 137"
+    },
+    {
+      "id": "V107-SUP-03",
+      "requirement": "SIGKILL supervisor with doublefork descendants",
+      "status": "FAIL_SAFETY_BOUNDARY",
+      "evidence": "AUDIT/evidence_v107/DOUBLEFORK_SUPERVISOR_SIGKILL_V107.json",
+      "notes": "Two running survivors before independent cleanup"
+    },
+    {
+      "id": "V107-AUTH-01",
+      "requirement": "SIGKILL authority and service-managed recovery",
+      "status": "NOT_EXECUTED",
+      "evidence": null,
+      "notes": "No live delegated cgroup/OS manager"
+    },
+    {
+      "id": "V107-IPC-01",
+      "requirement": "Real SO_PEERCRED cross-UID challenge",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/CROSS_UID_BROKER_BURST_V107.json",
+      "notes": "20 real clients, no positive grants"
+    },
+    {
+      "id": "V107-IPC-02",
+      "requirement": "Nonce replay across concurrency and process restart",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/CROSS_UID_BROKER_BURST_V107.json",
+      "notes": "15 concurrent replays and restart replay denied"
+    },
+    {
+      "id": "V107-IPC-03",
+      "requirement": "State-bound positive recovery permit",
+      "status": "NOT_IMPLEMENTED",
+      "evidence": null,
+      "notes": "Broker deny-only"
+    },
+    {
+      "id": "V107-LEGACY-01",
+      "requirement": "OS-level legacy production bypass elimination",
+      "status": "FAIL_SAFETY_BOUNDARY",
+      "evidence": "AUDIT/evidence_v107/CROSS_UID_LEGACY_BYPASS_V107.json",
+      "notes": "Direct legacy constructor available without production flag"
+    },
+    {
+      "id": "V107-WARN-01",
+      "requirement": "ResourceWarning and DeprecationWarning fail negative control",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/WARNING_NEGATIVE_CONTROL_V107.json",
+      "notes": "Two deliberately failing tests"
+    },
+    {
+      "id": "V107-PHYSICAL-01",
+      "requirement": "Independent physical SnowPiercer integration certification",
+      "status": "NOT_EXECUTED",
+      "evidence": null,
+      "notes": "Not in software boundary"
+    },
+    {
+      "id": "V107-IPC-04",
+      "requirement": "OS permissions block client socket unlink and replay journal reads",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "evidence": "AUDIT/evidence_v107/SOCKET_TAMPER_CROSS_UID_V107.json",
+      "notes": "UID65534 got EACCES on both operations; no admitted production request"
+    }
+  ],
+  "rule": "No production GO unless all mandatory positive kernel, watchdog, broker, legacy and physical safety gates proven end-to-end."
+}

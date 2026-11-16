@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage557/test_stage557_diagnose_stage_matrix.py::test_diagnostic_buckets_and_rows_are_sorted
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s

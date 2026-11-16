@@ -1,0 +1,11 @@
+.....                                                                    [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage63/test_diagnostic_investigation_checkpoint.py::test_checkpoint_round_trip_restores_typed_snapshots_after_restart
+0.01s call     tests/stage63/test_diagnostic_investigation_checkpoint.py::test_checkpoint_round_trip_restores_typed_snapshots_after_restart
+0.01s call     tests/stage63/test_diagnostic_investigation_checkpoint.py::test_missing_checkpoint_returns_none_and_blank_id_is_rejected
+0.01s call     tests/stage63/test_diagnostic_investigation_checkpoint.py::test_checkpoint_versions_use_optimistic_concurrency
+0.01s call     tests/stage63/test_diagnostic_investigation_checkpoint.py::test_checkpoint_rejects_inconsistent_task_state_counts
+0.01s call     tests/stage63/test_diagnostic_investigation_checkpoint.py::test_checkpoint_rejects_task_reference_to_missing_hypothesis_before_write
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+5 passed in 0.24s

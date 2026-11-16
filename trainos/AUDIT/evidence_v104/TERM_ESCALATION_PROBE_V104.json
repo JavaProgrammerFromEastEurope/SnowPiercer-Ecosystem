@@ -1,0 +1,10 @@
+{
+  "schema": "trainos.v104.term-escalation.v1",
+  "runner_pid": 63520,
+  "wrapper_exitcode": 143,
+  "runner_exitcode": -9,
+  "supervisor_exitcode": 143,
+  "cleanup_complete": true,
+  "test_status": "PASS",
+  "note": "SIGTERM ignored by runner; independent wrapper escalated to SIGKILL"
+}

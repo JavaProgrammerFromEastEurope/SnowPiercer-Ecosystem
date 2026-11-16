@@ -1,0 +1,32 @@
+{
+  "artifact": "TrainOS Financial Ledger Contract v9",
+  "build_date": "2026-10-24",
+  "base_archive": "TrainOS_Financial_Ledger_Contract_v8.zip",
+  "scope": "External HMAC-SHA256 checkpoints for validated standalone SQLite ledger backups; caller-managed key rotation",
+  "changes": [
+    "Added create_checkpoint() with canonical JSON and atomic manifest publication",
+    "Added verify_checkpoint() with trusted keyring, constant-time HMAC comparison, file SHA-256/size verification, and database revalidation",
+    "Added tests for database tampering after recalculating database-local fingerprint, manifest tampering, untrusted keys, and key rotation",
+    "Exported checkpoint functions from ledger_contract package"
+  ],
+  "verification": {
+    "financial_ledger_and_legacy_adapter_tests": {
+      "passed": 53,
+      "failed": 0
+    },
+    "targeted_stage172_to_stage177_tests": {
+      "passed": 15,
+      "failed": 0
+    },
+    "compileall": "passed for kernel/economy/ledger_contract and tests/ledger_contract",
+    "python_ast_files_scanned": 2666,
+    "python_ast_errors": 0,
+    "full_trainos_test_suite": "not run"
+  },
+  "limitations": [
+    "experimental isolated prototype; not for real-money transactions",
+    "HMAC shared-secret authentication, not an asymmetric digital signature",
+    "signing key management and rollback protection remain external responsibilities",
+    "full-suite CI, load qualification, production threat model, and independent security review remain outstanding"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "trainos.doublefork-supervisor-sigkill-negative.v106",
+  "status": "PASS_NEGATIVE_CONTROL",
+  "events": [
+    "actual supervisor SIGKILL; OS cgroup containment absent"
+  ],
+  "independent_cleanup": true,
+  "cgroup_kill_tested": false,
+  "runner_pid": 124705,
+  "grandchild_pid": 124769,
+  "supervisor_exitcode": -9,
+  "running_after_supervisor_sigkill": [
+    124705,
+    124769
+  ],
+  "residual_after_independent_cleanup": []
+}

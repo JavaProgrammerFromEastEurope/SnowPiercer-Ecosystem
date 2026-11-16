@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage568/test_stage568_pytest_diagnostic.py::test_collection_count_is_read_in_both_pytest_summary_orders
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s

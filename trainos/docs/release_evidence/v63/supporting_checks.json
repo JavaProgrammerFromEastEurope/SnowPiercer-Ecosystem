@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "passed": 70,
+  "failed": 0,
+  "selection": "tests/ci tests/ledger_contract"
+}

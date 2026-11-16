@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/domains/recovery/test_recovery_fault_sequences.py"
+  ],
+  "elapsed_seconds": 2.685,
+  "end_stage": 98,
+  "exit_code": 0,
+  "result": "PASS",
+  "schema_version": 1,
+  "selected_files": [
+    "tests/domains/recovery/test_recovery_fault_sequences.py"
+  ],
+  "selection_policy": "all test_*.py files recursively under tests/stageN for inclusive stage range; sorted unique paths",
+  "start_stage": 98,
+  "test_files_selected": 1,
+  "timeout_seconds": 30
+}

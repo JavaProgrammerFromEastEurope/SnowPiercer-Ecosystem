@@ -1,0 +1,10 @@
+{
+  "schema": "trainos.cgroup-watchdog.v107",
+  "production_admitted": false,
+  "cleanup_verified": false,
+  "status": "BLOCKED/NO-GO",
+  "events": [],
+  "pid1": null,
+  "exit_code": 125,
+  "error": "AdmissionDenied: dedicated systemd watchdog service cgroup not verified"
+}

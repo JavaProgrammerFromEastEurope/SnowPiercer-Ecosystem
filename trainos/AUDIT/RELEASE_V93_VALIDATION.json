@@ -1,0 +1,25 @@
+{
+  "release": "v93",
+  "base": "v92",
+  "status": "BLOCKED/NO-GO",
+  "verified": {
+    "strict_target": "8 passed in 8.41s",
+    "collection": "1479 collected",
+    "bounded_child_process_contract": "passed in target regression"
+  },
+  "unverified": [
+    "three completed combined strict regressions",
+    "full strict suite",
+    "all SQLite leaks eliminated",
+    "no orphan processes under every fault scenario",
+    "Kernel Runner compatibility",
+    "regression selector compatibility"
+  ],
+  "combined_attempt_exitcode": "124",
+  "changes": [
+    "bounded runner reaps leader after group cleanup and records leader_reaped",
+    "new POSIX child-process timeout contract",
+    "durable failure report contract"
+  ],
+  "limitations": "The combined attempt timed out or failed; no complete pytest summary; no broad PASS claimed."
+}

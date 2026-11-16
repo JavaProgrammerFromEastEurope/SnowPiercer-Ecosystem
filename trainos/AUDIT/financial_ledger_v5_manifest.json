@@ -1,0 +1,21 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v5.zip",
+  "stage": "Financial Ledger Contract v5 \u2014 Currency Registry and Retry Integrity",
+  "base_artifact": "TrainOS_Financial_Ledger_Contract_v4.zip",
+  "changes": [
+    "Added explicit CurrencySpec and CurrencyRegistry allowlist",
+    "LegacyTransactionAdapter optionally validates configured exponents against registry",
+    "Reversal retry reuses ID only when requested journal fingerprint matches",
+    "Added currency registry and reversal idempotency tests"
+  ],
+  "targeted_tests": "41 passed; 8 Python 3.13 multiprocessing fork deprecation warnings",
+  "ledger_contract_tests": "35 passed",
+  "compileall": "passed for kernel/economy/ledger_contract and tests/ledger_contract",
+  "ast_parse": {
+    "python_files": 2664,
+    "errors": 0
+  },
+  "full_test_suite": "not run",
+  "production_status": "prototype; not approved for real-money payments",
+  "currency_registry_note": "Explicit app-configured allowlist; not a complete/live/official ISO 4217 source"
+}

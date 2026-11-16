@@ -1,0 +1,18 @@
+{
+  "schema": "trainos.functional-stage-migration.v1",
+  "release": "v70",
+  "domain": "pytest_diagnostics",
+  "moved": {
+    "tests/stage578/test_stage578_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage578_pytest_diagnostic.py",
+    "tests/stage579/test_stage579_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage579_pytest_diagnostic.py",
+    "tests/stage580/test_stage580_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage580_pytest_diagnostic.py",
+    "tests/stage581/test_stage581_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage581_pytest_diagnostic.py",
+    "tests/stage582/test_stage582_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage582_pytest_diagnostic.py",
+    "tests/stage583/test_stage583_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage583_pytest_diagnostic.py",
+    "tests/stage584/test_stage584_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage584_pytest_diagnostic.py",
+    "tests/stage585/test_stage585_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage585_pytest_diagnostic.py",
+    "tests/stage586/test_stage586_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage586_pytest_diagnostic.py",
+    "tests/stage587/test_stage587_pytest_diagnostic.py": "tests/domains/pytest_diagnostics/test_stage587_pytest_diagnostic.py"
+  },
+  "compatibility": "Historical source paths replaced; tests discovered through functional registry. References to old paths must be updated externally."
+}

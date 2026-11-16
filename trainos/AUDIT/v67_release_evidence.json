@@ -1,0 +1,22 @@
+{
+  "release": "TrainOS v67",
+  "stages": [
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587
+  ],
+  "local_tests": "NOT_RUN",
+  "full_suite": "NOT_RUN",
+  "hosted_ci": "NOT_RUN",
+  "base_archive": "trainos.zip",
+  "scope": "pytest diagnostic progress evidence; CI shard 578\u2013587",
+  "targeted_regression": "PASS",
+  "targeted_regression_log": "AUDIT/v67_targeted_regression.txt"
+}

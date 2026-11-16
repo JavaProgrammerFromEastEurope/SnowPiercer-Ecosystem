@@ -1,0 +1,163 @@
+{
+  "counts": {
+    "FAIL": 0,
+    "PASS": 10,
+    "TIMEOUT": 0
+  },
+  "coverage_complete": null,
+  "expected_range": null,
+  "failed_stages": [],
+  "missing_stages": [],
+  "schema_version": 1,
+  "slow_stages": [],
+  "slow_threshold_seconds": 30,
+  "slowest_stages": [
+    {
+      "exit_code": 0,
+      "log": "stage577.log",
+      "seconds": 3,
+      "stage": 577,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage568.log",
+      "seconds": 2,
+      "stage": 568,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage569.log",
+      "seconds": 2,
+      "stage": 569,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage570.log",
+      "seconds": 2,
+      "stage": 570,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage572.log",
+      "seconds": 2,
+      "stage": 572,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage573.log",
+      "seconds": 2,
+      "stage": 573,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage574.log",
+      "seconds": 2,
+      "stage": 574,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage576.log",
+      "seconds": 2,
+      "stage": 576,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage571.log",
+      "seconds": 1,
+      "stage": 571,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage575.log",
+      "seconds": 1,
+      "stage": 575,
+      "status": "PASS"
+    }
+  ],
+  "source": "summary.tsv",
+  "stage_count": 10,
+  "stages": [
+    {
+      "exit_code": 0,
+      "log": "stage568.log",
+      "seconds": 2,
+      "stage": 568,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage569.log",
+      "seconds": 2,
+      "stage": 569,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage570.log",
+      "seconds": 2,
+      "stage": 570,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage571.log",
+      "seconds": 1,
+      "stage": 571,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage572.log",
+      "seconds": 2,
+      "stage": 572,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage573.log",
+      "seconds": 2,
+      "stage": 573,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage574.log",
+      "seconds": 2,
+      "stage": 574,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage575.log",
+      "seconds": 1,
+      "stage": 575,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage576.log",
+      "seconds": 2,
+      "stage": 576,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage577.log",
+      "seconds": 3,
+      "stage": 577,
+      "status": "PASS"
+    }
+  ],
+  "successful": true,
+  "timed_out_stages": [],
+  "total_seconds": 19
+}

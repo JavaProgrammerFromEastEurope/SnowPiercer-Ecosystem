@@ -1,0 +1,60 @@
+{
+  "schema": "trainos.v106.process-boundary",
+  "results": {
+    "sigterm": {
+      "status": "CAPTURED",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "scripts.ci.process_supervisor_v105",
+        "--report",
+        "/mnt/data/trainos_v106_work/trainos/AUDIT/evidence_v106/SIGTERM_SUPERVISOR_V105.json",
+        "--timeout",
+        "15",
+        "--",
+        "/opt/pyvenv/bin/python",
+        "-c",
+        "import os,time,pathlib;pathlib.Path('/tmp/trainos-v106-probe-tbc8h90y/ready.pid').write_text(str(os.getpid()));time.sleep(60)"
+      ],
+      "exitcode": 143,
+      "readiness_pid": 124820,
+      "emergency_kill": false,
+      "stdout": "sigterm_supervisor.stdout.log",
+      "stderr": "sigterm_supervisor.stderr.log",
+      "cleanup_complete": true,
+      "supervisor_signal": 15
+    },
+    "timeout": {
+      "status": "CAPTURED",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "scripts.ci.process_supervisor_v105",
+        "--report",
+        "/mnt/data/trainos_v106_work/trainos/AUDIT/evidence_v106/TIMEOUT_SUPERVISOR_V105.json",
+        "--timeout",
+        "0.35",
+        "--grace",
+        "0.15",
+        "--",
+        "/opt/pyvenv/bin/python",
+        "-c",
+        "import signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);time.sleep(60)"
+      ],
+      "exitcode": 124,
+      "readiness_pid": null,
+      "emergency_kill": false,
+      "stdout": "timeout_supervisor.stdout.log",
+      "stderr": "timeout_supervisor.stderr.log",
+      "cleanup_complete": true,
+      "timeout": true
+    },
+    "legacy_admission": {
+      "exitcode": 1,
+      "explicit_production_env": true,
+      "refused_before_tests": true,
+      "direct_dev_bypass_unrestricted": true
+    }
+  },
+  "status": "PASS"
+}

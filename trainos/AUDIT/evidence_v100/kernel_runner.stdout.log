@@ -1,0 +1,5 @@
+functional_stages 24
+[KERNEL-TEST 0.0000] RUN: tests/domains/recovery/test_recovery_assessment_snapshot.py
+....                                                                     [100%]
+4 passed in 0.15s
+runner_single_test_rc 0

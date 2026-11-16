@@ -1,0 +1,24 @@
+{
+  "schema": "trainos.bounded-pytest.v2",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "tests/domains/recovery/test_recovery_fault_sequences.py",
+    "-q"
+  ],
+  "timeout_seconds": 0.5,
+  "duration_seconds": 0.508,
+  "status": "timeout",
+  "timed_out": true,
+  "returncode": -15,
+  "stdout": "/mnt/data/v92work/trainos/AUDIT/evidence_v92/bounded_timeout.stdout.log",
+  "stderr": "/mnt/data/v92work/trainos/AUDIT/evidence_v92/bounded_timeout.stderr.log",
+  "group_cleanup": [
+    "timeout",
+    "group_sigterm",
+    "group_absent"
+  ],
+  "group_absence_verified": true,
+  "runner_error": null
+}

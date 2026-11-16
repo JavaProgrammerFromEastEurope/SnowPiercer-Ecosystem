@@ -1,0 +1,19 @@
+{
+  "version": "v24",
+  "requested_stage_range": "51-60",
+  "executed_stages": [51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+  "missing_stages": [],
+  "stage_counts": {
+    "FAIL": 0,
+    "PASS": 10,
+    "TIMEOUT": 0
+  },
+  "pytest_cases_reported": 57,
+  "stage_matrix_runner": "PASS",
+  "aggregator_log_validation": "PASS",
+  "aggregator_unit_tests": "6 passed",
+  "ci_shell_regression": "PASS: PASS/FAIL/TIMEOUT classification",
+  "full_suite": "NOT_CONFIRMED_ROOT_CAUSE_UNRESOLVED",
+  "github_actions_executed_here": false,
+  "real_payment_integration": "NO_GO"
+}

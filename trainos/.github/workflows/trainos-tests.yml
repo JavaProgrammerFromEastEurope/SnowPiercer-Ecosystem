@@ -1,0 +1,149 @@
+name: TrainOS tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest-shard:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: stages-001-049
+            start: 1
+            end: 49
+          - name: stages-050-099
+            start: 50
+            end: 99
+          - name: stages-100-124
+            start: 100
+            end: 124
+          - name: stages-125-149
+            start: 125
+            end: 149
+          - name: stages-150-177
+            start: 150
+            end: 177
+          - name: stages-178-249
+            start: 178
+            end: 249
+          - name: stages-250-349
+            start: 250
+            end: 349
+          - name: stages-350-449
+            start: 350
+            end: 449
+          - name: stages-450-499
+            start: 450
+            end: 499
+          - name: stages-500-537
+            start: 500
+            end: 537
+          - name: stages-538-547
+            start: 538
+            end: 547
+          - name: stages-548-557
+            start: 548
+            end: 557
+          - name: stages-558-567
+            start: 558
+            end: 567
+          - name: stages-568-577
+            start: 568
+            end: 577
+          - name: stages-578-587
+            start: 578
+            end: 587
+          - name: financial-ledger
+            start: ledger
+            end: ledger
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install test runner
+        run: python -m pip install --upgrade pytest
+      - name: Run financial-ledger shard
+        if: matrix.start == 'ledger'
+        env:
+          PYTHONPATH: .
+        run: python -m pytest -q --durations=20 tests/ledger_contract
+      - name: Test stage-matrix runner
+        if: matrix.start != 'ledger'
+        shell: bash
+        run: tests/ci/test_run_stage_matrix.sh
+      - name: Run stage shard with per-stage timeout and logs
+        if: matrix.start != 'ledger'
+        shell: bash
+        run: |
+          scripts/ci/run_stage_matrix.sh '${{ matrix.start }}' '${{ matrix.end }}' 'test-logs/${{ matrix.name }}' 180
+      - name: Diagnose stage timing and outcomes
+        if: always() && matrix.start != 'ledger'
+        shell: bash
+        run: |
+          if [[ -f 'test-logs/${{ matrix.name }}/summary.tsv' ]]; then
+            python scripts/ci/diagnose_stage_matrix.py 'test-logs/${{ matrix.name }}/summary.tsv' --check-logs --json 'test-logs/${{ matrix.name }}/diagnostics.json'
+          else
+            echo 'Stage summary unavailable; see preceding runner output.'
+            exit 1
+          fi
+      - name: Upload stage diagnostics
+        if: always() && matrix.start != 'ledger'
+        uses: actions/upload-artifact@v4
+        with:
+          name: trainos-test-logs-${{ matrix.name }}
+          path: test-logs/${{ matrix.name }}/
+          if-no-files-found: warn
+          retention-days: 14
+
+  full-suite-supporting-checks:
+    name: full-suite-supporting-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install test runner
+        run: python -m pip install --upgrade pytest
+      - name: Run non-stage contract and CI tests
+        env:
+          PYTHONPATH: .
+        run: python -m pytest -q tests/ledger_contract tests/ci
+      - name: Produce unified regression evidence for stages 170-587
+        env:
+          PYTHONPATH: .
+        run: python scripts/ci/run_regression.py --start 170 --end 587 --timeout-seconds 1800 --report test-logs/regression-170-587.json
+      - name: Run full suite with progress diagnostics
+        env:
+          PYTHONPATH: .
+        run: >-
+          python scripts/ci/run_pytest_diagnostic.py --root .
+          --timeout-seconds 600
+          --log test-logs/full-suite-verbose.log
+          --report test-logs/full-suite-diagnostic.json
+      - name: Upload regression evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trainos-regression-evidence
+          path: test-logs/regression-170-587.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload full-suite diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trainos-full-suite-diagnostics
+          path: |
+            test-logs/full-suite-verbose.log
+            test-logs/full-suite-diagnostic.json
+          if-no-files-found: warn
+          retention-days: 14

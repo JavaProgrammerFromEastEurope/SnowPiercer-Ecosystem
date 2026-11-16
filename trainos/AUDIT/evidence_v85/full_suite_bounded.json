@@ -1,0 +1,8 @@
+{
+  "name": "full_suite_bounded",
+  "status": "COMPLETED",
+  "exit_code": 1,
+  "duration_seconds": 68.49,
+  "summary": "9 failed, 1463 passed, 2 errors in 65.48s (0:01:05)",
+  "log": "AUDIT/evidence_v85/full_suite_bounded.log"
+}

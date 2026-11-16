@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v73",
+  "source_release": "v72",
+  "domain": "ci_release",
+  "moved": {
+    "tests/stage528/test_stage528_regression_selection.py": "tests/domains/ci_release/test_stage528_regression_selection.py",
+    "tests/stage529/test_stage529_include_path_safety.py": "tests/domains/ci_release/test_stage529_include_path_safety.py",
+    "tests/stage530/test_stage530_timeout_evidence.py": "tests/domains/ci_release/test_stage530_timeout_evidence.py",
+    "tests/stage531/test_stage531_dry_run_deduplicates.py": "tests/domains/ci_release/test_stage531_dry_run_deduplicates.py",
+    "tests/stage532/test_stage532_invalid_timeout.py": "tests/domains/ci_release/test_stage532_invalid_timeout.py",
+    "tests/stage533/test_stage533_ci_matrix_coverage.py": "tests/domains/ci_release/test_stage533_ci_matrix_coverage.py",
+    "tests/stage535/test_stage535_inventory_modules.py": "tests/domains/ci_release/test_stage535_inventory_modules.py",
+    "tests/stage536/test_stage536_safety_and_dependency_gates.py": "tests/domains/ci_release/test_stage536_safety_and_dependency_gates.py",
+    "tests/stage539/test_stage539_include_requires_test_file_under_tests.py": "tests/domains/ci_release/test_stage539_include_requires_test_file_under_tests.py",
+    "tests/stage541/test_stage541_invalid_timeout_is_rejected.py": "tests/domains/ci_release/test_stage541_invalid_timeout_is_rejected.py"
+  },
+  "method": "physical relocation with repository root path adjustment; preserved legacy regression selectors in test fixtures"
+}

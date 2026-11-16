@@ -1,0 +1,86 @@
+{
+  "changes": [
+    "Added stages 558-567 with focused tests and implementation/test documentation.",
+    "Added scripts/ci/run_pytest_diagnostic.py to run verbose pytest under a hard timeout, preserve full logs, identify last observed/completed tests, count outcomes, and atomically write a bounded diagnostic JSON report.",
+    "Extended CI matrix through stage 567 and added a 600-second full-suite diagnostic job step with log/JSON artifact upload.",
+    "Updated SnowPiercer Work Register v24 and Deliverable Baseline v5; overall ecosystem completion remains unknown."
+  ],
+  "ecosystem_register": {
+    "deliverable_baseline": "SnowPiercer_Ecosystem_Deliverable_Baseline_v5.json",
+    "ecosystem_completion_percent": null,
+    "json": "SnowPiercer_Ecosystem_Work_Register_v24.json",
+    "markdown": "SnowPiercer_Ecosystem_Work_Register_v24.md"
+  },
+  "focus": "Full-suite pytest progress diagnostics, bounded log tails, atomic timeout evidence, and CI matrix coverage through stage 567; avoid attributing the earlier timeout to a specific test without evidence.",
+  "limitations": [
+    "Full pytest suite remains INCOMPLETE_TIMEOUT locally; no total pass/fail count is claimed.",
+    "At 20 seconds, the last observed test was in stage121. A separate longer preliminary run progressed to stage169 at about 26% before the execution environment terminated it. These are progress markers, not proof of a stage137 defect or deadlock.",
+    "Hosted GitHub Actions has not been run in this environment.",
+    "External payment sandbox, backup authenticity, off-host durability, distributed exactly-once execution, and RPO/RTO remain unverified.",
+    "Physical subsystem readiness requires independent engineering and safety evidence."
+  ],
+  "project": "TrainOS / SnowPiercer",
+  "release": "v65",
+  "snapshot_date": "2026-10-28",
+  "stage_range": {
+    "count": 10,
+    "end": 567,
+    "start": 558
+  },
+  "verification": {
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED",
+    "full_project_suite": {
+      "evidence": "docs/release_evidence/v65/full_pytest_summary.json",
+      "failed": null,
+      "last_observed_test": "tests/stage121/test_cross_process_ambiguous_commit_races.py::test_competing_process_cannot_overwrite_terminal_row_during_lost_commit_ack",
+      "passed": null,
+      "result": "INCOMPLETE_TIMEOUT",
+      "tests_collected": 1386,
+      "timeout_seconds": 20
+    },
+    "github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "pytest_collection": {
+      "evidence": "docs/release_evidence/v65/collection_summary.json",
+      "exit_code": 0,
+      "result": "PASS",
+      "tests_collected": 1386
+    },
+    "python_ast_audit": {
+      "evidence": "docs/release_evidence/v65/python_ast_audit.json",
+      "files_scanned": 3063,
+      "result": "PASS",
+      "syntax_errors": 0
+    },
+    "regression_stages_170_567": {
+      "evidence": "docs/release_evidence/v65/regression_170_567.json",
+      "failed": 0,
+      "passed": 429,
+      "pytest_elapsed_seconds": 20.15,
+      "result": "PASS",
+      "runner_elapsed_seconds": 22.652,
+      "test_files_selected": 398
+    },
+    "stage_matrix_558_567": {
+      "evidence": "docs/release_evidence/v65/stage_matrix_diagnostics_558_567.json",
+      "failed": 0,
+      "result": "PASS",
+      "stages_passed": 10,
+      "timeouts": 0
+    },
+    "supporting_checks": {
+      "evidence": "docs/release_evidence/v65/supporting_checks.log",
+      "failed": 0,
+      "passed": 70,
+      "result": "PASS"
+    },
+    "targeted_stages_558_567": {
+      "evidence": "docs/release_evidence/v65/targeted_558_567.log",
+      "failed": 0,
+      "passed": 11,
+      "result": "PASS",
+      "selection": "tests/stage558 through tests/stage567"
+    },
+    "workflow_matrix_coverage": "PASS: stages 1-567 covered exactly once",
+    "workflow_yaml_parse": "PASS"
+  }
+}

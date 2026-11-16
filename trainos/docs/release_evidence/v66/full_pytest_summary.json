@@ -1,0 +1,62 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-vv",
+    "--durations=20"
+  ],
+  "elapsed_seconds": 65.0,
+  "execution_environment_interrupted": true,
+  "exit_code": null,
+  "log_path": "docs/release_evidence/v66/full_pytest_verbose.log",
+  "note": "The outer execution environment terminated this attempt before the diagnostic wrapper could write its final report. Pytest collection succeeded and the log progressed into stage158 (~23%); this is incomplete evidence, not a pytest exit status, assertion failure, or proof of a stage-specific defect. The report is reconstructed from the preserved log.",
+  "progress": {
+    "collected_tests": 1397,
+    "last_completed_test": "tests/stage177/test_multi_generation_long_outage_recovery.py::test_unknown_after_latest_attempt_stays_blocked_until_fresh_reconciliation",
+    "last_observed_test": "tests/stage178/test_completed_reconciliation_generation_audit.py::test_completed_reconciliation_audit_binds_current_generation",
+    "log_tail": [
+      "tests/stage17/test_constitution_evolution.py::test_constitution_evolution <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_evolution.py PASSED [ 25%]",
+      "tests/stage17/test_constitution_guardian.py::test_constitution_guardian <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_guardian.py PASSED [ 26%]",
+      "tests/stage17/test_constitution_immutability.py::test_constitution_immutability <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_immutability.py PASSED [ 26%]",
+      "tests/stage17/test_constitution_justification.py::test_constitution_justification <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_justification.py PASSED [ 26%]",
+      "tests/stage17/test_constitution_registry.py::test_constitution_registry <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_registry.py PASSED [ 26%]",
+      "tests/stage17/test_constitution_validation.py::test_constitution_validation <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitution_validation.py PASSED [ 26%]",
+      "tests/stage17/test_constitutional_hierarchy.py::test_constitution_hierarchy <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitutional_hierarchy.py PASSED [ 26%]",
+      "tests/stage17/test_constitutional_rule_creation.py::test_constitutional_rule_creation <- ../../trainos_v65_work/TrainOS/tests/stage17/test_constitutional_rule_creation.py PASSED [ 26%]",
+      "tests/stage170/test_cross_process_dispatch_reservation.py::test_competing_store_instances_reserve_only_one_dispatch <- ../../trainos_v65_work/TrainOS/tests/stage170/test_cross_process_dispatch_reservation.py PASSED [ 26%]",
+      "tests/stage170/test_cross_process_dispatch_reservation.py::test_reserved_attempt_is_not_replayed_after_reopen <- ../../trainos_v65_work/TrainOS/tests/stage170/test_cross_process_dispatch_reservation.py PASSED [ 26%]",
+      "tests/stage170/test_cross_process_dispatch_reservation.py::test_callback_exception_marks_outcome_unknown_and_keeps_reservation <- ../../trainos_v65_work/TrainOS/tests/stage170/test_cross_process_dispatch_reservation.py PASSED [ 26%]",
+      "tests/stage171/test_dispatch_reservation_crash_recovery.py::test_restart_after_reservation_before_callback_requires_reconciliation <- ../../trainos_v65_work/TrainOS/tests/stage171/test_dispatch_reservation_crash_recovery.py PASSED [ 26%]",
+      "tests/stage171/test_dispatch_reservation_crash_recovery.py::test_crashed_reservation_does_not_block_independent_command <- ../../trainos_v65_work/TrainOS/tests/stage171/test_dispatch_reservation_crash_recovery.py PASSED [ 26%]",
+      "tests/stage171/test_dispatch_reservation_crash_recovery.py::test_unknown_reserved_attempt_remains_blocked <- ../../trainos_v65_work/TrainOS/tests/stage171/test_dispatch_reservation_crash_recovery.py PASSED [ 26%]",
+      "tests/stage172/test_explicit_unknown_outcome_reconciliation.py::test_explicit_not_executed_evidence_allows_one_new_reservation_after_restart <- ../../trainos_v65_work/TrainOS/tests/stage172/test_explicit_unknown_outcome_reconciliation.py PASSED [ 26%]",
+      "tests/stage172/test_explicit_unknown_outcome_reconciliation.py::test_empty_or_wrong_binding_evidence_cannot_reconcile_unknown_outcome <- ../../trainos_v65_work/TrainOS/tests/stage172/test_explicit_unknown_outcome_reconciliation.py PASSED [ 27%]",
+      "tests/stage172/test_explicit_unknown_outcome_reconciliation.py::test_repeated_same_decision_is_idempotent_but_conflicting_evidence_is_blocked <- ../../trainos_v65_work/TrainOS/tests/stage172/test_explicit_unknown_outcome_reconciliation.py PASSED [ 27%]",
+      "tests/stage172/test_explicit_unknown_outcome_reconciliation.py::test_legacy_reconciliation_table_migrates_decision_column <- ../../trainos_v65_work/TrainOS/tests/stage172/test_explicit_unknown_outcome_reconciliation.py PASSED [ 27%]",
+      "tests/stage173/test_reconciliation_restart_windows.py::test_not_executed_decision_survives_restart_before_new_reservation <- ../../trainos_v65_work/TrainOS/tests/stage173/test_reconciliation_restart_windows.py PASSED [ 27%]",
+      "tests/stage173/test_reconciliation_restart_windows.py::test_restart_preserves_evidence_and_rejects_conflicting_reconciliation <- ../../trainos_v65_work/TrainOS/tests/stage173/test_reconciliation_restart_windows.py PASSED [ 27%]",
+      "tests/stage173/test_reconciliation_restart_windows.py::test_reconciliation_restart_does_not_change_independent_command <- ../../trainos_v65_work/TrainOS/tests/stage173/test_reconciliation_restart_windows.py PASSED [ 27%]",
+      "tests/stage174/test_reconciled_dispatch_crash_recovery.py::test_old_not_executed_evidence_cannot_be_reused_after_new_dispatch <- ../../trainos_v65_work/TrainOS/tests/stage174/test_reconciled_dispatch_crash_recovery.py PASSED [ 27%]",
+      "tests/stage174/test_reconciled_dispatch_crash_recovery.py::test_crash_after_re_reservation_preserves_generation_and_blocks_replay <- ../../trainos_v65_work/TrainOS/tests/stage174/test_reconciled_dispatch_crash_recovery.py PASSED [ 27%]",
+      "tests/stage175/test_dispatch_generation_migration.py::test_legacy_migration_preserves_records_and_blocks_reuse_of_old_evidence <- ../../trainos_v65_work/TrainOS/tests/stage175/test_dispatch_generation_migration.py PASSED [ 27%]",
+      "tests/stage175/test_dispatch_generation_migration.py::test_concurrent_processes_migrate_legacy_schema_without_losing_generation <- ../../trainos_v65_work/TrainOS/tests/stage175/test_dispatch_generation_migration.py PASSED [ 27%]",
+      "tests/stage176/test_cross_process_reconciliation_reservation_race.py::test_concurrent_processes_cannot_reuse_old_evidence_after_new_reservation <- ../../trainos_v65_work/TrainOS/tests/stage176/test_cross_process_reconciliation_reservation_race.py PASSED [ 27%]",
+      "tests/stage176/test_cross_process_reconciliation_reservation_race.py::test_conflicting_evidence_race_preserves_single_reconciliation_record <- ../../trainos_v65_work/TrainOS/tests/stage176/test_cross_process_reconciliation_reservation_race.py PASSED [ 27%]",
+      "tests/stage177/test_multi_generation_long_outage_recovery.py::test_multiple_generations_preserve_evidence_and_reject_stale_proofs <- ../../trainos_v65_work/TrainOS/tests/stage177/test_multi_generation_long_outage_recovery.py PASSED [ 27%]",
+      "tests/stage177/test_multi_generation_long_outage_recovery.py::test_unknown_after_latest_attempt_stays_blocked_until_fresh_reconciliation <- ../../trainos_v65_work/TrainOS/tests/stage177/test_multi_generation_long_outage_recovery.py PASSED [ 27%]",
+      "tests/stage178/test_completed_reconciliation_generation_audit.py::test_completed_reconciliation_audit_binds_current_generation <- ../../trainos_v65_work/TrainOS/tests/stage178/test_completed_reconciliation_generation_audit.py "
+    ],
+    "observed_outcome_counts": {
+      "ERROR": 0,
+      "FAILED": 0,
+      "PASSED": 359,
+      "SKIPPED": 0,
+      "XFAIL": 0,
+      "XPASS": 0
+    }
+  },
+  "result": "INCOMPLETE_TIMEOUT",
+  "schema_version": 1,
+  "timeout_seconds": 45
+}

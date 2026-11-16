@@ -1,0 +1,45 @@
+{
+  "schema": "trainos.process-supervisor.v105",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-c",
+    "import subprocess,sys,pathlib,time;p=subprocess.Popen([sys.executable,\"-c\",\"import time;time.sleep(60)\"],start_new_session=True);pathlib.Path('/tmp/trainos-v107-runner-signal-0t3yut8h/child.pid').write_text(str(p.pid));time.sleep(60)"
+  ],
+  "supervisor_pid": 20620,
+  "pid1_comm": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable": false,
+  "subreaper": true,
+  "pidfd_required": true,
+  "pidfd_available": true,
+  "production_admitted": false,
+  "events": [
+    {
+      "event": "runner_spawned",
+      "pid": 20659
+    },
+    {
+      "event": "signal_descendant",
+      "pid": 20691,
+      "signal": 15
+    },
+    {
+      "event": "reaped_adopted",
+      "pid": 20691,
+      "wait_status": 15
+    }
+  ],
+  "status": "FAIL",
+  "runner_pid": 20659,
+  "residual_at_runner_exit": [
+    20691
+  ],
+  "runner_exitcode": -15,
+  "supervisor_signal": null,
+  "timeout": false,
+  "residual_running_pids": [],
+  "observed_descendant_count": 1,
+  "supervisor_exitcode": 143,
+  "cleanup_complete": true,
+  "duration_seconds": 1.027
+}

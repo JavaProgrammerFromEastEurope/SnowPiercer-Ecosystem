@@ -1,0 +1,10 @@
+{
+  "schema": "trainos.v104.actual-kernel-sigkill.v1",
+  "kernel_runner_pid": 66731,
+  "pytest_child_pid": 66749,
+  "supervisor_exitcode": 137,
+  "runner_exitcode": -9,
+  "cleanup_complete": true,
+  "remaining_pytest_live": false,
+  "status": "PASS"
+}

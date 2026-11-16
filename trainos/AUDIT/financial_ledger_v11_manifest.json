@@ -1,0 +1,25 @@
+{
+  "artifact": "TrainOS Financial Ledger Contract v11",
+  "date": "2026-10-24",
+  "status": "isolated_prototype_no_go_for_production_payments",
+  "changes": [
+    "Added transaction type coverage matrix for all eight legacy TransactionType values",
+    "Added tests ensuring unsupported legacy types fail closed",
+    "Added integration readiness gates and recorded full-suite timeout honestly",
+    "Removed Python bytecode and test caches from deliverable archive"
+  ],
+  "targeted_tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/ledger_contract tests/stage172 tests/stage173 tests/stage174 tests/stage175 tests/stage176 tests/stage177",
+    "result": "79 passed in 17.68s"
+  },
+  "full_suite": {
+    "command": "PYTHONPATH=. python -m pytest -q",
+    "result": "timed out at 180 seconds after approximately 14% progress; not passed"
+  },
+  "production_gate": "not approved; full suite and security/accounting review remain required",
+  "canonical_root": "TrainOS/",
+  "file_count_excluding_zip_container": 2831,
+  "python_file_count": 2667,
+  "bytecode_and_test_caches_in_archive": false,
+  "source_tree_sha256": "245ef6909314f094cc490adfa1e16b3e2e3b9186a550458862169700b9aac39b"
+}

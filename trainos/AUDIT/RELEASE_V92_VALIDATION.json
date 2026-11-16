@@ -1,0 +1,17 @@
+{
+  "release": "v92",
+  "status": "BLOCKED/NO-GO",
+  "changes": [
+    "DiagnosticInvestigationStore closes SQLite connection on constructor initialization exception"
+  ],
+  "combined_regressions": "NOT CONFIRMED",
+  "full_suite": "NOT RUN",
+  "kernel_runner": "NOT VERIFIED",
+  "regression_selector": "NOT VERIFIED",
+  "known_issue": "SQLite unraisable warnings persist in recovery fault sequence; runner outer timeout interrupted evidence recording",
+  "limitations": [
+    "No 3 successful combined runs",
+    "No full strict run",
+    "No comprehensive orphan guarantee"
+  ]
+}

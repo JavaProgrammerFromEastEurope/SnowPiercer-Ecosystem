@@ -1,0 +1,32 @@
+.F.                                                                      [100%]
+=================================== FAILURES ===================================
+____________________ test_runner_timeout_kills_descendants _____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_runner_timeout_kills_desc0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f0bc6bbd0f0>
+
+    def test_runner_timeout_kills_descendants(tmp_path, monkeypatch):
+        if os.name != 'posix':
+            pytest.skip('POSIX process-group semantics required')
+        pidfile = tmp_path / 'child.pid'
+        code = ('import subprocess,sys,time;'
+                'p=subprocess.Popen([sys.executable,"-c","import time;time.sleep(120)"]);'
+                f'open({str(pidfile)!r},"w").write(str(p.pid));'
+                'time.sleep(120)')
+        monkeypatch.setenv('TRAINOS_KERNEL_FILE_TIMEOUT', '0.5')
+        monkeypatch.setenv('TRAINOS_KERNEL_KILL_GRACE', '0.2')
+        runner = KernelTestRunner()
+        assert runner._execute([sys.executable, '-c', code]) == 124
+>       assert pidfile.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/tmp/pytest-of-root/pytest-2/test_runner_timeout_kills_desc0/child.pid').exists
+
+tests/domains/ci_release/test_kernel_runner_v102.py:30: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[KERNEL-TEST 0.5007] TIMEOUT: pid=1372 limit=0.5s
+=========================== short test summary info ============================
+FAILED tests/domains/ci_release/test_kernel_runner_v102.py::test_runner_timeout_kills_descendants - AssertionError: assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/tmp/pytest-of-root/pytest-2/test_runner_timeout_kills_desc0/child.pid').exists
+1 failed, 2 passed in 2.08s

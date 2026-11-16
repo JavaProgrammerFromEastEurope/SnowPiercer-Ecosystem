@@ -1,0 +1,81 @@
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 23%]
+.......................................................................F [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 43%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 62%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+........................................................................ [ 90%]
+........................................................................ [ 95%]
+.................................................................        [100%]
+=================================== FAILURES ===================================
+________________ test_concurrent_identical_retries_commit_once _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-722/test_concurrent_identical_retr0')
+
+    def test_concurrent_identical_retries_commit_once(tmp_path: Path):
+        db = tmp_path / "concurrent.sqlite3"
+    
+        def append_once(_):
+            with FinancialLedger(db) as ledger:
+                return ledger.append(transfer("shared-operation"))
+    
+        with ThreadPoolExecutor(max_workers=8) as pool:
+>           results = list(pool.map(append_once, range(24)))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/ledger_contract/test_financial_ledger.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/concurrent/futures/_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/concurrent/futures/_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/usr/lib/python3.13/concurrent/futures/thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/ledger_contract/test_financial_ledger.py:76: in append_once
+    with FinancialLedger(db) as ledger:
+         ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <kernel.economy.ledger_contract.store.FinancialLedger object at 0x7f79b35e7bf0>
+database = PosixPath('/tmp/pytest-of-root/pytest-722/test_concurrent_identical_retr0/concurrent.sqlite3')
+
+    def __init__(self, database: str | Path = ":memory:", *, timeout_seconds: float = 10.0) -> None:
+        if timeout_seconds <= 0:
+            raise ValueError("timeout_seconds must be positive")
+        self._database = str(database)
+        self._timeout = float(timeout_seconds)
+        self._lock = threading.RLock()
+        self._connection = sqlite3.connect(
+            self._database, timeout=self._timeout, isolation_level=None,
+            check_same_thread=False,
+        )
+        self._connection.row_factory = sqlite3.Row
+        self._connection.execute("PRAGMA foreign_keys = ON")
+        if self._database != ":memory:":
+>           self._connection.execute("PRAGMA journal_mode = WAL")
+E           sqlite3.OperationalError: database is locked
+
+kernel/economy/ledger_contract/store.py:53: OperationalError
+=========================== short test summary info ============================
+FAILED tests/ledger_contract/test_financial_ledger.py::test_concurrent_identical_retries_commit_once - sqlite3.OperationalError: database is locked
+1 failed, 1504 passed in 93.86s (0:01:33)

@@ -1,0 +1,10 @@
+{
+  "schema": "trainos.v106-real-delegation-attempt",
+  "cgroup_path": "/sys/fs/cgroup/trainos-authority",
+  "operation": "mkdir(mode=0700)",
+  "os_managed_cgroup_positive_test_passed": false,
+  "error_type": "OSError",
+  "errno": 30,
+  "errno_symbol": "EROFS",
+  "message": "[Errno 30] Read-only file system: '/sys/fs/cgroup/trainos-authority'"
+}

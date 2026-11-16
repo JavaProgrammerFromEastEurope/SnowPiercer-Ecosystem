@@ -1,0 +1,15 @@
+{
+  "schema": "trainos.v107.watchdog-process-lock",
+  "status": "PASS_NEGATIVE_CONTROL",
+  "production_containment_proved": false,
+  "os_service_restart_proved": false,
+  "observations": {
+    "holder_sigkill_exitcode": -9,
+    "competing_exitcode": 125,
+    "competing_stdout": "LOCK_DENIED\n",
+    "competing_stderr": "",
+    "after_kill_exitcode": 0,
+    "after_kill_stdout": "LOCK_ACQUIRED\n",
+    "after_kill_stderr": ""
+  }
+}

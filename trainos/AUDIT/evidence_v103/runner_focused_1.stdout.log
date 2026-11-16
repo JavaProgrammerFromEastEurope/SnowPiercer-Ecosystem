@@ -1,0 +1,42 @@
+...F....                                                                 [100%]
+=================================== FAILURES ===================================
+______________ test_successful_leader_cannot_leave_residual_group ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-9/test_successful_leader_cannot_0')
+
+    @pytest.mark.skipif(os.name != 'posix', reason='POSIX process groups')
+    def test_successful_leader_cannot_leave_residual_group(tmp_path):
+        pidfile = tmp_path / 'residual.pid'
+        code = ('import subprocess,sys;'
+                'p=subprocess.Popen([sys.executable,"-c","import time;time.sleep(60)"]);'
+                f'open({str(pidfile)!r},"w").write(str(p.pid))')
+        runner = KernelTestRunner()
+        code = runner._execute([sys.executable, '-c', code])
+        assert pidfile.exists()
+        assert code == 125
+>       assert _not_running(int(pidfile.read_text()))
+E       AssertionError: assert False
+E        +  where False = _not_running(2904)
+E        +    where 2904 = int('2904')
+E        +      where '2904' = read_text()
+E        +        where read_text = PosixPath('/tmp/pytest-of-root/pytest-9/test_successful_leader_cannot_0/residual.pid').read_text
+
+tests/domains/ci_release/test_kernel_runner_v103.py:46: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[KERNEL-TEST 0.7179] RESIDUAL GROUP: pgid=2894; fail-closed
+----------------------------- Captured stderr call -----------------------------
+Exception ignored in: <_io.FileIO name='/tmp/pytest-of-root/pytest-9/test_successful_leader_cannot_0/residual.pid' mode='wb' closefd=True>
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/pytest-of-root/pytest-9/test_successful_leader_cannot_0/residual.pid' mode='w' encoding='UTF-8'>
+Exception ignored in: <function Popen.__del__ at 0x7f9b939b0b80>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/subprocess.py", line 1140, in __del__
+ResourceWarning: subprocess 2904 is still running
+=========================== short test summary info ============================
+FAILED tests/domains/ci_release/test_kernel_runner_v103.py::test_successful_leader_cannot_leave_residual_group - AssertionError: assert False
+ +  where False = _not_running(2904)
+ +    where 2904 = int('2904')
+ +      where '2904' = read_text()
+ +        where read_text = PosixPath('/tmp/pytest-of-root/pytest-9/test_successful_leader_cannot_0/residual.pid').read_text
+1 failed, 7 passed in 6.13s

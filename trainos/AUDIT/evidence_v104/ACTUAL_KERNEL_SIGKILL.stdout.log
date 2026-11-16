@@ -1,0 +1,7 @@
+[KERNEL-TEST 0.0000] BOOTING TRAINOS TEST KERNEL
+
+============================================================
+[STAGE START] pytest_diagnostics
+============================================================
+
+[KERNEL-TEST 0.0001] RUN: tests/domains/pytest_diagnostics/test_domain_registry.py

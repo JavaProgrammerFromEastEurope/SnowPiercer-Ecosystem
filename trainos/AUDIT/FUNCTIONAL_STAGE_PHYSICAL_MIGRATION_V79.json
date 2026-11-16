@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v79",
+  "source_release": "v78",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage125/test_crash_before_commit_retry_transaction.py": "tests/domains/recovery/test_crash_before_commit_retry_transaction.py",
+    "tests/stage126/test_interrupted_attempt_retry_authorization_race.py": "tests/domains/recovery/test_interrupted_attempt_retry_authorization_race.py",
+    "tests/stage127/test_ambiguous_retry_authorization_commit.py": "tests/domains/recovery/test_ambiguous_retry_authorization_commit.py",
+    "tests/stage129/test_reconcile_after_verification_outage.py": "tests/domains/recovery/test_reconcile_after_verification_outage.py",
+    "tests/stage130/test_repeated_ambiguous_recovery_transitions.py": "tests/domains/recovery/test_repeated_ambiguous_recovery_transitions.py",
+    "tests/stage132/test_corrupt_recovery_journal_status.py": "tests/domains/recovery/test_corrupt_recovery_journal_status.py",
+    "tests/stage133/test_corrupt_recovery_journal_invariants.py": "tests/domains/recovery/test_corrupt_recovery_journal_invariants.py",
+    "tests/stage134/test_recovery_journal_timestamp_integrity.py": "tests/domains/recovery/test_recovery_journal_timestamp_integrity.py",
+    "tests/stage135/test_recovery_owner_identity_consistency.py": "tests/domains/recovery/test_recovery_owner_identity_consistency.py",
+    "tests/stage137/test_competing_retry_authorization_and_attempt_start.py": "tests/domains/recovery/test_competing_retry_authorization_and_attempt_start.py"
+  },
+  "notes": "Moved recovery SQLite transaction, ambiguous commit, and corruption tests; retained module-level spawn worker targets."
+}

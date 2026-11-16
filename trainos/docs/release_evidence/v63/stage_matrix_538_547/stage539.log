@@ -1,0 +1,7 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.87s call     tests/stage539/test_stage539_include_requires_test_file_under_tests.py::test_include_rejects_non_test_python_file
+0.02s setup    tests/stage539/test_stage539_include_requires_test_file_under_tests.py::test_include_rejects_non_test_python_file
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.97s

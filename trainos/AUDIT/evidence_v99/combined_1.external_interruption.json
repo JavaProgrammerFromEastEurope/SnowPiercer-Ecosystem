@@ -1,0 +1,6 @@
+{
+  "status": "INTERRUPTED",
+  "reason": "external tool execution timeout; runner evidence missing",
+  "pytest_summary_observed": "1 failed, 396 passed in 50.21s",
+  "exit_code": "UNKNOWN"
+}

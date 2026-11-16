@@ -1,0 +1,22 @@
+{
+  "version": "v18",
+  "change": "Add strict TSV stage-result aggregator with JSON output and six unit tests",
+  "tests": {
+    "aggregator_unit_tests": "6 passed",
+    "ci_shell_regression": "PASS: simulated PASS/FAIL/TIMEOUT classification",
+    "targeted_pytest": "73 passed in 11.63s",
+    "stage117_stage118_smoke": {
+      "status": "PASS",
+      "stages": 2,
+      "pass": 2,
+      "fail": 0,
+      "timeout": 0,
+      "test_counts": {"stage117": 2, "stage118": 1},
+      "timeout_seconds_per_stage": 60
+    },
+    "aggregate_json_and_log_validation": "PASS"
+  },
+  "full_suite": "NOT_CONFIRMED_ROOT_CAUSE_UNRESOLVED",
+  "github_actions_executed_here": false,
+  "real_payment_integration": "NO_GO"
+}

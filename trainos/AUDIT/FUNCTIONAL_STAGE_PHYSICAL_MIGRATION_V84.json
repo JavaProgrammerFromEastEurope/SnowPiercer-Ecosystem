@@ -1,0 +1,16 @@
+{
+  "release": "v84",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage418/test_stage418_schema_recovery.py": "tests/domains/recovery/test_stage418_schema_recovery.py",
+    "tests/stage419/test_stage419_schema_recovery.py": "tests/domains/recovery/test_stage419_schema_recovery.py",
+    "tests/stage420/test_stage420_schema_recovery.py": "tests/domains/recovery/test_stage420_schema_recovery.py",
+    "tests/stage421/test_stage421_schema_recovery.py": "tests/domains/recovery/test_stage421_schema_recovery.py",
+    "tests/stage422/test_stage422_schema_recovery.py": "tests/domains/recovery/test_stage422_schema_recovery.py",
+    "tests/stage423/test_stage423_schema_recovery.py": "tests/domains/recovery/test_stage423_schema_recovery.py",
+    "tests/stage424/test_stage424_schema_recovery.py": "tests/domains/recovery/test_stage424_schema_recovery.py",
+    "tests/stage425/test_stage425_schema_recovery.py": "tests/domains/recovery/test_stage425_schema_recovery.py",
+    "tests/stage426/test_stage426_schema_recovery.py": "tests/domains/recovery/test_stage426_schema_recovery.py",
+    "tests/stage427/test_stage427_schema_recovery.py": "tests/domains/recovery/test_stage427_schema_recovery.py"
+  }
+}

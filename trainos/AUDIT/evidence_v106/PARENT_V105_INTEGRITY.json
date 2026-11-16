@@ -1,0 +1,9 @@
+{
+  "schema": "trainos.v106-parent-integrity",
+  "parent_zip_sha256": "e3ece0ab44cb03793d2da67d50a7f919bab17fa24f2165483868eae1d2034be2",
+  "manifest_file_count": 4971,
+  "missing_or_mismatching": [],
+  "unexpected": [],
+  "status": "PASS",
+  "parent_manifest_excluded_self": "trainos/AUDIT/evidence_v105/SHA256_MANIFEST_V105.json"
+}

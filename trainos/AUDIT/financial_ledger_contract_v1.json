@@ -1,0 +1,27 @@
+{
+  "contract": "financial-ledger",
+  "version": "1.0.0",
+  "status": "implemented_isolated_prototype_not_production_approved",
+  "implementation": "kernel/economy/ledger_contract/",
+  "tests": "tests/ledger_contract/",
+  "legacy_transaction_api_modified": false,
+  "storage": "sqlite",
+  "amount_representation": "positive integer minor units",
+  "currency_rule": "one uppercase three-letter code per journal",
+  "journal_rule": "at least one debit and one credit; totals equal",
+  "idempotency": "same operation_id and same payload is a no-op; changed payload raises IdempotencyConflict",
+  "atomicity": "journal header and postings inserted in one SQLite transaction",
+  "test_command": "PYTHONPATH=. python -m pytest -q tests/ledger_contract tests/stage21 tests/stage25 tests/stage3 tests/stage33 tests/stage125",
+  "test_result": "51 passed in 2.10s",
+  "full_suite_run": false,
+  "production_gates_remaining": [
+    "currency registry and precision policy",
+    "authorization and account ownership",
+    "funds availability and overdraft rules",
+    "fees, refunds and reversals",
+    "reconciliation and audit export",
+    "backup and restore validation",
+    "security and compliance review",
+    "load and availability qualification"
+  ]
+}

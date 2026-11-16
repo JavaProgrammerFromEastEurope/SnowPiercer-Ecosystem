@@ -1,0 +1,18 @@
+{
+  "release": "v94",
+  "base": "v93",
+  "status": "BLOCKED/NO-GO",
+  "confirmed": {
+    "bounded_runner_sigkill_contract": "1 PASS",
+    "isolated_sqlite_owner_audit": "15 connections tracked, 0 unclosed in two isolated fault tests"
+  },
+  "not_confirmed": [
+    "three complete strict combined regressions",
+    "complete strict full suite",
+    "absence of all orphaned processes",
+    "full production SQLite closure",
+    "Kernel Runner compatibility",
+    "regression selector compatibility"
+  ],
+  "evidence_limitation": "External tool deadlines interrupted some runs; partial logs are retained, not counted as PASS."
+}

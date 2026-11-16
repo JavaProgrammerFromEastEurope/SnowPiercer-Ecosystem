@@ -1,0 +1,49 @@
+{
+  "release": "v84",
+  "base": "v83",
+  "date": "2026-11-14",
+  "changes": [
+    "Migrated ten pinned recovery modules from historical stage418-stage427 to functional domain",
+    "Added SQLite validate_backup read-only connection closure regression test",
+    "Restored regression-selector migration audit mapping contract after a failed initial combined attempt"
+  ],
+  "strict_warning_policy": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning",
+    "error::pytest.PytestUnraisableExceptionWarning"
+  ],
+  "strict_combined_runs": [
+    {
+      "run": 1,
+      "summary": "334 passed in 38.55s",
+      "exit_code": 0,
+      "confirmed_pass": true,
+      "evidence": "AUDIT/evidence_v84/strict_combined_1_verified.log"
+    },
+    {
+      "run": 2,
+      "summary": "334 passed in 37.85s",
+      "exit_code": 0,
+      "confirmed_pass": true,
+      "evidence": "AUDIT/evidence_v84/strict_combined_2.log"
+    },
+    {
+      "run": 3,
+      "summary": "334 passed in 37.33s",
+      "exit_code": 0,
+      "confirmed_pass": true,
+      "evidence": "AUDIT/evidence_v84/strict_combined_3.log"
+    }
+  ],
+  "collection": {
+    "collected": 1472,
+    "result": "PASS"
+  },
+  "full_suite": "NOT_RUN",
+  "hosted_ci": "NOT_RUN",
+  "limitations": [
+    "Prior v83 SQLite unraisable warnings did not reproduce in initial v84 combined strict baseline; no universal absence guarantee",
+    "Three combined strict runs are not full-project regression",
+    "Initial failed run full log was overwritten and cannot be claimed retained"
+  ]
+}

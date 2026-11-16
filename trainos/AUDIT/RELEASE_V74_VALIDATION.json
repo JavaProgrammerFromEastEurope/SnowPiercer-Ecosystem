@@ -1,0 +1,18 @@
+{
+  "release": "v74",
+  "collection": {
+    "status": "PASS",
+    "collected_tests": 1453,
+    "errors": 0
+  },
+  "targeted": {
+    "status": "PASS",
+    "passed": 96
+  },
+  "historical_selector": {
+    "status": "PASS",
+    "selected": 9
+  },
+  "full_regression": "NOT_RUN",
+  "hosted_ci": "NOT_RUN"
+}

@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage547/test_stage547_release_contract_files_exist.py::test_v63_release_contract_artifacts_exist
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s

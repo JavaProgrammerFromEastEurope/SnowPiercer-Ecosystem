@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "selection_policy": "all test_*.py files recursively under tests/stageN for inclusive stage range; sorted unique paths",
+  "start_stage": 528,
+  "end_stage": 537,
+  "test_files_selected": 10,
+  "selected_files": [
+    "tests/stage528/test_stage528_regression_selection.py",
+    "tests/stage529/test_stage529_include_path_safety.py",
+    "tests/stage530/test_stage530_timeout_evidence.py",
+    "tests/stage531/test_stage531_dry_run_deduplicates.py",
+    "tests/stage532/test_stage532_invalid_timeout.py",
+    "tests/stage533/test_stage533_ci_matrix_coverage.py",
+    "tests/stage534/test_stage534_register_release_sync.py",
+    "tests/stage535/test_stage535_inventory_modules.py",
+    "tests/stage536/test_stage536_safety_and_dependency_gates.py",
+    "tests/stage537/test_stage537_release_contract.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/stage528/test_stage528_regression_selection.py",
+    "tests/stage529/test_stage529_include_path_safety.py",
+    "tests/stage530/test_stage530_timeout_evidence.py",
+    "tests/stage531/test_stage531_dry_run_deduplicates.py",
+    "tests/stage532/test_stage532_invalid_timeout.py",
+    "tests/stage533/test_stage533_ci_matrix_coverage.py",
+    "tests/stage534/test_stage534_register_release_sync.py",
+    "tests/stage535/test_stage535_inventory_modules.py",
+    "tests/stage536/test_stage536_safety_and_dependency_gates.py",
+    "tests/stage537/test_stage537_release_contract.py"
+  ],
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "result": "PASS",
+  "elapsed_seconds": 2.201
+}

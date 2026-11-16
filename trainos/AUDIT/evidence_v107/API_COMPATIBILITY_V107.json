@@ -1,0 +1,76 @@
+{
+  "schema": "trainos.v107.compatibility-audit",
+  "parent_entries": 5075,
+  "historical_source_changes": [],
+  "contracts": {
+    "trainos/tests/kernel_runner/runner.py": {
+      "parent_sha256": "743d5d9013414fcea0d252ffdac979911c3947a679ca88c3c94d5104e2c40bed",
+      "current_sha256": "743d5d9013414fcea0d252ffdac979911c3947a679ca88c3c94d5104e2c40bed",
+      "identical": true
+    },
+    "trainos/tests/kernel_runner/config.py": {
+      "parent_sha256": "63e0b49e61f451f80b9ce46334d17d7727b0c881df6bf39291fd66f885c865a5",
+      "current_sha256": "63e0b49e61f451f80b9ce46334d17d7727b0c881df6bf39291fd66f885c865a5",
+      "identical": true
+    },
+    "trainos/tests/kernel_runner/__main__.py": {
+      "parent_sha256": "bfe8b9aa725ad6d0224808ce6127262dec4c64ce5abadd823e5f6d9254f22c61",
+      "current_sha256": "bfe8b9aa725ad6d0224808ce6127262dec4c64ce5abadd823e5f6d9254f22c61",
+      "identical": true
+    },
+    "trainos/scripts/ci/cgroup_authority_v106.py": {
+      "parent_sha256": "e012f5eff349fd60792e49699952dee54a0004c43a9296de6917387693d8dc7e",
+      "current_sha256": "e012f5eff349fd60792e49699952dee54a0004c43a9296de6917387693d8dc7e",
+      "identical": true
+    },
+    "KernelTestRunner.run": {
+      "present": true,
+      "signature": "(self)"
+    },
+    "KernelTestRunner._run_test": {
+      "present": true,
+      "signature": "(self, test_file)"
+    },
+    "KernelTestRunner._run_batch": {
+      "present": true,
+      "signature": "(self, test_files)"
+    },
+    "KernelTestRunner._execute": {
+      "present": true,
+      "signature": "(self, argv)"
+    },
+    "KernelTestRunner._terminate_tree": {
+      "present": true,
+      "signature": "(self, process)"
+    }
+  },
+  "domain_names": [
+    "pytest_diagnostics",
+    "financial_ledger",
+    "recovery",
+    "backup_restore",
+    "security_governance",
+    "execution_scheduler",
+    "events_commands",
+    "registry_schema",
+    "ci_release",
+    "audit_integrity",
+    "runtime_kernel",
+    "education",
+    "healthcare",
+    "simulation",
+    "transactions",
+    "cognition_learning",
+    "society_governance",
+    "economy_resources",
+    "communication_persistence",
+    "orchestration_control",
+    "simulation_agents",
+    "knowledge_culture",
+    "population_services",
+    "diagnostic_investigation"
+  ],
+  "functional_domains": 24,
+  "configured_test_files": 958,
+  "status": "PASS"
+}

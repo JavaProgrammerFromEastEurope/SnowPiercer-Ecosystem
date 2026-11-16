@@ -1,0 +1,24 @@
+{
+  "release": "v80",
+  "source_release": "v79",
+  "domain": "recovery",
+  "migrated_modules": 10,
+  "targeted_tests": {
+    "recovery": {
+      "passed": 135,
+      "status": "PASS"
+    },
+    "ci_release_and_pytest_diagnostics": {
+      "passed": 139,
+      "status": "PASS"
+    }
+  },
+  "combined_targeted_run": "TIMEOUT_NO_SUMMARY",
+  "pytest_collection": {
+    "collected": 1465,
+    "errors": 0
+  },
+  "full_regression": "NOT_RUN",
+  "github_ci": "NOT_RUN",
+  "notes": "Two independently completed targeted pytest invocations. A combined invocation reached 100% progress but timed out without final summary; not counted as a pass."
+}

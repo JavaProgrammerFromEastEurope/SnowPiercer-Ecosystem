@@ -1,0 +1,20 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____________________________ test_resource_warning _____________________________
+
+    def test_resource_warning():
+>       warnings.warn('resource probe',ResourceWarning)
+E       ResourceWarning: resource probe
+
+/tmp/trainos-v104-warnings-_xnq83g7/test_warning_policy.py:3: ResourceWarning
+___________________________ test_deprecation_warning ___________________________
+
+    def test_deprecation_warning():
+>       warnings.warn('deprecation probe',DeprecationWarning)
+E       DeprecationWarning: deprecation probe
+
+/tmp/trainos-v104-warnings-_xnq83g7/test_warning_policy.py:5: DeprecationWarning
+=========================== short test summary info ============================
+FAILED ::test_resource_warning - ResourceWarning: resource probe
+FAILED ::test_deprecation_warning - DeprecationWarning: deprecation probe
+2 failed in 0.10s

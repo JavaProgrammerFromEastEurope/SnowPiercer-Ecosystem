@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "baseline_id": "SP-BASELINE-001",
+  "snapshot_date": "2026-10-28",
+  "policy": {
+    "completion_percent": "not calculated until scope, weights, acceptance criteria, and evidence are approved",
+    "stage_count_is_progress_metric": false,
+    "software_tests_prove_physical_readiness": false,
+    "unknown_status": "NOT_ASSESSED",
+    "critical_gates_require_evidence": true
+  },
+  "modules": [
+    {
+      "id": "SP-SW",
+      "name": "TrainOS and software platform",
+      "deliverables": [
+        "versioned source and release archive",
+        "deterministic regression selection and evidence manifest",
+        "financial ledger and idempotency contracts",
+        "backup/restore integrity checks",
+        "CI and full-suite test evidence"
+      ],
+      "status": "ACTIVE_IMPLEMENTATION",
+      "acceptance_evidence_required": [
+        "reproducible build/archive hash",
+        "full pytest result",
+        "CI run URL or explicit NOT_RUN",
+        "security and payment sandbox evidence"
+      ],
+      "critical_gates": [
+        "external payment sandbox before real-money processing",
+        "backup authenticity and off-host restore drill"
+      ]
+    },
+    {
+      "id": "SP-AI",
+      "name": "AI, autonomy, coordination and diagnostics",
+      "deliverables": [
+        "system requirements and decision boundaries",
+        "model inventory and evaluation plan",
+        "monitoring, fallback, operator override",
+        "simulation and failure-injection evidence"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "approved requirements",
+        "evaluation dataset/protocol",
+        "measured test results",
+        "human override and fail-safe tests"
+      ],
+      "critical_gates": [
+        "no unbounded autonomous authority over safety-critical controls"
+      ]
+    },
+    {
+      "id": "SP-RAIL",
+      "name": "Trains, rolling stock, coupling and railway infrastructure",
+      "deliverables": [
+        "operational concept",
+        "traction/braking/coupling requirements",
+        "track and route constraints",
+        "maintenance and inspection model",
+        "prototype and integration tests"
+      ],
+      "status": "ENGINEERING_EVIDENCE_PENDING",
+      "acceptance_evidence_required": [
+        "qualified engineering design",
+        "hazard analysis",
+        "simulation and physical test reports",
+        "independent safety review"
+      ],
+      "critical_gates": [
+        "certified braking, structural, fire, evacuation and railway safety"
+      ]
+    },
+    {
+      "id": "SP-ENERGY",
+      "name": "Energy generation, storage and distribution",
+      "deliverables": [
+        "load model and energy budget",
+        "generation/storage architecture",
+        "distribution and protection",
+        "degraded and emergency modes"
+      ],
+      "status": "FEASIBILITY_BASELINE_PENDING",
+      "acceptance_evidence_required": [
+        "validated load profiles",
+        "fault/current protection analysis",
+        "thermal/fire safety evidence",
+        "redundancy and endurance tests"
+      ],
+      "critical_gates": [
+        "safe shutdown and independently reviewed protection design"
+      ]
+    },
+    {
+      "id": "SP-LIFE",
+      "name": "Life support, medical, food, water and habitat",
+      "deliverables": [
+        "water/air/waste balances",
+        "food and nutrition plan",
+        "medical capability",
+        "habitat environmental controls",
+        "consumables and resupply model"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "mass/energy balance",
+        "water/air quality validation",
+        "medical response plan",
+        "long-duration reliability tests"
+      ],
+      "critical_gates": [
+        "human life-support safety and emergency evacuation"
+      ]
+    },
+    {
+      "id": "SP-LOG",
+      "name": "Logistics, inventory, robotics and drones",
+      "deliverables": [
+        "supply-chain model",
+        "inventory and traceability",
+        "robot/drone operational envelope",
+        "maintenance and charging",
+        "dispatch integration"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "end-to-end simulated workflows",
+        "collision/geofence tests",
+        "inventory reconciliation tests",
+        "human override tests"
+      ],
+      "critical_gates": [
+        "safe operation around people and transport infrastructure"
+      ]
+    },
+    {
+      "id": "SP-SAFE",
+      "name": "Cybersecurity, physical safety and emergency response",
+      "deliverables": [
+        "threat model and hazard register",
+        "access control and key management",
+        "incident response",
+        "fire/chemical/biological/radiological protection plans",
+        "security verification"
+      ],
+      "status": "SAFETY_BASELINE_PENDING",
+      "acceptance_evidence_required": [
+        "threat model review",
+        "penetration/security tests",
+        "hazard analysis",
+        "drills and corrective action closure"
+      ],
+      "critical_gates": [
+        "independent safety/security approval before operational deployment"
+      ]
+    },
+    {
+      "id": "SP-ISLAND",
+      "name": "SnowPiercer Island and autonomous industrial facilities",
+      "deliverables": [
+        "site and utility requirements",
+        "industrial process inventory",
+        "environmental and permitting constraints",
+        "construction phases and interfaces"
+      ],
+      "status": "SCOPE_DECOMPOSITION_PENDING",
+      "acceptance_evidence_required": [
+        "site feasibility",
+        "engineering concept studies",
+        "permitting map",
+        "capital and operating estimates"
+      ],
+      "critical_gates": [
+        "land, environmental, industrial and public safety approvals"
+      ]
+    },
+    {
+      "id": "SP-OPS",
+      "name": "Operations, governance and lifecycle",
+      "deliverables": [
+        "operating model and roles",
+        "maintenance windows and spare parts",
+        "change management",
+        "training and incident procedures",
+        "lifecycle cost and audit trail"
+      ],
+      "status": "INVENTORY_PENDING",
+      "acceptance_evidence_required": [
+        "approved SOPs",
+        "training/drill results",
+        "maintenance metrics",
+        "auditable change approvals"
+      ],
+      "critical_gates": [
+        "named accountable owners and emergency command structure"
+      ]
+    }
+  ],
+  "cross_system_workstreams": [
+    "requirements traceability",
+    "interface control documents",
+    "risk and hazard register",
+    "verification and validation plan",
+    "supply chain and lifecycle cost",
+    "cybersecurity and incident response",
+    "configuration management",
+    "operational readiness review"
+  ],
+  "current_blockers": [
+    "weighted scope baseline not approved",
+    "physical engineering evidence not inventoried",
+    "full end-to-end integration not demonstrated",
+    "external payment sandbox not verified",
+    "CI workflow execution not verified in GitHub-hosted runner"
+  ],
+  "status_legend": {
+    "ACTIVE_IMPLEMENTATION": "implementation underway; not equivalent to completion",
+    "INVENTORY_PENDING": "deliverables and acceptance evidence not yet audited",
+    "ENGINEERING_EVIDENCE_PENDING": "requires engineering design and test evidence",
+    "FEASIBILITY_BASELINE_PENDING": "needs quantified feasibility and energy/resource balances",
+    "SAFETY_BASELINE_PENDING": "requires hazard analysis and independent acceptance",
+    "SCOPE_DECOMPOSITION_PENDING": "scope, interfaces, and phased deliverables not approved"
+  }
+}

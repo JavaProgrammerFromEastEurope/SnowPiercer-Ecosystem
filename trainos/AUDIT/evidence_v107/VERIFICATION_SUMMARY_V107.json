@@ -1,0 +1,1175 @@
+{
+  "schema": "trainos.release-verification.v107",
+  "release": "v107",
+  "decision": "BLOCKED/NO-GO",
+  "parent_zip_sha256": "f05ad0512dfd6d60f3de1e2dded1a7f05b21912688fc6c20d7552847560d7a20",
+  "parent_files": 5075,
+  "parent_identical_files": 5075,
+  "parent_changed": [],
+  "parent_removed": [],
+  "added_files": 129,
+  "added_paths": [
+    "trainos/AUDIT/TRAINOS_V107_CERTIFICATION_MATRIX.json",
+    "trainos/AUDIT/TRAINOS_V107_IPC_CONTRACT.md",
+    "trainos/AUDIT/TRAINOS_V107_REQUIREMENTS.md",
+    "trainos/AUDIT/TRAINOS_V107_SAFETY_ANALYSIS.md",
+    "trainos/AUDIT/evidence_v107/API_COMPATIBILITY_V107.json",
+    "trainos/AUDIT/evidence_v107/BUILD_ATTEMPT_1_FAIL.log",
+    "trainos/AUDIT/evidence_v107/CGROUP_HOST_PROBE_V107.json",
+    "trainos/AUDIT/evidence_v107/CROSS_UID_BROKER_BURST_SERVER_V107.json",
+    "trainos/AUDIT/evidence_v107/CROSS_UID_BROKER_BURST_V107.json",
+    "trainos/AUDIT/evidence_v107/CROSS_UID_BROKER_RESTART_SERVER_V107.json",
+    "trainos/AUDIT/evidence_v107/CROSS_UID_LEGACY_BYPASS_V107.json",
+    "trainos/AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json",
+    "trainos/AUDIT/evidence_v107/DOMAIN_REGISTRY_V107.json",
+    "trainos/AUDIT/evidence_v107/DOUBLEFORK_SUPERVISOR_SIGKILL_V107.json",
+    "trainos/AUDIT/evidence_v107/PROCESS_BOUNDARY_PROBES_V107.json",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_CROSS_UID_V107.json",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_0_V107.exitcode",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_0_V107.stderr.log",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_0_V107.stdout.log",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65533_V107.exitcode",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65533_V107.stderr.log",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65533_V107.stdout.log",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65534_V107.exitcode",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65534_V107.stderr.log",
+    "trainos/AUDIT/evidence_v107/PRODUCTION_DENIAL_UID_65534_V107.stdout.log",
+    "trainos/AUDIT/evidence_v107/RUNNER_SIGNAL_PROBES_V107.json",
+    "trainos/AUDIT/evidence_v107/RUNNER_sigkill_SUPERVISOR_V107.json",
+    "trainos/AUDIT/evidence_v107/RUNNER_sigterm_SUPERVISOR_V107.json",
+    "trainos/AUDIT/evidence_v107/SIGTERM_SUPERVISOR_V107.json",
+    "trainos/AUDIT/evidence_v107/SOCKET_TAMPER_CROSS_UID_V107.json",
+    "trainos/AUDIT/evidence_v107/SOCKET_TAMPER_SERVER_V107.json",
+    "trainos/AUDIT/evidence_v107/SYSTEMD_UNIT_VERIFY_V107.exitcode",
+    "trainos/AUDIT/evidence_v107/SYSTEMD_UNIT_VERIFY_V107.stderr.log",
+    "trainos/AUDIT/evidence_v107/SYSTEMD_UNIT_VERIFY_V107.stdout.log",
+    "trainos/AUDIT/evidence_v107/TIMEOUT_SUPERVISOR_V107.json",
+    "trainos/AUDIT/evidence_v107/WARNING_NEGATIVE_CONTROL_V107.json",
+    "trainos/AUDIT/evidence_v107/WATCHDOG_LOCK_SIGKILL_V107.json",
+    "trainos/AUDIT/evidence_v107/combined_1.exitcode",
+    "trainos/AUDIT/evidence_v107/combined_1.json",
+    "trainos/AUDIT/evidence_v107/combined_1.stderr.log",
+    "trainos/AUDIT/evidence_v107/combined_1.stdout.log",
+    "trainos/AUDIT/evidence_v107/combined_2.exitcode",
+    "trainos/AUDIT/evidence_v107/combined_2.json",
+    "trainos/AUDIT/evidence_v107/combined_2.stderr.log",
+    "trainos/AUDIT/evidence_v107/combined_2.stdout.log",
+    "trainos/AUDIT/evidence_v107/combined_3.exitcode",
+    "trainos/AUDIT/evidence_v107/combined_3.json",
+    "trainos/AUDIT/evidence_v107/combined_3.stderr.log",
+    "trainos/AUDIT/evidence_v107/combined_3.stdout.log",
+    "trainos/AUDIT/evidence_v107/kernel-launch.log",
+    "trainos/AUDIT/evidence_v107/kernel_batch_1.exitcode",
+    "trainos/AUDIT/evidence_v107/kernel_batch_1.stderr.log",
+    "trainos/AUDIT/evidence_v107/kernel_batch_1.stdout.log",
+    "trainos/AUDIT/evidence_v107/kernel_batch_1.supervisor.json",
+    "trainos/AUDIT/evidence_v107/kernel_batch_2.exitcode",
+    "trainos/AUDIT/evidence_v107/kernel_batch_2.json",
+    "trainos/AUDIT/evidence_v107/kernel_batch_2.stderr.log",
+    "trainos/AUDIT/evidence_v107/kernel_batch_2.stdout.log",
+    "trainos/AUDIT/evidence_v107/kernel_batch_2.supervisor.json",
+    "trainos/AUDIT/evidence_v107/kernel_batch_retry_launch.log",
+    "trainos/AUDIT/evidence_v107/kernel_default_1.exitcode",
+    "trainos/AUDIT/evidence_v107/kernel_default_1.json",
+    "trainos/AUDIT/evidence_v107/kernel_default_1.stderr.log",
+    "trainos/AUDIT/evidence_v107/kernel_default_1.stdout.log",
+    "trainos/AUDIT/evidence_v107/kernel_default_1.supervisor.json",
+    "trainos/AUDIT/evidence_v107/kernel_workers_1.exitcode",
+    "trainos/AUDIT/evidence_v107/kernel_workers_1.json",
+    "trainos/AUDIT/evidence_v107/kernel_workers_1.stderr.log",
+    "trainos/AUDIT/evidence_v107/kernel_workers_1.stdout.log",
+    "trainos/AUDIT/evidence_v107/kernel_workers_1.supervisor.json",
+    "trainos/AUDIT/evidence_v107/legacy_production_denied.exitcode",
+    "trainos/AUDIT/evidence_v107/legacy_production_denied.stderr.log",
+    "trainos/AUDIT/evidence_v107/legacy_production_denied.stdout.log",
+    "trainos/AUDIT/evidence_v107/matrix-launch.log",
+    "trainos/AUDIT/evidence_v107/runner_sigkill.exitcode",
+    "trainos/AUDIT/evidence_v107/runner_sigkill.stderr.log",
+    "trainos/AUDIT/evidence_v107/runner_sigkill.stdout.log",
+    "trainos/AUDIT/evidence_v107/runner_sigterm.exitcode",
+    "trainos/AUDIT/evidence_v107/runner_sigterm.stderr.log",
+    "trainos/AUDIT/evidence_v107/runner_sigterm.stdout.log",
+    "trainos/AUDIT/evidence_v107/scheduler-launch.log",
+    "trainos/AUDIT/evidence_v107/sigterm_supervisor.exitcode",
+    "trainos/AUDIT/evidence_v107/sigterm_supervisor.stderr.log",
+    "trainos/AUDIT/evidence_v107/sigterm_supervisor.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_1.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_1.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_1.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_2.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_2.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_2.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_3.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_3.json",
+    "trainos/AUDIT/evidence_v107/strict_full_3.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_3.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_4.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_4.json",
+    "trainos/AUDIT/evidence_v107/strict_full_4.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_4.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_5.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_5.json",
+    "trainos/AUDIT/evidence_v107/strict_full_5.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_5.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_full_6.exitcode",
+    "trainos/AUDIT/evidence_v107/strict_full_6.json",
+    "trainos/AUDIT/evidence_v107/strict_full_6.stderr.log",
+    "trainos/AUDIT/evidence_v107/strict_full_6.stdout.log",
+    "trainos/AUDIT/evidence_v107/strict_retries-launch.log",
+    "trainos/AUDIT/evidence_v107/timeout_supervisor.exitcode",
+    "trainos/AUDIT/evidence_v107/timeout_supervisor.stderr.log",
+    "trainos/AUDIT/evidence_v107/timeout_supervisor.stdout.log",
+    "trainos/AUDIT/evidence_v107/warning_negative_control.exitcode",
+    "trainos/AUDIT/evidence_v107/warning_negative_control.stderr.log",
+    "trainos/AUDIT/evidence_v107/warning_negative_control.stdout.log",
+    "trainos/docs/production_v107/CERTIFICATION_REQUIREMENTS.md",
+    "trainos/docs/production_v107/RUNBOOK.md",
+    "trainos/docs/production_v107/trainos-watchdog-v107.service",
+    "trainos/scripts/ci/build_v107_archive.py",
+    "trainos/scripts/ci/cgroup_watchdog_v107.py",
+    "trainos/scripts/ci/probe_doublefork_selfkill_v107.py",
+    "trainos/scripts/ci/probe_runner_signals_v107.py",
+    "trainos/scripts/ci/probe_socket_tamper_v107.py",
+    "trainos/scripts/ci/probe_uid_broker_concurrency_v107.py",
+    "trainos/scripts/ci/probe_watchdog_lock_v107.py",
+    "trainos/scripts/ci/process_boundary_probes_v107.py",
+    "trainos/scripts/ci/uid_broker_v107.py",
+    "trainos/scripts/ci/verify_v107.py",
+    "trainos/scripts/ci/warning_probe_v107.py",
+    "trainos/tests/domains/ci_release/test_production_watchdog_v107.py",
+    "trainos/tests/domains/ci_release/test_uid_broker_v107.py"
+  ],
+  "domains": 24,
+  "configured_test_files": 958,
+  "matrix": {
+    "strict_full": {
+      "attempts": 6,
+      "pass": 3,
+      "fail": 3
+    },
+    "combined": {
+      "attempts": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "focused": {
+      "attempts": 0,
+      "pass": 0,
+      "fail": 0
+    },
+    "kernel_default": {
+      "attempts": 1,
+      "pass": 1,
+      "fail": 0
+    },
+    "kernel_workers": {
+      "attempts": 1,
+      "pass": 1,
+      "fail": 0
+    },
+    "kernel_batch": {
+      "attempts": 2,
+      "pass": 1,
+      "fail": 1
+    }
+  },
+  "attempts": {
+    "strict_full": [
+      {
+        "case": "strict_full",
+        "iteration": 3,
+        "status": "FAIL",
+        "exitcode": 1,
+        "timed_out": false,
+        "duration_seconds": 225.294,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "strict_full_3.stdout.log",
+        "stderr": "strict_full_3.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ]
+      },
+      {
+        "case": "strict_full",
+        "iteration": 4,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 209.276,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "strict_full_4.stdout.log",
+        "stderr": "strict_full_4.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ]
+      },
+      {
+        "case": "strict_full",
+        "iteration": 5,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 101.188,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "strict_full_5.stdout.log",
+        "stderr": "strict_full_5.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ]
+      },
+      {
+        "case": "strict_full",
+        "iteration": 6,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 105.72,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "strict_full_6.stdout.log",
+        "stderr": "strict_full_6.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests"
+        ]
+      }
+    ],
+    "combined": [
+      {
+        "case": "combined",
+        "iteration": 1,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 165.029,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "combined_1.stdout.log",
+        "stderr": "combined_1.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ]
+      },
+      {
+        "case": "combined",
+        "iteration": 2,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 81.225,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "combined_2.stdout.log",
+        "stderr": "combined_2.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ]
+      },
+      {
+        "case": "combined",
+        "iteration": 3,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 80.896,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "combined_3.stdout.log",
+        "stderr": "combined_3.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "/mnt/data/trainos_v107_work/trainos/scripts/ci/run_with_subreaper.py",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-W",
+          "error::ResourceWarning",
+          "-W",
+          "error::DeprecationWarning",
+          "-W",
+          "error::pytest.PytestUnraisableExceptionWarning",
+          "tests/domains/recovery",
+          "tests/domains/ci_release",
+          "tests/domains/pytest_diagnostics"
+        ]
+      }
+    ],
+    "focused": [],
+    "kernel_default": [
+      {
+        "case": "kernel_default",
+        "iteration": 1,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 1857.909,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "kernel_default_1.stdout.log",
+        "stderr": "kernel_default_1.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "scripts.ci.process_supervisor_v105",
+          "--report",
+          "/mnt/data/trainos_v107_work/trainos/AUDIT/evidence_v107/kernel_default_1.supervisor.json",
+          "--timeout",
+          "4970.0",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "tests.kernel_runner"
+        ]
+      }
+    ],
+    "kernel_workers": [
+      {
+        "case": "kernel_workers",
+        "iteration": 1,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 824.382,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "kernel_workers_1.stdout.log",
+        "stderr": "kernel_workers_1.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "scripts.ci.process_supervisor_v105",
+          "--report",
+          "/mnt/data/trainos_v107_work/trainos/AUDIT/evidence_v107/kernel_workers_1.supervisor.json",
+          "--timeout",
+          "4970.0",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "tests.kernel_runner"
+        ]
+      }
+    ],
+    "kernel_batch": [
+      {
+        "case": "kernel_batch",
+        "iteration": 2,
+        "status": "PASS",
+        "exitcode": 0,
+        "timed_out": false,
+        "duration_seconds": 329.83,
+        "warnings": "error::ResourceWarning,error::DeprecationWarning",
+        "stdout": "kernel_batch_2.stdout.log",
+        "stderr": "kernel_batch_2.stderr.log",
+        "error": null,
+        "command": [
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "scripts.ci.process_supervisor_v105",
+          "--report",
+          "/mnt/data/trainos_v107_work/trainos/AUDIT/evidence_v107/kernel_batch_2.supervisor.json",
+          "--timeout",
+          "1470.0",
+          "--",
+          "/opt/pyvenv/bin/python",
+          "-m",
+          "tests.kernel_runner"
+        ]
+      }
+    ]
+  },
+  "harness_failures": [
+    {
+      "attempt": "strict_full_1",
+      "status": "HARNESS_FAILED",
+      "pytest_exitcode": "0",
+      "stdout": "strict_full_1.stdout.log",
+      "stderr": "strict_full_1.stderr.log",
+      "classification": "unverified: report-writing harness failed"
+    },
+    {
+      "attempt": "strict_full_2",
+      "status": "HARNESS_FAILED",
+      "pytest_exitcode": "0",
+      "stdout": "strict_full_2.stdout.log",
+      "stderr": "strict_full_2.stderr.log",
+      "classification": "unverified: report-writing harness failed"
+    },
+    {
+      "attempt": "kernel_batch_1",
+      "status": "HARNESS_FAILED",
+      "pytest_exitcode": "0",
+      "stdout": "kernel_batch_1.stdout.log",
+      "stderr": "kernel_batch_1.stderr.log",
+      "classification": "unverified: report-writing harness failed"
+    }
+  ],
+  "kernel_modes": {
+    "kernel_default": [
+      {
+        "iteration": 1,
+        "verified_complete": true,
+        "started_files": 958,
+        "started_batches": 0,
+        "started_domains": 24,
+        "terminal_marker": true,
+        "supervisor_cleanup": true,
+        "exitcode": 0,
+        "duration_seconds": 1857.909
+      }
+    ],
+    "kernel_workers": [
+      {
+        "iteration": 1,
+        "verified_complete": true,
+        "started_files": 958,
+        "started_batches": 0,
+        "started_domains": 24,
+        "terminal_marker": true,
+        "supervisor_cleanup": true,
+        "exitcode": 0,
+        "duration_seconds": 824.382
+      }
+    ],
+    "kernel_batch": [
+      {
+        "iteration": 2,
+        "verified_complete": true,
+        "started_files": 0,
+        "started_batches": 24,
+        "started_domains": 24,
+        "terminal_marker": true,
+        "supervisor_cleanup": true,
+        "exitcode": 0,
+        "duration_seconds": 329.83
+      }
+    ]
+  },
+  "host": {
+    "pid1": "supervisord",
+    "cgroup_mountinfo": "59 55 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate",
+    "writable_cgroup_delegation": false
+  },
+  "process_negative_controls": {
+    "PROCESS_BOUNDARY_PROBES_V107.json": {
+      "schema": "trainos.v107.process-boundary",
+      "results": {
+        "sigterm": {
+          "status": "CAPTURED",
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.process_supervisor_v105",
+            "--report",
+            "/mnt/data/trainos_v107_work/trainos/AUDIT/evidence_v107/SIGTERM_SUPERVISOR_V107.json",
+            "--timeout",
+            "15",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-c",
+            "import os,time,pathlib;pathlib.Path('/tmp/trainos-v107-probe-550k9pqo/ready.pid').write_text(str(os.getpid()));time.sleep(60)"
+          ],
+          "exitcode": 143,
+          "readiness_pid": 1864,
+          "emergency_kill": false,
+          "stdout": "sigterm_supervisor.stdout.log",
+          "stderr": "sigterm_supervisor.stderr.log",
+          "cleanup_complete": true,
+          "supervisor_signal": 15
+        },
+        "timeout": {
+          "status": "CAPTURED",
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.process_supervisor_v105",
+            "--report",
+            "/mnt/data/trainos_v107_work/trainos/AUDIT/evidence_v107/TIMEOUT_SUPERVISOR_V107.json",
+            "--timeout",
+            "0.35",
+            "--grace",
+            "0.15",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-c",
+            "import signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);time.sleep(60)"
+          ],
+          "exitcode": 124,
+          "readiness_pid": null,
+          "emergency_kill": false,
+          "stdout": "timeout_supervisor.stdout.log",
+          "stderr": "timeout_supervisor.stderr.log",
+          "cleanup_complete": true,
+          "timeout": true
+        },
+        "legacy_admission": {
+          "exitcode": 1,
+          "explicit_production_env": true,
+          "refused_before_tests": true,
+          "direct_dev_bypass_unrestricted": true
+        }
+      },
+      "status": "PASS"
+    },
+    "DOUBLEFORK_SUPERVISOR_SIGKILL_V107.json": {
+      "schema": "trainos.doublefork-supervisor-sigkill-negative.v106",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "events": [
+        "actual supervisor SIGKILL; OS cgroup containment absent"
+      ],
+      "independent_cleanup": true,
+      "cgroup_kill_tested": false,
+      "runner_pid": 2026,
+      "grandchild_pid": 2079,
+      "supervisor_exitcode": -9,
+      "running_after_supervisor_sigkill": [
+        2026,
+        2079
+      ],
+      "residual_after_independent_cleanup": []
+    },
+    "RUNNER_SIGNAL_PROBES_V107.json": {
+      "schema": "trainos.v107-runner-signal-probes",
+      "results": [
+        {
+          "case": "sigterm",
+          "runner_signal": 15,
+          "supervisor_exitcode": 143,
+          "runner_pid": 20659,
+          "detached_child_pid": 20691,
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "case": "sigkill",
+          "runner_signal": 9,
+          "supervisor_exitcode": 137,
+          "runner_pid": 20744,
+          "detached_child_pid": 20784,
+          "status": "PASS",
+          "error": null
+        }
+      ],
+      "status": "PASS",
+      "production_containment_proved": false
+    },
+    "WATCHDOG_LOCK_SIGKILL_V107.json": {
+      "schema": "trainos.v107.watchdog-process-lock",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "production_containment_proved": false,
+      "os_service_restart_proved": false,
+      "observations": {
+        "holder_sigkill_exitcode": -9,
+        "competing_exitcode": 125,
+        "competing_stdout": "LOCK_DENIED\n",
+        "competing_stderr": "",
+        "after_kill_exitcode": 0,
+        "after_kill_stdout": "LOCK_ACQUIRED\n",
+        "after_kill_stderr": ""
+      }
+    },
+    "CROSS_UID_BROKER_BURST_V107.json": {
+      "schema": "trainos.v107.real-crossuid-ipc-burst",
+      "production_admitted": false,
+      "cases": [
+        {
+          "request": 0,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "CONTAINMENT_NOT_CERTIFIED"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"CONTAINMENT_NOT_CERTIFIED\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 1,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 2,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 3,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 4,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 5,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 6,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 7,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 8,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 9,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 10,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 11,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 12,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 13,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 14,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 15,
+          "uid": 65534,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "REPLAY"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"REPLAY\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 16,
+          "uid": 65533,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "INVALID_PEER"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 17,
+          "uid": 65533,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "INVALID_PEER"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 18,
+          "uid": 65533,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "INVALID_PEER"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+          "stderr": ""
+        },
+        {
+          "request": 19,
+          "uid": 65533,
+          "exitcode": 125,
+          "response": {
+            "status": "DENIED",
+            "reason": "INVALID_PEER"
+          },
+          "stdout": "{\"status\": \"DENIED\", \"reason\": \"INVALID_PEER\"}\n",
+          "stderr": ""
+        }
+      ],
+      "status": "PASS_NEGATIVE_CONTROL",
+      "kernel_so_peercred": true,
+      "first_server_code": 0,
+      "restart_replay": {
+        "response": {
+          "status": "DENIED",
+          "reason": "REPLAY"
+        },
+        "exitcode": 125,
+        "server_exitcode": 0
+      }
+    },
+    "PRODUCTION_DENIAL_CROSS_UID_V107.json": {
+      "schema": "trainos.v107.production-denial",
+      "host_pid1": "supervisord",
+      "all_denied_no_exec": true,
+      "results": [
+        {
+          "uid": 0,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_watchdog_v107",
+            "--production",
+            "--delegated-root",
+            "/sys/fs/cgroup/trainos-authority",
+            "--state-dir",
+            "/run/trainos-v107",
+            "--service-uid",
+            "65534",
+            "--client-uid",
+            "65533",
+            "--report",
+            "AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_authority_v106",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-c",
+            "open('AUDIT/evidence_v107/PRODUCTION_MUST_NOT_EXECUTE_V107',\"w\").write(\"BAD\")"
+          ],
+          "exitcode": 125,
+          "stdout": "",
+          "stderr": "",
+          "marker_executed": false
+        },
+        {
+          "uid": 65534,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_watchdog_v107",
+            "--production",
+            "--delegated-root",
+            "/sys/fs/cgroup/trainos-authority",
+            "--state-dir",
+            "/run/trainos-v107",
+            "--service-uid",
+            "65534",
+            "--client-uid",
+            "65533",
+            "--report",
+            "AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_authority_v106",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-c",
+            "open('AUDIT/evidence_v107/PRODUCTION_MUST_NOT_EXECUTE_V107',\"w\").write(\"BAD\")"
+          ],
+          "exitcode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 194, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 190, in main\n    return run_watchdog(a.delegated_root,a.state_dir,a.service_uid,a.client_uid,a.timeout,a.report,cmd)\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 165, in run_watchdog\n    tmp.write_text(json.dumps(report,indent=2)+'\\n')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 557, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 539, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json.tmp'\n",
+          "marker_executed": false
+        },
+        {
+          "uid": 65533,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_watchdog_v107",
+            "--production",
+            "--delegated-root",
+            "/sys/fs/cgroup/trainos-authority",
+            "--state-dir",
+            "/run/trainos-v107",
+            "--service-uid",
+            "65534",
+            "--client-uid",
+            "65533",
+            "--report",
+            "AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-m",
+            "scripts.ci.cgroup_authority_v106",
+            "--",
+            "/opt/pyvenv/bin/python",
+            "-c",
+            "open('AUDIT/evidence_v107/PRODUCTION_MUST_NOT_EXECUTE_V107',\"w\").write(\"BAD\")"
+          ],
+          "exitcode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 194, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 190, in main\n    return run_watchdog(a.delegated_root,a.state_dir,a.service_uid,a.client_uid,a.timeout,a.report,cmd)\n  File \"/mnt/data/trainos_v107_work/trainos/scripts/ci/cgroup_watchdog_v107.py\", line 165, in run_watchdog\n    tmp.write_text(json.dumps(report,indent=2)+'\\n')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 557, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 539, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'AUDIT/evidence_v107/DENIED_WATCHDOG_REPORT_V107.json.tmp'\n",
+          "marker_executed": false
+        }
+      ]
+    },
+    "CGROUP_HOST_PROBE_V107.json": {
+      "schema": "trainos.v107.real-host-containment-probe",
+      "pid1": "supervisord",
+      "path": "/sys/fs/cgroup/trainos-authority",
+      "cgroup2_mount": true,
+      "parent_writable": false,
+      "production_admitted": false,
+      "errors": [
+        "delegated subtree missing",
+        "delegated subtree not writable"
+      ],
+      "mount_readonly": true,
+      "manager_verification": "DENIED: dedicated systemd watchdog service cgroup not verified",
+      "real_create": "OSError errno=30 (EROFS)",
+      "production_certified": false,
+      "kernel_capabilities": {
+        "CapEff": "00000000800405fb",
+        "CapBnd": "00000000800405fb"
+      },
+      "cap_sys_admin_effective": false
+    },
+    "WARNING_NEGATIVE_CONTROL_V107.json": {
+      "schema": "trainos.v107.warning-negative-control.v1",
+      "exitcode": 1,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-c",
+        "/mnt/data/trainos_v107_work/trainos/pytest.ini",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-W",
+        "error::pytest.PytestUnraisableExceptionWarning",
+        "/tmp/trainos-v107-warnings-2wlfi6wx/test_warning_policy.py"
+      ],
+      "resource_warn_raised_as_error": true,
+      "deprecation_warn_raised_as_error": true,
+      "two_expected_failures": true,
+      "test_status": "PASS",
+      "note": "Negative-control failure is expected; not a release regression failure."
+    },
+    "CROSS_UID_LEGACY_BYPASS_V107.json": {
+      "schema": "trainos.v107.crossuid-legacy-negative",
+      "cases": [
+        {
+          "uid": 65534,
+          "flags": {},
+          "exitcode": 0,
+          "stdout": "LEGACY_CONSTRUCTOR_AVAILABLE\n",
+          "stderr": ""
+        },
+        {
+          "uid": 65533,
+          "flags": {
+            "TRAINOS_KERNEL_PRODUCTION": "1"
+          },
+          "exitcode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from tests.kernel_runner.runner import KernelTestRunner; KernelTestRunner(); print(\"LEGACY_CONSTRUCTOR_AVAILABLE\")\n                                                             ~~~~~~~~~~~~~~~~^^\n  File \"/mnt/data/trainos_v107_work/trainos/tests/kernel_runner/runner.py\", line 30, in __init__\n    raise RuntimeError('TrainOS production Runner admission unavailable: independent OS cgroup authority required')\nRuntimeError: TrainOS production Runner admission unavailable: independent OS cgroup authority required\n"
+        }
+      ],
+      "os_enforced_legacy_fence_verified": false,
+      "status": "NEGATIVE_CONTROL"
+    },
+    "SOCKET_TAMPER_CROSS_UID_V107.json": {
+      "schema": "trainos.v107.socket-tamper",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "production_admitted": false,
+      "observations": {
+        "tamper_exitcode": 0,
+        "tamper": {
+          "unlink": "13",
+          "read": "13"
+        },
+        "request_exitcode": 125,
+        "request_response": {
+          "status": "DENIED",
+          "reason": "CONTAINMENT_NOT_CERTIFIED"
+        },
+        "server_exitcode": 0,
+        "server_stderr": ""
+      }
+    },
+    "API_COMPATIBILITY_V107.json": {
+      "schema": "trainos.v107.compatibility-audit",
+      "parent_entries": 5075,
+      "historical_source_changes": [],
+      "contracts": {
+        "trainos/tests/kernel_runner/runner.py": {
+          "parent_sha256": "743d5d9013414fcea0d252ffdac979911c3947a679ca88c3c94d5104e2c40bed",
+          "current_sha256": "743d5d9013414fcea0d252ffdac979911c3947a679ca88c3c94d5104e2c40bed",
+          "identical": true
+        },
+        "trainos/tests/kernel_runner/config.py": {
+          "parent_sha256": "63e0b49e61f451f80b9ce46334d17d7727b0c881df6bf39291fd66f885c865a5",
+          "current_sha256": "63e0b49e61f451f80b9ce46334d17d7727b0c881df6bf39291fd66f885c865a5",
+          "identical": true
+        },
+        "trainos/tests/kernel_runner/__main__.py": {
+          "parent_sha256": "bfe8b9aa725ad6d0224808ce6127262dec4c64ce5abadd823e5f6d9254f22c61",
+          "current_sha256": "bfe8b9aa725ad6d0224808ce6127262dec4c64ce5abadd823e5f6d9254f22c61",
+          "identical": true
+        },
+        "trainos/scripts/ci/cgroup_authority_v106.py": {
+          "parent_sha256": "e012f5eff349fd60792e49699952dee54a0004c43a9296de6917387693d8dc7e",
+          "current_sha256": "e012f5eff349fd60792e49699952dee54a0004c43a9296de6917387693d8dc7e",
+          "identical": true
+        },
+        "KernelTestRunner.run": {
+          "present": true,
+          "signature": "(self)"
+        },
+        "KernelTestRunner._run_test": {
+          "present": true,
+          "signature": "(self, test_file)"
+        },
+        "KernelTestRunner._run_batch": {
+          "present": true,
+          "signature": "(self, test_files)"
+        },
+        "KernelTestRunner._execute": {
+          "present": true,
+          "signature": "(self, argv)"
+        },
+        "KernelTestRunner._terminate_tree": {
+          "present": true,
+          "signature": "(self, process)"
+        }
+      },
+      "domain_names": [
+        "pytest_diagnostics",
+        "financial_ledger",
+        "recovery",
+        "backup_restore",
+        "security_governance",
+        "execution_scheduler",
+        "events_commands",
+        "registry_schema",
+        "ci_release",
+        "audit_integrity",
+        "runtime_kernel",
+        "education",
+        "healthcare",
+        "simulation",
+        "transactions",
+        "cognition_learning",
+        "society_governance",
+        "economy_resources",
+        "communication_persistence",
+        "orchestration_control",
+        "simulation_agents",
+        "knowledge_culture",
+        "population_services",
+        "diagnostic_investigation"
+      ],
+      "functional_domains": 24,
+      "configured_test_files": 958,
+      "status": "PASS"
+    }
+  },
+  "required_checks": {
+    "three_strict_full_pass": true,
+    "three_combined_pass": true,
+    "kernel_serial_completed": true,
+    "kernel_worker_completed": true,
+    "kernel_batch_completed": true
+  },
+  "all_requested_regressions_confirmed": true,
+  "production_cgroup_e2e": false,
+  "production_ipc_e2e": false,
+  "os_legacy_fencing_e2e": false,
+  "safety_blockers": [
+    "No independent writable delegated cgroup v2; kernel cgroup.kill and process migration defense unverified",
+    "PID1 is not systemd; watchdog restart after SIGKILL not verified",
+    "Authenticated SO_PEERCRED broker denies every execution: positive production IPC handoff is not implemented",
+    "Direct legacy KernelTestRunner remains callable; OS-level write service fencing not deployed",
+    "No real authority SIGKILL recovery in writable cgroup, no physical-system integration"
+  ]
+}

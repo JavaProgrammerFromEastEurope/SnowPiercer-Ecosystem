@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "passed": 70,
+  "failed": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 6.519,
+  "selection": [
+    "tests/ci",
+    "tests/ledger_contract"
+  ]
+}

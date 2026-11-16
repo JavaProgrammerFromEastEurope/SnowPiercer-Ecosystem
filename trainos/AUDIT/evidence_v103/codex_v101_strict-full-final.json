@@ -1,0 +1,30 @@
+{
+  "schema": "trainos.bounded-pytest.v2",
+  "command": [
+    "/workspace/work/trainos-venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "tests"
+  ],
+  "timeout_seconds": 240.0,
+  "duration_seconds": 24.117,
+  "status": "passed",
+  "timed_out": false,
+  "returncode": 0,
+  "stdout": "/workspace/work/verification/strict-full-final.stdout.log",
+  "stderr": "/workspace/work/verification/strict-full-final.stderr.log",
+  "group_cleanup": [
+    "group_absent"
+  ],
+  "group_absence_verified": true,
+  "leader_reaped": true,
+  "unexpected_residual_group": false,
+  "runner_error": null
+}

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/stage83/test_direct_store_trusted_reads.py",
+    "tests/stage84/test_trusted_read_snapshot.py",
+    "tests/stage85/test_atomic_integrity_snapshot.py"
+  ],
+  "elapsed_seconds": 2.599,
+  "end_stage": 85,
+  "exit_code": 0,
+  "result": "PASS",
+  "schema_version": 1,
+  "selected_files": [
+    "tests/stage83/test_direct_store_trusted_reads.py",
+    "tests/stage84/test_trusted_read_snapshot.py",
+    "tests/stage85/test_atomic_integrity_snapshot.py"
+  ],
+  "selection_policy": "all test_*.py files recursively under tests/stageN for inclusive stage range; sorted unique paths",
+  "start_stage": 83,
+  "test_files_selected": 3,
+  "timeout_seconds": 25
+}

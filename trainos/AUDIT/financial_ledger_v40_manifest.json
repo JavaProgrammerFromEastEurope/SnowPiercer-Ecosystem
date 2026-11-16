@@ -1,0 +1,47 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v40.zip",
+  "version": "v40",
+  "base_version": "v39",
+  "requested_stage_range": [
+    308,
+    317
+  ],
+  "stages_added": [
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317
+  ],
+  "stage_focus": {
+    "308": "A repeated claim with the same canonical command returns the existing record without creating a second claim.",
+    "309": "Reusing an idempotency key for a different command name is rejected without mutating the original record.",
+    "310": "An execution identity cannot be attached after a command has already been claimed.",
+    "311": "Required text identifiers are trimmed consistently at the storage boundary.",
+    "312": "Blank idempotency keys and command names are rejected before ledger mutation.",
+    "313": "Dispatch cannot be reserved for a command without a bound execution identity.",
+    "314": "Explicit not-executed reconciliation permits a new dispatch generation exactly after evidence is recorded.",
+    "315": "A bound command cannot be completed without the matching execution identity.",
+    "316": "A claimed command cannot be reconciled as completed without first entering UNKNOWN.",
+    "317": "Completed reconciliation writes a durable audit entry that survives reopening SQLite."
+  },
+  "verification": {
+    "new_stage_tests": "PASS: executed; see AUDIT/v40_new_pytest.txt",
+    "regression_tests_stages_170_317": "PASS: executed; see AUDIT/v40_regression_pytest.txt",
+    "python_ast_audit": "PASS: 2809 Python files scanned, 0 syntax errors",
+    "github_actions": "NOT_RUN",
+    "full_project_test_suite": "NOT_RUN",
+    "external_payment_integration": "NO_GO_NOT_VERIFIED"
+  },
+  "limitations": [
+    "Tests cover local SQLite ledger behavior only.",
+    "No external payment provider or physical command integration was executed.",
+    "Full project test suite and GitHub Actions were not run."
+  ],
+  "syntax_errors": []
+}

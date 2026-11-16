@@ -1,0 +1,19 @@
+{
+  "artifact": "TrainOS Financial Ledger Contract v10",
+  "date": "2026-10-24",
+  "stage": "rollback-aware external checkpoints",
+  "python_files_ast_checked": 2666,
+  "python_ast_errors": 0,
+  "compileall": "passed for kernel/economy/ledger_contract and tests/ledger_contract",
+  "tests": {
+    "tests/ledger_contract": "55 passed",
+    "tests/stage172..stage177": "15 passed",
+    "full_trainos_suite": "not run"
+  },
+  "new_api": [
+    "create_checkpoint(..., sequence, previous_manifest_sha256)",
+    "verify_checkpoint(..., minimum_sequence, expected_manifest_sha256)"
+  ],
+  "security_limit": "Anti-rollback only works when minimum sequence or expected manifest digest is supplied from separately protected monotonic state. Sequence chain is not automatically enforced.",
+  "status": "experimental isolated prototype; not approved for real-money transactions"
+}

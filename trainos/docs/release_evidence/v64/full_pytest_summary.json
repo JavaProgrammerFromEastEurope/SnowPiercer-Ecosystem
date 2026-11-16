@@ -1,0 +1,17 @@
+{
+  "result": "INCOMPLETE_TIMEOUT",
+  "tests_collected": 1376,
+  "attempts": [
+    {
+      "command": "timeout --signal=TERM --kill-after=2s 30s python -m pytest -vv",
+      "timeout_seconds": 30,
+      "exit_code": 124,
+      "last_observed_test": "tests/stage137/test_competing_retry_authorization_and_attempt_start.py::test_competing_authorizations_and_starters_consume_one_retry_once",
+      "observed": "The test was still active at the 30-second limit in the full-suite ordering; isolated test passed in 2.64 seconds, and stages 100\u2013137 grouped passed in 20.96 seconds. This points to an order/interaction-sensitive slowdown, not a proven assertion failure."
+    }
+  ],
+  "passed": null,
+  "failed": null,
+  "exit_code": null,
+  "note": "Full suite is not marked PASS. The stage-137 multiprocessing race is a diagnostic lead; investigate order-sensitive process/SQLite contention before claiming full-suite completion."
+}

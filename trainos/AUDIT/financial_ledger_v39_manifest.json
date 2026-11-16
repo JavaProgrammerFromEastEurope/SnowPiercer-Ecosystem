@@ -1,0 +1,53 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v39.zip",
+  "version": "v39",
+  "base_version": "v38",
+  "requested_stage_range": [
+    298,
+    307
+  ],
+  "stages_added": [
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307
+  ],
+  "stage_focus": {
+    "298": "A completion request with a mismatched execution identity is rejected without changing the record.",
+    "299": "An UNKNOWN record cannot be assigned a conflicting uncertainty reason.",
+    "300": "A completed command cannot transition back to UNKNOWN.",
+    "301": "Repeated reconciliation of an already completed command is idempotent.",
+    "302": "Not-executed reconciliation stores its evidence and dispatch generation durably.",
+    "303": "Dispatch reservation is refused while a command outcome is UNKNOWN.",
+    "304": "Dispatch reservation is refused after command completion.",
+    "305": "Invalid completion JSON is rejected before state mutation.",
+    "306": "A completion conflict leaves the original result and audit state unchanged.",
+    "307": "Concurrent dispatch reservation across independent stores has exactly one winner."
+  },
+  "verification": {
+    "new_stage_tests": "PASS: executed; see AUDIT/v39_new_pytest.txt",
+    "regression_tests_stages_170_307": "PASS: executed; see AUDIT/v39_regression_pytest.txt",
+    "python_ast_audit": "PASS: 2799 Python files scanned, 0 syntax errors",
+    "github_actions": "NOT_RUN",
+    "full_project_test_suite": "NOT_RUN",
+    "external_payment_integration": "NO_GO_NOT_VERIFIED"
+  },
+  "limitations": [
+    "Tests cover local SQLite ledger behavior only.",
+    "No external payment provider or physical command integration was executed.",
+    "Full project test suite and GitHub Actions were not run."
+  ],
+  "syntax_errors": [],
+  "archive_bytes": 1599120,
+  "archive_entries": 3236,
+  "sha256": "2bff97d71240a619482495af60a365d768b1d97e800b97633ab0fc380a304fa9",
+  "zip_integrity": "PASS",
+  "excluded_cache_audit": "PASS",
+  "cache_entries_found": []
+}

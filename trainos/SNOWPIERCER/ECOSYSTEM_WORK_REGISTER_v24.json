@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "project": "SnowPiercer",
+  "snapshot_date": "2026-10-28",
+  "measurement_policy": {
+    "stage_is_fixed_percentage": false,
+    "weighting_dimensions": [
+      "scope",
+      "engineering_complexity",
+      "criticality"
+    ],
+    "require_evidence": true,
+    "require_approved_baseline_before_percentage": true,
+    "unknown_progress_representation": null,
+    "illustrative_70_year_horizon_is_schedule": false
+  },
+  "ecosystem_completion_percent": null,
+  "ecosystem_completion_status": "NOT_CALCULATED_SCOPE_WEIGHTS_AND_EVIDENCE_NOT_APPROVED",
+  "modules": [
+    {
+      "id": "SP-SW",
+      "name": "TrainOS and software platform",
+      "status": "ACTIVE_IMPLEMENTATION_SUBSYSTEM_AUDIT_INCOMPLETE",
+      "completion_percent": null,
+      "evidence": [
+        "TrainOS Financial Ledger v44 archive",
+        "Stages 348-357: 10 tests passed",
+        "Regression stages 170-357: 217 passed",
+        "Python AST audit: 2849 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v45 archive",
+        "Stages 358-367: 10 new tests targeted at transaction-boundary contracts",
+        "Regression stages 170-367: pending verification in this release manifest",
+        "Stages 358-367: 10 passed in 0.23s",
+        "Regression stages 170-367: 227 passed in 11.92s",
+        "Python AST audit: 2859 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v46 archive",
+        "Stages 368-377: crash-recovery and ledger-durability contracts; test results recorded in v46 manifest",
+        "Stages 368-377: 10 passed in 0.22s",
+        "Regression stages 170-377: 237 passed in 12.26s",
+        "Python AST audit: 2869 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v47 archive",
+        "Stages 378-387: read-only ledger integrity diagnostics and corruption/audit consistency checks",
+        "Stages 378-387: 10 passed in 0.35s",
+        "Regression stages 170-387: 247 passed in 11.91s",
+        "Python AST audit: 2879 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion: passed",
+        "TrainOS Financial Ledger v49 archive",
+        "Stages 398–407: schema-version guard and SQLite backup/restore checks; 10 passed",
+        "Regression stages 170–407: 267 passed in 12.91s",
+        "Python AST audit: 2899 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v50 archive",
+        "Stages 408–417: schema validation, transactional migration rollback/retry, and UNKNOWN-state backup/restore contracts; 10 passed",
+        "Regression stages 170–417: 277 passed",
+        "Python AST audit: result recorded in v50 manifest",
+        "TrainOS Financial Ledger v51 archive",
+        "Stages 418–427: concurrent initialization, backup snapshot integrity, index validation, damaged backup refusal, concurrent idempotency claim and UNKNOWN recovery tests; 10 passed",
+        "Regression stages 170–427: 287 passed",
+        "Python AST audit, ZIP integrity, and cache exclusion: see v51 manifest",
+        "TrainOS Financial Ledger v52 archive",
+        "Stages 428–437: read-only backup validation, atomic no-overwrite publication, incompatible/incomplete/corrupt backup refusal, concurrent publication and recovery/audit tests; 11 passed",
+        "Regression stages 170–437: 298 passed in 11.57s",
+        "Python AST audit: 2929 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion: PASS",
+        "TrainOS Financial Ledger v53 archive",
+        "Stages 438–447: reconciliation audit cross-record validation, concurrent no-overwrite backup publication, failed-publication cleanup, restored audit persistence, and UNKNOWN non-retryability",
+        "Stages 438–447: 10 passed in 0.19s",
+        "Regression stages 170–447: 308 passed in 11.57s",
+        "Python AST audit: 2939 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v54 archive",
+        "Stages 448–457: audit timestamp/sequence validation, backup cleanup, repeated recovery and UNKNOWN preservation contracts; results recorded in v54 manifest",
+        "Stages 448–457: 10 passed",
+        "Regression stages 170–457: 318 passed",
+        "Python AST audit: pending final archive audit",
+        "TrainOS Financial Ledger v55 archive",
+        "Stages 458–467: 10 tests passed; ISO-8601 timezone-aware audit timestamp validation and backup/recovery checks",
+        "Regression stages 170–467: 328 passed in 12.70s",
+        "Python AST audit: 2959 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v56 archive",
+        "Stages 468–477: 10 tests passed; UTC-normalized audit ordering, duplicate-event detection, and backup/recovery checks",
+        "Regression stages 170–477: 338 passed in 14.26s",
+        "Python AST audit: 2969 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v57 archive",
+        "Stages 478-487: audit schema declared-type and NOT NULL checks, malformed SQLite value rejection, orphan-key and sequence validation, concurrent read-only backup validation, and read-only corruption rejection",
+        "Stages 478-487: 10 passed in 0.30s",
+        "Regression stages 170-487: 348 passed in 13.70s",
+        "Python AST audit: 2979 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion: see v57 manifest",
+        "TrainOS Financial Ledger v58 archive",
+        "Python AST audit: 2990 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed",
+        "Stages 488–497: contiguous global reconciliation sequence, monotonic per-key generations, stale not_executed evidence rejection, explicit read snapshot, and restore/reopen audit-history checks; 10 tests passed",
+        "Regression stages 170–497: 659 passed in 14.15s",
+        "TrainOS Financial Ledger v59 archive",
+        "Stages 498–507: conflicting decisions, duplicate audit identity, generation gaps, restore/reopen, concurrent validation, read-only corruption refusal, and end-to-end recovery checks; 10 passed in 0.35s",
+        "Regression stages 170–507: 368 passed in 12.62s (338 test files selected)",
+        "Python AST audit: 3000 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v60 archive",
+        "Stages 508–517: audit schema sequence identity and latest dispatch-generation coverage; missing or stale audit history is rejected",
+        "Stages 508–517: 10 passed in 0.60s",
+        "Regression stages 170–517: 378 passed in 14.23s (348 test files selected)",
+        "Python AST audit: 3010 files scanned, 0 syntax errors",
+        "TrainOS v61 stages 518–527: deterministic regression selection, audit edge cases, and inventory acceptance tests; final results in v61 manifest.",
+        "Regression selector policy: sorted unique test_*.py files recursively under inclusive tests/stageN range; machine-readable report records exact selected paths.",
+        "TrainOS v61: 10 targeted tests passed; unified stages 170–527 regression passed 388 tests across 358 test files; 70 supporting tests passed; 1,346 tests collected.",
+        "Python AST audit: 3,021 files scanned, 0 syntax errors; GitHub Actions workflow YAML parsed locally.",
+        "v62 full pytest: 1,356 passed, exit code 0",
+        "v62 deterministic regression: 398 passed across 368 test files",
+        "v62 AST audit: 3,031 files, 0 syntax errors"
+      ],
+      "blockers": [
+        "External payment provider sandbox not verified",
+        "Backup authenticity, off-host durability, and disaster-recovery RPO/RTO are not established",
+        "External payment provider sandbox not verified.",
+        "Backup authenticity, off-host durability, distributed exactly-once execution, and disaster-recovery RPO/RTO remain unproven.",
+        "Monolithic full-suite execution timed out/incomplete; per-stage isolation is used in CI, and hosted CI remains unverified.",
+        "External payment provider sandbox not verified.",
+        "Backup authenticity, off-host durability, distributed exactly-once execution, and disaster-recovery RPO/RTO remain unproven.",
+        "Monolithic full-suite execution timed out/incomplete; per-stage isolation is used in CI, and hosted CI remains unverified.",
+        "External payment provider sandbox not verified.",
+        "Backup authenticity, off-host durability, distributed exactly-once execution, and disaster-recovery RPO/RTO remain unproven."
+      ],
+      "latest_release": "TrainOS v61 — stages 518–527",
+      "latest_release_verification": {
+        "targeted_tests": "10 passed in 0.31s",
+        "regression_tests": "388 passed in 13.71s; 358 test files; stages 170–527",
+        "supporting_tests": "70 passed in 5.00s (tests/ci and tests/ledger_contract)",
+        "collection": "1,346 tests collected",
+        "python_ast_audit": "3,021 files scanned; 0 syntax errors",
+        "full_project_suite": "INCOMPLETE_TIMEOUT; monolithic run stalled in stage156 context; isolated stage156 passed",
+        "github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+        "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED"
+      }
+    },
+    {
+      "id": "SP-AI",
+      "name": "AI, autonomy, coordination and diagnostics",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "High-level direction discussed"
+      ],
+      "blockers": [
+        "Deliverable inventory and acceptance criteria not audited"
+      ]
+    },
+    {
+      "id": "SP-RAIL",
+      "name": "Trains, rolling stock, coupling and railway infrastructure",
+      "status": "ENGINEERING_EVIDENCE_AUDIT_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "System concept discussed"
+      ],
+      "blockers": [
+        "Requirements, design evidence, prototype and test inventory pending"
+      ]
+    },
+    {
+      "id": "SP-ENERGY",
+      "name": "Generation, storage, distribution and emergency power",
+      "status": "ARCHITECTURE_FEASIBILITY_BASELINE_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Energy autonomy identified as a target"
+      ],
+      "blockers": [
+        "Approved architecture and feasibility evidence pending"
+      ]
+    },
+    {
+      "id": "SP-LIFE",
+      "name": "Medical, food, restaurant, farm, aquarium and maintenance functions",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Functional areas discussed"
+      ],
+      "blockers": [
+        "Detailed designs and acceptance tests not inventoried"
+      ]
+    },
+    {
+      "id": "SP-LOG",
+      "name": "Freight, supplies, drones and logistics",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Functional direction discussed"
+      ],
+      "blockers": [
+        "Interfaces, capacity model and tests not inventoried"
+      ]
+    },
+    {
+      "id": "SP-SAFE",
+      "name": "Safety, emergency response, environmental protection and RCB protection",
+      "status": "SAFETY_BASELINE_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Safety identified as a project-wide requirement"
+      ],
+      "blockers": [
+        "Hazard analysis and certification evidence not inventoried"
+      ]
+    },
+    {
+      "id": "SP-ISLAND",
+      "name": "SnowPiercer Island and autonomous industrial infrastructure",
+      "status": "SCOPE_DECOMPOSITION_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Separate long-term direction discussed"
+      ],
+      "blockers": [
+        "Scope boundaries and deliverables need formal decomposition"
+      ]
+    },
+    {
+      "id": "SP-OPS",
+      "name": "Operations, maintenance, human factors, governance and lifecycle support",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Cross-cutting workstream identified"
+      ],
+      "blockers": [
+        "Lifecycle requirements and module ownership not yet decomposed"
+      ]
+    }
+  ],
+  "latest_stage": 567,
+  "payment_integration_status": "NO_GO_NOT_VERIFIED",
+  "limitations": [
+    "Targeted stages 518–527: 10 passed; unified regression stages 170–527: 388 passed across 358 files; supporting tests tests/ci and tests/ledger_contract: 70 passed.",
+    "GitHub Actions workflow was updated and YAML-parsed locally, but hosted workflow execution was not run.",
+    "External payment provider sandbox is not verified; real-money processing remains NO-GO.",
+    "Local SQLite tests do not prove backup authenticity, off-host durability, distributed exactly-once execution, or disaster-recovery RPO/RTO.",
+    "Physical subsystems require separate engineering evidence, hazard analysis, and independent acceptance.",
+    "Hosted GitHub Actions has not been executed in this release context.",
+    "Physical subsystem readiness and payment-provider sandbox remain unverified.",
+    "GitHub Actions hosted workflow has not been run; local workflow YAML parsing and supporting tests do not substitute for hosted CI evidence.",
+    "External payment-provider sandbox, backup authenticity, off-host durability, distributed exactly-once execution, and RPO/RTO remain unverified.",
+    "Physical subsystems require independent engineering and safety evidence before readiness can be claimed.",
+    "Full pytest suite did not finish; 1,376 tests were collected and full-suite status remains INCOMPLETE_TIMEOUT.",
+    "The stage137 multiprocessing race passed in isolation and when stages100-137 were grouped, but slowed in the full-suite order; root cause is not confirmed.",
+    "Hosted GitHub Actions has not been executed; local workflow YAML parsing is not hosted CI evidence.",
+    "External payment sandbox, off-host durability, backup authenticity, distributed exactly-once execution, RPO/RTO, and physical-system readiness remain unverified."
+  ],
+  "latest_release": "v65",
+  "release": "TrainOS v65",
+  "stage_range": {
+    "start": 558,
+    "end": 567,
+    "count": 10
+  },
+  "focus": "Full-suite pytest progress diagnostics, bounded log tails, atomic timeout evidence, and CI matrix coverage through stage 567; distinguish insufficient timeout budget from a proven stage-specific defect.",
+  "verification": {
+    "targeted_tests": {
+      "result": "PASS",
+      "passed": 11,
+      "failed": 0,
+      "selection": "tests/stage558 through tests/stage567",
+      "evidence": "docs/release_evidence/v65/targeted_558_567.json"
+    },
+    "regression_stages_170_567": {
+      "result": "PASS",
+      "passed": 429,
+      "failed": 0,
+      "test_files_selected": 398,
+      "pytest_elapsed_seconds": 20.15,
+      "runner_elapsed_seconds": 22.652,
+      "selection": "scripts/ci/run_regression.py: sorted unique test_*.py files under inclusive stage range",
+      "evidence": "docs/release_evidence/v65/regression_170_567.json"
+    },
+    "supporting_tests": {
+      "result": "PASS",
+      "passed": 70,
+      "failed": 0,
+      "selection": "tests/ci and tests/ledger_contract",
+      "evidence": "docs/release_evidence/v65/supporting_checks.log"
+    },
+    "collection": {
+      "result": "PASS",
+      "tests_collected": 1386,
+      "evidence": "docs/release_evidence/v65/collection_summary.json"
+    },
+    "python_ast_audit": {
+      "result": "PASS",
+      "files_scanned": 3063,
+      "syntax_errors": 0,
+      "evidence": "docs/release_evidence/v65/python_ast_audit.json"
+    },
+    "workflow_yaml_parse": "PASS",
+    "zip_integrity": "PENDING_ARCHIVE_BUILD",
+    "cache_exclusion": "PENDING_ARCHIVE_AUDIT",
+    "full_project_suite": {
+      "result": "INCOMPLETE_TIMEOUT",
+      "tests_collected": 1386,
+      "passed": null,
+      "failed": null,
+      "evidence": "docs/release_evidence/v65/full_pytest_summary.json"
+    },
+    "stage_matrix_558_567": {
+      "result": "PASS",
+      "stages_passed": 10,
+      "failed": 0,
+      "timeouts": 0,
+      "evidence": "docs/release_evidence/v65/stage_matrix_diagnostics_558_567.json"
+    },
+    "github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED",
+    "workflow_matrix_coverage": "PASS: stages 1-567 covered exactly once"
+  },
+  "safety_boundary": [
+    "Backup validation checks local SQLite integrity, schema version, required columns and indexes, ledger decoding, audit schema types/constraints, contiguous audit sequence, per-key generation monotonicity, stale evidence reuse, timestamps, and cross-record references; it does not prove authenticity or off-host durability.",
+    "The v58 tests exercise missing global sequence entries, histories that begin after sequence one, dispatch-generation regressions, stale not-executed evidence reuse, valid multi-generation histories, read-only refusal, concurrent validation, and restore/reopen preservation.",
+    "An explicit SQLite read transaction keeps validation queries on one read snapshot; local tests do not establish distributed exactly-once execution or disaster-recovery RPO/RTO.",
+    "Real-money payment processing remains NO-GO until the provider sandbox is independently verified.",
+    "Per-stage diagnostic reports improve triage but do not prove the full suite is green; TIMEOUT remains a non-pass result.",
+    "Full-suite diagnostic records progress and timeout status; last observed test is not proof of root cause or a suite pass."
+  ],
+  "current_release": {
+    "name": "TrainOS v65",
+    "stage_start": 558,
+    "stage_end": 567
+  },
+  "release_history": [
+    {
+      "release": "v50",
+      "stages": [
+        408,
+        417
+      ],
+      "evidence": [
+        "10 new tests passed",
+        "Regression stages 170–417: 277 passed",
+        "Python AST audit: see v50 manifest",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v51",
+      "stages": [
+        418,
+        427
+      ],
+      "evidence": [
+        "10 new tests passed",
+        "Regression stages 170–427: 287 passed",
+        "Python AST audit details recorded in v51 manifest",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v52",
+      "stages": [
+        428,
+        437
+      ],
+      "evidence": [
+        "11 new tests passed",
+        "Regression stages 170–437: 298 passed in 11.57s",
+        "Python AST audit: 2929 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v55",
+      "stages": [
+        458,
+        467
+      ],
+      "evidence": [
+        "10 new tests passed in 0.22s",
+        "Regression stages 170–467: 328 passed in 12.70s",
+        "Python AST audit: 2959 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v56",
+      "stages": [
+        468,
+        477
+      ],
+      "evidence": [
+        "10 new tests passed in 0.25s",
+        "Regression stages 170–477: 338 passed in 14.26s",
+        "Python AST audit: 2969 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v57",
+      "stages": [
+        478,
+        487
+      ],
+      "evidence": [
+        "10 new tests passed in 0.30s",
+        "Regression stages 170–487: 348 passed in 13.70s",
+        "Python AST audit: 2979 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment provider sandbox not verified; real-money payments remain NO-GO"
+      ]
+    },
+    {
+      "release": "v58",
+      "stages": [
+        488,
+        497
+      ],
+      "evidence": [
+        "10 new tests passed in 0.35s",
+        "Regression stages 170–497: 358 passed in 12.30s",
+        "Python AST audit: 2990 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment provider sandbox not verified; real-money payments remain NO-GO"
+      ]
+    },
+    {
+      "release": "v60",
+      "stages": [
+        508,
+        517
+      ],
+      "evidence": [
+        "10 new tests passed",
+        "Regression stages 170–517: 378 passed in 14.23s",
+        "Python AST audit: 3010 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v61",
+      "stage_range": {
+        "start": 518,
+        "end": 527,
+        "count": 10
+      },
+      "status": "LOCAL_CHECKS_PARTIAL_PASS_FULL_SUITE_INCOMPLETE",
+      "manifest": "TrainOS_Financial_Ledger_Contract_v61_manifest.json"
+    },
+    {
+      "release": "v62",
+      "stage_range": {
+        "start": 528,
+        "end": 537,
+        "count": 10
+      },
+      "status": "LOCAL_FULL_SUITE_PASS_HOSTED_CI_UNVERIFIED",
+      "manifest": "TrainOS_Financial_Ledger_Contract_v62_manifest.json",
+      "evidence": [
+        "10 targeted tests passed",
+        "398 regression tests passed across 368 test files for stages 170–537",
+        "70 supporting tests passed",
+        "Full project suite: 1,356 passed, exit code 0",
+        "Python AST audit: 3,031 files, 0 syntax errors",
+        "Archive hash and ZIP integrity to be finalized in v62 manifest"
+      ],
+      "limits": [
+        "GitHub Actions hosted run not observed",
+        "External payment sandbox not verified",
+        "Physical subsystem readiness not established"
+      ]
+    },
+    {
+      "release": "v63",
+      "stage_range": {
+        "start": 538,
+        "end": 547,
+        "count": 10
+      },
+      "status": "LOCAL_REGRESSION_PASS_FULL_SUITE_INCOMPLETE",
+      "manifest": "TrainOS_Financial_Ledger_Contract_v63_manifest.json",
+      "evidence": [
+        "10 targeted tests passed",
+        "408 regression tests passed across 378 files",
+        "Full suite incomplete after timeout"
+      ],
+      "limits": [
+        "Hosted CI not run",
+        "Payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v64",
+      "stage_range": {
+        "start": 548,
+        "end": 557,
+        "count": 10
+      },
+      "status": "LOCAL_REGRESSION_PASS_FULL_SUITE_INCOMPLETE",
+      "manifest": "TrainOS_Financial_Ledger_Contract_v64_manifest.json",
+      "evidence": [
+        "10 targeted tests passed",
+        "418 regression tests passed across 388 files",
+        "70 supporting tests passed",
+        "1,376 tests collected",
+        "Python AST audit: 3,052 files and 0 syntax errors",
+        "Stage-matrix diagnostics 548-557: all 10 PASS"
+      ],
+      "limits": [
+        "Full suite timeout near stage137 in full-suite order; root cause unresolved",
+        "Hosted GitHub Actions not run",
+        "Payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v65",
+      "stage_range": {
+        "start": 558,
+        "end": 567,
+        "count": 10
+      },
+      "status": "LOCAL_REGRESSION_PASS_FULL_SUITE_INCOMPLETE",
+      "manifest": "TrainOS_Financial_Ledger_Contract_v65_manifest.json",
+      "evidence": [
+        "11 targeted tests passed",
+        "429 regression tests passed across 398 files",
+        "70 supporting tests passed",
+        "1,386 tests collected",
+        "Python AST audit: 3,063 files and 0 syntax errors",
+        "Stage-matrix diagnostics 558-567: all 10 PASS"
+      ],
+      "limits": [
+        "Full project suite remains INCOMPLETE_TIMEOUT; local diagnostic reached stage121 at 20 seconds and longer preliminary run reached stage169 before environment termination",
+        "Hosted GitHub Actions not run",
+        "Payment sandbox not verified"
+      ]
+    }
+  ],
+  "release_manifest": "TrainOS_Financial_Ledger_Contract_v65_manifest.json",
+  "latest_release_stage_range": {
+    "start": 558,
+    "end": 567,
+    "count": 10
+  },
+  "register_version": 24,
+  "inventory_baseline": "SNOWPIERCER/ECOSYSTEM_DELIVERABLE_BASELINE_V5.json",
+  "regression_and_ci": {
+    "policy": "Deterministic inclusive stage selection; per-stage timeout evidence; full-suite verbose progress tracking; atomic diagnostic JSON; timeout remains incomplete and non-pass.",
+    "hosted_github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "full_project_suite": "INCOMPLETE_TIMEOUT",
+    "collection": "1386 tests collected",
+    "regression_stages_170_567": "PASS: 429 tests across 398 test files",
+    "targeted_stages_558_567": "PASS: 11 tests",
+    "supporting_checks": "PASS: 70 tests",
+    "slowdown_diagnostic": "Full-suite diagnostic timed out at 20 seconds while stage121 was last observed; longer preliminary attempt progressed to stage169 at about 26%. These are progress markers, not proof that stage137 is defective. The full suite remains incomplete."
+  },
+  "release_notes": [
+    "TrainOS v65 stages 558-567: add a full-suite pytest diagnostic runner that records last observed/completed test, outcome counts, bounded log tail, elapsed time, and atomic JSON evidence.",
+    "CI now includes stages 558-567 and runs the full-suite diagnostic with a 600-second timeout, retaining verbose logs and JSON artifacts.",
+    "Targeted stages 558-567: 11 passed. Regression stages 170-567: 429 passed across 398 test files. Supporting checks: 70 passed.",
+    "Pytest collection: 1,386 tests. Full-suite execution remains INCOMPLETE_TIMEOUT in this environment. The available evidence does not establish stage137 as the root cause; the 30-second budget used in the earlier run was insufficient to diagnose a suite of this size.",
+    "Hosted GitHub Actions and external payment sandbox remain unverified; real-money payment processing remains NO-GO."
+  ]
+}

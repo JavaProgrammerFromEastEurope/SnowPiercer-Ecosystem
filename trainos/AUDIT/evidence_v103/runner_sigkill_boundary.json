@@ -1,0 +1,15 @@
+{
+  "schema": "trainos.runner-sigkill-boundary.v103",
+  "supervisor_mode": "Linux PR_SET_CHILD_SUBREAPER",
+  "status": "LIMITATION_CONFIRMED",
+  "child_pid": 9305,
+  "child_pgid_before_sigkill": 9305,
+  "child_running_before_sigkill": true,
+  "runner_returncode_after_sigkill": -9,
+  "child_running_after_runner_sigkill": true,
+  "cleanup_sigkill_sent": true,
+  "runner_stdout": "",
+  "runner_stderr": "",
+  "child_reaped_by_probe_supervisor": true,
+  "child_running_after_cleanup": false
+}

@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "passed": 10,
+  "failed": 0,
+  "selection": "tests/stage568 through tests/stage577",
+  "evidence": "docs/release_evidence/v66/targeted_568_577.log"
+}

@@ -1,0 +1,19 @@
+usage: run_regression.py [-h] [--root ROOT] --start START --end END
+                         [--include INCLUDE] [--report REPORT]
+                         [--timeout-seconds TIMEOUT_SECONDS] [--dry-run]
+
+Run a deterministic regression selection across stage directories. The
+selector includes only test files under tests/stageN for the inclusive range,
+plus optional explicit test paths. It emits a machine-readable evidence
+report.
+
+options:
+  -h, --help            show this help message and exit
+  --root ROOT
+  --start START
+  --end END
+  --include INCLUDE     additional explicit pytest path (repeatable)
+  --report REPORT       write JSON evidence report
+  --timeout-seconds TIMEOUT_SECONDS
+                        hard timeout for pytest (default: 1800 seconds)
+  --dry-run             print selection without executing pytest

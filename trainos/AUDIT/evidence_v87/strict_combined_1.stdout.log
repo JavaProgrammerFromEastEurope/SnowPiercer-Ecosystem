@@ -1,0 +1,171 @@
+........................................................................ [ 18%]
+...................................F.................................... [ 37%]
+........................................................................ [ 55%]
+.......................F................................................ [ 74%]
+........................................................................ [ 93%]
+..........................                                               [100%]
+=================================== FAILURES ===================================
+_____ test_backup_change_after_publication_interrupt_blocks_reconciliation _____
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+  |     yield
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 158, in pytest_runtest_call
+  |     collect_unraisable(item.config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f4679bd0400>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f4679bd0400>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f4679bd22f0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f4679bd22f0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f4679bd1c60>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f4679bd1c60>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f4679bd2020>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f4679bd2020>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f4679bd24d0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f4679bd24d0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/lib/python3.13/threading.py", line 869, in __init__
+    |     def __init__(self, group=None, target=None, name=None,
+    |     
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f467a395b70>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7f467a395b70>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +------------------------------------
+_________________________ test_bounded_runner_success __________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0')
+
+    def test_bounded_runner_success(tmp_path):
+        test_file = tmp_path/'test_ok.py'
+        test_file.write_text('def test_ok(): assert True\n')
+        report = tmp_path/'success.json'
+        assert MODULE.run_bounded([str(test_file),'-q'],20,report)==0
+        assert json.loads(report.read_text())['status']=='passed'
+>       assert report.with_suffix('.pytest.log').exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.pytest.log').exists
+E        +      where PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.pytest.log') = with_suffix('.pytest.log')
+E        +        where with_suffix = PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.json').with_suffix
+
+tests/domains/ci_release/test_bounded_pytest_v81.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED tests/domains/recovery/test_recovery_fault_sequences.py::test_backup_change_after_publication_interrupt_blocks_reconciliation - ExceptionGroup: multiple unraisable exception warnings (6 sub-exceptions)
+FAILED tests/domains/ci_release/test_bounded_pytest_v81.py::test_bounded_runner_success - AssertionError: assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.pytest.log').exists
+ +      where PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.pytest.log') = with_suffix('.pytest.log')
+ +        where with_suffix = PosixPath('/tmp/pytest-of-root/pytest-41/test_bounded_runner_success0/success.json').with_suffix
+2 failed, 384 passed in 37.62s

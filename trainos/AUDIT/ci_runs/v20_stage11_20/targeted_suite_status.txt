@@ -1,0 +1,5 @@
+Command: PYTHONPATH=. python -m pytest -q tests/ci tests/ledger_contract tests/stage117 tests/stage118
+Status: INCOMPLETE
+Reason: enclosing command exceeded 480-second execution limit
+Last captured progress: 98%; pytest did not print a final summary
+Interpretation: NOT A PASS; root cause unresolved

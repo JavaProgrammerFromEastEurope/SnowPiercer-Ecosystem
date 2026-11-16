@@ -1,0 +1,98 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v27.zip",
+  "version": "v27",
+  "base_artifact": "TrainOS_Financial_Ledger_Contract_v26(1).zip",
+  "base_sha256": "a83425a349d1039a211ee18364b5a6aaa0f006e5fa499c0d0d7424be6bc2cc6e",
+  "stage_range": {
+    "start": 178,
+    "end": 187
+  },
+  "stage_test_files": 10,
+  "stage_matrix": [
+    {
+      "stage": 178,
+      "test_files": [
+        "tests/stage178/test_completed_reconciliation_generation_audit.py"
+      ]
+    },
+    {
+      "stage": 179,
+      "test_files": [
+        "tests/stage179/test_completed_reconciliation_restart.py"
+      ]
+    },
+    {
+      "stage": 180,
+      "test_files": [
+        "tests/stage180/test_execution_binding_reconciliation.py"
+      ]
+    },
+    {
+      "stage": 181,
+      "test_files": [
+        "tests/stage181/test_reconciliation_evidence_validation.py"
+      ]
+    },
+    {
+      "stage": 182,
+      "test_files": [
+        "tests/stage182/test_duplicate_completion_idempotency.py"
+      ]
+    },
+    {
+      "stage": 183,
+      "test_files": [
+        "tests/stage183/test_completed_command_dispatch_gate.py"
+      ]
+    },
+    {
+      "stage": 184,
+      "test_files": [
+        "tests/stage184/test_execution_id_unique_binding.py"
+      ]
+    },
+    {
+      "stage": 185,
+      "test_files": [
+        "tests/stage185/test_legacy_reconciliation_table_migration.py"
+      ]
+    },
+    {
+      "stage": 186,
+      "test_files": [
+        "tests/stage186/test_independent_command_recovery_isolation.py"
+      ]
+    },
+    {
+      "stage": 187,
+      "test_files": [
+        "tests/stage187/test_full_recovery_lifecycle_audit.py"
+      ]
+    }
+  ],
+  "changes": [
+    "completed reconciliation audit now records dispatch_generation",
+    "added .gitignore excluding __pycache__ and .history plus local caches/secrets/databases",
+    "added v27 release notes"
+  ],
+  "validation": {
+    "targeted_stages_178_187": {
+      "result": "PASS",
+      "cases": 12,
+      "command": "python -m pytest -q -p no:cacheprovider tests/stage178 ... tests/stage187"
+    },
+    "regression_stages_170_187": {
+      "result": "PASS",
+      "cases": 33,
+      "command": "python -m pytest -q -p no:cacheprovider tests/stage170 ... tests/stage187"
+    },
+    "python_ast_syntax_check": {
+      "result": "PASS",
+      "files_checked": 11
+    },
+    "full_repository_suite": "NOT_RUN",
+    "github_actions": "NOT_RUN",
+    "real_payment_integration": "NO_GO"
+  },
+  "safety_boundary": "Tests cover local SQLite state and audit behavior only; they do not authenticate evidence or certify external/physical execution."
+}

@@ -1,0 +1,11 @@
+......                                                                   [100%]
+============================= slowest 10 durations =============================
+0.04s setup    tests/stage76/test_persistent_command_event_store.py::test_events_survive_store_and_registry_restart
+0.02s call     tests/stage76/test_persistent_command_event_store.py::test_events_survive_store_and_registry_restart
+0.01s call     tests/stage76/test_persistent_command_event_store.py::test_persistent_registry_refuses_to_clear_append_only_history
+0.01s call     tests/stage76/test_persistent_command_event_store.py::test_conflicting_event_id_is_rejected
+0.01s call     tests/stage76/test_persistent_command_event_store.py::test_store_preserves_event_order_and_types
+0.01s call     tests/stage76/test_persistent_command_event_store.py::test_duplicate_identical_event_is_idempotent
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+6 passed in 0.27s

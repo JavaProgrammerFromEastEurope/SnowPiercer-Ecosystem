@@ -1,0 +1,82 @@
+{
+  "project": "TrainOS / SnowPiercer",
+  "release": "v63",
+  "snapshot_date": "2026-10-28",
+  "stage_range": {
+    "start": 538,
+    "end": 547,
+    "count": 10
+  },
+  "focus": "Regression evidence integrity, explicit include-path confinement to tests/test_*.py, atomic JSON report writing, CI matrix coverage through stage 547, and inventory baseline consistency.",
+  "verification": {
+    "targeted_stages_538_547": {
+      "result": "PASS",
+      "passed": 10,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v63/targeted_538_547.json"
+    },
+    "regression_stages_170_547": {
+      "result": "PASS",
+      "passed": 408,
+      "failed": 0,
+      "test_files_selected": 378,
+      "elapsed_seconds": 19.317,
+      "evidence": "docs/release_evidence/v63/regression_170_547.json"
+    },
+    "supporting_checks": {
+      "result": "PASS",
+      "passed": 70,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v63/supporting_checks.json"
+    },
+    "stage_matrix_538_547": {
+      "result": "PASS",
+      "stages_passed": 10,
+      "failed": 0,
+      "timeouts": 0,
+      "evidence": "docs/release_evidence/v63/stage_matrix_538_547_summary.json"
+    },
+    "pytest_collection": {
+      "result": "PASS",
+      "tests_collected": 1366,
+      "exit_code": 0,
+      "evidence": "docs/release_evidence/v63/collection_summary.json"
+    },
+    "full_project_suite": {
+      "result": "INCOMPLETE_TIMEOUT",
+      "tests_collected": 1366,
+      "passed": null,
+      "failed": null,
+      "evidence": "docs/release_evidence/v63/full_pytest_summary.json"
+    },
+    "python_ast_audit": {
+      "result": "PASS",
+      "files_scanned": 3041,
+      "syntax_errors": 0,
+      "evidence": "docs/release_evidence/v63/python_ast_audit.json"
+    },
+    "workflow_yaml_parse": "PASS",
+    "zip_integrity": "PENDING_FINAL_ARCHIVE_BUILD",
+    "cache_exclusion": "PENDING_FINAL_ARCHIVE_BUILD",
+    "github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED"
+  },
+  "changes": [
+    "Added stages 538–547 with tests and implementation/test documentation.",
+    "Explicit include paths to run_regression.py must resolve under tests/ and be named test_*.py; reports use atomic replacement.",
+    "Extended CI stage matrix through 547, added dedicated shard 538–547, and corrected executable permissions for stage runner and summary tool.",
+    "Updated Work Register v22 and Deliverable Baseline v3, preserving unknown overall completion until weighted scope and evidence are approved."
+  ],
+  "limitations": [
+    "Full project suite was interrupted by tool timeouts at 180 and 300 seconds; it is not marked PASS.",
+    "GitHub Actions hosted workflow has not been run.",
+    "External payment provider sandbox, off-host durability, backup authenticity, distributed exactly-once execution and RPO/RTO remain unverified.",
+    "Physical subsystem readiness requires independent engineering and safety evidence."
+  ],
+  "ecosystem_register": {
+    "markdown": "SnowPiercer_Ecosystem_Work_Register_v22.md",
+    "json": "SnowPiercer_Ecosystem_Work_Register_v22.json",
+    "deliverable_baseline": "SnowPiercer_Ecosystem_Deliverable_Baseline_v3.json",
+    "ecosystem_completion_percent": null
+  }
+}

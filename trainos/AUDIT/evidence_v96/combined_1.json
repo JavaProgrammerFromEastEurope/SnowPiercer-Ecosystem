@@ -1,0 +1,34 @@
+{
+  "schema": "trainos.bounded-pytest.v2",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "tests/domains/recovery",
+    "tests/domains/ci_release",
+    "tests/domains/pytest_diagnostics"
+  ],
+  "timeout_seconds": 22.0,
+  "duration_seconds": 22.57,
+  "status": "timeout",
+  "timed_out": true,
+  "returncode": -15,
+  "stdout": "AUDIT/evidence_v96/combined_1.stdout.log",
+  "stderr": "AUDIT/evidence_v96/combined_1.stderr.log",
+  "group_cleanup": [
+    "timeout",
+    "group_sigterm",
+    "group_sigterm",
+    "group_absent"
+  ],
+  "group_absence_verified": true,
+  "leader_reaped": true,
+  "runner_error": null
+}

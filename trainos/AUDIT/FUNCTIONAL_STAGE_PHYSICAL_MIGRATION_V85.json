@@ -1,0 +1,16 @@
+{
+  "release": "v85",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage428/test_stage428_backup_recovery.py": "tests/domains/recovery/test_stage428_backup_recovery.py",
+    "tests/stage429/test_stage429_backup_recovery.py": "tests/domains/recovery/test_stage429_backup_recovery.py",
+    "tests/stage430/test_stage430_backup_recovery.py": "tests/domains/recovery/test_stage430_backup_recovery.py",
+    "tests/stage431/test_stage431_backup_recovery.py": "tests/domains/recovery/test_stage431_backup_recovery.py",
+    "tests/stage432/test_stage432_backup_recovery.py": "tests/domains/recovery/test_stage432_backup_recovery.py",
+    "tests/stage433/test_stage433_backup_recovery.py": "tests/domains/recovery/test_stage433_backup_recovery.py",
+    "tests/stage434/test_stage434_backup_recovery.py": "tests/domains/recovery/test_stage434_backup_recovery.py",
+    "tests/stage435/test_stage435_backup_recovery.py": "tests/domains/recovery/test_stage435_backup_recovery.py",
+    "tests/stage436/test_stage436_backup_recovery.py": "tests/domains/recovery/test_stage436_backup_recovery.py",
+    "tests/stage437/test_stage437_backup_recovery.py": "tests/domains/recovery/test_stage437_backup_recovery.py"
+  }
+}

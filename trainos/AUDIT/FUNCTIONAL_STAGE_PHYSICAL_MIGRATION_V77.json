@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v77",
+  "source_release": "v76",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage98/test_recovery_fault_sequences.py": "tests/domains/recovery/test_recovery_fault_sequences.py",
+    "tests/stage99/test_recovery_cross_process_ownership.py": "tests/domains/recovery/test_recovery_cross_process_ownership.py",
+    "tests/stage100/test_recovery_fencing_tokens.py": "tests/domains/recovery/test_recovery_fencing_tokens.py",
+    "tests/stage101/test_recovery_owner_races.py": "tests/domains/recovery/test_recovery_owner_races.py",
+    "tests/stage102/test_strict_recovery_fencing.py": "tests/domains/recovery/test_strict_recovery_fencing.py",
+    "tests/stage104/test_recovery_owner_leases.py": "tests/domains/recovery/test_recovery_owner_leases.py",
+    "tests/stage105/test_recovery_lease_heartbeat.py": "tests/domains/recovery/test_recovery_lease_heartbeat.py",
+    "tests/stage106/test_recovery_ownership_races.py": "tests/domains/recovery/test_recovery_ownership_races.py",
+    "tests/stage107/test_recovery_process_crash_injection.py": "tests/domains/recovery/test_recovery_process_crash_injection.py",
+    "tests/stage110/test_recovery_sqlite_failure_boundaries.py": "tests/domains/recovery/test_recovery_sqlite_failure_boundaries.py"
+  },
+  "notes": "Cross-process spawn and SQLite recovery tests retained as importable top-level module names."
+}

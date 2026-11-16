@@ -1,0 +1,14 @@
+{
+  "release": "v68",
+  "status": "targeted_tests_passed_full_suite_not_run",
+  "functional_stages": 16,
+  "test_modules": 926,
+  "legacy_assignments": 924,
+  "new_tests": 10,
+  "targeted_tests_passed": 14,
+  "notes": [
+    "Legacy assignments pinned from v67 provisional filename classification, not manually validated",
+    "Existing numbered paths retained for compatibility",
+    "Full kernel suite and hosted CI not run"
+  ]
+}

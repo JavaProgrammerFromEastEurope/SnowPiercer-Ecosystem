@@ -1,0 +1,21 @@
+{
+  "schema": "trainos.v103.warning-enforcement.v1",
+  "expected_failed_test_count": 2,
+  "actual_exitcode": 1,
+  "both_warnings_fail_closed": true,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::ResourceWarning",
+    "-W",
+    "error::DeprecationWarning",
+    "-W",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "/tmp/tmpbfoa4k6m/test_warning_probe.py"
+  ],
+  "stdout": "warning_enforcement.stdout.log",
+  "stderr": "warning_enforcement.stderr.log"
+}

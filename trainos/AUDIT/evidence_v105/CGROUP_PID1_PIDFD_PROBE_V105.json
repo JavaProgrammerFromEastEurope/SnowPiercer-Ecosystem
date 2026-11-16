@@ -1,0 +1,11 @@
+{
+  "schema": "trainos.cgroup-boundaries.v105",
+  "pid1": "supervisord",
+  "cgroup_v2": true,
+  "cgroup_writable_by_current_uid": false,
+  "pidfd_open": true,
+  "sig_pidfd_send_signal": true,
+  "delegation_probe": "REFUSED",
+  "delegation_error_errno": 30,
+  "delegation_error": "[Errno 30] Read-only file system: '/sys/fs/cgroup/trainos-v105-admission-probe'"
+}

@@ -1,0 +1,82 @@
+{
+  "project": "TrainOS / SnowPiercer",
+  "release": "v66",
+  "snapshot_date": "2026-10-28",
+  "stage_range": {
+    "start": 568,
+    "end": 577,
+    "count": 10
+  },
+  "focus": "Pytest progress parsing for import-mode source annotations; collection count extraction; bounded log-tail configuration; truthful incomplete-run reporting; CI matrix coverage through stage 577.",
+  "changes": [
+    "Added stages 568-577 with deterministic tests and implementation/test documentation.",
+    "Updated pytest diagnostic parser to recognize source-path annotations inserted before test outcomes in importlib mode.",
+    "Added collection-count parsing for both common pytest summary orders and a configurable --tail-lines option.",
+    "Extended workflow matrix and unified regression evidence through stage 577.",
+    "Updated SnowPiercer Work Register v25 and Deliverable Baseline v6; overall completion remains uncalculated."
+  ],
+  "verification": {
+    "targeted_stages_568_577": {
+      "result": "PASS",
+      "passed": 10,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v66/targeted_568_577.json"
+    },
+    "regression_170_577": {
+      "result": "PASS",
+      "passed": 439,
+      "failed": 0,
+      "test_files_selected": 408,
+      "evidence": "docs/release_evidence/v66/regression_170_577.json"
+    },
+    "supporting_checks": {
+      "result": "PASS",
+      "passed": 70,
+      "failed": 0,
+      "evidence": "docs/release_evidence/v66/supporting_checks.json"
+    },
+    "collection": {
+      "result": "PASS",
+      "tests_collected": 1397,
+      "evidence": "docs/release_evidence/v66/collection_summary.json"
+    },
+    "python_ast_audit": {
+      "result": "PASS",
+      "files_scanned": 3073,
+      "syntax_errors": 0,
+      "evidence": "docs/release_evidence/v66/python_ast_audit.json"
+    },
+    "workflow_yaml_parse": "PASS",
+    "workflow_matrix_coverage": "PASS: stages 1-577 exactly once",
+    "stage_matrix_568_577": {
+      "result": "PASS",
+      "stages_passed": 10,
+      "failed": 0,
+      "timeouts": 0,
+      "evidence": "docs/release_evidence/v66/stage_matrix_diagnostics_568_577.json"
+    },
+    "full_project_suite": {
+      "result": "INCOMPLETE_TIMEOUT",
+      "tests_collected": 1397,
+      "partial_passed_observed": 359,
+      "failed_observed": 0,
+      "last_observed_stage": 178,
+      "final_exit_code": null,
+      "evidence": "docs/release_evidence/v66/full_pytest_summary.json"
+    },
+    "hosted_github_actions": "NOT_RUN_HOSTED_WORKFLOW_UNVERIFIED",
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED"
+  },
+  "limitations": [
+    "The outer execution environment interrupted the full-suite attempt after progress into stage178. The log yielded 359 completed PASS outcomes and zero observed failures, but no final pytest exit status; no full-suite pass is claimed.",
+    "Hosted GitHub Actions has not been run in this environment.",
+    "External payment sandbox, backup authenticity, off-host durability, distributed exactly-once execution, and RPO/RTO remain unverified.",
+    "Physical subsystem readiness requires independent engineering and safety evidence."
+  ],
+  "ecosystem_register": {
+    "json": "SNOWPIERCER/ECOSYSTEM_WORK_REGISTER_v25.json",
+    "markdown": "SNOWPIERCER/ECOSYSTEM_WORK_REGISTER_v25.md",
+    "deliverable_baseline": "SNOWPIERCER/ECOSYSTEM_DELIVERABLE_BASELINE_V6.json",
+    "ecosystem_completion_percent": null
+  }
+}

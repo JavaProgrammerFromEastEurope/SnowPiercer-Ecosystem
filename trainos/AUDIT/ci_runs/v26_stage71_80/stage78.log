@@ -1,0 +1,12 @@
+......                                                                   [100%]
+============================= slowest 10 durations =============================
+0.04s setup    tests/stage78/test_event_integrity_anchors.py::test_anchor_matches_clean_event_log_and_persists
+0.02s call     tests/stage78/test_event_integrity_anchors.py::test_anchor_matches_clean_event_log_and_persists
+0.02s call     tests/stage78/test_event_integrity_anchors.py::test_append_after_anchor_does_not_invalidate_previous_anchor
+0.02s call     tests/stage78/test_event_integrity_anchors.py::test_anchor_detects_deleted_anchored_tail
+0.02s call     tests/stage78/test_event_integrity_anchors.py::test_anchor_detects_tampering_before_anchored_head
+0.02s call     tests/stage78/test_event_integrity_anchors.py::test_empty_log_anchor_detects_new_events
+0.01s call     tests/stage78/test_event_integrity_anchors.py::test_missing_anchor_is_reported_and_invalid_store_rejected
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+6 passed in 0.26s

@@ -1,0 +1,24 @@
+{
+  "version": "v15",
+  "date": "2026-10-24",
+  "scope": "CI/test orchestration only; no runtime behavior changed",
+  "runner": {
+    "path": "scripts/ci/run_stage_matrix.sh",
+    "per_stage_timeout_seconds_default": 180,
+    "term_then_kill_after_seconds": 10,
+    "per_stage_log": true,
+    "tsv_summary": true,
+    "syntax_check": "PASS",
+    "smoke_test": {
+      "command": "scripts/ci/run_stage_matrix.sh 117 118 /tmp/trainos_v15_smoke 30",
+      "stage117": "PASS",
+      "stage117_tests_passed": 2,
+      "stage118": "PASS",
+      "stage118_tests_passed": 1,
+      "timeout_hit": false
+    }
+  },
+  "monolithic_suite": "UNRESOLVED_NOT_PASSING",
+  "github_actions_executed_here": false,
+  "real_payment_integration": "NO_GO"
+}

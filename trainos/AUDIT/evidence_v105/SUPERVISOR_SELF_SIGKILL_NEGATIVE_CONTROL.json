@@ -1,0 +1,12 @@
+{
+  "schema": "trainos.supervisor-selfkill-negative.v105",
+  "status": "PASS",
+  "events": [
+    "independent_subreaper_begins_cleanup"
+  ],
+  "supervisor_exitcode": -9,
+  "runner_survived_supervisor_kill": true,
+  "detached_child_survived_supervisor_kill": true,
+  "supervisor_selfkill_not_contained_without_external_authority": true,
+  "residual_after_independent_cleanup": []
+}

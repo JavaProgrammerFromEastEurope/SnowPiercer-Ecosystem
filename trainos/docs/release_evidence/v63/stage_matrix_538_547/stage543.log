@@ -1,0 +1,6 @@
+.                                                                        [100%]
+============================= slowest 10 durations =============================
+0.02s setup    tests/stage543/test_stage543_summary_rejects_duplicate_stage_rows.py::test_duplicate_stage_rows_are_rejected
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s

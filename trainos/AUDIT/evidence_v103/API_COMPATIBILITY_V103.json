@@ -1,0 +1,163 @@
+{
+  "schema": "trainos.v103.api-compatibility.v1",
+  "old_methods": {
+    "__init__": {
+      "positional": [
+        "self"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "run": {
+      "positional": [
+        "self"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_expand": {
+      "positional": [
+        "self",
+        "target"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_run_batch": {
+      "positional": [
+        "self",
+        "test_files"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_run_test": {
+      "positional": [
+        "self",
+        "test_file"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_execute": {
+      "positional": [
+        "self",
+        "argv"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_terminate_tree": {
+      "positional": [
+        "self",
+        "process"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    }
+  },
+  "new_methods": {
+    "__init__": {
+      "positional": [
+        "self"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "run": {
+      "positional": [
+        "self"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_expand": {
+      "positional": [
+        "self",
+        "target"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_run_batch": {
+      "positional": [
+        "self",
+        "test_files"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_run_test": {
+      "positional": [
+        "self",
+        "test_file"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_group_alive": {
+      "positional": [
+        "pgid"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_signal_group": {
+      "positional": [
+        "pgid",
+        "signum"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_execute": {
+      "positional": [
+        "self",
+        "argv"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "_terminate_tree": {
+      "positional": [
+        "self",
+        "process"
+      ],
+      "kwonly": [],
+      "vararg": null,
+      "kwarg": null
+    }
+  },
+  "preserved_method_signatures": {
+    "__init__": true,
+    "run": true,
+    "_expand": true,
+    "_run_batch": true,
+    "_run_test": true,
+    "_execute": true,
+    "_terminate_tree": true
+  },
+  "all_signatures_preserved": true,
+  "pinned_files_identical_to_v102": {
+    "tests/kernel_runner/config.py": true,
+    "tests/kernel_runner/legacy_domain_assignments.json": true,
+    "tests/kernel_runner/__main__.py": true
+  },
+  "all_pinned_files_identical": true,
+  "note": "AST signature equivalence is not proof of full runtime behavioral equivalence; strict pytest provides separate coverage."
+}

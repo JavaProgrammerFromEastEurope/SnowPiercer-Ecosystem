@@ -1,0 +1,10 @@
+{
+  "schema": "trainos.v106-runner-launcher-control",
+  "status": "ACTIVE_SERIAL_RETAINED",
+  "mode_launcher_pid": 123128,
+  "mode_launcher_action": "sent SIGTERM only to shell wrapper after launching serial; avoided redundant later worker/batch case 1",
+  "serial_verify_pid": 123131,
+  "serial_process_continued": true,
+  "prior_independent_worker_and_batch_cases": "kernel_workers_2 and kernel_batch_2",
+  "note": "No kernel process or supervisor was killed. Serial completion must be established independently from its own exitcode and supervisor report."
+}

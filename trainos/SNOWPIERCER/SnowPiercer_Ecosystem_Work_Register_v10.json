@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "project": "SnowPiercer",
+  "snapshot_date": "2026-10-27",
+  "measurement_policy": {
+    "stage_is_fixed_percentage": false,
+    "weighting_dimensions": [
+      "scope",
+      "engineering_complexity",
+      "criticality"
+    ],
+    "require_evidence": true,
+    "require_approved_baseline_before_percentage": true,
+    "unknown_progress_representation": null,
+    "illustrative_70_year_horizon_is_schedule": false
+  },
+  "ecosystem_completion_percent": null,
+  "ecosystem_completion_status": "NOT_CALCULABLE_BASELINE_INCOMPLETE",
+  "modules": [
+    {
+      "id": "SP-SW",
+      "name": "TrainOS and software platform",
+      "status": "ACTIVE_IMPLEMENTATION_SUBSYSTEM_AUDIT_INCOMPLETE",
+      "completion_percent": null,
+      "evidence": [
+        "TrainOS Financial Ledger v44 archive",
+        "Stages 348-357: 10 tests passed",
+        "Regression stages 170-357: 217 passed",
+        "Python AST audit: 2849 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v45 archive",
+        "Stages 358-367: 10 new tests targeted at transaction-boundary contracts",
+        "Regression stages 170-367: pending verification in this release manifest",
+        "Stages 358-367: 10 passed in 0.23s",
+        "Regression stages 170-367: 227 passed in 11.92s",
+        "Python AST audit: 2859 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v46 archive",
+        "Stages 368-377: crash-recovery and ledger-durability contracts; test results recorded in v46 manifest",
+        "Stages 368-377: 10 passed in 0.22s",
+        "Regression stages 170-377: 237 passed in 12.26s",
+        "Python AST audit: 2869 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v47 archive",
+        "Stages 378-387: read-only ledger integrity diagnostics and corruption/audit consistency checks",
+        "Stages 378-387: 10 passed in 0.35s",
+        "Regression stages 170-387: 247 passed in 11.91s",
+        "Python AST audit: 2879 files scanned, 0 syntax errors",
+        "ZIP integrity and cache exclusion: passed",
+        "TrainOS Financial Ledger v49 archive",
+        "Stages 398–407: schema-version guard and SQLite backup/restore checks; 10 passed",
+        "Regression stages 170–407: 267 passed in 12.91s",
+        "Python AST audit: 2899 files scanned, 0 syntax errors",
+        "TrainOS Financial Ledger v50 archive",
+        "Stages 408–417: schema validation, transactional migration rollback/retry, and UNKNOWN-state backup/restore contracts; 10 passed",
+        "Regression stages 170–417: 277 passed",
+        "Python AST audit: result recorded in v50 manifest",
+        "TrainOS Financial Ledger v51 archive",
+        "Stages 418–427: concurrent initialization, backup snapshot integrity, index validation, damaged backup refusal, concurrent idempotency claim and UNKNOWN recovery tests; 10 passed",
+        "Regression stages 170–427: 287 passed",
+        "Python AST audit, ZIP integrity, and cache exclusion: see v51 manifest"
+      ],
+      "blockers": [
+        "Full project suite not verified",
+        "GitHub Actions not run",
+        "External payment provider sandbox not verified"
+      ]
+    },
+    {
+      "id": "SP-AI",
+      "name": "AI, autonomy, coordination and diagnostics",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "High-level direction discussed"
+      ],
+      "blockers": [
+        "Deliverable inventory and acceptance criteria not audited"
+      ]
+    },
+    {
+      "id": "SP-RAIL",
+      "name": "Trains, rolling stock, coupling and railway infrastructure",
+      "status": "ENGINEERING_EVIDENCE_AUDIT_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "System concept discussed"
+      ],
+      "blockers": [
+        "Requirements, design evidence, prototype and test inventory pending"
+      ]
+    },
+    {
+      "id": "SP-ENERGY",
+      "name": "Generation, storage, distribution and emergency power",
+      "status": "ARCHITECTURE_FEASIBILITY_BASELINE_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Energy autonomy identified as a target"
+      ],
+      "blockers": [
+        "Approved architecture and feasibility evidence pending"
+      ]
+    },
+    {
+      "id": "SP-LIFE",
+      "name": "Medical, food, restaurant, farm, aquarium and maintenance functions",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Functional areas discussed"
+      ],
+      "blockers": [
+        "Detailed designs and acceptance tests not inventoried"
+      ]
+    },
+    {
+      "id": "SP-LOG",
+      "name": "Freight, supplies, drones and logistics",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Functional direction discussed"
+      ],
+      "blockers": [
+        "Interfaces, capacity model and tests not inventoried"
+      ]
+    },
+    {
+      "id": "SP-SAFE",
+      "name": "Safety, emergency response, environmental protection and RCB protection",
+      "status": "SAFETY_BASELINE_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Safety identified as a project-wide requirement"
+      ],
+      "blockers": [
+        "Hazard analysis and certification evidence not inventoried"
+      ]
+    },
+    {
+      "id": "SP-ISLAND",
+      "name": "SnowPiercer Island and autonomous industrial infrastructure",
+      "status": "SCOPE_DECOMPOSITION_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Separate long-term direction discussed"
+      ],
+      "blockers": [
+        "Scope boundaries and deliverables need formal decomposition"
+      ]
+    },
+    {
+      "id": "SP-OPS",
+      "name": "Operations, maintenance, human factors, governance and lifecycle support",
+      "status": "INVENTORY_PENDING",
+      "completion_percent": null,
+      "evidence": [
+        "Cross-cutting workstream identified"
+      ],
+      "blockers": [
+        "Lifecycle requirements and module ownership not yet decomposed"
+      ]
+    }
+  ],
+  "latest_stage": {
+    "project": "TrainOS",
+    "release": "v51",
+    "stages": [
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427
+    ]
+  },
+  "payment_integration_status": "NO_GO_NOT_VERIFIED",
+  "limitations": [
+    "Full project test suite not run; regression stages 170–427 and targeted stages 418–427 verified.",
+    "GitHub Actions not run.",
+    "External payment provider and sandbox not tested; real-money processing remains NO-GO.",
+    "Integrity diagnostics report findings and do not automatically repair records.",
+    "SQLite backup snapshots do not establish disaster-recovery RPO/RTO or arbitrary corruption recovery.",
+    "Local SQLite tests do not establish distributed exactly-once execution."
+  ],
+  "latest_release": "TrainOS v51",
+  "release": "v51",
+  "stage_range": {
+    "start": 418,
+    "end": 427,
+    "count": 10
+  },
+  "focus": "Concurrent SQLite initialization, consistent integrity-checked backup snapshots, index definition validation, damaged backup rejection, concurrent idempotency claims, and UNKNOWN-state restore safety.",
+  "verification": {
+    "targeted_stages_418_427": {
+      "result": "PASS",
+      "passed": 10,
+      "failed": 0
+    },
+    "regression_stages_170_427": {
+      "result": "PASS",
+      "passed": 287,
+      "failed": 0,
+      "stage_directories": 258
+    },
+    "python_ast_audit": {
+      "files_scanned": 2919,
+      "syntax_errors": 0,
+      "result": "PASS",
+      "errors": []
+    },
+    "zip_integrity": "PASS",
+    "cache_exclusion": "PASS",
+    "full_project_suite": "NOT_RUN",
+    "github_actions": "NOT_RUN",
+    "external_payment_provider_sandbox": "NO_GO_NOT_VERIFIED"
+  },
+  "safety_boundary": [
+    "Backup API verifies SQLite structural integrity before reporting success; restore drills remain required for operational disaster recovery.",
+    "Index diagnostics detect the tested missing/incorrect index definitions but do not repair them.",
+    "Local SQLite tests do not establish distributed exactly-once execution.",
+    "Real-money payment processing remains prohibited until provider and sandbox integration are independently verified."
+  ],
+  "current_release": {
+    "name": "TrainOS v51",
+    "stage_start": 418,
+    "stage_end": 427,
+    "focus": "Concurrent SQLite initialization, consistent integrity-checked backup snapshots, index definition validation, damaged backup rejection, concurrent idempotency claims, and UNKNOWN-state restore safety.",
+    "payment_integration": "NO_GO_NOT_VERIFIED",
+    "full_project_suite": "NOT_RUN",
+    "github_actions": "NOT_RUN"
+  },
+  "release_history": [
+    {
+      "release": "v50",
+      "stages": [
+        408,
+        417
+      ],
+      "evidence": [
+        "10 new tests passed",
+        "Regression stages 170–417: 277 passed",
+        "Python AST audit: see v50 manifest",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    },
+    {
+      "release": "v51",
+      "stages": [
+        418,
+        427
+      ],
+      "evidence": [
+        "10 new tests passed",
+        "Regression stages 170–427: 287 passed",
+        "Python AST audit details recorded in v51 manifest",
+        "ZIP integrity and cache exclusion passed"
+      ],
+      "limits": [
+        "Full project suite not run",
+        "GitHub Actions not run",
+        "External payment sandbox not verified"
+      ]
+    }
+  ]
+}

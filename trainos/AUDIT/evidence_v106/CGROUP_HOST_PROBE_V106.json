@@ -1,0 +1,13 @@
+{
+  "schema": "trainos.cgroup-v2-probe.v106",
+  "pid1": "supervisord",
+  "path": "/sys/fs/cgroup/trainos-authority",
+  "cgroup2_mount": true,
+  "parent_writable": false,
+  "production_admitted": false,
+  "errors": [
+    "delegated subtree missing",
+    "delegated subtree not writable"
+  ],
+  "mount_readonly": true
+}

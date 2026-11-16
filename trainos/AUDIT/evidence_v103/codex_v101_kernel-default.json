@@ -1,0 +1,12 @@
+{
+  "schema": "trainos.workspace.kernel-verification.v1",
+  "mode": "default-per-file",
+  "TRAINOS_KERNEL_BATCH": "unset",
+  "timeout_seconds": 600,
+  "duration_seconds": 251.438,
+  "returncode": 0,
+  "status": "passed",
+  "stdout": "kernel-default.stdout.log",
+  "stderr": "kernel-default.stderr.log",
+  "supervision": "Linux PR_SET_CHILD_SUBREAPER; no production or test code changes"
+}

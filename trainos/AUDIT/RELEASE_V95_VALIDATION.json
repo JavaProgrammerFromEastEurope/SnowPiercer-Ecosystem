@@ -1,0 +1,32 @@
+{
+  "release": "v95",
+  "base": "v94",
+  "status": "BLOCKED/NO-GO",
+  "confirmed": [
+    "minimizer contract 2 passed"
+  ],
+  "unconfirmed": [
+    "minimal order-dependent SQLite reproduction",
+    "3 strict combined regressions",
+    "full strict suite",
+    "Kernel Runner",
+    "regression selector",
+    "no orphan processes"
+  ],
+  "notes": "External timeouts interrupted regression orchestration. Do not infer PASS from partial progress. No production SQLite fix asserted.",
+  "evidence_files": [
+    "combined_1.exitcode",
+    "combined_1.stderr.log",
+    "combined_1.stdout.log",
+    "combined_2.exitcode",
+    "combined_2.stderr.log",
+    "combined_2.stdout.log",
+    "combined_3.exitcode",
+    "combined_3.stderr.log",
+    "combined_3.stdout.log",
+    "full_suite.exitcode",
+    "minimizer_contract.exitcode",
+    "minimizer_contract.stderr.log",
+    "minimizer_contract.stdout.log"
+  ]
+}

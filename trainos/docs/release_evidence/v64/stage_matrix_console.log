@@ -1,0 +1,72 @@
+
+=== stage548 (timeout 30s) ===
+stage548: PASS (exit=0, 2s)
+0.02s setup    tests/stage548/test_stage548_diagnose_stage_matrix.py::test_valid_matrix_counts_statuses
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage549 (timeout 30s) ===
+stage549: PASS (exit=0, 2s)
+0.02s setup    tests/stage549/test_stage549_diagnose_stage_matrix.py::test_slowest_stages_are_ranked_deterministically
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage550 (timeout 30s) ===
+stage550: PASS (exit=0, 2s)
+0.02s setup    tests/stage550/test_stage550_diagnose_stage_matrix.py::test_missing_expected_stages_are_reported
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage551 (timeout 30s) ===
+stage551: PASS (exit=0, 3s)
+0.02s setup    tests/stage551/test_stage551_diagnose_stage_matrix.py::test_require_complete_returns_nonzero_for_nonpass
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.82s
+
+=== stage552 (timeout 30s) ===
+stage552: PASS (exit=0, 2s)
+0.02s setup    tests/stage552/test_stage552_diagnose_stage_matrix.py::test_rejects_pass_with_nonzero_exit_code
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.10s
+
+=== stage553 (timeout 30s) ===
+stage553: PASS (exit=0, 2s)
+0.02s setup    tests/stage553/test_stage553_diagnose_stage_matrix.py::test_rejects_log_path_traversal
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.10s
+
+=== stage554 (timeout 30s) ===
+stage554: PASS (exit=0, 2s)
+0.03s setup    tests/stage554/test_stage554_diagnose_stage_matrix.py::test_check_logs_requires_referenced_file
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.11s
+
+=== stage555 (timeout 30s) ===
+stage555: PASS (exit=0, 3s)
+0.02s setup    tests/stage555/test_stage555_diagnose_stage_matrix.py::test_json_output_is_valid_and_has_no_temp_residue
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.88s
+
+=== stage556 (timeout 30s) ===
+stage556: PASS (exit=0, 2s)
+0.02s setup    tests/stage556/test_stage556_diagnose_stage_matrix.py::test_expected_range_requires_both_bounds
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+=== stage557 (timeout 30s) ===
+stage557: PASS (exit=0, 2s)
+0.02s setup    tests/stage557/test_stage557_diagnose_stage_matrix.py::test_diagnostic_buckets_and_rows_are_sorted
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+1 passed in 0.09s
+
+Stage summary: docs/release_evidence/v64/stage_matrix_548_557/summary.tsv (10 stage directories)

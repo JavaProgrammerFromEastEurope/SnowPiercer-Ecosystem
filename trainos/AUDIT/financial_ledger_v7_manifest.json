@@ -1,0 +1,27 @@
+{
+  "artifact": "TrainOS Financial Ledger Contract v7",
+  "created_date": "2026-10-24",
+  "source_baseline": "TrainOS_Financial_Ledger_Contract_v6.zip",
+  "changes": [
+    "Use multiprocessing spawn context for cross-process idempotency/reversal tests",
+    "Atomic no-clobber restore publication when overwrite=False",
+    "Tests for schema-version rejection, explicit overwrite, restored policies and reversal links"
+  ],
+  "tests": {
+    "tests/ledger_contract": "44 passed",
+    "tests/stage172..stage177": "15 passed",
+    "targeted_total": 59,
+    "full_suite": "not run"
+  },
+  "compileall": "passed for kernel/economy/ledger_contract and tests/ledger_contract",
+  "python_ast": {
+    "files": 2664,
+    "errors": 0
+  },
+  "limitations": [
+    "prototype only; not production payment ready",
+    "no full TrainOS suite",
+    "no offsite/encrypted backup policy or signed external integrity anchor",
+    "restore with writers stopped"
+  ]
+}

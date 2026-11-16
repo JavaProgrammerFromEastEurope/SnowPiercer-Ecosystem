@@ -1,0 +1,13 @@
+...........                                                              [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage44/test_execution_audit_store.py::test_audit_store_persists_append_only_history_across_reopen
+0.02s call     tests/stage44/test_execution_recovery.py::test_recovery_marks_running_execution_without_retrying
+0.02s call     tests/stage44/test_execution_recovery.py::test_recovery_keeps_other_running_executions_independent
+0.02s call     tests/stage44/test_execution_recovery.py::test_recovery_required_is_terminal_for_ordinary_transitions
+0.02s call     tests/stage44/test_execution_recovery.py::test_recovery_does_not_touch_terminal_executions
+0.02s call     tests/stage44/test_execution_audit_store.py::test_audit_store_persists_append_only_history_across_reopen
+0.01s call     tests/stage44/test_execution_audit_store.py::test_dispatcher_writes_all_lifecycle_states_to_audit_store
+0.01s call     tests/stage44/test_execution_recovery.py::test_recovery_is_idempotent
+0.01s call     tests/stage44/test_execution_audit_store.py::test_dispatcher_persists_failure_transition
+0.01s call     tests/stage44/test_execution_audit_store.py::test_duplicate_same_state_is_idempotent_but_conflict_is_rejected
+11 passed in 0.34s

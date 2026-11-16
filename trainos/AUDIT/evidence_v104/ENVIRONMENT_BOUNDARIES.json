@@ -1,0 +1,13 @@
+{
+  "schema": "trainos.v104.environment-boundaries.v1",
+  "platform": "Linux",
+  "pid1_observed": "supervisord",
+  "cgroup_version": 2,
+  "cgroup_v2_mount_mode": "read-only",
+  "cgroup_kill_tested": false,
+  "delegated_cgroup_available": false,
+  "process_supervisor_subreaper_supported": true,
+  "cross_uid_certification": false,
+  "pid1_certification": false,
+  "readiness": "BLOCKED/NO-GO"
+}

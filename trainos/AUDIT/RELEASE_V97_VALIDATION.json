@@ -1,0 +1,22 @@
+{
+  "release": "v97",
+  "base": "v96",
+  "decision": "BLOCKED/NO-GO",
+  "confirmed": {
+    "bounded_runner_contracts": "5 passed",
+    "pytest_collection": "1484 collected",
+    "regression_selector_help": "exit 0"
+  },
+  "not_confirmed": {
+    "combined_strict_regressions": "0/3 completed; first interrupted after progress failure",
+    "full_strict_suite": "NOT_RUN",
+    "sqlite_root_cause": "NOT_IDENTIFIED",
+    "kernel_runner": "NOT_VERIFIED",
+    "orphan_absence": "NOT_PROVEN"
+  },
+  "changes": [
+    "Fail closed if pytest leader exits zero but leaves a live process group",
+    "Added two regression contracts for residual descendants and clean exit"
+  ],
+  "warnings_suppressed": false
+}

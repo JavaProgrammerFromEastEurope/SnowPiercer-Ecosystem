@@ -1,0 +1,22 @@
+{
+  "release": "v90",
+  "status": "BLOCKED/NO-GO",
+  "source": "v89 cumulative ZIP",
+  "changes": [
+    "close SQLite source on destination-open failure",
+    "atomic bounded pytest evidence and bounded cleanup"
+  ],
+  "tests": {
+    "targeted": "4 passed",
+    "collection": "1477 collected",
+    "strict_combined": "three bounded attempts timed out",
+    "full_strict": "timed out"
+  },
+  "limitations": [
+    "No three strict PASS",
+    "No full-suite PASS",
+    "No orphan-free guarantee",
+    "SQLite leaks not fully localized",
+    "Kernel Runner compatibility not independently verified"
+  ]
+}

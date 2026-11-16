@@ -1,0 +1,19 @@
+{
+  "schema": "trainos.functional-stage-physical-migration.v1",
+  "release": "v80",
+  "source_release": "v79",
+  "domain": "recovery",
+  "moved": {
+    "tests/stage138/test_stale_recovery_owner_cannot_mutate_replacement.py": "tests/domains/recovery/test_stale_recovery_owner_cannot_mutate_replacement.py",
+    "tests/stage139/test_renew_lease_racing_failure_completion.py": "tests/domains/recovery/test_renew_lease_racing_failure_completion.py",
+    "tests/stage140/test_recovery_journal_process_crash_atomicity.py": "tests/domains/recovery/test_recovery_journal_process_crash_atomicity.py",
+    "tests/stage141/test_retry_authorization_crash_before_commit.py": "tests/domains/recovery/test_retry_authorization_crash_before_commit.py",
+    "tests/stage143/test_corrupt_recovery_owner_metadata_fails_closed.py": "tests/domains/recovery/test_corrupt_recovery_owner_metadata_fails_closed.py",
+    "tests/stage144/test_terminal_and_retry_states_reject_stale_ownership.py": "tests/domains/recovery/test_terminal_and_retry_states_reject_stale_ownership.py",
+    "tests/stage145/test_retry_authorization_metadata_fails_closed.py": "tests/domains/recovery/test_retry_authorization_metadata_fails_closed.py",
+    "tests/stage146/test_recovery_state_metadata_consistency.py": "tests/domains/recovery/test_recovery_state_metadata_consistency.py",
+    "tests/stage147/test_corrupt_recovery_record_fields_fail_closed.py": "tests/domains/recovery/test_corrupt_recovery_record_fields_fail_closed.py",
+    "tests/stage150/test_commit_failure_recovery_and_connection_reuse.py": "tests/domains/recovery/test_commit_failure_recovery_and_connection_reuse.py"
+  },
+  "notes": "Moved ownership fencing, lease races, process-crash atomicity, and fail-closed recovery metadata tests. Spawn worker targets remain at module scope."
+}

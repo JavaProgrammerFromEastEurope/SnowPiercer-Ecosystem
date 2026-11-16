@@ -156,17 +156,23 @@ class ExecutionAuditStore:
                    ORDER BY a.sequence"""
             ).fetchall()
             for row in latest_rows:
-                execution = CommandExecution(
-                    execution_id=row["execution_id"],
-                    command_id=row["command_id"],
-                    progress=ExecutionProgress(
-                        attempts=row["attempts"],
-                        max_attempts=row["max_attempts"],
-                        completed=bool(row["completed"]),
-                    ),
-                    status=ExecutionStatus.RECOVERY_REQUIRED,
-                )
-                self.append(execution)
+                # A torn or manually corrupted row must not prevent recovery of
+                # unrelated executions. Keep the suspect history untouched; the
+                # read-only integrity verifier reports its invalid progress fields.
+                try:
+                    execution = CommandExecution(
+                        execution_id=row["execution_id"],
+                        command_id=row["command_id"],
+                        progress=ExecutionProgress(
+                            attempts=row["attempts"],
+                            max_attempts=row["max_attempts"],
+                            completed=bool(row["completed"]),
+                        ),
+                        status=ExecutionStatus.RECOVERY_REQUIRED,
+                    )
+                    self.append(execution)
+                except (ValueError, TypeError):
+                    continue
                 recovered.append(execution)
         return tuple(recovered)
 

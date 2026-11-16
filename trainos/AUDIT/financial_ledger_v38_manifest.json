@@ -1,0 +1,53 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v38.zip",
+  "version": "v38",
+  "base_version": "v37",
+  "requested_stage_range": [
+    288,
+    297
+  ],
+  "stages_added": [
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297
+  ],
+  "stage_focus": {
+    "288": "Repeated equivalent claims are read-only and preserve an existing dispatch reservation.",
+    "289": "A conflicting execution identity is rejected without changing the original record.",
+    "290": "Execution-ID uniqueness is enforced across independently opened store instances.",
+    "291": "Invalid non-JSON payloads are rejected before a ledger row is inserted.",
+    "292": "Duplicate completion with equivalent canonical JSON is idempotent.",
+    "293": "Blank uncertainty reasons are rejected without changing command state.",
+    "294": "Blank reconciliation evidence is rejected without changing UNKNOWN state.",
+    "295": "A previously used not-executed proof cannot authorize a later dispatch generation.",
+    "296": "UNKNOWN state and its reason survive a database close and reopen.",
+    "297": "The execution-binding diagnostic detects duplicate bindings after index loss."
+  },
+  "verification": {
+    "new_stage_tests": "PASS: verified by execution; see AUDIT/v38_new_pytest.txt",
+    "regression_tests_stages_170_297": "PASS: verified by execution; see AUDIT/v38_regression_pytest.txt",
+    "python_ast_audit": "PASS: 2789 Python files scanned, 0 syntax errors",
+    "github_actions": "NOT_RUN",
+    "full_project_test_suite": "NOT_RUN",
+    "external_payment_integration": "NO_GO_NOT_VERIFIED"
+  },
+  "limitations": [
+    "Tests cover local SQLite ledger behavior only.",
+    "No external payment provider or physical command integration was executed.",
+    "Full project test suite and GitHub Actions were not run."
+  ],
+  "syntax_errors": [],
+  "archive_bytes": 1588148,
+  "archive_entries": 3213,
+  "sha256": "bb507a856c916d14f94d26c3369ef8087e28007c0cc1f64698d61dabbbe8fd34",
+  "zip_integrity": "PASS",
+  "excluded_cache_audit": "PASS",
+  "cache_entries_found": []
+}

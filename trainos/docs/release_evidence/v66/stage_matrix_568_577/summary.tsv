@@ -1,0 +1,11 @@
+stage	status	exit_code	seconds	log
+568	PASS	0	2	stage568.log
+569	PASS	0	2	stage569.log
+570	PASS	0	2	stage570.log
+571	PASS	0	1	stage571.log
+572	PASS	0	2	stage572.log
+573	PASS	0	2	stage573.log
+574	PASS	0	2	stage574.log
+575	PASS	0	1	stage575.log
+576	PASS	0	2	stage576.log
+577	PASS	0	3	stage577.log

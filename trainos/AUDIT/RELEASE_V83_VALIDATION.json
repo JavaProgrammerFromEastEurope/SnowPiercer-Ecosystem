@@ -1,0 +1,33 @@
+{
+  "release": "v83",
+  "base": "v82",
+  "date": "2026-11-14",
+  "changes": [
+    "Explicitly close sqlite3 connections in recovery and ci_release tests; sqlite3 context manager only commits or rolls back",
+    "Migrate ten pinned recovery test modules into tests/domains/recovery; update ownership registry"
+  ],
+  "verification": {
+    "strict_recovery_runs": [
+      {
+        "log": "v83_strict_1.log",
+        "result": "178 passed"
+      },
+      {
+        "log": "v83_strict_2.log",
+        "result": "178 passed"
+      },
+      {
+        "log": "v83_strict_3_retry.log",
+        "result": "178 passed"
+      }
+    ],
+    "baseline_before_migration": "155 passed",
+    "combined": "See evidence_v83/v83_combined_retry.log; do not claim PASS without terminal summary",
+    "all_project_regression": "NOT_RUN",
+    "hosted_ci": "NOT_RUN"
+  },
+  "limitations": [
+    "Closing SQLite connections in tests fixes confirmed test-owned leaks; no claim all production SQLite ownership paths are proven leak-free",
+    "Full-project strict regression and hosted CI not executed"
+  ]
+}

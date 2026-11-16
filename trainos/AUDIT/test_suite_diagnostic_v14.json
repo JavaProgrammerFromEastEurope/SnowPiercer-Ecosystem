@@ -1,0 +1,33 @@
+{
+  "version": "v14",
+  "date": "2026-10-24",
+  "scope": "test orchestration and diagnosis only; no runtime changes",
+  "observations": {
+    "monolithic_run": {
+      "status": "unresolved_timeout_or_slowdown",
+      "last_visible_test": "tests/stage118/test_expired_lease_recovery_contention.py::test_expired_lease_cannot_be_resurrected_and_only_one_retry_owner_wins",
+      "stage117_parameter_transiently_failed_in_combined_run": true,
+      "root_cause_confirmed": false
+    },
+    "stage117_after_commit_isolated": {
+      "passed": 1,
+      "duration_seconds": 0.92
+    },
+    "stage118_isolated": {
+      "passed": 1,
+      "duration_seconds": 3.30
+    },
+    "stage117_118_combined_repeats": [
+      {"passed": 3, "duration_seconds": 4.27},
+      {"passed": 3, "duration_seconds": 5.82},
+      {"passed": 3, "duration_seconds": 5.81}
+    ]
+  },
+  "ci_workflow": {
+    "path": ".github/workflows/trainos-tests.yml",
+    "stage_process_isolation": true,
+    "github_actions_executed_here": false
+  },
+  "monolithic_suite": "UNRESOLVED_NOT_PASSING",
+  "real_payment_integration": "NO_GO"
+}

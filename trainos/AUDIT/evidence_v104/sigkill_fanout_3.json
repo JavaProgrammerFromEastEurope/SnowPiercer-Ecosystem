@@ -1,0 +1,29 @@
+{
+  "iteration": 3,
+  "fanout": 8,
+  "runner_pid": 46326,
+  "detached_pids": [
+    46363,
+    46364,
+    46365,
+    46367,
+    46368,
+    46369,
+    46370,
+    46371
+  ],
+  "signalled_pids": [
+    46363,
+    46364,
+    46365,
+    46367,
+    46368,
+    46369,
+    46370,
+    46371
+  ],
+  "unreaped_live": [],
+  "supervisor_exitcode": 137,
+  "reported_cleanup": true,
+  "result": "PASS"
+}

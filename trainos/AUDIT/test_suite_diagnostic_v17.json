@@ -1,0 +1,34 @@
+{
+  "version": "v17",
+  "date": "2026-10-24",
+  "scope": "CI orchestration regression coverage only; no runtime or ledger business logic changed",
+  "changes": [
+    "Extend stage-matrix shell regression to cover PASS, FAIL, and TIMEOUT classification",
+    "Assert per-stage logs, summary.tsv entries, and nonzero aggregate exit status"
+  ],
+  "validation": {
+    "shell_syntax": "PASS",
+    "runner_regression": {
+      "status": "PASS",
+      "cases": [
+        "PASS",
+        "FAIL",
+        "TIMEOUT"
+      ],
+      "executable_bits": "fixed"
+    },
+    "pytest_targeted": {
+      "status": "PASS",
+      "tests_passed": 67,
+      "duration_seconds": 12.73,
+      "groups": [
+        "tests/ledger_contract",
+        "tests/stage117",
+        "tests/stage118"
+      ]
+    }
+  },
+  "full_suite": "NOT_CONFIRMED_ROOT_CAUSE_UNRESOLVED",
+  "github_actions_executed_here": false,
+  "real_payment_integration": "NO_GO"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "trainos.v105.wal-concurrent-stress",
+  "cases": [
+    {
+      "iteration": 0,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 1,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 2,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 3,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 4,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 5,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 6,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    },
+    {
+      "iteration": 7,
+      "thread_true": 1,
+      "thread_false": 31,
+      "process_true": 0,
+      "process_false": 16,
+      "integrity": true
+    }
+  ],
+  "status": "PASS",
+  "duration_seconds": 15.49
+}

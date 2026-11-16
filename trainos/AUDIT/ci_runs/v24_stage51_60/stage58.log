@@ -1,0 +1,6 @@
+.....                                                                    [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage58/test_diagnostic_evidence_collection_planner.py::test_plan_lists_missing_evidence_and_incomplete_history
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+5 passed in 0.14s

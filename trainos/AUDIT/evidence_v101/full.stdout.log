@@ -1,0 +1,399 @@
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 24%]
+........................................................................ [ 29%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 43%]
+........................................................................ [ 48%]
+........................................................................ [ 53%]
+........................................................................ [ 58%]
+........................................................................ [ 63%]
+........................................................................ [ 67%]
+........................................................................ [ 72%]
+........................................................................ [ 77%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 92%]
+...................................................................F.... [ 96%]
+.............................................                            [100%]
+=================================== FAILURES ===================================
+_______________ test_create_backup_and_restore_verified_snapshot _______________
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+  |     yield
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 158, in pytest_runtest_call
+  |     collect_unraisable(item.config)
+  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 81, in collect_unraisable
+  |     raise ExceptionGroup("multiple unraisable exception warnings", errors)
+  | ExceptionGroup: multiple unraisable exception warnings (23 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7f100>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7f100>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7ed40>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7ed40>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7ea70>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7ea70>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7f6a0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7f6a0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7f3d0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7f3d0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7ef20>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7ef20>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 7 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7f970>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7f970>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 8 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7f790>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7f790>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 9 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7e020>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7e020>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 10 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7ee30>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7ee30>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 11 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7fc40>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7fc40>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 12 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7eb60>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7eb60>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 13 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7e890>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7e890>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 14 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7e6b0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7e6b0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- 15 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/trainos_v101/kernel/command/events/event_integrity_anchor_store.py", line 72, in create_anchor
+    |     latest_row = self._connection.execute(
+    |                  ~~~~~~~~~~~~~~~~~~~~~~~~^
+    |         "SELECT anchor_id, event_sequence, event_hash, created_at "
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         "FROM event_integrity_anchors ORDER BY anchor_id DESC LIMIT 1"
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ).fetchone()
+    |     ^
+    | ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcbb7a7e7a0>
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/opt/pyvenv/lib/python3.13/site-packages/_pytest/unraisableexception.py", line 67, in collect_unraisable
+    |     warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pytest.PytestUnraisableExceptionWarning: Exception ignored in: <sqlite3.Connection object at 0x7fcbb7a7e7a0>
+    | Enable tracemalloc to get traceback where the object was allocated.
+    | See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    +---------------- ... ----------------
+    | and 8 more exceptions
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED tests/stage87/test_event_log_backup.py::test_create_backup_and_restore_verified_snapshot - ExceptionGroup: multiple unraisable exception warnings (23 sub-exceptions)
+1 failed, 1484 passed in 74.65s (0:01:14)

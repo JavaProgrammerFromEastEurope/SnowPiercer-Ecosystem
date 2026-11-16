@@ -1,0 +1,47 @@
+{
+  "artifact": "TrainOS_Financial_Ledger_Contract_v41.zip",
+  "version": "v41",
+  "base_version": "v40",
+  "requested_stage_range": [
+    318,
+    327
+  ],
+  "stages_added": [
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327
+  ],
+  "stage_focus": {
+    "318": "Completing a command with the same canonical result is idempotent and preserves the original record.",
+    "319": "A conflicting duplicate completion is rejected without mutating the completed record.",
+    "320": "Blank uncertainty reasons are rejected before state mutation.",
+    "321": "Repeating the same UNKNOWN reason is idempotent.",
+    "322": "A conflicting UNKNOWN reason is rejected without changing the original uncertainty reason.",
+    "323": "Blank reconciliation evidence is rejected without changing the UNKNOWN record.",
+    "324": "Repeating completed reconciliation with the same result does not duplicate audit entries.",
+    "325": "Completed reconciliation stores explicit evidence and the dispatch generation in durable audit.",
+    "326": "Execution binding diagnostics count a valid binding and return zero for an unrelated identifier.",
+    "327": "Corrupt persisted fingerprints are rejected when reading a ledger record."
+  },
+  "verification": {
+    "new_stage_tests": "PASS: executed; see AUDIT/v41_new_pytest.txt",
+    "regression_tests_stages_170_327": "PASS: executed; see AUDIT/v41_regression_pytest.txt",
+    "python_ast_audit": "PASS: 2819 Python files scanned, 0 syntax errors",
+    "github_actions": "NOT_RUN",
+    "full_project_test_suite": "NOT_RUN",
+    "external_payment_integration": "NO_GO_NOT_VERIFIED"
+  },
+  "limitations": [
+    "Tests cover local SQLite ledger behavior only.",
+    "No external payment provider or physical command integration was executed.",
+    "Full project test suite and GitHub Actions were not run."
+  ],
+  "syntax_errors": []
+}

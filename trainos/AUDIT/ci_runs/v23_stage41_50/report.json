@@ -1,0 +1,82 @@
+{
+  "counts": {
+    "FAIL": 0,
+    "PASS": 9,
+    "TIMEOUT": 0
+  },
+  "execution_timeout_seconds_per_stage": 20,
+  "missing_stages": [
+    45
+  ],
+  "pytest_cases_reported": 57,
+  "requested_stage_range": "41-50",
+  "source": "summary.tsv",
+  "stage_count": 9,
+  "stages": [
+    {
+      "exit_code": 0,
+      "log": "stage41.log",
+      "seconds": 4,
+      "stage": 41,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage42.log",
+      "seconds": 2,
+      "stage": 42,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage43.log",
+      "seconds": 2,
+      "stage": 43,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage44.log",
+      "seconds": 3,
+      "stage": 44,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage46.log",
+      "seconds": 2,
+      "stage": 46,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage47.log",
+      "seconds": 2,
+      "stage": 47,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage48.log",
+      "seconds": 2,
+      "stage": 48,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage49.log",
+      "seconds": 5,
+      "stage": 49,
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "log": "stage50.log",
+      "seconds": 3,
+      "stage": 50,
+      "status": "PASS"
+    }
+  ],
+  "successful": true,
+  "total_seconds": 25
+}

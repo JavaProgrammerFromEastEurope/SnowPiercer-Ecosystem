@@ -1,0 +1,6 @@
+.......                                                                  [100%]
+============================= slowest 10 durations =============================
+0.03s setup    tests/stage68/test_evidence_recovery_integrity.py::test_valid_recovery_history_is_consistent
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+7 passed in 0.16s
