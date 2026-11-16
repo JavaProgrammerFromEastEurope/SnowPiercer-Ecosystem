@@ -1,0 +1,297 @@
+{
+  "schema": "snowpiercer.ops-local-validation.v1",
+  "observedAt": "2026-11-15T20:35:05.677364+00:00",
+  "scope": "New SP-OPS unit tests, existing workspace Python tests, existing stage engine, JS syntax and read-only scanner; no hardware/OS MAC/DOM full run",
+  "runs": [
+    {
+      "run": 1,
+      "name": "ops_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "subsystems/operations/tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run1_ops_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run1_ops_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 1,
+      "name": "workspace_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run1_workspace_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run1_workspace_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 1,
+      "name": "stage_engine",
+      "command": [
+        "node",
+        "--test",
+        "tests/stage-engine.test.cjs"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run1_stage_engine.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run1_stage_engine.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 1,
+      "name": "js_syntax",
+      "command": [
+        "node",
+        "--check",
+        "dist/assets/app.js"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run1_js_syntax.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run1_js_syntax.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 1,
+      "name": "ops_cli",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "tools/run_ops_assessment.py",
+        "--out",
+        "subsystems/operations/evidence/regressions/latest-cli-report.json"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run1_ops_cli.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run1_ops_cli.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 2,
+      "name": "ops_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "subsystems/operations/tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run2_ops_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run2_ops_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 2,
+      "name": "workspace_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run2_workspace_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run2_workspace_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 2,
+      "name": "stage_engine",
+      "command": [
+        "node",
+        "--test",
+        "tests/stage-engine.test.cjs"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run2_stage_engine.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run2_stage_engine.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 2,
+      "name": "js_syntax",
+      "command": [
+        "node",
+        "--check",
+        "dist/assets/app.js"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run2_js_syntax.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run2_js_syntax.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 2,
+      "name": "ops_cli",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "tools/run_ops_assessment.py",
+        "--out",
+        "subsystems/operations/evidence/regressions/latest-cli-report.json"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run2_ops_cli.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run2_ops_cli.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 3,
+      "name": "ops_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "subsystems/operations/tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run3_ops_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run3_ops_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 3,
+      "name": "workspace_unittest",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run3_workspace_unittest.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run3_workspace_unittest.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 3,
+      "name": "stage_engine",
+      "command": [
+        "node",
+        "--test",
+        "tests/stage-engine.test.cjs"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run3_stage_engine.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run3_stage_engine.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 3,
+      "name": "js_syntax",
+      "command": [
+        "node",
+        "--check",
+        "dist/assets/app.js"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run3_js_syntax.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run3_js_syntax.stderr.log",
+      "passed": true
+    },
+    {
+      "run": 3,
+      "name": "ops_cli",
+      "command": [
+        "python3",
+        "-W",
+        "error::ResourceWarning",
+        "-W",
+        "error::DeprecationWarning",
+        "tools/run_ops_assessment.py",
+        "--out",
+        "subsystems/operations/evidence/regressions/latest-cli-report.json"
+      ],
+      "exitCode": 0,
+      "stdout": "subsystems/operations/evidence/regressions/run3_ops_cli.stdout.log",
+      "stderr": "subsystems/operations/evidence/regressions/run3_ops_cli.stderr.log",
+      "passed": true
+    }
+  ],
+  "missingCoverage": [
+    "full jsdom DOM suite unavailable: package jsdom not installed",
+    "headless Chromium screenshot attempt timed out; no successful visual assertion",
+    "cross-module live IPC E2E not run",
+    "cross-UID OS confinement, monotonic authority and witness not verified",
+    "no safety certification, physical HIL or operational acceptance"
+  ],
+  "operationalReady": false,
+  "decision": "NO_GO",
+  "apiProbes": {
+    "report": "subsystems/operations/evidence/current_api_probes.json",
+    "status": "passed",
+    "modules": 6,
+    "checks": 23,
+    "scope": "Six independent in-process/API boundaries; not a cross-module integration or hardware proof"
+  },
+  "domSuite": {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 1,
+    "stdout": "subsystems/operations/evidence/regressions/dom_suite.stdout.log",
+    "stderr": "subsystems/operations/evidence/regressions/dom_suite.stderr.log",
+    "status": "BLOCKED_MISSING_JSDOM"
+  }
+}

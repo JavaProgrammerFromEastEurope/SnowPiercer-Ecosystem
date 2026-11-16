@@ -1,0 +1,25 @@
+test_claim_has_bounded_expiry_and_does_not_change_readiness (test_development_runs.DevelopmentRunTests.test_claim_has_bounded_expiry_and_does_not_change_readiness) ... ok
+test_completion_requires_real_report_reference_and_digest (test_development_runs.DevelopmentRunTests.test_completion_requires_real_report_reference_and_digest) ... ok
+test_expired_run_is_unconfirmed_not_successful (test_development_runs.DevelopmentRunTests.test_expired_run_is_unconfirmed_not_successful) ... ok
+test_invalid_types_do_not_create_a_lease (test_development_runs.DevelopmentRunTests.test_invalid_types_do_not_create_a_lease) ... ok
+test_lease_and_completion_reject_backwards_clocks_and_naive_timestamps (test_development_runs.DevelopmentRunTests.test_lease_and_completion_reject_backwards_clocks_and_naive_timestamps) ... ok
+test_stale_owner_revision_or_expiry_cannot_finish (test_development_runs.DevelopmentRunTests.test_stale_owner_revision_or_expiry_cannot_finish) ... ok
+test_success_and_failure_are_separate_and_keep_history (test_development_runs.DevelopmentRunTests.test_success_and_failure_are_separate_and_keep_history) ... ok
+test_unexpired_run_blocks_another_worker (test_development_runs.DevelopmentRunTests.test_unexpired_run_blocks_another_worker) ... ok
+test_empty_duplicate_or_nonobject_checks_refused (test_integration_probes.ProbeContractTests.test_empty_duplicate_or_nonobject_checks_refused) ... ok
+test_exact_current_contract_is_accepted (test_integration_probes.ProbeContractTests.test_exact_current_contract_is_accepted) ... ok
+test_no_authority_or_truthy_substitutions (test_integration_probes.ProbeContractTests.test_no_authority_or_truthy_substitutions) ... ok
+test_nonzero_process_cannot_be_presented_as_success (test_integration_probes.ProbeContractTests.test_nonzero_process_cannot_be_presented_as_success) ... ok
+test_six_unique_registered_directions_required (test_integration_probes.ProbeContractTests.test_six_unique_registered_directions_required) ... ok
+test_stage_module_and_correlation_are_bound (test_integration_probes.ProbeContractTests.test_stage_module_and_correlation_are_bound) ... ok
+test_timeout_fails_closed_and_reaps_direct_child (test_integration_probes.ProbeContractTests.test_timeout_fails_closed_and_reaps_direct_child) ... ok
+test_embedded_report_matches_saved_json (test_operations_integration.OperationsWorkspaceTests.test_embedded_report_matches_saved_json) ... ok
+test_ops_cli_is_no_go_and_does_not_confuse_exit_zero_with_readiness (test_operations_integration.OperationsWorkspaceTests.test_ops_cli_is_no_go_and_does_not_confuse_exit_zero_with_readiness) ... ok
+test_security_module_does_not_gain_fake_source_evidence (test_operations_integration.OperationsWorkspaceTests.test_security_module_does_not_gain_fake_source_evidence) ... ok
+test_ui_has_operations_navigation_and_loaded_asset (test_operations_integration.OperationsWorkspaceTests.test_ui_has_operations_navigation_and_loaded_asset) ... ok
+test_workspace_manifest_detects_tamper_and_unknown_file (test_operations_integration.OperationsWorkspaceTests.test_workspace_manifest_detects_tamper_and_unknown_file) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.256s
+
+OK

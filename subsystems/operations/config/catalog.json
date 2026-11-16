@@ -1,0 +1,234 @@
+{
+  "schema": "snowpiercer.ops-catalog.v1",
+  "snapshot": "ECO-001 / uploaded TrainOS_Workspace(5).zip / 2026-11-15",
+  "modules": [
+    {
+      "moduleId": "SP-SW",
+      "name": "TrainOS",
+      "baseline": "v101 (archived snapshot; not a claim about current release)",
+      "readiness": "ARCHIVED_NO_GO",
+      "dependencies": [],
+      "artifacts": [
+        {
+          "path": "dist/evidence/TrainOS-v101-source.zip",
+          "classification": "ARCHIVED_RELEASE"
+        },
+        {
+          "path": "dist/evidence/RELEASE_V101_VALIDATION.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-AI",
+      "name": "AI / Cognition",
+      "baseline": "AI-CORE-021",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/ai/AI-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "151a9fa4b540961df624af01125d307e9d88fd65b890f0de08a786f80deb5f4e"
+        },
+        {
+          "path": "dist/subsystems/ai/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-RAIL",
+      "name": "Rail Systems",
+      "baseline": "RAIL-TRUST-011",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/rail/RAIL-TRUST-011.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "b92d33fbb37bf9c93dd3ca6aca121f378dd655d73981cc556de7abf7c77a49d0"
+        },
+        {
+          "path": "dist/subsystems/rail/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-ENERGY",
+      "name": "Energy",
+      "baseline": "ENERGY-CORE-021",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/energy/ENERGY-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "043f45e98702d1f5f8af929f0bc52f192a5579e759d107e549cc9927ddc31825"
+        },
+        {
+          "path": "dist/subsystems/energy/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-LIFE",
+      "name": "Life Support",
+      "baseline": "LIFE-CORE-021",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/life/LIFE-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "366567bcf2589d7425c9e1e4a4099ad9e3c7c622b3cf8fb87bc99d5468c91e5c"
+        },
+        {
+          "path": "dist/subsystems/life/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-LOG",
+      "name": "Logistics",
+      "baseline": "LOG-CORE-021",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-AI",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/logistics/LOG-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "ec63923e8734f8b581a821a8f07d6c4065488016800e34862f6c21083decfd0f"
+        },
+        {
+          "path": "dist/subsystems/logistics/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-SAFE",
+      "name": "Security",
+      "baseline": "No standalone security baseline in supplied ZIP",
+      "readiness": "PENDING",
+      "dependencies": [
+        "SP-SW",
+        "SP-OPS"
+      ],
+      "artifacts": []
+    },
+    {
+      "moduleId": "SP-ISLAND",
+      "name": "SnowPiercer Island",
+      "baseline": "ISLAND-GEO-021",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-RAIL",
+        "SP-ENERGY",
+        "SP-LIFE",
+        "SP-LOG",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "artifacts": [
+        {
+          "path": "dist/subsystems/island/ISLAND-GEO-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "expectedSha256": "047bbdf389e32782467126cb97203d1c8e7804e7cd09fd8d77bdfe9028572fa8"
+        },
+        {
+          "path": "dist/subsystems/island/development-result.json",
+          "classification": "LOCAL_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "moduleId": "SP-OPS",
+      "name": "Integration & Operations",
+      "baseline": "SP-OPS v0.1.0 (new offline baseline)",
+      "readiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE"
+      ],
+      "artifacts": [
+        {
+          "path": "subsystems/operations/docs/ARCHITECTURE.md",
+          "classification": "REVIEWED_SOURCE"
+        },
+        {
+          "path": "subsystems/operations/contracts/interfaces.json",
+          "classification": "REVIEWED_SOURCE"
+        }
+      ]
+    }
+  ],
+  "globalBlockers": [
+    {
+      "id": "OPS-GATE-001",
+      "reason": "No independently authenticated OS-protected provenance / monotonic rollback root for whole-system release",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-002",
+      "reason": "No certified integrated hardware-in-the-loop or real physical safety validation",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-003",
+      "reason": "No complete privileged cross-UID, MAC/LSM, crash/replay/rollback end-to-end matrix",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-004",
+      "reason": "No independently reviewed and approved cross-subsystem safety case and hazard closure",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-005",
+      "reason": "No accountable production change-control, independent approver and signed release authority",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-006",
+      "reason": "No complete operational acceptance: incident response, service restoration, training, maintenance and drills",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-007",
+      "reason": "Security lacks independently verified standalone baseline in this snapshot",
+      "state": "UNVERIFIED"
+    },
+    {
+      "id": "OPS-GATE-008",
+      "reason": "Interfaces in contracts/interfaces.json are proposals and not end-to-end accredited",
+      "state": "UNVERIFIED"
+    }
+  ]
+}

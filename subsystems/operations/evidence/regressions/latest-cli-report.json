@@ -1,0 +1,311 @@
+{
+  "schema": "snowpiercer.ops-assessment.v1",
+  "assessedAt": "2026-11-15T20:35:05.102480+00:00",
+  "assessmentKind": "OFFLINE_EVIDENCE_INVENTORY_ONLY",
+  "sourceSnapshot": "ECO-001 / uploaded TrainOS_Workspace(5).zip / 2026-11-15",
+  "modules": [
+    {
+      "moduleId": "SP-SW",
+      "baseline": "v101 (archived snapshot; not a claim about current release)",
+      "sourceReadiness": "ARCHIVED_NO_GO",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "dist/evidence/TrainOS-v101-source.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "63df844e7b6f5950ef8e8e70c51696989ae18b50396612ca13525d7d76d54f50",
+          "sizeBytes": 12921770,
+          "status": "PRESENT_UNATTESTED"
+        },
+        {
+          "path": "dist/evidence/RELEASE_V101_VALIDATION.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "3a34f8e722bad474f42b6bff78ef63e1e1568528f4f4fd72790d5caa4bdd6db6",
+          "sizeBytes": 10330,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-AI",
+      "baseline": "AI-CORE-021",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/ai/AI-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "151a9fa4b540961df624af01125d307e9d88fd65b890f0de08a786f80deb5f4e",
+          "sizeBytes": 175077,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/ai/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "1cbb511fef3e600131d8f1f833336b9eac361fb53f1f545443d76aacf9c0d2cc",
+          "sizeBytes": 6419,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-RAIL",
+      "baseline": "RAIL-TRUST-011",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/rail/RAIL-TRUST-011.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "b92d33fbb37bf9c93dd3ca6aca121f378dd655d73981cc556de7abf7c77a49d0",
+          "sizeBytes": 113701,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/rail/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "5b7bd3dde65ca5019a73a0c04ccf31fd836b7dd6a1ba605ce01cd78d0673f7a8",
+          "sizeBytes": 5553,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-ENERGY",
+      "baseline": "ENERGY-CORE-021",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/energy/ENERGY-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "043f45e98702d1f5f8af929f0bc52f192a5579e759d107e549cc9927ddc31825",
+          "sizeBytes": 183330,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/energy/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "2f33172243c6480108912a4367e8b9ea145883917a4b929627812792b2349cab",
+          "sizeBytes": 6794,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-LIFE",
+      "baseline": "LIFE-CORE-021",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-ENERGY",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/life/LIFE-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "366567bcf2589d7425c9e1e4a4099ad9e3c7c622b3cf8fb87bc99d5468c91e5c",
+          "sizeBytes": 334737,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/life/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "4d41a34f0b62158ffc3a7fadbf4be1d6cf853e0c05929dd6398cef8e9f6c6515",
+          "sizeBytes": 6734,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-LOG",
+      "baseline": "LOG-CORE-021",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-AI",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/logistics/LOG-CORE-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "ec63923e8734f8b581a821a8f07d6c4065488016800e34862f6c21083decfd0f",
+          "sizeBytes": 277249,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/logistics/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "ab919cfe30b257175904b3ca622fc6d4bf102115baaedf979dea01653a4bbffa",
+          "sizeBytes": 6741,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-SAFE",
+      "baseline": "No standalone security baseline in supplied ZIP",
+      "sourceReadiness": "PENDING",
+      "dependencies": [
+        "SP-SW",
+        "SP-OPS"
+      ],
+      "evidence": [],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-ISLAND",
+      "baseline": "ISLAND-GEO-021",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-RAIL",
+        "SP-ENERGY",
+        "SP-LIFE",
+        "SP-LOG",
+        "SP-SAFE",
+        "SP-OPS"
+      ],
+      "evidence": [
+        {
+          "path": "dist/subsystems/island/ISLAND-GEO-021.zip",
+          "classification": "ARCHIVED_RELEASE",
+          "sha256": "047bbdf389e32782467126cb97203d1c8e7804e7cd09fd8d77bdfe9028572fa8",
+          "sizeBytes": 400218,
+          "status": "DIGEST_MATCH_UNATTESTED"
+        },
+        {
+          "path": "dist/subsystems/island/development-result.json",
+          "classification": "LOCAL_OBSERVATION",
+          "sha256": "323bdd0a17882c83cfb874767f31d646013b3ef9c55e25b89e5e5afa5c21aae6",
+          "sizeBytes": 6698,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    },
+    {
+      "moduleId": "SP-OPS",
+      "baseline": "SP-OPS v0.1.0 (new offline baseline)",
+      "sourceReadiness": "SOFTWARE_OBSERVED_NO_GO",
+      "dependencies": [
+        "SP-SW",
+        "SP-SAFE"
+      ],
+      "evidence": [
+        {
+          "path": "subsystems/operations/docs/ARCHITECTURE.md",
+          "classification": "REVIEWED_SOURCE",
+          "sha256": "7c21bec6060d324db14385de5e6354308afc8004d00ccb1d157d00839d2c4150",
+          "sizeBytes": 4349,
+          "status": "PRESENT_UNATTESTED"
+        },
+        {
+          "path": "subsystems/operations/contracts/interfaces.json",
+          "classification": "REVIEWED_SOURCE",
+          "sha256": "b795ee1667b6f66f7ffa488885ac8400427c497d5cb137cff27737e9fc2eabd7",
+          "sizeBytes": 4112,
+          "status": "PRESENT_UNATTESTED"
+        }
+      ],
+      "operationalReady": false
+    }
+  ],
+  "findings": [
+    {
+      "code": "MODULE_BASELINE_PENDING",
+      "moduleId": "SP-SAFE"
+    },
+    {
+      "code": "NO_ARTIFACTS",
+      "moduleId": "SP-SAFE"
+    },
+    {
+      "code": "DEPENDENCY_CYCLE",
+      "path": [
+        "SP-OPS",
+        "SP-SAFE",
+        "SP-OPS"
+      ]
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-001",
+      "reason": "No independently authenticated OS-protected provenance / monotonic rollback root for whole-system release"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-002",
+      "reason": "No certified integrated hardware-in-the-loop or real physical safety validation"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-003",
+      "reason": "No complete privileged cross-UID, MAC/LSM, crash/replay/rollback end-to-end matrix"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-004",
+      "reason": "No independently reviewed and approved cross-subsystem safety case and hazard closure"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-005",
+      "reason": "No accountable production change-control, independent approver and signed release authority"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-006",
+      "reason": "No complete operational acceptance: incident response, service restoration, training, maintenance and drills"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-007",
+      "reason": "Security lacks independently verified standalone baseline in this snapshot"
+    },
+    {
+      "code": "UNVERIFIED_REQUIRED_CONTROL",
+      "controlId": "OPS-GATE-008",
+      "reason": "Interfaces in contracts/interfaces.json are proposals and not end-to-end accredited"
+    }
+  ],
+  "summary": {
+    "modulesObserved": 9,
+    "evidenceRecords": 16,
+    "digestMatchesUnattested": 6,
+    "artifactFailures": 0,
+    "dependencyCycles": 1,
+    "unverifiedControls": 8
+  },
+  "operationalReady": false,
+  "decision": "NO_GO",
+  "ecosystemCompletionPercent": null,
+  "limits": [
+    "SHA-256 concordance is not a trusted timestamp or independent integrity root.",
+    "Local software tests are not cross-module hardware or safety certification.",
+    "No GO authority, safety actuation, permit issuance or production admission exists in this tool.",
+    "Source snapshot is fixed; newer releases must be re-imported and re-verified."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "snowpiercer.ops-interface-catalog.v1",
+  "status": "PROPOSED_NOT_INTEGRATED",
+  "safetyPrinciples": {
+    "defaultDecision": "DENY",
+    "authorityModel": "observation / recommendation / requested-action / privileged actuation",
+    "failClosed": true,
+    "clock": "UTC timestamps for records; independent monotonic expiry at receiving authority",
+    "identity": "OS-protected service principal and mutually authenticated peers required in production",
+    "lineage": "per-message correlationId, immutable eventId, source revision and verified schema version",
+    "replay": "durable receiver-side idempotency and anti-rollback proofs required for operational commands",
+    "trust": "schemas do not constitute implementation or authorization"
+  },
+  "envelopes": {
+    "observation.v1": {
+      "required": ["schema", "eventId", "correlationId", "sourceModule", "observedAt", "unit", "quality", "payload", "revision"],
+      "forbidden": ["actionPermit", "directActuation"],
+      "quality": ["GOOD", "BAD", "STALE", "UNKNOWN"],
+      "semantics": "read-only, typed SI units, invalid/untrusted measurement cannot satisfy safety guard"
+    },
+    "recommendation.v1": {
+      "required": ["schema", "eventId", "correlationId", "sourceModule", "contextRevision", "expiresAt", "proposal", "authority"],
+      "authority": "REVIEW_ONLY",
+      "semantics": "AI proposal never implies authorization of equipment control"
+    },
+    "command-request.v1": {
+      "required": ["schema", "commandId", "correlationId", "sourcePrincipal", "targetModule", "expectedRevision", "expiresAt", "policyId", "payload", "permitRef"],
+      "semantics": "not implemented; admission, permit consumption, nonce, fencing and audit required before effect"
+    },
+    "outcome.v1": {
+      "required": ["schema", "commandId", "correlationId", "accepted", "decisionCode", "committedRevision", "receiptRef"],
+      "semantics": "UNKNOWN is a first-class outcome after crash; never infer success from timeout"
+    }
+  },
+  "interfaces": [
+    {"id":"OPS-IF-001","from":"SP-SW","to":"SP-AI","type":"context-and-recommendation","authority":"REVIEW_ONLY","requiredProof":"revision, authentication, TTL, same-context binding, no direct control","state":"PROPOSED"},
+    {"id":"OPS-IF-002","from":"SP-ENERGY","to":"SP-LIFE","type":"power-telemetry-and-readiness","authority":"OBSERVATION_ONLY","requiredProof":"SI units, quality, time, sequence, fail-safe degraded-power behavior","state":"PROPOSED"},
+    {"id":"OPS-IF-003","from":"SP-ENERGY","to":"SP-RAIL","type":"traction-power-status","authority":"OBSERVATION_ONLY","requiredProof":"quality, limit enforcement, independent train stop on unavailable power","state":"PROPOSED"},
+    {"id":"OPS-IF-004","from":"SP-SW","to":"SP-RAIL","type":"requested-train-action","authority":"NO_ACTUATION","requiredProof":"signed policy, independently authorized one-use permit, cgroup/MAC fence, safe stop","state":"PROPOSED"},
+    {"id":"OPS-IF-005","from":"SP-AI","to":"SP-LOG","type":"planning-suggestions","authority":"REVIEW_ONLY","requiredProof":"human/authority approval, bounded command envelope, durable idempotency","state":"PROPOSED"},
+    {"id":"OPS-IF-006","from":"SP-ISLAND","to":"SP-ENERGY","type":"site-constraints","authority":"OBSERVATION_ONLY","requiredProof":"survey provenance, validity domain, geotechnical hazard guard","state":"PROPOSED"},
+    {"id":"OPS-IF-007","from":"SP-SAFE","to":"SP-OPS","type":"security-attestations-and-incident-audit","authority":"AUDIT_ONLY","requiredProof":"independent root and peer identity, anti-rollback, cross-UID policy, retention","state":"PROPOSED"},
+    {"id":"OPS-IF-008","from":"SP-OPS","to":"SP-SW","type":"verification-status-and-change-ticket","authority":"ADVISORY_ONLY","requiredProof":"no direct service admission; independently enforced release decision needed","state":"PROPOSED"},
+    {"id":"OPS-IF-009","from":"SP-RAIL","to":"SP-ISLAND","type":"track-structure-loads","authority":"OBSERVATION_ONLY","requiredProof":"design envelope, finite element/sensor agreement, site permit authority","state":"PROPOSED"}
+  ]
+}

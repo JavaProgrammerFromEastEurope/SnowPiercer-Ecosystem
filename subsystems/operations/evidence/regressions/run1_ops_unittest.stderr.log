@@ -1,0 +1,23 @@
+test_acyclic_graph (test_ops_core.CatalogTests.test_acyclic_graph) ... ok
+test_bad_digest_rejected (test_ops_core.CatalogTests.test_bad_digest_rejected) ... ok
+test_duplicate_and_missing_modules_rejected (test_ops_core.CatalogTests.test_duplicate_and_missing_modules_rejected) ... ok
+test_duplicate_artifact_rejected (test_ops_core.CatalogTests.test_duplicate_artifact_rejected) ... ok
+test_exact_nine_modules (test_ops_core.CatalogTests.test_exact_nine_modules) ... ok
+test_fake_go_cannot_enter_catalog (test_ops_core.CatalogTests.test_fake_go_cannot_enter_catalog) ... ok
+test_mandatory_global_blockers_cannot_be_silently_removed_or_marked_passed (test_ops_core.CatalogTests.test_mandatory_global_blockers_cannot_be_silently_removed_or_marked_passed) ... ok
+test_security_operations_dependency_cycle_explicit (test_ops_core.CatalogTests.test_security_operations_dependency_cycle_explicit) ... ok
+test_unknown_dependency_rejected (test_ops_core.CatalogTests.test_unknown_dependency_rejected) ... ok
+test_atomic_report_output (test_ops_core.EvidenceTests.test_atomic_report_output) ... ok
+test_digest_mismatch_fails (test_ops_core.EvidenceTests.test_digest_mismatch_fails) ... ok
+test_directories_rejected (test_ops_core.EvidenceTests.test_directories_rejected) ... ok
+test_empty_controls_block (test_ops_core.EvidenceTests.test_empty_controls_block) ... ok
+test_missing_is_not_pass (test_ops_core.EvidenceTests.test_missing_is_not_pass) ... ok
+test_no_go_even_without_global_failure (test_ops_core.EvidenceTests.test_no_go_even_without_global_failure) ... ok
+test_regular_file_digest_match_is_unattested (test_ops_core.EvidenceTests.test_regular_file_digest_match_is_unattested) ... ok
+test_relative_unsafe_paths_rejected (test_ops_core.EvidenceTests.test_relative_unsafe_paths_rejected) ... ok
+test_symlinks_rejected (test_ops_core.EvidenceTests.test_symlinks_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.008s
+
+OK
