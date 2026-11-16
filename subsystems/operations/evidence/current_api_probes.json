@@ -1,0 +1,182 @@
+{
+  "schema": "snowpiercer.integration-report.v1",
+  "observedAt": "2026-11-15T20:33:36.926179+00:00",
+  "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+  "status": "passed",
+  "durationSeconds": 2.6488,
+  "modules": [
+    {
+      "moduleId": "SP-RAIL",
+      "stageId": "RAIL-TRUST-011",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "checks": [
+        {
+          "name": "fragmented_unix_frame_accepted",
+          "passed": true
+        },
+        {
+          "name": "unsupported_verb_rejected",
+          "passed": true
+        },
+        {
+          "name": "malformed_anchor_blocks_publication",
+          "passed": true
+        }
+      ],
+      "schema": "snowpiercer.integration-probe.v1",
+      "durationSeconds": 2.3584,
+      "stderr": ""
+    },
+    {
+      "moduleId": "SP-LIFE",
+      "stageId": "LIFE-CORE-021",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "schema": "snowpiercer.integration-probe.v1",
+      "checks": [
+        {
+          "name": "fresh_registered_sample_admitted",
+          "passed": true
+        },
+        {
+          "name": "replayed_identity_rejected",
+          "passed": true
+        },
+        {
+          "name": "stale_sample_rejected",
+          "passed": true
+        }
+      ],
+      "durationSeconds": 2.3708,
+      "stderr": ""
+    },
+    {
+      "moduleId": "SP-AI",
+      "stageId": "AI-CORE-021",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "schema": "snowpiercer.integration-probe.v1",
+      "checks": [
+        {
+          "name": "authenticated_context_bound_review_only_proposal",
+          "passed": true
+        },
+        {
+          "name": "changed_trainos_revision_rejected",
+          "passed": true
+        },
+        {
+          "name": "authority_escalation_tamper_rejected",
+          "passed": true
+        },
+        {
+          "name": "expired_proposal_clock_rollback_revival_rejected",
+          "passed": true
+        }
+      ],
+      "durationSeconds": 2.1935,
+      "stderr": ""
+    },
+    {
+      "moduleId": "SP-LOG",
+      "stageId": "LOG-CORE-021",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "checks": [
+        {
+          "name": "valid_envelope_commits_local_model",
+          "passed": true
+        },
+        {
+          "name": "exact_replay_has_single_effect",
+          "passed": true
+        },
+        {
+          "name": "stale_revision_rejected",
+          "passed": true
+        },
+        {
+          "name": "expired_command_rejected",
+          "passed": true
+        },
+        {
+          "name": "rejected_commands_have_no_effect",
+          "passed": true
+        }
+      ],
+      "schema": "snowpiercer.integration-probe.v1",
+      "durationSeconds": 1.4574,
+      "stderr": ""
+    },
+    {
+      "moduleId": "SP-ENERGY",
+      "stageId": "ENERGY-CORE-021",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "schema": "snowpiercer.integration-probe.v1",
+      "checks": [
+        {
+          "name": "typed_fresh_SI_power_is_observable",
+          "passed": true
+        },
+        {
+          "name": "exact_retry_is_idempotent",
+          "passed": true
+        },
+        {
+          "name": "receiver_TTL_rejects_stale_retry",
+          "passed": true
+        },
+        {
+          "name": "invalid_quality_replaces_good_and_is_not_usable",
+          "passed": true
+        }
+      ],
+      "durationSeconds": 2.3429,
+      "stderr": ""
+    },
+    {
+      "moduleId": "SP-ISLAND",
+      "stageId": "ISLAND-GEO-021",
+      "status": "ok",
+      "correlationId": "ECO-001-471ce42da62e4cf08748d395adf6e6a4",
+      "operationalReady": false,
+      "returncode": 0,
+      "schema": "snowpiercer.integration-probe.v1",
+      "checks": [
+        {
+          "name": "signed_client_payload_anchored",
+          "passed": true
+        },
+        {
+          "name": "facade_payload_substitution_rejected",
+          "passed": true
+        },
+        {
+          "name": "replay_denied_without_second_write",
+          "passed": true
+        },
+        {
+          "name": "engineering_approval_remains_no_go",
+          "passed": true
+        }
+      ],
+      "durationSeconds": 2.6418,
+      "stderr": ""
+    }
+  ],
+  "operationalReady": false,
+  "ecosystemCompletionPercent": null,
+  "scope": "Six independent local API boundaries; not a connected hardware or distributed end-to-end system."
+}
