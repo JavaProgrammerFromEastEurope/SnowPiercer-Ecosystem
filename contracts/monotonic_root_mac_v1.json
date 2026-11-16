@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ISLAND-GEO-022: Independent monotonic root and fail-closed production security",
+  "stage": "ISLAND-GEO-022",
+  "version": "0.23.0",
+  "status": "BLOCKED/NO-GO",
+  "root_protocol": {
+    "transport": "AF_UNIX with kernel SO_PEERCRED, remote UID pinning",
+    "operations": ["read", "cas"],
+    "challenge": "16 bytes fresh randomness, lowercase hex",
+    "signed_domain": "ISLAND-GEO-022:ROOT-HEAD:V1\\0",
+    "body": {"protocol": "ISLAND-GEO-022-root-v1", "challenge": "lowercase hex", "head": {"sequence": "nonnegative integer", "digest": "64 lowercase hex"}},
+    "proof": {"body": "canonical JSON object", "signature": "Ed25519 lowercase hex"},
+    "guarantee": "authenticity and freshness conditional on key and root process integrity; NOT independent anti-rollback without protected monotonic backend",
+    "software_fixture": "REJECTED for production"
+  },
+  "role_uids": ["client", "facade", "broker", "witness", "recovery_authority", "root"],
+  "permit_protocol": "direct client issue over SO_PEERCRED; broker-only consume; exactly-once durable SQLite state-bound to witness head",
+  "witness": "witness-owned SQLite; CAS mirrors to external root and denies divergence; no auto-repair after split CAS crash",
+  "strict_admission": "Reject before DB access / lease / socket publication if OS-MAC, hardware root and independent service manager are not all independently verified",
+  "os_mac": "Independent real loaded LSM profile assessment required; labels or DAC permissions alone insufficient",
+  "service_manager": "Independent PID1/supervisor, pre-exec domain confinement and lifecycle restart with measured service credentials mandatory; not installed",
+  "fail_closed": ["missing root", "root signature mismatch", "replayed challenge", "root-witness divergence", "missing permit", "permit UID mismatch", "broker/root/authority UID collision", "absent MAC confinement", "absent independently verified lifecycle"],
+  "physical_readiness": "BLOCKED/NO-GO"
+}

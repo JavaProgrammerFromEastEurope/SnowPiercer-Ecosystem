@@ -1,0 +1,82 @@
+[
+  {
+    "boundary": "before SQLite phase commit",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "after SQLite phase commit",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "before witness CAS",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "after witness CAS",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "before SQLite accepted commit",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "after SQLite accepted commit",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "before IPC response",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "after IPC response",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "concurrent startup",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "rollback to genesis",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "witness DB replacement",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "SQLite DB replacement",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "phase journal substitution",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "lock inode substitution",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "socket swap",
+    "status": "NOT_EXECUTED",
+    "reason": "No deterministic kill hook / independent recovery harness"
+  },
+  {
+    "boundary": "service SIGKILL after completed admission",
+    "status": "PASS",
+    "evidence": "stage012-multiuid.json"
+  }
+]

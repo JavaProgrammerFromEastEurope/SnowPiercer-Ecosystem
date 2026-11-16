@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 44, in main
+    broker.serve(token)
+    ~~~~~~~~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 19, in serve
+    require_production_security()  # Must deny before startup lease, permit or SQL.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/host_security.py", line 80, in require_production_security
+    raise AdmissionDenied('production admission BLOCKED/NO-GO: ' + '; '.join(evidence.reasons))
+island.anchored_admission.AdmissionDenied: production admission BLOCKED/NO-GO: enforcing kernel LSM not observable; systemd PID1 service manager not observable; TPM device not observable; independent hardware monotonic root attestation not verified; broker same-UID legacy MAC policy not independently verified; independent service lifecycle and policy not independently verified

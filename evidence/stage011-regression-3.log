@@ -1,0 +1,7 @@
+COMMAND: /opt/pyvenv/bin/python -W error::ResourceWarning -W error::DeprecationWarning -m unittest discover -s tests
+EXIT: 0
+...........................................................................................................................
+----------------------------------------------------------------------
+Ran 123 tests in 2.596s
+
+OK

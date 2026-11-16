@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "owner": "SnowPiercer Island",
+  "interface": "geotechnical-screen-v1",
+  "consumers": [
+    "Civil Structures",
+    "Underground",
+    "Rail Systems",
+    "Energy",
+    "Life Support"
+  ],
+  "inputs": {
+    "layers": "ordered contiguous depth intervals in metres",
+    "groundwater_depth_m": "nullable metres below surface",
+    "surface_pressure_kpa": "nonnegative kPa",
+    "footprint_m2": "positive m²",
+    "provenance": "synthetic|unverified-field|verified-field"
+  },
+  "outputs": [
+    "total_vertical_stress_kpa",
+    "hydrostatic_pore_pressure_kpa",
+    "effective_vertical_stress_kpa",
+    "applied_force_kn",
+    "risk_flags",
+    "engineering_approval"
+  ],
+  "authorization": "none",
+  "fail_closed": "invalid input raises GeotechnicalInputError; missing groundwater yields null pore/effective stress; always BLOCKED/NO-GO",
+  "versioning": "additive fields only in v1"
+}

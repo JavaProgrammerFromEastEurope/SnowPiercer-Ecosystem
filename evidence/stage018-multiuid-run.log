@@ -1,0 +1,16 @@
+{
+  "uids": {
+    "client": 23001,
+    "service": 23002,
+    "witness": 23003
+  },
+  "checks": {},
+  "limitations": [
+    "No exhaustive production SIGKILL matrix",
+    "Root test controller can replace storage",
+    "Legacy service UID can still call library API",
+    "Witness rollback to genesis is detectable only if local history remains",
+    "No independent hardware-backed witness"
+  ],
+  "error": "RuntimeError('startup failed: Traceback (most recent call last):\\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\\n  File \"<frozen runpy>\", line 88, in _run_code\\n  File \"/mnt/data/snowpiercer-island-v0.18.0/island/isolated_runtime.py\", line 16, in <module>\\n    if __name__==\\'__main__\\':main()\\n                            ~~~~^^\\n  File \"/mnt/data/snowpiercer-island-v0.18.0/island/isolated_runtime.py\", line 12, in main\\n    if a.role==\\'authority\\':IsolatedAuthorityServer(a.socket,a.db,a.permit_db,a.service_uid,a.client_uid).serve()\\n                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\\n  File \"/mnt/data/snowpiercer-island-v0.18.0/island/socket_isolation.py\", line 92, in serve\\n    srv.bind(str(b.path));os.chmod(b.path,0o660);srv.listen(16);srv.settimeout(.3)\\n    ~~~~~~~~^^^^^^^^^^^^^\\nPermissionError: [Errno 13] Permission denied\\n')"
+}

@@ -1,0 +1,25 @@
+{
+  "stage": "ISLAND-GEO-010",
+  "test_count_each": 118,
+  "successful_full_runs": 3,
+  "total_passed": 354,
+  "warning_filters": [
+    "error::ResourceWarning",
+    "error::DeprecationWarning"
+  ],
+  "successful_logs": [
+    "verified-regression-1.log",
+    "verified-regression-2.log",
+    "verified-regression-3.log"
+  ],
+  "failed_logs_preserved": [
+    "regression-1.log",
+    "regression-2.log",
+    "regression-3.log",
+    "final-regression-1.log",
+    "final-regression-2.log",
+    "final-regression-3.log"
+  ],
+  "scope": "unit and inherited regression; not cross-UID E2E",
+  "security_status": "BLOCKED/NO-GO"
+}

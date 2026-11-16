@@ -1,0 +1,16 @@
+{
+  "id": "geotechnical-signed-measurement-v1",
+  "stage": "ISLAND-GEO-007",
+  "canonical": "restricted JSON UTF-8 sorted keys; integer and decimal-string values",
+  "measurement_signature": "Ed25519 domain ISLAND-MEASUREMENT-V1\\u0000",
+  "policy_signature": "Ed25519 domain ISLAND-POLICY-V1\\u0000",
+  "epoch": "explicit UTC anchor",
+  "replay": "local SQLite BEGIN IMMEDIATE; not rollback proof",
+  "output": {
+    "admitted": "bool",
+    "reasons": "list[str]",
+    "risk_flags": "list[str]",
+    "engineering_approval": "BLOCKED/NO-GO"
+  },
+  "physical_deployment": "BLOCKED/NO-GO"
+}

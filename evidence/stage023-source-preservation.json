@@ -1,0 +1,18 @@
+{
+  "previous_version": "0.22.0",
+  "stage": "ISLAND-GEO-022",
+  "previous_file_count": 571,
+  "removed_files": [],
+  "previous_files_unchanged": 564,
+  "modified_files": [
+    "README.md",
+    "island/attested_broker.py",
+    "models/readiness.json",
+    "models/requirements.json",
+    "safety/hazards.json",
+    "tests/test_stage001.py",
+    "tests/test_stage002.py"
+  ],
+  "new_file_count": 397,
+  "compatibility_status": "All previous modules, tests and evidence retained; original broker client construction unchanged unless opt-in override."
+}

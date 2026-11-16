@@ -1,0 +1,1 @@
+Initial full regression: 20 tests, 2 failures (legacy tests asserted total counts 14 and 6 after cumulative expansion to 21 and 11). Corrected assertions to count original Stage001 artifacts; all original test methods retained. Full failure transcript available in build execution, this summary is retained as evidence.

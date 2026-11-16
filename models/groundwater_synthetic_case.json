@@ -1,0 +1,57 @@
+{
+  "case_id": "SYN-GEO-002",
+  "classification": "synthetic-only",
+  "layers": [
+    {
+      "top_m": 0,
+      "bottom_m": 2,
+      "unit_weight_kn_m3": [
+        17,
+        19
+      ]
+    },
+    {
+      "top_m": 2,
+      "bottom_m": 10,
+      "unit_weight_kn_m3": [
+        19,
+        21
+      ]
+    }
+  ],
+  "water_observations": [
+    {
+      "time_days": 0,
+      "depth_m": [
+        2,
+        4
+      ]
+    },
+    {
+      "time_days": 10,
+      "depth_m": [
+        4,
+        6
+      ]
+    }
+  ],
+  "evaluation": {
+    "time_days": 5,
+    "depth_m": 5
+  },
+  "expected": {
+    "total_vertical_stress_kpa": [
+      91,
+      101
+    ],
+    "hydrostatic_pore_pressure_kpa": [
+      0,
+      19.62
+    ],
+    "effective_vertical_stress_kpa": [
+      71.38,
+      101
+    ]
+  },
+  "physical_approval": "BLOCKED/NO-GO"
+}

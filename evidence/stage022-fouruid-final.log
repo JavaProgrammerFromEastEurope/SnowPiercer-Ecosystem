@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "checks": {
+    "witness_peer_owner": {
+      "pass": true
+    },
+    "four_uid_real_processes": {
+      "pass": true,
+      "pids": {
+        "witness": 3258,
+        "broker": 3278,
+        "facade": 3288
+      }
+    },
+    "direct_client_signed_admission": {
+      "pass": true,
+      "response": "{\"admitted\": true, \"digest\": \"09157ef31b2451f7cb17a7fb0293ecd2a42edf06699909b57f7793d4c019c56c\", \"engineering_approval\": \"BLOCKED/NO-GO\", \"sequence\": 1}\n"
+    },
+    "signed_replay_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "service_cannot_forge_client_signature": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "facade_legacy_ledger_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "client_legacy_ledger_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "witness_legacy_ledger_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "facade_cannot_read_client_key": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "broker_cannot_read_client_key": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "facade_cannot_read_witness": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "client_cannot_read_permits": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "socket_owner_separation": {
+      "pass": true
+    },
+    "broker_rejects_direct_client_peer": {
+      "pass": true
+    },
+    "concurrent_broker_startup_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "real_sigkill_matrix": {
+      "pass": true,
+      "count": 17
+    },
+    "admission_chain_advanced": {
+      "pass": true,
+      "sequence_count": 25
+    },
+    "startup_lock_symlink_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "phase_journal_tampering_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "ledger_symlink_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "sqlite_sidecar_journal_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "sqlite_sidecar_wal_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "sqlite_sidecar_shm_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "occupied_broker_socket_denied": {
+      "pass": true,
+      "exit_code": 1
+    },
+    "witness_genesis_rollback_denied": {
+      "pass": true,
+      "exit_code": 1
+    }
+  },
+  "crash_count": 17,
+  "error": null
+}

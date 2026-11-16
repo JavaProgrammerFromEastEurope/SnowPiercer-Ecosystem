@@ -1,0 +1,32 @@
+..F.....F.......F..............................................................................................................................................................
+======================================================================
+FAIL: test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.21.0/tests/test_stage001.py", line 12, in test_hazard_structure
+    self.assertEqual(len([h for h in load("safety/hazards.json")["hazards"] if not h["id"].startswith(("ISLAND-GEO-HZ-", "H-GEO2-", "ISLAND-HAZ-GEO-004-", "ISLAND-HAZ-GEO-005-", "ISLAND-HAZ-GEO-006-", "ISLAND-HAZ-GEO-007-", "H-GEO-008-", "ISLAND-HAZ-GEO-007-", "H-GEO-008-", "H-GEO-009-", "H-GEO-010-", "H-GEO-011-", "H-GEO-012-", "H-GEO-013-", "H-GEO-014-", "H-GEO-015-", "H-GEO-016-", "H-GEO-017-", "H-GEO-018-"))]),6)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 12 != 6
+
+======================================================================
+FAIL: test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.21.0/tests/test_stage001.py", line 6, in test_requirement_traceability
+    self.assertEqual(len([r for r in load("models/requirements.json")["requirements"] if not r["id"].startswith(("ISLAND-GEO2-", "ISLAND-GEO-004-", "ISLAND-GEO-005-", "ISLAND-GEO-006-", "ISLAND-GEO-007-", "ISLAND-GEO-008-", "ISLAND-GEO-007-", "ISLAND-GEO-008-", "ISLAND-GEO-009-", "ISLAND-GEO-010-", "ISLAND-GEO-011-", "ISLAND-GEO-012-", "ISLAND-GEO-013-", "ISLAND-GEO-014-", "ISLAND-GEO-015-", "ISLAND-GEO-016-", "ISLAND-GEO-017-", "ISLAND-GEO-018-")) and r["id"] not in {"ISLAND-GEO-002","ISLAND-GEO-003","ISLAND-GEO-004","ISLAND-GEO-005","ISLAND-GEO-006","ISLAND-GEO-007","ISLAND-GEO-008"}]),14)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 21 != 14
+
+======================================================================
+FAIL: test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.21.0/tests/test_stage002.py", line 62, in test_requirements_trace
+    self.assertEqual(len([x for x in r if not x['id'].startswith(('ISLAND-GEO2-', 'ISLAND-GEO-004-', 'ISLAND-GEO-005-', 'ISLAND-GEO-006-', 'ISLAND-GEO-007-', 'ISLAND-GEO-008-', 'ISLAND-GEO-009-', 'ISLAND-GEO-010-', 'ISLAND-GEO-011-', 'ISLAND-GEO-012-', 'ISLAND-GEO-013-', 'ISLAND-GEO-014-', 'ISLAND-GEO-015-', 'ISLAND-GEO-016-', 'ISLAND-GEO-017-', 'ISLAND-GEO-018-'))]),21)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 28 != 21
+
+----------------------------------------------------------------------
+Ran 175 tests in 3.911s
+
+FAILED (failures=3)

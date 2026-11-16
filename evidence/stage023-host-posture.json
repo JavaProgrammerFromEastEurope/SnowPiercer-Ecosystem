@@ -1,0 +1,22 @@
+{
+  "claim": "Observed environment only; not independently attested",
+  "current_lsm_label": "kernel\u0000",
+  "independent_service_manager": false,
+  "kernel_lsm_enforcing": false,
+  "linux": true,
+  "reasons": [
+    "privileged service UID",
+    "enforcing kernel LSM not observable",
+    "systemd PID1 service manager not observable",
+    "TPM device not observable",
+    "independent hardware monotonic root attestation not verified",
+    "broker same-UID legacy MAC policy not independently verified",
+    "independent service lifecycle and policy not independently verified"
+  ],
+  "rootless_service": false,
+  "security_conclusion": "PRODUCTION SECURITY BLOCKED/NO-GO",
+  "tpm_device_present": false,
+  "verified_hardware_monotonic_root": false,
+  "verified_same_uid_mac_fence": false,
+  "verified_service_manager_policy": false
+}

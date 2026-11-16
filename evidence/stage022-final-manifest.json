@@ -1,0 +1,65 @@
+{
+  "stage": "ISLAND-GEO-021",
+  "release": "Island v0.22.0",
+  "base_release": "Island v0.21.0",
+  "base_zip_sha256": "ed738e5372caa40d6948cbf5503b6d3d00b27026a86bb4b177ee3397d2bb9188",
+  "base_zip_integrity": true,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "regressions": [
+    {
+      "run": 1,
+      "tests": 184,
+      "exit_code": 0,
+      "stdout": "evidence/stage022-final-regression-1.stdout",
+      "stderr": "evidence/stage022-final-regression-1.stderr"
+    },
+    {
+      "run": 2,
+      "tests": 184,
+      "exit_code": 0,
+      "stdout": "evidence/stage022-final-regression-2.stdout",
+      "stderr": "evidence/stage022-final-regression-2.stderr"
+    },
+    {
+      "run": 3,
+      "tests": 184,
+      "exit_code": 0,
+      "stdout": "evidence/stage022-final-regression-3.stdout",
+      "stderr": "evidence/stage022-final-regression-3.stderr"
+    }
+  ],
+  "regression_total_pass": 552,
+  "four_uid_e2e_success": true,
+  "four_uid_check_count": 27,
+  "real_sigkill_points": 17,
+  "real_sigkill_exit_codes": [
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9,
+    -9
+  ],
+  "failed_executions_preserved": [
+    "evidence/stage022-fouruid-initial.log",
+    "evidence/stage022-fouruid-initial-2.log",
+    "evidence/stage022-fouruid-debug.log",
+    "evidence/stage022-artifact-initial.log"
+  ],
+  "physical_deployment": "BLOCKED/NO-GO",
+  "production_security": "BLOCKED/NO-GO"
+}

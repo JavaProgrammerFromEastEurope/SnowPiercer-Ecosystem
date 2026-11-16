@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 44, in main
+    broker.serve(token)
+    ~~~~~~~~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/attested_broker.py", line 163, in serve
+    self.preflight()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/split_authorities.py", line 200, in preflight
+    super().preflight()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/attested_broker.py", line 126, in preflight
+    super().preflight()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/write_broker.py", line 42, in preflight
+    if self.path.exists() or self.path.is_symlink(): raise AdmissionDenied('occupied broker endpoint')
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+island.anchored_admission.AdmissionDenied: occupied broker endpoint

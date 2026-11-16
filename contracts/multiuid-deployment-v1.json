@@ -1,0 +1,14 @@
+{
+  "name": "multiuid-deployment-v1",
+  "linux_only": true,
+  "roles": [
+    "client",
+    "service",
+    "witness"
+  ],
+  "uids": "distinct_non_root",
+  "ipc": "AF_UNIX/SO_PEERCRED",
+  "witness": "CAS",
+  "legacy": "library_only_no_production_guarantee",
+  "readiness": "BLOCKED/NO-GO"
+}

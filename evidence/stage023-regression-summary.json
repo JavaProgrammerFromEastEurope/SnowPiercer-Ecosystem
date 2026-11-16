@@ -1,0 +1,40 @@
+{
+  "stage": "ISLAND-GEO-022",
+  "full_strict_runs": 3,
+  "test_count_per_run": 200,
+  "total_pass": 600,
+  "warning_policy": "error::ResourceWarning,error::DeprecationWarning",
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONWARNINGS=error::ResourceWarning,error::DeprecationWarning python -m unittest discover -s tests -v",
+  "runs": [
+    {
+      "run": 1,
+      "tests": 200,
+      "passed": 200,
+      "exit_code": 0,
+      "stdout": "evidence/stage023-regression-1.stdout",
+      "stderr": "evidence/stage023-regression-1.stderr",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "436b4807b4a7c810a5fea10e9fa3bdb0869243f57662969df765eeefe274a997"
+    },
+    {
+      "run": 2,
+      "tests": 200,
+      "passed": 200,
+      "exit_code": 0,
+      "stdout": "evidence/stage023-regression-2.stdout",
+      "stderr": "evidence/stage023-regression-2.stderr",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "56265aa4255855977365a01c9ed037bc9cf9c0cd3b1edcd5606aea76e9a38342"
+    },
+    {
+      "run": 3,
+      "tests": 200,
+      "passed": 200,
+      "exit_code": 0,
+      "stdout": "evidence/stage023-regression-3.stdout",
+      "stderr": "evidence/stage023-regression-3.stderr",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "26dd389ff53b46b77d0832820df7e8ae6b593ce31c67f75c3e8e723e07073a66"
+    }
+  ]
+}

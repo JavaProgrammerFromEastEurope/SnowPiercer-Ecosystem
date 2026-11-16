@@ -1,0 +1,86 @@
+{
+  "stage": "ISLAND-GEO-014",
+  "scope": "honest evidence classification",
+  "checks": {
+    "legacy_compatibility": {
+      "status": "PASS",
+      "notes": "All historical 132 tests plus 8 new tests run successfully; API imports retained"
+    },
+    "permit_one_time_concurrent": {
+      "status": "PASS",
+      "notes": "8 competing threads; exactly one transactional consume"
+    },
+    "permit_uid_logic": {
+      "status": "PASS",
+      "notes": "Unit tests reject incorrect issuer and consumer UID"
+    },
+    "production_ipc_injection_points": {
+      "status": "IMPLEMENTED_NOT_E2E_VERIFIED",
+      "notes": "19 named boundaries, test-only SIGKILL; not exercised in full cross-UID production service"
+    },
+    "real_cross_uid_end_to_end": {
+      "status": "NOT_EXECUTED",
+      "notes": "No real three-UID deployment harness run in Stage 014"
+    },
+    "os_enforced_legacy_fencing": {
+      "status": "NOT_VERIFIED",
+      "notes": "Legacy API remains callable with direct file write permission"
+    },
+    "production_concurrent_start": {
+      "status": "NOT_EXECUTED",
+      "notes": "No independent production start race evidence"
+    },
+    "replay": {
+      "status": "PARTIAL",
+      "notes": "Permit replay denied in unit test; transaction replay E2E not executed"
+    },
+    "rollback_to_genesis": {
+      "status": "NOT_EXECUTED",
+      "notes": "Stage 013 had a limited worker test; Stage 014 no independent E2E rollback"
+    },
+    "sqlite_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "No adversarial E2E inode replacement"
+    },
+    "phase_journal_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "Phase journal inside SQLite; no E2E substitution test"
+    },
+    "witness_anchor_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "No separate UID witness file substitution test"
+    },
+    "permit_database_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "No independent permit DB tamper test"
+    },
+    "lock_file_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "No TOCTOU process test"
+    },
+    "socket_substitution": {
+      "status": "NOT_EXECUTED",
+      "notes": "Socket owner checked by stat, peer pinning not proven"
+    },
+    "sigkill_sqlite_begin_commit": {
+      "status": "IMPLEMENTED_NOT_E2E_VERIFIED",
+      "notes": "Test hooks present; not executed in production IPC"
+    },
+    "sigkill_witness_cas": {
+      "status": "IMPLEMENTED_NOT_E2E_VERIFIED",
+      "notes": "Test hooks present; not executed in production IPC"
+    },
+    "sigkill_ipc": {
+      "status": "IMPLEMENTED_NOT_E2E_VERIFIED",
+      "notes": "Test hooks present; not executed in production IPC"
+    },
+    "independent_witness_antirollback": {
+      "status": "NOT_VERIFIED",
+      "notes": "Witness uses mutable SQLite"
+    },
+    "physical_safety": {
+      "status": "BLOCKED/NO-GO",
+      "notes": "No independent geotechnical or civil engineering validation"
+    }
+  }
+}

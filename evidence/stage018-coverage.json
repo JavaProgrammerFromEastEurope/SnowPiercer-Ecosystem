@@ -1,0 +1,86 @@
+{
+  "stage": "ISLAND-GEO-017",
+  "version": "0.18.0",
+  "unit_regressions": [
+    {
+      "log": "stage018-final-regression-1.log",
+      "tests": 157,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "log": "stage018-final-regression-2.log",
+      "tests": 157,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "log": "stage018-final-regression-3.log",
+      "tests": 157,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "multiuid": {
+    "direct_client_permit": {
+      "pass": true,
+      "stderr": ""
+    },
+    "admission": {
+      "pass": true,
+      "stderr": "",
+      "stdout": "{\"admitted\": true, \"digest\": \"9f4ee2b4e66fb7da7e360546d338616eca3c8644d8759f70ec783e21e0c7e4ad\", \"engineering_approval\": \"BLOCKED/NO-GO\", \"sequence\": 1}\n"
+    },
+    "witness_storage_denied_client": {
+      "pass": true
+    },
+    "witness_storage_denied_service": {
+      "pass": true
+    },
+    "service_storage_denied_client": {
+      "pass": true
+    },
+    "service_storage_denied_witness": {
+      "pass": true
+    },
+    "socket_owners": {
+      "pass": true
+    },
+    "permit_replay_denied": {
+      "pass": true
+    },
+    "service_sigkill": {
+      "pass": true
+    },
+    "fresh_permit_after_rollback": {
+      "pass": true
+    },
+    "genesis_rollback_denied": {
+      "pass": true,
+      "stderr": "reconcile\n    if local!=remote: raise AdmissionDenied('rollback, witness divergence or lost local history')\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nisland.anchored_admission.AdmissionDenied: rollback, witness divergence or lost local history\n"
+    }
+  },
+  "not_verified": [
+    "all production SIGKILL crash boundaries",
+    "concurrent production startups",
+    "SQLite phase journal lock socket and permit DB replacement matrix",
+    "legacy service UID bypass",
+    "independent monotonic witness rollback resistance",
+    "host root compromise",
+    "physical construction safety"
+  ],
+  "status": {
+    "software": "PASS in tested scope",
+    "production_security": "BLOCKED/NO-GO",
+    "physical": "BLOCKED/NO-GO"
+  }
+}

@@ -1,0 +1,23 @@
+........F.......F............................................................................................................................................
+======================================================================
+FAIL: test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.18.0/tests/test_stage001.py", line 6, in test_requirement_traceability
+    self.assertEqual(len([r for r in load("models/requirements.json")["requirements"] if not r["id"].startswith(("ISLAND-GEO2-", "ISLAND-GEO-004-", "ISLAND-GEO-005-", "ISLAND-GEO-006-", "ISLAND-GEO-007-", "ISLAND-GEO-008-", "ISLAND-GEO-007-", "ISLAND-GEO-008-", "ISLAND-GEO-009-", "ISLAND-GEO-010-", "ISLAND-GEO-011-", "ISLAND-GEO-012-", "ISLAND-GEO-013-", "ISLAND-GEO-014-", "ISLAND-GEO-015-", "ISLAND-GEO-016-")) and r["id"] not in {"ISLAND-GEO-002","ISLAND-GEO-003","ISLAND-GEO-004","ISLAND-GEO-005","ISLAND-GEO-006","ISLAND-GEO-007","ISLAND-GEO-008"}]),14)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 20 != 14
+
+======================================================================
+FAIL: test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.18.0/tests/test_stage002.py", line 62, in test_requirements_trace
+    self.assertEqual(len([x for x in r if not x['id'].startswith(('ISLAND-GEO2-', 'ISLAND-GEO-004-', 'ISLAND-GEO-005-', 'ISLAND-GEO-006-', 'ISLAND-GEO-007-', 'ISLAND-GEO-008-', 'ISLAND-GEO-009-', 'ISLAND-GEO-010-', 'ISLAND-GEO-011-', 'ISLAND-GEO-012-', 'ISLAND-GEO-013-', 'ISLAND-GEO-014-', 'ISLAND-GEO-015-', 'ISLAND-GEO-016-'))]),21)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 27 != 21
+
+----------------------------------------------------------------------
+Ran 157 tests in 3.673s
+
+FAILED (failures=2)

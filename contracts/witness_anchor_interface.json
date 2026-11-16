@@ -1,0 +1,23 @@
+{
+  "id": "geotechnical-witness-cas-v1",
+  "transport": "Unix stream socket, length-prefixed JSON",
+  "authentication": "Linux SO_PEERCRED UID allowlist",
+  "operations": [
+    "read",
+    "cas"
+  ],
+  "cas_fields": [
+    "sequence",
+    "previous",
+    "digest"
+  ],
+  "limits": {
+    "request_bytes": 8192,
+    "socket_timeout_seconds": 3
+  },
+  "caveats": [
+    "No independent witness if same UID owns local and witness files",
+    "No secure hardware monotonic counter",
+    "Legacy direct ReplayLedger still accessible"
+  ]
+}

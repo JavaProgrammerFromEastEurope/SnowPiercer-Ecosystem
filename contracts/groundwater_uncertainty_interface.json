@@ -1,0 +1,15 @@
+{
+  "version": "0.3.0",
+  "interface": "geotechnical-uncertainty-screen-v1",
+  "status": "draft; not a production IPC protocol",
+  "input_units": {
+    "time_days": "days from arbitrary observation epoch",
+    "depth_m": "m below surface",
+    "unit_weights": "kN/m^3"
+  },
+  "groundwater": "strict time series; nullable depth intervals; linear interpolation only; extrapolation prohibited",
+  "risk_graph": "target -> tuple of upstream node identifiers",
+  "output": "interval bounds, risk flags, BLOCKED/NO-GO",
+  "compatibility": "additive; geotechnical-screen-v1 retained",
+  "authorization": "none"
+}

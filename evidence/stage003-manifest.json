@@ -1,0 +1,77 @@
+{
+  "stage": "ISLAND-GEO-002",
+  "version": "0.3.0",
+  "status": "software PASS; physical BLOCKED/NO-GO",
+  "regression_runs": [
+    {
+      "name": "stage003-regression-1.log",
+      "tests": 31,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "name": "stage003-regression-2.log",
+      "tests": 31,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "name": "stage003-regression-3.log",
+      "tests": 31,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "initial_failed_run": "stage003-initial.log",
+  "previous_stages_preserved": [
+    "ISLAND-CORE-001",
+    "ISLAND-GEO-001"
+  ],
+  "scope": "conceptual synthetic only",
+  "files": {
+    "README.md": "7714724a97509b9be201582e0604dd5dd2fc335b1a98dab5057d6b2de590d007",
+    "contracts/geotechnical_interface.json": "967190e1bd67eb70fb7941e98cd1410679ed8aa5fd7c7cd5721607a4ab388f0a",
+    "contracts/groundwater_uncertainty_interface.json": "cfd3c138d928270b2444dc1ff736086400599af6db05c9401b641946c38c3b55",
+    "contracts/interfaces.json": "7736f3b63defd333818efdd710459c977ee85108b3bdc6dd99fa9d405c8c1b13",
+    "docs/architecture.md": "0f7454c3ec25c21d6b274045682eb652bcd1b1637db537ae4f044c0f3a59a405",
+    "docs/geotechnical_model.md": "8405888ddcc9fb8b9c512c548fbfbe49a6e6cc2216fa42b7d22d79074093fa8e",
+    "docs/groundwater_uncertainty.md": "e14ad7e2dc77670473d602002afb0db81a3f5cd9ec1637c2432717ff492dc361",
+    "docs/safety.md": "412b31d9ecf94ee7851e742c7bcd3199e6ebef14fa6ecddeec90e5edcc74e7a0",
+    "evidence/initial-failed-regression.log": "b4eeffbe9ef11f8559127832305ac299f3f65af2a4b8fdce041e22158cc9c151",
+    "evidence/manifest.json": "6b8a639a6594b7a107d52c306b6b1fa20d34c5144451d4de049052c2468564a8",
+    "evidence/regression-1.log": "c937f03d4efeaaf437f877536d7dc731f04121284dcfbd90f54f278dc30ffc7e",
+    "evidence/regression-2.log": "c937f03d4efeaaf437f877536d7dc731f04121284dcfbd90f54f278dc30ffc7e",
+    "evidence/regression-3.log": "c937f03d4efeaaf437f877536d7dc731f04121284dcfbd90f54f278dc30ffc7e",
+    "evidence/stage002-manifest.json": "e2960d28d33c5510d88ae9f24005a626ca046680db6f1d2bd17157f530ed4a06",
+    "evidence/stage002-regression-1.log": "112b2038c4b2f41d01505cef92cbfd47c481ca5c4a11e17798968febc23ca0b6",
+    "evidence/stage002-regression-2.log": "12a7c83ae692e39899915508d57b3edfc18fcc52ef1d858340062a1350b89264",
+    "evidence/stage002-regression-3.log": "112b2038c4b2f41d01505cef92cbfd47c481ca5c4a11e17798968febc23ca0b6",
+    "evidence/stage003-initial.log": "7468a1736c5f817d7cc53d3c633707245fa7777ade4187ab928d336adb6a91e6",
+    "evidence/stage003-regression-1.log": "dff436652e2119dc5e971f890227490ac6f3674ecf62b232e32658a2cac0abad",
+    "evidence/stage003-regression-2.log": "5278622141d9ce0ed46004c1b0cd9f2a2f095a2876f8470ee7ce34d469215283",
+    "evidence/stage003-regression-3.log": "45c9cbf6296d0643c7103e624018ba9f199114385ba5bb094b5b588de72aa870",
+    "island/__init__.py": "8b61396a6ad9147ad0cb2f5fe463e7fa74624151325c7e9422cc0d25cb8b28ea",
+    "island/geotechnics.py": "d4df8d19e5dd7a3993446b52e274ee7e46b0ebb73e87b244dcc375e13995270d",
+    "island/groundwater.py": "8896d5456496510c697b9b4f9642edef6272e8d7cd4c2f44672d92f6a3ace9ce",
+    "island/validation.py": "18feacb02f010f37ac151c42bda34151160d38e77a29714ed824dd9b59b2edf4",
+    "models/assets.json": "7507124b11c2ad9f824e3e6613f7015bbf0723e812cb726fd0d5f251e561c7bb",
+    "models/geotechnical_synthetic_case.json": "b093a08f09a0b06a7271a850a1e9166a8426106e74ad2a7b63cc29fa7041d7c9",
+    "models/groundwater_synthetic_case.json": "54b87149ab73d258ac7d1f7b0ac8628c11e8a18c7ecf80ae213c7de3f8020e55",
+    "models/readiness.json": "3f2794c1dd24b06b692e64118b804e0670c55a67d595de4b29bb942f778dd169",
+    "models/requirements.json": "4607e80b0dd2da6ce32b263e0c4fa22a66523de9ad1a4057c16fd4e521e3db49",
+    "safety/hazards.json": "c68d7ba41eb5f09e521c8a62322066551903599ee5651d56c9b7baa5d4098212",
+    "schemas/requirements.schema.json": "35cfe22d98fa079ec172d91c41db3d1a298c6a270bec8812b74f4b30a89a6f6f",
+    "tests/test_stage001.py": "9a337985fbe661e06ae25f0a75f05339c0a42159184a4580bdd9286164c79113",
+    "tests/test_stage002.py": "e939914093aa0d121d2960c7b27f978dcd63e359198f74a0b02baebdf8dd0cbc",
+    "tests/test_stage003.py": "a7b8ff58dc28ddf038453c13379e5e06e97e7d5716b5ae6fb14d0ba6878d0a77"
+  }
+}

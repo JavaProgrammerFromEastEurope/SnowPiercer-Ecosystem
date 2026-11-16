@@ -1,0 +1,32 @@
+{
+  "stage": "ISLAND-GEO-015",
+  "regressions": [
+    {
+      "file": "stage016-regression-1.log",
+      "tests": 146,
+      "status": "FAIL"
+    },
+    {
+      "file": "stage016-regression-2.log",
+      "tests": 146,
+      "status": "PASS"
+    },
+    {
+      "file": "stage016-regression-3.log",
+      "tests": 146,
+      "status": "PASS"
+    },
+    {
+      "file": "stage016-regression-4.log",
+      "tests": 146,
+      "status": "PASS"
+    }
+  ],
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "verified": "library unit only",
+  "production_security": "BLOCKED/NO-GO",
+  "physical": "BLOCKED/NO-GO"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "client_attested_broker_v1",
+  "stage": "ISLAND-GEO-021",
+  "version": "0.22.0",
+  "roles": {
+    "client_uid": 24001,
+    "facade_uid": 24002,
+    "broker_uid": 24003,
+    "witness_permit_uid": 24004
+  },
+  "wire_format": {
+    "operation": "admit_signed",
+    "envelope": {
+      "message": {
+        "protocol": "ISLAND-GEO-021-v1",
+        "client_uid": "positive integer",
+        "broker_uid": "positive integer",
+        "nonce": "32 lowercase hex chars",
+        "payload": "2 to 8192 lowercase hex chars, 1-4096 bytes"
+      },
+      "signature": "128 lowercase hex chars / Ed25519 signature"
+    }
+  },
+  "signature_input": "Ed25519(DOMAIN || canonical UTF-8 ASCII sorted-key JSON(message))",
+  "domain": "ISLAND-GEO-021:CLIENT-ADMISSION:V1\\0",
+  "nonce_semantics": "Burned atomically in broker SQLite before witness CAS. Crash gap may lose a request but replay is denied while broker database is retained.",
+  "recovery": "Direct client SO_PEERCRED permit issuance via witness/authority; broker consumes state-bound one-shot permit before reconciliation and publishes socket only after success",
+  "startup_secret_delivery": "Inherited file descriptor; token never added to command line or persisted in test logs",
+  "kernel_checks": "SO_PEERCRED on every IPC hop; OS file owner/private directory checks",
+  "library_compatibility": "Older Python module and APIs unchanged; new attested_runtime is opt-in for OS-provisioned deployments",
+  "no_go": [
+    "Same-broker-UID legacy bypass possible",
+    "Witness and permit authority share UID",
+    "No independent external monotonic root",
+    "Privileged controller/root can rewrite data and sockets",
+    "No production-wide MAC/LSM policy or independent power-failure evidence"
+  ]
+}

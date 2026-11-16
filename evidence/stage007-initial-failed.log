@@ -1,0 +1,1 @@
+Initial run observed: 73 tests, failures=3, errors=1. Legacy stage count assertions did not exclude ISLAND-GEO-007; new risk-isolation test used reversed dependency direction. Original stdout was overwritten during regeneration; this summary is NOT a verbatim execution log.

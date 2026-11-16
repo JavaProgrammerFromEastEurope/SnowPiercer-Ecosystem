@@ -1,0 +1,29 @@
+{
+  "stage": "ISLAND-GEO-022",
+  "failures": [
+    {
+      "name": "initial unit",
+      "result": "FAIL 1/200",
+      "exit_code": 1,
+      "stderr": "stage023-initial-unit.stderr",
+      "stdout": "stage023-initial-unit.stdout",
+      "resolution": "Correct lab-fixture docstring assertion"
+    },
+    {
+      "name": "post-requirement/safety expansion",
+      "result": "FAIL 6/200",
+      "exit_code": 1,
+      "stderr": "stage023-after-artifacts.stderr",
+      "stdout": "stage023-after-artifacts.stdout",
+      "resolution": "Historical Stage scope predicates and hazard verification enums preserved"
+    },
+    {
+      "name": "first six-UID harness",
+      "result": "TIMEOUT / interrupted",
+      "exit_code": "TIMEOUT",
+      "stderr": "stage023-sixuid-initial.stderr",
+      "stdout": "stage023-sixuid-initial.stdout",
+      "resolution": "Final rerun with explicit per-case progress, preserved initial controller streams; early subprocess paths reused and cannot be reconstructed"
+    }
+  ]
+}

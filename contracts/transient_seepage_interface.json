@@ -1,0 +1,29 @@
+{
+  "contract_id": "transient-seepage-envelope-v1",
+  "version": "0.5.0",
+  "entrypoint": "island.transient.transient_envelope",
+  "inputs": [
+    "TransientPath",
+    "start_days",
+    "end_days",
+    "critical_gradient optional"
+  ],
+  "outputs": [
+    "evaluated_times_days",
+    "gradient",
+    "specific_discharge_m_s",
+    "discharge_m3_s",
+    "risk_flags",
+    "engineering_approval"
+  ],
+  "unknown_policy": "entire numeric envelope null",
+  "time_policy": "no extrapolation; all observation knots evaluated",
+  "approval": "BLOCKED/NO-GO",
+  "consumers": [
+    "Energy",
+    "Rail Systems",
+    "Life Support",
+    "Security",
+    "TrainOS"
+  ]
+}

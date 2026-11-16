@@ -1,0 +1,53 @@
+{
+  "stage": "ISLAND-GEO-018",
+  "hazards": [
+    {
+      "id": "H-GEO-018-01",
+      "scenario": "Legacy direct SQLite write bypass",
+      "severity": "critical",
+      "mitigation": "OS-provisioned DAC and negative UID tests",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-02",
+      "scenario": "IPC socket replacement / TOCTOU",
+      "severity": "critical",
+      "mitigation": "Root-owned sticky namespace, peer UID and inode checks",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-03",
+      "scenario": "Witness rollback to genesis",
+      "severity": "critical",
+      "mitigation": "External monotonic anchor and recovery denial",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-04",
+      "scenario": "Concurrent startup corrupts recovery",
+      "severity": "critical",
+      "mitigation": "Mandatory shared startup lock and crash injection",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-05",
+      "scenario": "Power loss at SQLite or witness CAS",
+      "severity": "critical",
+      "mitigation": "Full crash-point fault-injection matrix",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-06",
+      "scenario": "Root compromise or privileged bypass",
+      "severity": "critical",
+      "mitigation": "Independent hardware trust and external assessment",
+      "verification": "OPEN",
+      "residual_risk": "unassessed"
+    }
+  ]
+}

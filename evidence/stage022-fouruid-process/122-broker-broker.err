@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 55, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 36, in main
+    a.service_uid, a.witness_uid, a.crash_at).serve(token)
+                                              ~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_broker.py", line 160, in serve
+    self.preflight()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_broker.py", line 126, in preflight
+    super().preflight()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/write_broker.py", line 40, in preflight
+    _safe_existing(self.db,os.geteuid())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/mandatory_guard.py", line 31, in _safe_existing
+    _private_regular(str(path) + suffix, uid)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/mandatory_guard.py", line 25, in _private_regular
+    raise AdmissionDenied('private file compromised: ' + str(path))
+island.anchored_admission.AdmissionDenied: private file compromised: /tmp/island021-ykuy1ewm/broker/b.db-wal

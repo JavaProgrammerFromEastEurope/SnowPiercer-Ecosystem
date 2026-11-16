@@ -1,0 +1,90 @@
+======================================================================
+FAIL: test_asset_identifiers (test_stage001.Stage001Tests.test_asset_identifiers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 8, in test_asset_identifiers
+    self.assertEqual(validate()["assets"],8)
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.9.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] == "pending" and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 12, in test_hazard_structure
+    self.assertEqual(len([h for h in load("safety/hazards.json")["hazards"] if not h["id"].startswith(("ISLAND-GEO-HZ-", "H-GEO2-", "ISLAND-HAZ-GEO-004-", "ISLAND-HAZ-GEO-005-", "ISLAND-HAZ-GEO-006-", "ISLAND-HAZ-GEO-007-", "ISLAND-HAZ-GEO-007-"))]),6)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 11 != 6
+
+======================================================================
+FAIL: test_hazards_unverified (test_stage001.Stage001Tests.test_hazards_unverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 22, in test_hazards_unverified
+    self.assertTrue(all(h["verification"] == "pending" for h in load("safety/hazards.json")["hazards"]))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_interface_coverage (test_stage001.Stage001Tests.test_interface_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 10, in test_interface_coverage
+    self.assertEqual(validate()["contracts"],7)
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.9.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] == "pending" and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_readiness_gate (test_stage001.Stage001Tests.test_readiness_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 14, in test_readiness_gate
+    self.assertEqual(validate()["physical_deployment"],"BLOCKED/NO-GO")
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.9.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] == "pending" and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage001.py", line 6, in test_requirement_traceability
+    self.assertEqual(len([r for r in load("models/requirements.json")["requirements"] if not r["id"].startswith(("ISLAND-GEO2-", "ISLAND-GEO-004-", "ISLAND-GEO-005-", "ISLAND-GEO-006-", "ISLAND-GEO-007-", "ISLAND-GEO-007-")) and r["id"] not in {"ISLAND-GEO-002","ISLAND-GEO-003","ISLAND-GEO-004","ISLAND-GEO-005","ISLAND-GEO-006","ISLAND-GEO-007","ISLAND-GEO-008"}]),14)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 20 != 14
+
+======================================================================
+FAIL: test_no_go (test_stage002.Stage002Tests.test_no_go)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage002.py", line 39, in test_no_go
+    self.assertEqual(validate()['physical_deployment'],'BLOCKED/NO-GO')
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.9.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] == "pending" and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.9.0/tests/test_stage002.py", line 62, in test_requirements_trace
+    self.assertEqual(len([x for x in r if not x['id'].startswith(('ISLAND-GEO2-', 'ISLAND-GEO-004-', 'ISLAND-GEO-005-', 'ISLAND-GEO-006-', 'ISLAND-GEO-007-'))]),21)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 27 != 21
+
+----------------------------------------------------------------------
+Ran 100 tests in 2.757s
+
+FAILED (failures=8)
+Exception ignored in: <sqlite3.Connection object at 0x7f64c33d1120>
+ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f64c33d1120>

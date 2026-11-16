@@ -1,0 +1,57 @@
+{
+  "stage": "ISLAND-GEO-018",
+  "coverage": [
+    {
+      "check": "Unit storage owner/mode/symlink/hardlink",
+      "status": "PASS",
+      "evidence": "test_stage019"
+    },
+    {
+      "check": "Unit IPC parent and missing endpoint",
+      "status": "PASS",
+      "evidence": "test_stage019"
+    },
+    {
+      "check": "Cumulative full regression with strict warnings",
+      "status": "PASS",
+      "evidence": "three runs, 163 each"
+    },
+    {
+      "check": "Independent 3-UID full production E2E",
+      "status": "NOT EXECUTED",
+      "evidence": "prior stage tests not rerun as standalone adversarial campaign"
+    },
+    {
+      "check": "Concurrent production startup",
+      "status": "NOT EXECUTED",
+      "evidence": "open"
+    },
+    {
+      "check": "Rollback to genesis and witness database replacement",
+      "status": "NOT EXECUTED",
+      "evidence": "open"
+    },
+    {
+      "check": "SQLite, phase, witness, permit, lock and socket replacement E2E",
+      "status": "NOT EXECUTED",
+      "evidence": "open"
+    },
+    {
+      "check": "Production IPC exhaustive real SIGKILL",
+      "status": "NOT EXECUTED",
+      "evidence": "open"
+    },
+    {
+      "check": "OS-enforced denial of all legacy production entrypoints",
+      "status": "NOT VERIFIED",
+      "evidence": "open"
+    },
+    {
+      "check": "Independent rollback-resistant witness",
+      "status": "NOT VERIFIED",
+      "evidence": "open"
+    }
+  ],
+  "production_security": "BLOCKED/NO-GO",
+  "physical_deployment": "BLOCKED/NO-GO"
+}

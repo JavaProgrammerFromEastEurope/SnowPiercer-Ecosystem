@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/mandatory_guard.py", line 45, in startup_lease
+    fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 44, in main
+    broker.serve(token)
+    ~~~~~~~~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/attested_broker.py", line 162, in serve
+    with startup_lease(self.db.parent / '.broker-startup.lock'):
+         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/mandatory_guard.py", line 47, in startup_lease
+    raise AdmissionDenied('concurrent production startup') from exc
+island.anchored_admission.AdmissionDenied: concurrent production startup

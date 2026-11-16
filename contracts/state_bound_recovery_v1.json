@@ -1,0 +1,33 @@
+{
+  "stage": "ISLAND-GEO-015",
+  "version": "0.16.0",
+  "operations": {
+    "issue": {
+      "caller": "client_uid",
+      "result": [
+        "token",
+        "sequence",
+        "digest"
+      ]
+    },
+    "consume": {
+      "caller": "service_uid",
+      "requires": [
+        "token",
+        "matching_witness_head",
+        "unused_token"
+      ],
+      "result": [
+        "consumed",
+        "sequence",
+        "digest"
+      ]
+    }
+  },
+  "limitations": [
+    "No independent rollback-resistant witness",
+    "No client-to-service direct attestation",
+    "No complete production IPC integration",
+    "No OS enforcement proven by unit tests"
+  ]
+}

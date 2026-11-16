@@ -1,0 +1,70 @@
+======================================================================
+FAIL: test_asset_identifiers (test_stage001.Stage001Tests.test_asset_identifiers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage001.py", line 8, in test_asset_identifiers
+    self.assertEqual(validate()["assets"],8)
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_hazards_unverified (test_stage001.Stage001Tests.test_hazards_unverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage001.py", line 22, in test_hazards_unverified
+    self.assertTrue(all(h["verification"] in ("pending", "pending independent E2E") for h in load("safety/hazards.json")["hazards"]))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_interface_coverage (test_stage001.Stage001Tests.test_interface_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage001.py", line 10, in test_interface_coverage
+    self.assertGreaterEqual(validate()["contracts"],7)
+                            ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_readiness_gate (test_stage001.Stage001Tests.test_readiness_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage001.py", line 14, in test_readiness_gate
+    self.assertEqual(validate()["physical_deployment"],"BLOCKED/NO-GO")
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_no_go (test_stage002.Stage002Tests.test_no_go)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage002.py", line 39, in test_no_go
+    self.assertEqual(validate()['physical_deployment'],'BLOCKED/NO-GO')
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage002.py", line 62, in test_requirements_trace
+    self.assertEqual(len([x for x in r if not x['id'].startswith(('ISLAND-GEO2-', 'ISLAND-GEO-004-', 'ISLAND-GEO-005-', 'ISLAND-GEO-006-', 'ISLAND-GEO-007-', 'ISLAND-GEO-008-', 'ISLAND-GEO-009-', 'ISLAND-GEO-010-', 'ISLAND-GEO-011-', 'ISLAND-GEO-012-', 'ISLAND-GEO-013-', 'ISLAND-GEO-014-', 'ISLAND-GEO-015-', 'ISLAND-GEO-016-', 'ISLAND-GEO-017-', 'ISLAND-GEO-018-', 'ISLAND-GEO-020-', 'ISLAND-GEO-021-'))]),21)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 31 != 21
+
+----------------------------------------------------------------------
+Ran 200 tests in 3.468s
+
+FAILED (failures=6)

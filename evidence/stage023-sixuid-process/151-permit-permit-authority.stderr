@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 55, in main
+    a.client_uid,a.crash_at).serve()
+                             ~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/split_authorities.py", line 152, in serve
+    _private_layout(self.endpoint, self.db)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/split_authorities.py", line 29, in _private_layout
+    _safe_existing(p, uid)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/mandatory_guard.py", line 31, in _safe_existing
+    _private_regular(str(path) + suffix, uid)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/mandatory_guard.py", line 25, in _private_regular
+    raise AdmissionDenied('private file compromised: ' + str(path))
+island.anchored_admission.AdmissionDenied: private file compromised: /tmp/island-g022-x288rwz3/permit/permits.sqlite

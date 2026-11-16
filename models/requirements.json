@@ -1,0 +1,1055 @@
+{
+  "version": "0.23.0",
+  "requirements": [
+    {
+      "id": "ISLAND-GOV-001",
+      "statement": "Every infrastructure asset has a stable identifier",
+      "verification": "test_asset_identifiers",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GOV-002",
+      "statement": "Every requirement has a verification method",
+      "verification": "test_requirement_traceability",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GOV-003",
+      "statement": "Physical deployment remains NO-GO without external certification",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-001",
+      "statement": "Site-specific geotechnical data is required before foundation approval",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-CIV-001",
+      "statement": "Structural design requires applicable load cases and code review",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-UND-001",
+      "statement": "Underground works require ground-water and evacuation assessments",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-UTL-001",
+      "statement": "Critical utilities require documented redundancy strategy",
+      "verification": "test_interface_coverage",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-TRN-001",
+      "statement": "Rail interface requires explicit safety boundary",
+      "verification": "test_interface_coverage",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-DAT-001",
+      "statement": "Control infrastructure requires authenticated interfaces",
+      "verification": "test_interface_coverage",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-ENV-001",
+      "statement": "Environmental baseline is required before physical works",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-OPS-001",
+      "statement": "Maintenance responsibilities must be allocated",
+      "verification": "test_asset_identifiers",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-INT-001",
+      "statement": "All seven peer subsystem contracts must exist",
+      "verification": "test_interface_coverage",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-SAF-001",
+      "statement": "Hazards require severity, mitigation and evidence status",
+      "verification": "test_hazard_structure",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-SAF-002",
+      "statement": "Unverified high-consequence hazards block deployment",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-002",
+      "statement": "Layers must be continuous, ordered, finite and start at zero",
+      "verification": "test_layer_validation",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-003",
+      "statement": "Unknown groundwater must not be treated as dry ground",
+      "verification": "test_unknown_groundwater",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-004",
+      "statement": "Depth beyond model must be rejected",
+      "verification": "test_depth_bounds",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-005",
+      "statement": "All calculations remain non-authorizing",
+      "verification": "test_no_go",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-006",
+      "statement": "Provenance and assumptions must be explicit",
+      "verification": "test_synthetic_case",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-007",
+      "statement": "Groundwater intersection and uncertain strata must be flagged",
+      "verification": "test_risk_flags",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO-008",
+      "statement": "Arithmetic shall satisfy bounded property checks",
+      "verification": "test_property_invariants",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage002.py"
+    },
+    {
+      "id": "ISLAND-GEO2-001",
+      "statement": "Water observations require strictly increasing time",
+      "verification": "test_extrapolation_and_time_validation",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-002",
+      "statement": "No extrapolation outside observed time",
+      "verification": "test_extrapolation_and_time_validation",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-003",
+      "statement": "Unknown water must propagate as unknown",
+      "verification": "test_unknown_never_dry",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-004",
+      "statement": "Intervals must be finite, ordered, and physically bounded",
+      "verification": "test_interval_invalid",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-005",
+      "statement": "Stress interval must conservatively combine endpoints",
+      "verification": "test_property_random_intervals",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-006",
+      "statement": "Risk propagation must converge on cyclic graphs",
+      "verification": "test_graph_cycles_and_isolation",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-007",
+      "statement": "Unresolved dependency must be rejected",
+      "verification": "test_graph_invalid",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO2-008",
+      "statement": "No geotechnical result grants physical approval",
+      "verification": "test_reference",
+      "status": "implemented-software",
+      "evidence": "tests/test_stage003.py"
+    },
+    {
+      "id": "ISLAND-GEO-004-01",
+      "statement": "Hydraulic boundary heads must be finite intervals or explicitly unknown",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-004-02",
+      "statement": "Darcy screening must reject invalid geometry and conductivity",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-004-03",
+      "statement": "Unknown inputs must not produce numeric seepage results",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-004-04",
+      "statement": "Interval outputs must conservatively enclose point samples",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-004-05",
+      "statement": "Risk propagation must respect explicit directed edge admission",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-004-06",
+      "statement": "Physical approval must remain blocked regardless of screening output",
+      "verification": "tests/test_stage004.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-01",
+      "statement": "Head time series must be strictly ordered, finite and non-extrapolating",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-02",
+      "statement": "Transient screening must cover all interior observation knots",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-03",
+      "statement": "Missing observations or conductivity must invalidate numeric envelope",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-04",
+      "statement": "Envelope must conservatively enclose piecewise-linear head scenarios",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-05",
+      "statement": "Cross-asset propagation must require explicit directed edge admission",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-005-06",
+      "statement": "Physical deployment must remain BLOCKED/NO-GO",
+      "verification": "tests/test_stage005.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-006-01",
+      "statement": "Scenario sets must have unique identifiers and compatible path/window",
+      "verification": "tests/test_stage006.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-006-02",
+      "statement": "Unknown observations or conductivity invalidate the entire numeric scenario union",
+      "verification": "tests/test_stage006.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-006-03",
+      "statement": "Scenario union must enclose each constituent interval envelope",
+      "verification": "tests/test_stage006.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-006-04",
+      "statement": "Incomplete assessments escalate risks only through admitted directed edges",
+      "verification": "tests/test_stage006.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-006-05",
+      "statement": "All outputs must prohibit physical deployment",
+      "verification": "tests/test_stage006.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-01",
+      "statement": "Every scenario observation and conductivity input has unique evidence provenance",
+      "verification": "tests/test_stage007.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-02",
+      "statement": "Source versions and exact SHA-256 payload digests require explicit admission policy",
+      "verification": "tests/test_stage007.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-03",
+      "statement": "Missing, tampered, duplicated or contradictory evidence denies numeric scenario admission",
+      "verification": "tests/test_stage007.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-04",
+      "statement": "Rejected provenance escalates conservative risks across only authorized directed edges",
+      "verification": "tests/test_stage007.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-05",
+      "statement": "Admission traces all input records and preserves physical BLOCKED/NO-GO",
+      "verification": "tests/test_stage007.py",
+      "status": "specified",
+      "evidence": "automated-test-only"
+    },
+    {
+      "id": "ISLAND-GEO-007-001",
+      "statement": "Canonical UTF-8 measurement payloads reject ambiguous JSON and nonfinite values",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-002",
+      "statement": "Measurements bind exact model intervals, units and UTC timestamps to a declared epoch",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-003",
+      "statement": "Ed25519 signatures authenticate admitted source keys against root-signed policy",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-004",
+      "statement": "Replay ledger rejects repeated observations and non-increasing source sequence numbers",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-005",
+      "statement": "Policy version rollback is rejected by local transactional ledger",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-006",
+      "statement": "Admission denies missing, inconsistent or tampered evidence with conservative risk flags",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-007-007",
+      "statement": "Physical deployment remains BLOCKED/NO-GO regardless of admission",
+      "verification": "tests/test_stage008.py",
+      "status": "specified",
+      "evidence": "stage008-regression"
+    },
+    {
+      "id": "ISLAND-GEO-008-01",
+      "statement": "Witness CAS rejects divergent or stale heads",
+      "verification": "test_witness_cas",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-008-02",
+      "statement": "Phase recovery reconciles committed witness updates",
+      "verification": "test_crash_recovery",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-008-03",
+      "statement": "Rollback to genesis is rejected against external witness",
+      "verification": "test_rollback",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-008-04",
+      "statement": "Replay and concurrent local admissions are serialized",
+      "verification": "test_concurrency",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-008-05",
+      "statement": "Witness IPC authenticates peer UID",
+      "verification": "test_uid_rejection",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-008-06",
+      "statement": "Physical deployment remains prohibited",
+      "verification": "test_no_go",
+      "status": "specified",
+      "evidence": "software_test_only"
+    },
+    {
+      "id": "ISLAND-GEO-009-01",
+      "statement": "Production IPC rejects unapproved client UIDs",
+      "verification": "test_denied_uid",
+      "status": "specified",
+      "evidence": "test_stage010.py"
+    },
+    {
+      "id": "ISLAND-GEO-009-02",
+      "statement": "Production startup fails closed if witness is absent",
+      "verification": "test_startup_fails_without_witness",
+      "status": "specified",
+      "evidence": "test_stage010.py"
+    },
+    {
+      "id": "ISLAND-GEO-009-03",
+      "statement": "Production admission validates socket and file ownership and type",
+      "verification": "test_symlink_and_permissions",
+      "status": "specified",
+      "evidence": "test_stage010.py"
+    },
+    {
+      "id": "ISLAND-GEO-009-04",
+      "statement": "Production IPC admission routes writes through anchored coordinator",
+      "verification": "test_end_to_end",
+      "status": "specified",
+      "evidence": "test_stage010.py"
+    },
+    {
+      "id": "ISLAND-GEO-009-05",
+      "statement": "Physical deployment remains blocked regardless of admission",
+      "verification": "test_end_to_end",
+      "status": "specified",
+      "evidence": "test_stage010.py"
+    },
+    {
+      "id": "ISLAND-GEO-009-06",
+      "statement": "Independent UID isolation and legacy fencing require external verification",
+      "verification": "test_startup_fails_without_witness",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-010-01",
+      "statement": "Distinct client, service and witness UIDs are required by hardened profile",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-010-02",
+      "statement": "Peer credentials of connected witness and service sockets are verified",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-010-03",
+      "statement": "Private ownership and file type checks reject unsafe local state",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-010-04",
+      "statement": "Lock identity is pinned against replacement during use",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-010-05",
+      "statement": "Production rollout requires independent OS-provisioning and legacy-bypass evidence",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-010-06",
+      "statement": "Crash-point matrix must distinguish exercised and unverified boundaries",
+      "verification": "test_stage011.py / deployment evidence pending",
+      "status": "specified",
+      "evidence": "partial_unit_tests_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R01",
+      "statement": "Three distinct non-root OS identities required",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R02",
+      "statement": "Production service and witness data require distinct ownership",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R03",
+      "statement": "Legacy DB must be inaccessible to client identities",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R04",
+      "statement": "Witness IPC must verify actual peer UID",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R05",
+      "statement": "Unsafe preflight must fail without permission repair",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-011-R06",
+      "statement": "Physical deployment must remain NO-GO without independent E2E evidence",
+      "verification": "test_stage012 and independent deployment harness (pending)",
+      "status": "specified",
+      "evidence": "partial_unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-012-001",
+      "statement": "Multi-UID deployment requires three distinct non-root Linux UIDs",
+      "verification": "test_identity",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-012-002",
+      "statement": "Private admission and witness stores reject unauthorized file modes",
+      "verification": "test_private_tree",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-012-003",
+      "statement": "IPC peer UID is read from kernel credentials",
+      "verification": "test_real_peer_uid",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-012-004",
+      "statement": "Production cross-UID harness must preserve negative-test evidence",
+      "verification": "test_multiuid_harness",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-012-005",
+      "statement": "Crash-point coverage must distinguish executed from unexecuted boundaries",
+      "verification": "test_crash_matrix",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-012-006",
+      "statement": "Physical and production approval remain NO-GO pending independent proof",
+      "verification": "test_readiness_gate",
+      "status": "specified",
+      "evidence": "partial_or_not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-013-R01",
+      "statement": "Crash injection SHALL use real SIGKILL at named SQLite and witness boundaries",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-013-R02",
+      "statement": "Recovery SHALL fail closed on unexplainable witness/local divergence",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-013-R03",
+      "statement": "A separate service UID SHALL not read witness private database",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-013-R04",
+      "statement": "Crash evidence SHALL distinguish executed points from untested IPC points",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-013-R05",
+      "statement": "Production legacy bypass SHALL remain NO-GO until OS-enforced fencing is proven",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-013-R06",
+      "statement": "Witness rollback to genesis SHALL be detected after committed admission",
+      "verification": "stage013 crash harness / tests",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-001",
+      "statement": "Production service must authenticate client UID and witness UID",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-002",
+      "statement": "Recovery permit must be single-use and client-issued",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-003",
+      "statement": "Production IPC crash injection must cover explicit transaction and IPC boundaries",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-004",
+      "statement": "Service must fail closed on missing or substituted authority endpoint",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-005",
+      "statement": "Legacy production writers must be denied by OS permissions in deployed profile",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-014-REQ-006",
+      "statement": "Cross-UID crash and adversarial matrix must report uncovered boundaries",
+      "verification": "tests/test_stage015.py",
+      "status": "implemented-experimental",
+      "evidence": "stage015 matrix; production certification pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-001",
+      "statement": "Recovery permits bind the issuing client UID and consuming service UID",
+      "verification": "test_uid_auth",
+      "status": "implemented-experimental",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-002",
+      "statement": "Recovery permits bind the exact witness sequence and digest",
+      "verification": "test_stale_state_denied",
+      "status": "implemented-experimental",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-003",
+      "statement": "Permit consumption is atomic and single-use across threads",
+      "verification": "test_concurrent_consume",
+      "status": "implemented-experimental",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-004",
+      "statement": "Legacy production access must be denied by OS permission boundaries",
+      "verification": "test_legacy_fence_preflight",
+      "status": "implemented-experimental",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-005",
+      "statement": "Production IPC crash-point E2E must be evidenced or remain NO-GO",
+      "verification": "pending independent E2E",
+      "status": "blocked",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-015-REQ-006",
+      "statement": "Rollback of permit and witness storage must be detected independently",
+      "verification": "pending independent E2E",
+      "status": "blocked",
+      "evidence": "stage016 matrix; independent production validation pending"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-001",
+      "statement": "State-bound permit authority authenticates direct Unix peer UID",
+      "verification": "test_authority_uid_policy",
+      "status": "specified",
+      "evidence": "stage017 tests"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-002",
+      "statement": "Service pins witness authority UID before submitting recovery token",
+      "verification": "test_peer_pin_rejects_missing_socket",
+      "status": "specified",
+      "evidence": "stage017 tests"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-003",
+      "statement": "Production startup consumes a state-bound permit before recovery",
+      "verification": "test_missing_permit_fail_closed",
+      "status": "specified",
+      "evidence": "stage017 tests"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-004",
+      "statement": "Recovery token is single-use and stale witness state is rejected",
+      "verification": "test_state_binding_replay",
+      "status": "specified",
+      "evidence": "stage017 tests"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-005",
+      "statement": "Cross-UID E2E IPC and OS-enforced legacy fencing require independent proof",
+      "verification": "pending cross-UID E2E",
+      "status": "blocked",
+      "evidence": "stage017 coverage matrix: NOT EXECUTED"
+    },
+    {
+      "id": "ISLAND-GEO-016-REQ-006",
+      "statement": "SIGKILL, rollback and file substitution matrix requires executed evidence",
+      "verification": "pending adversarial E2E",
+      "status": "blocked",
+      "evidence": "stage017 coverage matrix: NOT EXECUTED"
+    },
+    {
+      "id": "ISLAND-GEO-017-01",
+      "statement": "Isolate private witness and permit stores from shared IPC namespace",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-017-02",
+      "statement": "Verify socket peer identities and filesystem owner/group/mode",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-017-03",
+      "statement": "Require direct client-origin permit requests through authority IPC",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-017-04",
+      "statement": "Reject legacy write access with real nonroot OS probes",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-017-05",
+      "statement": "Recover only after state-bound permit consumption",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-017-06",
+      "statement": "Preserve physical BLOCKED/NO-GO without independent proof",
+      "verification": "test_stage018",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-018-01",
+      "statement": "Guard checks must run before production IPC admission",
+      "verification": "test_stage020",
+      "status": "specified",
+      "evidence": "verified_limited"
+    },
+    {
+      "id": "ISLAND-GEO-018-02",
+      "statement": "Production startup must require a state-bound single-use permit",
+      "verification": "test_stage020",
+      "status": "specified",
+      "evidence": "verified_limited"
+    },
+    {
+      "id": "ISLAND-GEO-018-03",
+      "statement": "Service lifetime must exclude concurrent startup with a kernel flock",
+      "verification": "test_stage020",
+      "status": "specified",
+      "evidence": "verified_limited"
+    },
+    {
+      "id": "ISLAND-GEO-018-04",
+      "statement": "Production storage and SQLite sidecars must reject symlinks and unsafe owners",
+      "verification": "test_stage020",
+      "status": "specified",
+      "evidence": "verified_limited"
+    },
+    {
+      "id": "ISLAND-GEO-018-05",
+      "statement": "Witness UID must be verified using kernel IPC peer credentials",
+      "verification": "stage020-multiuid",
+      "status": "specified",
+      "evidence": "verified_limited"
+    },
+    {
+      "id": "ISLAND-GEO-018-06",
+      "statement": "Legacy production write bypass must be OS-fenced independently of service UID",
+      "verification": "not_verified",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-018-07",
+      "statement": "Production SIGKILL crash matrix must cover all SQLite CAS permit and IPC boundaries",
+      "verification": "not_verified",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-020-01",
+      "statement": "Production ledger ownership shall be separated from unprivileged admission facade UID",
+      "verification": "tests/test_stage021.py",
+      "status": "specified",
+      "evidence": "unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-020-02",
+      "statement": "Write broker shall reject non-service Unix peer credentials",
+      "verification": "tests/test_stage021.py",
+      "status": "specified",
+      "evidence": "unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-020-03",
+      "statement": "Write broker shall pin independent witness peer UID before consuming recovery permits",
+      "verification": "tests/test_stage021.py",
+      "status": "specified",
+      "evidence": "unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-020-04",
+      "statement": "Write broker startup shall fail closed without a recovery token",
+      "verification": "tests/test_stage021.py",
+      "status": "specified",
+      "evidence": "unit_only"
+    },
+    {
+      "id": "ISLAND-GEO-020-05",
+      "statement": "OS-enforced legacy write denial shall be verified with real cross-UID negative probes",
+      "verification": "pending independent multi-UID E2E",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-020-06",
+      "statement": "Independent crash-point and rollback evidence shall be required before production GO",
+      "verification": "pending independent multi-UID E2E",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-020-07",
+      "statement": "Direct-client provenance shall be enforced end-to-end across facade and broker before production GO",
+      "verification": "pending independent multi-UID E2E",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-021-01",
+      "statement": "Write broker must cryptographically verify client Ed25519 signature before all ledger writes",
+      "verification": "tests/test_stage022.py + tests/stage022_fouruid.py",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-02",
+      "statement": "Client-signed request must bind protocol, payload, client UID, broker UID, and unique nonce",
+      "verification": "tests/test_stage022.py",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-03",
+      "statement": "Durable broker nonce replay reservation must precede witness CAS and deny duplicate requests",
+      "verification": "tests/test_stage022.py + tests/stage022_fouruid.py",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-04",
+      "statement": "Broker startup must require independent client-origin state-bound permit and reconcile before publishing endpoint",
+      "verification": "tests/stage022_fouruid.py",
+      "status": "specified",
+      "evidence": "limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-05",
+      "statement": "Distinct four real Unix UID roles must prevent client and facade direct SQLite writes and protect client key",
+      "verification": "tests/stage022_fouruid.py",
+      "status": "specified",
+      "evidence": "limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-06",
+      "statement": "Concurrent startups, crash points, rollback and artifact replacement must fail closed where independently tested",
+      "verification": "tests/stage022_fouruid.py",
+      "status": "specified",
+      "evidence": "partial_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-021-07",
+      "statement": "OS-enforced denial of code execution as broker UID and same-UID legacy API writes requires independently verified MAC",
+      "verification": "not verified; platform policy required",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-021-08",
+      "statement": "Witness head must have a root of monotonic trust outside rollbackable SQLite before production GO",
+      "verification": "not verified; protected independent hardware/service required",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-022-01",
+      "statement": "All production admission must fail before I/O unless independent protected monotonic root and root challenge attestation are independently verified",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-022-02",
+      "statement": "Witness and recovery permit authority shall run under distinct nonroot UID with separate SQLite ownership and sockets",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-022-03",
+      "statement": "Witness shall compare signed root (sequence,digest) before read/CAS and refuse recovery on divergence",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-022-04",
+      "statement": "Client-signed broker admissions and nonce replay table remain mandatory for all experimental writes",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-022-05",
+      "statement": "Recovery permits shall be client-origin, state-bound, one-use and consumed by broker before socket publication",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-022-06",
+      "statement": "Independent enforced MAC/LSM confinement must prevent same-broker-UID arbitrary legacy production entrypoints",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-022-07",
+      "statement": "Independent service manager shall enforce pre-exec domain and lifecycle supervision; no self-reported environment proof shall authorize GO",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-022-08",
+      "statement": "SIGKILL, concurrency, UID and artifact replacement checks shall classify only executed E2E cases as proved",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "unit_and_limited_e2e"
+    },
+    {
+      "id": "ISLAND-GEO-022-09",
+      "statement": "Signed software SQLite root does NOT satisfy physical monotonic anti-rollback and shall always enforce production NO-GO",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-022-10",
+      "statement": "Engineering and physical construction/operations remain BLOCKED/NO-GO until independent acceptance",
+      "verification": "tests/test_stage023.py; tests/stage023_sixuid.py; evidence/stage023-coverage.json",
+      "status": "specified",
+      "evidence": "not_verified"
+    }
+  ]
+}

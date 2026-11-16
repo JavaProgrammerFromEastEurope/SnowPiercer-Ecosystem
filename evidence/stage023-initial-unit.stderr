@@ -1,0 +1,13 @@
+======================================================================
+FAIL: test_fixture_is_not_hardware_root (test_stage023.IndependentRootTests.test_fixture_is_not_hardware_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/tests/test_stage023.py", line 75, in test_fixture_is_not_hardware_root
+    self.assertIn('ROLLBACKABLE',SoftwareRootServer.__doc__)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ROLLBACKABLE' not found in 'LAB ONLY: sqlite root and software key can both roll back. Always NO-GO.'
+
+----------------------------------------------------------------------
+Ran 200 tests in 3.439s
+
+FAILED (failures=1)

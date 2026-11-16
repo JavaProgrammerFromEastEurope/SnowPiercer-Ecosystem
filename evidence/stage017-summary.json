@@ -1,0 +1,18 @@
+{
+  "stage": "ISLAND-GEO-016",
+  "version": "0.17.0",
+  "regressions": 3,
+  "tests_per_regression": 151,
+  "results": [
+    "PASS",
+    "PASS",
+    "PASS"
+  ],
+  "failed_logs": [
+    "stage017-failed-1.log",
+    "stage017-failed-2.log",
+    "stage017-failed-3.log"
+  ],
+  "security": "BLOCKED/NO-GO",
+  "physical": "BLOCKED/NO-GO"
+}

@@ -1,0 +1,58 @@
+{
+  "stage": "ISLAND-GEO-019",
+  "version": "0.20.0",
+  "full_regressions": [
+    {
+      "log": "stage020-final-regression-1.log",
+      "tests": 170,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "log": "stage020-final-regression-2.log",
+      "tests": 170,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "log": "stage020-final-regression-3.log",
+      "tests": 170,
+      "result": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "multi_uid_e2e": {
+    "direct_client_permit": true,
+    "admission": true,
+    "witness_storage_denied_client": true,
+    "witness_storage_denied_service": true,
+    "service_storage_denied_client": true,
+    "service_storage_denied_witness": true,
+    "socket_owners": true,
+    "permit_replay_denied": true,
+    "service_sigkill": true,
+    "fresh_permit_after_rollback": true,
+    "genesis_rollback_denied": true
+  },
+  "not_verified": [
+    "exhaustive real SIGKILL across production SQLite/CAS/permit/IPC",
+    "all artifact substitution cases",
+    "independent rollback-resistant witness",
+    "OS-enforced prevention of legacy API invocation by service UID",
+    "all concurrent startup/recovery interleavings"
+  ],
+  "failed_run_logs": [
+    "stage020-after-artifacts.log"
+  ],
+  "physical_construction": "BLOCKED/NO-GO",
+  "production_security": "BLOCKED/NO-GO"
+}

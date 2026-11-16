@@ -1,0 +1,25 @@
+{
+  "id": "island-geo-017-socket-isolation-v1",
+  "service_uid": 23002,
+  "client_uid": 23001,
+  "witness_uid": 23003,
+  "storage": {
+    "service_mode": "0700",
+    "witness_mode": "0700"
+  },
+  "ipc_directory": {
+    "owner_uid": 0,
+    "mode": "01777",
+    "sticky_required": true
+  },
+  "socket_mode": "0660",
+  "peer_uid": "SO_PEERCRED",
+  "startup": "permit required; fail closed",
+  "readiness": "BLOCKED/NO-GO",
+  "limitations": [
+    "root can modify storage",
+    "service UID can invoke legacy library",
+    "sticky namespace does not prevent owner unlink",
+    "no independent rollback resistant anchor"
+  ]
+}

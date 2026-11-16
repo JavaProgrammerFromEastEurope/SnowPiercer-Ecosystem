@@ -1,0 +1,176 @@
+{
+  "stage": "ISLAND-GEO-022",
+  "version": "0.23.0",
+  "production_security": "BLOCKED/NO-GO",
+  "physical_construction_operations": "BLOCKED/NO-GO",
+  "lab_four_or_more_uid_coverage": true,
+  "checks_executed": 27,
+  "checks_passed": 27,
+  "broker_sigkill_executed": 17,
+  "broker_sigkill_pass": 17,
+  "evidence": [
+    {
+      "requirement": "previous_stages_library_regression",
+      "status": "PASS_UNIT",
+      "details": "3 x 200 (600) strict warnings",
+      "reference": "evidence/stage023-regression-summary.json"
+    },
+    {
+      "requirement": "root_challenge_signing_and_replay",
+      "status": "PASS_UNIT",
+      "details": "signed challenge, stale challenge, wrong key, mutated head",
+      "reference": "tests/test_stage023.py"
+    },
+    {
+      "requirement": "six_distinct_nonroot_roles",
+      "status": "PASS_E2E",
+      "details": "six actual kernel UIDs, positive and negative access",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "separate_witness_recovery_authority",
+      "status": "PASS_E2E",
+      "details": "different witness and permit owner/process; actual socket and SQLite separation",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "client_signed_broker_ipc_admission",
+      "status": "PASS_E2E",
+      "details": "signed admission, tampered signature and nonce replay",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "state_bound_permit_consumption",
+      "status": "PASS_E2E",
+      "details": "direct client issuance, broker consumption; SIGKILL after consumption and fresh permit recovery",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "strict_production_gate_fail_closed",
+      "status": "PASS_E2E",
+      "details": "strict broker rejects without hardware-backed root, independently verified MAC and service manager",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "concurrent_startup",
+      "status": "PASS_E2E_LIMITED",
+      "details": "second broker with different socket rejected by lifetime lease",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "broker_sigkill_points",
+      "status": "PASS_E2E_17_OF_17",
+      "details": "17 real SIGKILL (nonce, SQLite journal, witness IPC and broker responses), restart+fresh admission",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "permit_consume_sigkill",
+      "status": "PASS_E2E_LIMITED",
+      "details": "authority process SIGKILL after commit; broker startup denied, new permit succeeds",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "rollback_root_to_genesis",
+      "status": "PASS_E2E_LIMITED",
+      "details": "root reset while witness advanced -> witness startup denied",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "full_simultaneous_rollback_to_genesis",
+      "status": "NOT_PROTECTED",
+      "details": "software root and mutable signing key can roll back with all stores",
+      "reference": "docs/stage023_safety.md"
+    },
+    {
+      "requirement": "witness_root_cas_sigkill",
+      "status": "NOT_EXECUTED",
+      "details": "no complete independent kill matrix inside both services",
+      "reference": "docs/stage023_architecture.md"
+    },
+    {
+      "requirement": "power_loss_fsync",
+      "status": "NOT_EXECUTED",
+      "details": "storage hardware fail points not tested",
+      "reference": "docs/stage023_safety.md"
+    },
+    {
+      "requirement": "sqlite_phase_corruption",
+      "status": "PASS_E2E_LIMITED",
+      "details": "invalid phase row denied at startup",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "sqlite_main_file_symlink",
+      "status": "INHERITED_EVIDENCE_ONLY",
+      "details": "prior Stage 021 exercised main DB symlink; not re-executed for split root",
+      "reference": "evidence/stage022-fouruid-e2e.json"
+    },
+    {
+      "requirement": "wal_shm_checkpoint_tamper",
+      "status": "INHERITED_EVIDENCE_ONLY",
+      "details": "prior Stage 021 exercised some sidecars; not exhaustive for split root",
+      "reference": "evidence/stage022-fouruid-e2e.json"
+    },
+    {
+      "requirement": "witness_database_symlink",
+      "status": "PASS_E2E_LIMITED",
+      "details": "witness startup rejected",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "permit_database_symlink",
+      "status": "PASS_E2E_LIMITED",
+      "details": "permit authority startup rejected",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "root_public_key_substitution",
+      "status": "PASS_E2E_LIMITED",
+      "details": "witness refuses changed root verification key",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "root_private_key_substitution",
+      "status": "NOT_EXECUTED",
+      "details": "key source trust and root private-key replacement not exhaustively tested",
+      "reference": "docs/stage023_safety.md"
+    },
+    {
+      "requirement": "startup_lock_symlink",
+      "status": "PASS_E2E_LIMITED",
+      "details": "broker startup rejects symlink lock",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "occupied_socket_substitution",
+      "status": "PASS_E2E_LIMITED",
+      "details": "occupied socket rejected; no exhaustive TOCTOU proof",
+      "reference": "evidence/stage023-sixuid-e2e.json"
+    },
+    {
+      "requirement": "same_uid_legacy_mac_fence",
+      "status": "NOT_IMPLEMENTED",
+      "details": "no verified OS-enforced MAC profile against arbitrary broker UID code",
+      "reference": "evidence/stage023-host-posture.json"
+    },
+    {
+      "requirement": "independent_monotonic_root",
+      "status": "NOT_IMPLEMENTED",
+      "details": "software root is rollbackable and no verified hardware-backed root exists",
+      "reference": "evidence/stage023-host-posture.json"
+    },
+    {
+      "requirement": "independent_service_manager",
+      "status": "NOT_IMPLEMENTED",
+      "details": "PID1 is not verified systemd and no trusted service-manager lifecycle proof",
+      "reference": "evidence/stage023-host-posture.json"
+    },
+    {
+      "requirement": "physical_construction_operations",
+      "status": "BLOCKED_NO_GO",
+      "details": "site investigation, approvals, independent engineering certification missing",
+      "reference": "models/readiness.json"
+    }
+  ],
+  "limitations": "Lab-only software root is not a TPM/immutable protected monotonic root; unresolved MAC/service-manager and root/service killpoints remain NO-GO."
+}

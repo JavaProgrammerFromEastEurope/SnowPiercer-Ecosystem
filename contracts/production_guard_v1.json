@@ -1,0 +1,16 @@
+{
+  "id": "island-production-guard-v1",
+  "version": "0.19.0",
+  "functions": {
+    "inspect_endpoint": "socket pathname; expected UID and GID -> EndpointIdentity or AdmissionDenied",
+    "assert_endpoint_unchanged": "path and pinned identity -> True or AdmissionDenied",
+    "verify_legacy_fence": "only executes under forbidden nonroot UID; O_RDWR denial -> True; all ambiguous cases deny",
+    "verify_storage_owner": "regular file, owner UID, nlink=1, mode <=0600 -> True or AdmissionDenied"
+  },
+  "limits": [
+    "inspection is not atomic with connect",
+    "privileged root outside threat model",
+    "legacy fencing requires independently provisioned filesystem permissions",
+    "not integrated as mandatory path in existing service"
+  ]
+}

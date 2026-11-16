@@ -1,0 +1,25 @@
+{
+  "stage": "ISLAND-GEO-014",
+  "version": "0.15.0",
+  "authority_operations": [
+    "read",
+    "cas",
+    "issue",
+    "consume"
+  ],
+  "service_operations": [
+    "admit"
+  ],
+  "identity": {
+    "client": "SO_PEERCRED UID",
+    "service": "SO_PEERCRED UID",
+    "witness": "socket inode owner + service-side UID pinning pending"
+  },
+  "permit": {
+    "entropy_bits": 256,
+    "storage": "SHA256 token",
+    "consumption": "atomic UPDATE WHERE consumed=0",
+    "scope": "recovery only; client issuance"
+  },
+  "readiness": "BLOCKED/NO-GO"
+}

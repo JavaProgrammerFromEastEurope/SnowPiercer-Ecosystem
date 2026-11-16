@@ -1,0 +1,31 @@
+{
+  "case_id": "SYN-GEO-001",
+  "data_class": "SYNTHETIC_NOT_SITE_SPECIFIC",
+  "layers": [
+    {
+      "name": "surface fill",
+      "top_m": 0,
+      "bottom_m": 2,
+      "unit_weight_kn_m3": 18,
+      "material": "fill"
+    },
+    {
+      "name": "sand",
+      "top_m": 2,
+      "bottom_m": 10,
+      "unit_weight_kn_m3": 20,
+      "material": "soil"
+    }
+  ],
+  "groundwater_depth_m": 3,
+  "surface_pressure_kpa": 120,
+  "footprint_m2": 50,
+  "provenance": "synthetic",
+  "evaluation_depth_m": 5,
+  "expected": {
+    "total_vertical_stress_kpa": 96,
+    "hydrostatic_pore_pressure_kpa": 19.62,
+    "effective_vertical_stress_kpa": 76.38,
+    "applied_force_kn": 6000
+  }
+}

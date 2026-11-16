@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 55, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 36, in main
+    a.service_uid, a.witness_uid, a.crash_at).serve(token)
+                                              ~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_broker.py", line 159, in serve
+    with startup_lease(self.db.parent / '.broker-startup.lock'):
+         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/mandatory_guard.py", line 39, in startup_lease
+    fd = os.open(lock_path, flags, 0o600)
+OSError: [Errno 40] Too many levels of symbolic links: '/tmp/island021-ykuy1ewm/broker/.broker-startup.lock'

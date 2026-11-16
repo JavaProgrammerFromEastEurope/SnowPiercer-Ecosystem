@@ -1,0 +1,17 @@
+{
+  "stage": "ISLAND-GEO-006",
+  "version": "0.7.0",
+  "regressions": 3,
+  "tests_per_regression": 73,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "prior_failed_log": "stage007-initial-failed.log (reconstructed summary, not raw log)",
+  "readiness": "BLOCKED/NO-GO",
+  "limitations": [
+    "caller-controlled source allowlist",
+    "no semantic binding of numerical observations to evidence bytes",
+    "no independent engineering validation"
+  ]
+}

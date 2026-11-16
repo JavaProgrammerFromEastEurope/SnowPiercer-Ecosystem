@@ -1,0 +1,14 @@
+{
+  "case": "SYN-GEO-005",
+  "scenario_ids": [
+    "A",
+    "B"
+  ],
+  "path_id": "P",
+  "window_days": [
+    0,
+    10
+  ],
+  "provenance": "synthetic",
+  "engineering_approval": "BLOCKED/NO-GO"
+}

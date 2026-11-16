@@ -1,0 +1,28 @@
+{
+  "stage": "ISLAND-GEO-016",
+  "version": "0.17.0",
+  "operations": {
+    "issue": {
+      "peer": "client_uid",
+      "returns": [
+        "token",
+        "sequence",
+        "digest"
+      ]
+    },
+    "consume": {
+      "peer": "service_uid",
+      "requires": [
+        "token"
+      ],
+      "precondition": "witness head unchanged"
+    },
+    "read": {
+      "peer": "service_uid"
+    },
+    "cas": {
+      "peer": "service_uid"
+    }
+  },
+  "security": "experimental; independent E2E not certified"
+}

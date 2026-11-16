@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.22.0/tests/stage022_fouruid.py", line 19, in <module>
+    from island.attested_broker import ALL_CRASH_POINTS
+ModuleNotFoundError: No module named 'island'

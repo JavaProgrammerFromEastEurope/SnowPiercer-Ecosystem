@@ -1,0 +1,8 @@
+{
+  "id": "crash-recovery-evidence-v1",
+  "points": "island.crash_protocol.POINTS",
+  "kill_signal": "SIGKILL",
+  "recovery": "witness/local reconciliation; ambiguity denied",
+  "guarantee": "test instrumentation only",
+  "deployment": "BLOCKED/NO-GO"
+}

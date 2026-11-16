@@ -1,0 +1,164 @@
+{
+  "contracts": [
+    {
+      "id": "ICD-TRAINOS",
+      "peer": "TrainOS",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-AI_COGNITION",
+      "peer": "AI-Cognition",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-RAIL_SYSTEMS",
+      "peer": "Rail-Systems",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-ENERGY",
+      "peer": "Energy",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-LIFE_SUPPORT",
+      "peer": "Life-Support",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-LOGISTICS",
+      "peer": "Logistics",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-SECURITY",
+      "peer": "Security",
+      "version": "0.1.0-draft",
+      "transport": "TBD",
+      "direction": "bidirectional",
+      "authentication": "mandatory; mechanism TBD",
+      "messages": [
+        {
+          "name": "status",
+          "schema": "unresolved"
+        },
+        {
+          "name": "alarm",
+          "schema": "unresolved"
+        }
+      ],
+      "safety_boundary": "no actuation authorized",
+      "implementation": "not_integrated"
+    },
+    {
+      "id": "ICD-ISLAND-GEO-011",
+      "peer": "Production admission / independent witness",
+      "version": "0.12.0-draft",
+      "transport": "AF_UNIX/SO_PEERCRED",
+      "direction": "bidirectional",
+      "authentication": "distinct UID, runtime peer pinning required",
+      "messages": [
+        {
+          "name": "admit",
+          "schema": "legacy IPC framed JSON"
+        },
+        {
+          "name": "cas",
+          "schema": "witness CAS"
+        }
+      ],
+      "safety_boundary": "NO-GO until independent E2E verification",
+      "implementation": "preflight prototype only"
+    }
+  ]
+}

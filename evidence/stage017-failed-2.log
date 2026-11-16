@@ -1,0 +1,62 @@
+F..FF..F......F........................................................................................................................................
+======================================================================
+FAIL: test_asset_identifiers (test_stage001.Stage001Tests.test_asset_identifiers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.17.0/tests/test_stage001.py", line 8, in test_asset_identifiers
+    self.assertEqual(validate()["assets"],8)
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.17.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_hazards_unverified (test_stage001.Stage001Tests.test_hazards_unverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.17.0/tests/test_stage001.py", line 22, in test_hazards_unverified
+    self.assertTrue(all(h["verification"] in ("pending", "pending independent E2E") for h in load("safety/hazards.json")["hazards"]))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_interface_coverage (test_stage001.Stage001Tests.test_interface_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.17.0/tests/test_stage001.py", line 10, in test_interface_coverage
+    self.assertGreaterEqual(validate()["contracts"],7)
+                            ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.17.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_readiness_gate (test_stage001.Stage001Tests.test_readiness_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.17.0/tests/test_stage001.py", line 14, in test_readiness_gate
+    self.assertEqual(validate()["physical_deployment"],"BLOCKED/NO-GO")
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.17.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+FAIL: test_no_go (test_stage002.Stage002Tests.test_no_go)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.17.0/tests/test_stage002.py", line 39, in test_no_go
+    self.assertEqual(validate()['physical_deployment'],'BLOCKED/NO-GO')
+                     ~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.17.0/island/validation.py", line 24, in validate
+    assert all(h["verification"] in ("pending", "pending independent E2E") and h["residual_risk"] == "unassessed" for h in hazards)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+----------------------------------------------------------------------
+Ran 151 tests in 2.548s
+
+FAILED (failures=5)

@@ -1,0 +1,1236 @@
+{
+  "checks": {
+    "broker_cannot_read_root_private": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "broker_cannot_write_permits": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "client_cannot_write_broker": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "client_cannot_write_permits": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "concurrent_startup_denied": {
+      "pass": true
+    },
+    "direct_signed_client_to_split_broker": {
+      "exit_code": 0,
+      "pass": true
+    },
+    "facade_cannot_write_broker": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "modified_signature_rejected": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "nonce_replay_rejected": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "permit_cannot_write_witness": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "service_cannot_read_signing_key": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "six_real_distinct_uid_processes": {
+      "pass": true,
+      "process_uids": {
+        "broker": 25003,
+        "client": 25001,
+        "permit": 25005,
+        "root": 25006,
+        "service": 25002,
+        "witness": 25004
+      }
+    },
+    "socket_uid_separation": {
+      "pass": true
+    },
+    "strict_production_gate_blocks_no_mac_root_or_manager": {
+      "pass": true
+    }
+  },
+  "crash_matrix": [
+    {
+      "broker_exit": -9,
+      "point": "before_reconcile",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_reconcile",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_phase_begin",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_phase_begin",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_phase_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_phase_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_witness_cas",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_witness_cas",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_local_begin",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_local_begin",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_local_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_local_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_ipc_response",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_broker_ipc_read",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "before_nonce_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_nonce_commit",
+      "request_exit": 1,
+      "restart_recovery": true
+    },
+    {
+      "broker_exit": -9,
+      "point": "after_broker_ipc_write",
+      "request_exit": 0,
+      "restart_recovery": true
+    }
+  ],
+  "limitations": [
+    "All six UIDs are separate Linux processes, but privileged test controller can impersonate every UID",
+    "Software root is separately UID-owned but NOT hardware-protected or monotonic against privileged rollback",
+    "No independently verified OS-enforced MAC policy or systemd lifecycle in the execution environment",
+    "Power-cut fsync, filesystem snapshots and same-broker-UID arbitrary execution not certified",
+    "Root and witness CAS are two separate SQLite transactions; crash can cause intentional persistent NO-GO"
+  ],
+  "processes": [
+    {
+      "exit_code": null,
+      "name": "001-root-lab-root",
+      "role": "root",
+      "stderr": "stage023-sixuid-process/001-root-lab-root.stderr",
+      "stdout": "stage023-sixuid-process/001-root-lab-root.stdout"
+    },
+    {
+      "exit_code": null,
+      "name": "002-witness-witness",
+      "role": "witness",
+      "stderr": "stage023-sixuid-process/002-witness-witness.stderr",
+      "stdout": "stage023-sixuid-process/002-witness-witness.stdout"
+    },
+    {
+      "exit_code": null,
+      "name": "003-permit-permit-authority",
+      "role": "permit",
+      "stderr": "stage023-sixuid-process/003-permit-permit-authority.stderr",
+      "stdout": "stage023-sixuid-process/003-permit-permit-authority.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "004-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/004-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/004-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "005-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/005-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/005-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": null,
+      "name": "006-service-facade",
+      "role": "service",
+      "stderr": "stage023-sixuid-process/006-service-facade.stderr",
+      "stdout": "stage023-sixuid-process/006-service-facade.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "007-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/007-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/007-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "008-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/008-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/008-client-submit.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "009-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/009-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/009-client-submit.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "010-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/010-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/010-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "011-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/011-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/011-client-issue.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "012-broker-strict-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/012-broker-strict-broker.stderr",
+      "stdout": "stage023-sixuid-process/012-broker-strict-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "013-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/013-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/013-client-issue.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "014-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/014-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/014-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "015-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/015-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/015-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "016-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/016-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/016-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "017-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/017-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/017-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "018-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/018-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/018-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "019-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/019-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/019-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "020-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/020-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/020-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "021-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/021-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/021-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "022-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/022-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/022-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "023-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/023-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/023-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "024-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/024-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/024-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "025-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/025-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/025-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "026-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/026-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/026-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "027-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/027-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/027-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "028-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/028-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/028-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "029-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/029-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/029-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "030-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/030-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/030-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "031-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/031-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/031-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "032-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/032-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/032-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "033-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/033-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/033-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "034-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/034-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/034-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "035-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/035-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/035-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "036-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/036-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/036-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "037-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/037-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/037-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "038-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/038-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/038-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "039-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/039-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/039-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "040-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/040-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/040-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "041-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/041-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/041-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "042-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/042-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/042-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "043-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/043-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/043-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "044-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/044-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/044-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "045-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/045-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/045-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "046-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/046-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/046-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "047-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/047-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/047-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "048-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/048-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/048-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "049-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/049-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/049-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "050-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/050-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/050-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "051-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/051-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/051-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "052-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/052-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/052-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "053-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/053-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/053-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "054-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/054-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/054-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "055-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/055-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/055-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "056-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/056-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/056-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "057-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/057-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/057-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "058-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/058-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/058-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "059-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/059-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/059-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "060-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/060-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/060-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "061-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/061-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/061-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "062-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/062-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/062-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "063-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/063-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/063-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "064-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/064-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/064-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "065-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/065-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/065-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "066-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/066-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/066-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "067-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/067-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/067-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "068-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/068-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/068-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "069-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/069-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/069-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "070-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/070-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/070-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "071-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/071-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/071-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "072-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/072-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/072-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "073-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/073-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/073-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "074-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/074-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/074-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "075-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/075-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/075-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "076-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/076-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/076-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "077-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/077-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/077-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "078-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/078-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/078-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "079-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/079-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/079-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "080-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/080-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/080-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "081-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/081-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/081-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "082-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/082-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/082-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "083-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/083-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/083-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "084-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/084-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/084-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "085-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/085-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/085-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "086-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/086-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/086-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "087-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/087-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/087-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "088-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/088-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/088-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "089-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/089-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/089-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "090-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/090-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/090-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "091-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/091-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/091-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "092-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/092-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/092-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "093-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/093-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/093-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "094-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/094-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/094-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "095-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/095-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/095-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "096-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/096-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/096-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "097-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/097-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/097-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "098-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/098-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/098-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "099-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/099-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/099-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "100-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/100-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/100-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "101-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/101-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/101-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "102-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/102-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/102-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "103-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/103-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/103-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "104-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/104-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/104-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "105-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/105-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/105-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "106-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/106-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/106-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "107-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/107-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/107-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "108-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/108-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/108-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "109-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/109-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/109-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "110-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/110-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/110-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "111-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/111-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/111-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "112-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/112-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/112-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "113-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/113-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/113-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "114-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/114-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/114-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "115-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/115-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/115-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "116-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/116-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/116-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "117-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/117-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/117-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "118-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/118-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/118-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "119-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/119-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/119-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "120-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/120-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/120-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "121-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/121-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/121-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "122-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/122-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/122-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "123-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/123-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/123-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "124-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/124-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/124-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "125-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/125-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/125-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "126-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/126-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/126-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "127-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/127-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/127-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "128-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/128-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/128-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "129-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/129-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/129-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "130-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/130-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/130-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "131-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/131-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/131-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "132-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/132-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/132-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "133-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/133-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/133-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "134-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/134-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/134-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "135-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/135-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/135-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "136-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/136-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/136-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "137-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/137-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/137-client-sign.stdout"
+    },
+    {
+      "exit_code": 1,
+      "name": "138-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/138-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/138-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "139-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/139-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/139-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "140-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/140-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/140-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "141-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/141-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/141-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "142-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/142-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/142-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "143-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/143-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/143-client-issue.stdout"
+    },
+    {
+      "exit_code": -9,
+      "name": "144-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/144-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/144-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "145-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/145-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/145-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "146-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/146-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/146-client-submit.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "147-client-issue",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/147-client-issue.stderr",
+      "stdout": "stage023-sixuid-process/147-client-issue.stdout"
+    },
+    {
+      "exit_code": -15,
+      "name": "148-broker-lab-broker",
+      "role": "broker",
+      "stderr": "stage023-sixuid-process/148-broker-lab-broker.stderr",
+      "stdout": "stage023-sixuid-process/148-broker-lab-broker.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "149-client-sign",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/149-client-sign.stderr",
+      "stdout": "stage023-sixuid-process/149-client-sign.stdout"
+    },
+    {
+      "exit_code": 0,
+      "name": "150-client-submit",
+      "role": "client",
+      "stderr": "stage023-sixuid-process/150-client-submit.stderr",
+      "stdout": "stage023-sixuid-process/150-client-submit.stdout"
+    }
+  ],
+  "stage": "ISLAND-GEO-022",
+  "uids": {
+    "broker": 25003,
+    "client": 25001,
+    "permit": 25005,
+    "root": 25006,
+    "service": 25002,
+    "witness": 25004
+  }
+}

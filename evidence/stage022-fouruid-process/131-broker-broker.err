@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 55, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_runtime.py", line 36, in main
+    a.service_uid, a.witness_uid, a.crash_at).serve(token)
+                                              ~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/attested_broker.py", line 164, in serve
+    admission.recover()  # Must reconcile before publishing the IPC endpoint.
+    ~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/anchored_admission.py", line 158, in recover
+    try: return self._reconcile(db)
+                ~~~~~~~~~~~~~~~^^^^
+  File "/mnt/data/snowpiercer-island-v0.22.0/island/anchored_admission.py", line 153, in _reconcile
+    if local!=remote: raise AdmissionDenied('rollback, witness divergence or lost local history')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+island.anchored_admission.AdmissionDenied: rollback, witness divergence or lost local history

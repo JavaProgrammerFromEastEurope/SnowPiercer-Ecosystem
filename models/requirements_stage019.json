@@ -1,0 +1,48 @@
+{
+  "stage": "ISLAND-GEO-018",
+  "version": "0.19.0",
+  "requirements": [
+    {
+      "id": "ISLAND-GEO-018-R01",
+      "statement": "Require OS-owned storage and deny direct legacy write access",
+      "verification": "unit plus UID negative probe",
+      "status": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-018-R02",
+      "statement": "Pin IPC endpoint owner, group, type and inode",
+      "verification": "unit checks",
+      "status": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-018-R03",
+      "statement": "Reject symlink and hardlink substitutions for private files",
+      "verification": "unit checks",
+      "status": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-018-R04",
+      "statement": "Fail closed when IPC namespace is untrusted",
+      "verification": "unit checks",
+      "status": "partial"
+    },
+    {
+      "id": "ISLAND-GEO-018-R05",
+      "statement": "Verify all concurrent production startup and recovery races",
+      "verification": "independent multi-UID E2E pending",
+      "status": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-018-R06",
+      "statement": "Verify all SIGKILL boundaries in actual production IPC",
+      "verification": "exhaustive E2E pending",
+      "status": "not_verified"
+    },
+    {
+      "id": "ISLAND-GEO-018-R07",
+      "statement": "Establish independent rollback-resistant witness",
+      "verification": "external attestation pending",
+      "status": "not_verified"
+    }
+  ]
+}

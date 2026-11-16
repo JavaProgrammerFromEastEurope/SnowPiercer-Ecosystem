@@ -1,0 +1,21 @@
+{
+  "contract": "seepage-screen-v1",
+  "stage": "ISLAND-GEO-003",
+  "inputs": [
+    "upstream_head_m_interval_or_null",
+    "downstream_head_m_interval_or_null",
+    "conductivity_m_s_interval_or_null",
+    "path_length_m",
+    "area_m2",
+    "critical_gradient_interval_or_null"
+  ],
+  "outputs": [
+    "gradient_interval_or_null",
+    "specific_discharge_interval_or_null",
+    "discharge_interval_or_null",
+    "risk_flags",
+    "engineering_approval"
+  ],
+  "semantics": "Illustrative 1-D steady Darcy interval bounding only; not validated design",
+  "risk_edge_policy": "default deny, explicit (source,target) allowlist"
+}

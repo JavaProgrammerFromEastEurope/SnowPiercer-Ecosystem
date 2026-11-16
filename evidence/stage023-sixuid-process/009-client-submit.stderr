@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 67, in main
+    print(json.dumps(SignedAdmissionClient(a.socket,a.facade_uid).admit(envelope)),flush=True)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/attested_broker.py", line 289, in admit
+    raise AdmissionDenied(reply.get('reason', 'facade denied') if type(reply) is dict else 'bad facade response')
+island.anchored_admission.AdmissionDenied: signed request replay

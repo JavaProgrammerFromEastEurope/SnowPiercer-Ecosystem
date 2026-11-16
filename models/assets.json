@@ -1,0 +1,82 @@
+{
+  "assets": [
+    {
+      "id": "ISL-GEO",
+      "name": "Ground and foundations",
+      "domain": "GEO",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-CIV",
+      "name": "Buildings and structures",
+      "domain": "CIV",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-UND",
+      "name": "Tunnels and underground works",
+      "domain": "UND",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-UTL",
+      "name": "Utility corridors",
+      "domain": "UTL",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-TRN",
+      "name": "Stations and depots",
+      "domain": "TRN",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-DAT",
+      "name": "Data centers and communications",
+      "domain": "DAT",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-ENV",
+      "name": "Water and environmental systems",
+      "domain": "ENV",
+      "design_status": "conceptual",
+      "site_verified": false
+    },
+    {
+      "id": "ISL-OPS",
+      "name": "Facilities maintenance",
+      "domain": "OPS",
+      "design_status": "conceptual",
+      "site_verified": false
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "ISL-CIV",
+      "on": "ISL-GEO"
+    },
+    {
+      "from": "ISL-UND",
+      "on": "ISL-GEO"
+    },
+    {
+      "from": "ISL-DAT",
+      "on": "ISL-UTL"
+    },
+    {
+      "from": "ISL-TRN",
+      "on": "ISL-CIV"
+    },
+    {
+      "from": "ISL-OPS",
+      "on": "ISL-DAT"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "euid": 0,
+  "platform": "linux",
+  "so_peercred": true,
+  "independent_UID_provisioning": "NOT_PERFORMED",
+  "limitations": "root container session; no independent trust anchor or complete OS fencing evidence"
+}

@@ -1,0 +1,21 @@
+{
+  "three distinct nonroot UIDs E2E": "NOT EXECUTED / NOT VERIFIED",
+  "OS-enforced legacy bypass rejection": "NOT EXECUTED / NOT VERIFIED",
+  "concurrent production startup": "NOT EXECUTED / NOT VERIFIED",
+  "SQLite tamper": "NOT EXECUTED / NOT VERIFIED",
+  "phase journal tamper": "NOT EXECUTED / NOT VERIFIED",
+  "witness rollback to genesis E2E": "NOT EXECUTED / NOT VERIFIED",
+  "permit DB rollback": "NOT EXECUTED / NOT VERIFIED",
+  "lock inode substitution": "NOT EXECUTED / NOT VERIFIED",
+  "authority and production socket substitution": "NOT EXECUTED / NOT VERIFIED",
+  "real production SIGKILL every SQLite boundary": "NOT EXECUTED / NOT VERIFIED",
+  "real production SIGKILL witness CAS": "NOT EXECUTED / NOT VERIFIED",
+  "real production SIGKILL permit consume": "NOT EXECUTED / NOT VERIFIED",
+  "real production SIGKILL IPC send": "NOT EXECUTED / NOT VERIFIED",
+  "unit state-bound permits": "PASS",
+  "unit replay rejection": "PASS",
+  "unit stale witness head": "PASS",
+  "unit missing permit startup": "PASS",
+  "unit authority UID policy": "PASS",
+  "unit missing authority endpoint": "PASS"
+}

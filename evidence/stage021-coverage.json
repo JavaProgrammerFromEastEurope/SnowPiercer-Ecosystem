@@ -1,0 +1,20 @@
+{
+  "stage": "ISLAND-GEO-020",
+  "verified": [
+    "four-role UID validation unit",
+    "broker mandatory permit unit",
+    "broker missing witness fail-closed unit",
+    "broker invalid payload unit",
+    "full cumulative unit regression"
+  ],
+  "not_verified": [
+    "four UID real production broker E2E",
+    "service-to-broker direct-client attestation",
+    "OS enforced denial across all aliases",
+    "concurrent production startup E2E",
+    "rollback to genesis with independent witness",
+    "tampering SQLite/checkpoint/phase/witness/permit/lock/socket E2E",
+    "exhaustive production SIGKILL SQLite/witness/permit/IPC",
+    "rollback-resistant external witness"
+  ]
+}

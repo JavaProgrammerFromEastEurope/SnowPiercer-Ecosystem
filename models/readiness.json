@@ -1,0 +1,18 @@
+{
+  "physical_deployment": "BLOCKED/NO-GO",
+  "software_stage": "regression_pass_partial_stage022",
+  "production_security": "BLOCKED/NO-GO",
+  "cross_uid_independence_verified": false,
+  "legacy_production_fenced": false,
+  "exhaustive_crash_verification": false,
+  "site_selected": false,
+  "engineering_approved": false,
+  "permits_obtained": false,
+  "safety_case_accepted": false,
+  "integration_tested": false,
+  "independent_monotonic_root_verified": false,
+  "mac_lsm_legacy_confinement_verified": false,
+  "independent_service_manager_verified": false,
+  "six_role_uid_lab_e2e_verified": true,
+  "hardware_powercut_crash_verified": false
+}

@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 44, in main
+    broker.serve(token)
+    ~~~~~~~~~~~~^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/attested_broker.py", line 165, in serve
+    authority.execute('consume', token=recovery_token)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/split_authorities.py", line 184, in execute
+    return self.permit.execute(operation, token=token)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/bound_ipc.py", line 67, in execute
+    reply=_receive(sock)
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/anchored_admission.py", line 56, in _receive
+    size=struct.unpack('!I',_read_exact(sock,4))[0]
+                            ~~~~~~~~~~~^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/anchored_admission.py", line 64, in _read_exact
+    if not part: raise AdmissionDenied('truncated IPC')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+island.anchored_admission.AdmissionDenied: truncated IPC

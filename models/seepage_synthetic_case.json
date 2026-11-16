@@ -1,0 +1,21 @@
+{
+  "synthetic_only": true,
+  "upstream_head_m": [
+    4,
+    5
+  ],
+  "downstream_head_m": [
+    1,
+    2
+  ],
+  "conductivity_m_s": [
+    1e-05,
+    2e-05
+  ],
+  "length_m": 10,
+  "area_m2": 2,
+  "critical_gradient": [
+    0.2,
+    0.4
+  ]
+}

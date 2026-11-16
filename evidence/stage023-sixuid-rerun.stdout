@@ -1,0 +1,36 @@
+CHECK six_real_distinct_uid_processes PASS
+CHECK socket_uid_separation PASS
+CHECK direct_signed_client_to_split_broker PASS
+CHECK nonce_replay_rejected PASS
+CHECK modified_signature_rejected PASS
+CHECK client_cannot_write_broker PASS
+CHECK facade_cannot_write_broker PASS
+CHECK permit_cannot_write_witness PASS
+CHECK client_cannot_write_permits PASS
+CHECK broker_cannot_read_root_private PASS
+CHECK service_cannot_read_signing_key PASS
+CHECK broker_cannot_write_permits PASS
+CHECK strict_production_gate_blocks_no_mac_root_or_manager PASS
+CHECK concurrent_startup_denied PASS
+CRASH 1 17 before_reconcile
+CRASH 2 17 after_reconcile
+CRASH 3 17 before_phase_begin
+CRASH 4 17 after_phase_begin
+CRASH 5 17 before_phase_commit
+CRASH 6 17 after_phase_commit
+CRASH 7 17 before_witness_cas
+CRASH 8 17 after_witness_cas
+CRASH 9 17 before_local_begin
+CRASH 10 17 after_local_begin
+CRASH 11 17 before_local_commit
+CRASH 12 17 after_local_commit
+CRASH 13 17 before_ipc_response
+CRASH 14 17 after_broker_ipc_read
+CRASH 15 17 before_nonce_commit
+CRASH 16 17 after_nonce_commit
+CRASH 17 17 after_broker_ipc_write
+CHECK broker_sigkill_17_boundaries PASS
+CHECK root_genesis_rollback_denied PASS
+CHECK no_witness_fail_closed PASS
+CHECK software_root_does_not_grant_production_go PASS
+{"checks": 18, "crash_points": 17, "exit_code": 0, "failure": null}

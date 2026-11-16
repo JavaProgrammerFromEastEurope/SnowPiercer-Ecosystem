@@ -1,0 +1,21 @@
+======================================================================
+ERROR: test_missing_endpoint (test_stage019.Stage019Tests.test_missing_endpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.19.0/tests/test_stage019.py", line 36, in test_missing_endpoint
+    with self.assertRaises(AdmissionDenied):assert_endpoint_unchanged(Path(d)/'missing',type('I',(),{'device':0,'inode':0,'owner':0,'group':0})())
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.19.0/island/production_guard.py", line 39, in assert_endpoint_unchanged
+    st = Path(path).lstat()
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 437, in lstat
+    return self.stat(follow_symlinks=False)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 517, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpksc1it_r/missing'
+
+----------------------------------------------------------------------
+Ran 163 tests in 3.727s
+
+FAILED (errors=1)

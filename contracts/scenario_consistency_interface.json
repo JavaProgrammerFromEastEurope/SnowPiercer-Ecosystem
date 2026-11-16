@@ -1,0 +1,18 @@
+{
+  "id": "geotechnical-scenario-consistency-v1",
+  "inputs": [
+    "Scenario tuple",
+    "critical_gradient optional",
+    "directed dependencies",
+    "allowed_edges"
+  ],
+  "outputs": [
+    "complete",
+    "interval union",
+    "risk_flags",
+    "engineering_approval"
+  ],
+  "failure": "GeotechnicalInputError for invalid inputs; unknowns suppress numeric output",
+  "compatibility": "Additive API; previous interfaces unchanged",
+  "physical_authority": "NONE"
+}

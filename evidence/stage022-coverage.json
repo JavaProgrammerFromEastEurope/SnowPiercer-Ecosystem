@@ -1,0 +1,82 @@
+{
+  "stage": "ISLAND-GEO-021",
+  "release": "Island v0.22.0",
+  "software_regression": "PASS",
+  "production_security": "BLOCKED/NO-GO",
+  "physical_construction_operations": "BLOCKED/NO-GO",
+  "verified_real_e2e": {
+    "four distinct unprivileged Linux UID roles": {
+      "pass": true,
+      "pids": {
+        "broker": 5115,
+        "facade": 5125,
+        "witness": 5095
+      }
+    },
+    "client signed request end-to-end": {
+      "pass": true,
+      "response": "{\"admitted\": true, \"digest\": \"09157ef31b2451f7cb17a7fb0293ecd2a42edf06699909b57f7793d4c019c56c\", \"engineering_approval\": \"BLOCKED/NO-GO\", \"sequence\": 1}\n"
+    },
+    "signed replay denial": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "forged payload denial": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "kernel DAC denied client and facade broker SQLite": true,
+    "kernel DAC denied access to client signing key": true,
+    "startup lifetime lease rejects concurrent broker": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "real SIGKILL in broker and recovery": "17/17 PASS",
+    "local SQLite journal/lock/symlink tamper selected cases": "PASS",
+    "authority permit-db symlink tamper": "PASS",
+    "root-owned impersonated broker socket pin check": "PASS",
+    "witness rollback to genesis with broker history": "FAIL CLOSED"
+  },
+  "executed_crash_points": [
+    "before_reconcile",
+    "after_reconcile",
+    "before_phase_begin",
+    "after_phase_begin",
+    "before_phase_commit",
+    "after_phase_commit",
+    "before_witness_cas",
+    "after_witness_cas",
+    "before_local_begin",
+    "after_local_begin",
+    "before_local_commit",
+    "after_local_commit",
+    "before_ipc_response",
+    "after_broker_ipc_read",
+    "before_nonce_commit",
+    "after_nonce_commit",
+    "after_broker_ipc_write"
+  ],
+  "not_verified_or_not_implemented": [
+    "Independent hardware- or separate privileged-domain-backed monotonic witness root",
+    "Witness/permit authority separate UID (one combined UID in this experiment)",
+    "OS MAC/LSM confinement preventing same-broker-UID arbitrary legacy Python entrypoints",
+    "Mandatory single production entrypoint across all historical modules and service managers",
+    "Root or broker UID compromise resistance, or simultaneous witness and ledger rollback",
+    "Crash injection precisely inside witness CAS and permit SQL COMMIT kernel boundaries",
+    "Crash testing of actual power loss, filesystem fsync persistence and all syscall instruction boundaries",
+    "Exhaustive TOCTOU file/socket replacement by privileged root during active requests",
+    "Permit database rollback to genesis independently anchored",
+    "Credential provisioning, key rotation and HSM-backed client UID to key binding",
+    "Deployment safety of the island foundation and critical civil infrastructure"
+  ],
+  "evidence": "evidence/stage022-fouruid-e2e.json",
+  "limitations": [
+    "Root test controller may replace every file and impersonate every UID",
+    "Witness and permit authority intentionally share UID 24004",
+    "Broker UID code execution can call legacy Python APIs directly",
+    "No external secure monotonic root: simultaneous local/witness rollback not ruled out",
+    "No power-loss/fsync hardware fault injection or independently certified MAC policy",
+    "Test-only root removes orphaned sockets after SIGKILL"
+  ],
+  "test_controller": "privileged Linux ephemeral host"
+}

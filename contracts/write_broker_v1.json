@@ -1,0 +1,27 @@
+{
+  "name": "write_broker_v1",
+  "stage": "ISLAND-GEO-020",
+  "experimental": true,
+  "roles": [
+    "client_uid",
+    "service_uid",
+    "broker_uid",
+    "witness_uid"
+  ],
+  "entrypoints": [
+    "python -m island.broker_runtime broker",
+    "python -m island.broker_runtime facade"
+  ],
+  "broker_request": {
+    "operation": "admit",
+    "payload": "hex <=4096 bytes"
+  },
+  "mandatory_recovery_token": true,
+  "peer_authentication": "Linux SO_PEERCRED",
+  "limitations": [
+    "No direct client cryptographic attestation through facade",
+    "No OS-enforced broker UID confinement from arbitrary Python imports",
+    "No independent witness anti-rollback",
+    "No completed cross-UID E2E or exhaustive SIGKILL"
+  ]
+}

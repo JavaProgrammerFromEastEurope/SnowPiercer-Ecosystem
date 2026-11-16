@@ -1,0 +1,13 @@
+======================================================================
+FAIL: test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.8.0/tests/test_stage001.py", line 12, in test_hazard_structure
+    self.assertEqual(len([h for h in load("safety/hazards.json")["hazards"] if not h["id"].startswith(("ISLAND-GEO-HZ-", "H-GEO2-", "ISLAND-HAZ-GEO-004-", "ISLAND-HAZ-GEO-005-", "ISLAND-HAZ-GEO-006-", "ISLAND-HAZ-GEO-007-", "ISLAND-HAZ-GEO-007-"))]),6)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 12 != 6
+
+----------------------------------------------------------------------
+Ran 89 tests in 0.784s
+
+FAILED (failures=1)

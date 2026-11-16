@@ -1,0 +1,94 @@
+Reproduced original pre-fix historical-count test expectations
+exit_code: 1
+test_asset_identifiers (test_stage001.Stage001Tests.test_asset_identifiers) ... ok
+test_dependencies_resolve (test_stage001.Stage001Tests.test_dependencies_resolve) ... ok
+test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure) ... FAIL
+test_hazards_unverified (test_stage001.Stage001Tests.test_hazards_unverified) ... ok
+test_interface_coverage (test_stage001.Stage001Tests.test_interface_coverage) ... ok
+test_no_approval (test_stage001.Stage001Tests.test_no_approval) ... ok
+test_no_contract_actuation (test_stage001.Stage001Tests.test_no_contract_actuation) ... ok
+test_readiness_gate (test_stage001.Stage001Tests.test_readiness_gate) ... ok
+test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability) ... FAIL
+test_requirements_unique (test_stage001.Stage001Tests.test_requirements_unique) ... ok
+test_contract_and_hazards (test_stage002.Stage002Tests.test_contract_and_hazards) ... ok
+test_depth_bounds (test_stage002.Stage002Tests.test_depth_bounds) ... ok
+test_invalid_loads_and_types (test_stage002.Stage002Tests.test_invalid_loads_and_types) ... ok
+test_layer_validation (test_stage002.Stage002Tests.test_layer_validation) ... ok
+test_no_go (test_stage002.Stage002Tests.test_no_go) ... ok
+test_property_invariants (test_stage002.Stage002Tests.test_property_invariants) ... ok
+test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace) ... FAIL
+test_risk_flags (test_stage002.Stage002Tests.test_risk_flags) ... ok
+test_synthetic_case (test_stage002.Stage002Tests.test_synthetic_case) ... ok
+test_unknown_groundwater (test_stage002.Stage002Tests.test_unknown_groundwater) ... ok
+test_artifact_traceability (test_stage003.Stage003Tests.test_artifact_traceability) ... ok
+test_extrapolation_and_time_validation (test_stage003.Stage003Tests.test_extrapolation_and_time_validation) ... ok
+test_graph_cycles_and_isolation (test_stage003.Stage003Tests.test_graph_cycles_and_isolation) ... ok
+test_graph_invalid (test_stage003.Stage003Tests.test_graph_invalid) ... ok
+test_interval_invalid (test_stage003.Stage003Tests.test_interval_invalid) ... ok
+test_mismatch_and_depth (test_stage003.Stage003Tests.test_mismatch_and_depth) ... ok
+test_property_monotone_risk (test_stage003.Stage003Tests.test_property_monotone_risk) ... ok
+test_property_random_intervals (test_stage003.Stage003Tests.test_property_random_intervals) ... ok
+test_reference (test_stage003.Stage003Tests.test_reference) ... ok
+test_unknown_never_dry (test_stage003.Stage003Tests.test_unknown_never_dry) ... ok
+test_water_interpolation (test_stage003.Stage003Tests.test_water_interpolation) ... ok
+test_direction_ambiguity (test_stage004.TestSeepage.test_direction_ambiguity) ... ok
+test_invalid (test_stage004.TestSeepage.test_invalid) ... ok
+test_isolation_and_cycles (test_stage004.TestSeepage.test_isolation_and_cycles) ... ok
+test_nominal (test_stage004.TestSeepage.test_nominal) ... ok
+test_property_interval_enclosure (test_stage004.TestSeepage.test_property_interval_enclosure) ... ok
+test_property_isolation (test_stage004.TestSeepage.test_property_isolation) ... ok
+test_reject_undeclared_edges (test_stage004.TestSeepage.test_reject_undeclared_edges) ... ok
+test_reverse_flow (test_stage004.TestSeepage.test_reverse_flow) ... ok
+test_unknown_is_fail_closed (test_stage004.TestSeepage.test_unknown_is_fail_closed) ... ok
+test_asynchronous_knots (test_stage005.TransientTests.test_asynchronous_knots) ... ok
+test_basic_envelope (test_stage005.TransientTests.test_basic_envelope) ... ok
+test_invalid_series (test_stage005.TransientTests.test_invalid_series) ... ok
+test_isolation (test_stage005.TransientTests.test_isolation) ... ok
+test_no_extrapolation (test_stage005.TransientTests.test_no_extrapolation) ... ok
+test_property_enclosure (test_stage005.TransientTests.test_property_enclosure) ... ok
+test_reject_geometry_and_types (test_stage005.TransientTests.test_reject_geometry_and_types) ... ok
+test_single_instant (test_stage005.TransientTests.test_single_instant) ... ok
+test_unknown_at_knot_blocks_envelope (test_stage005.TransientTests.test_unknown_at_knot_blocks_envelope) ... ok
+test_unknown_conductivity (test_stage005.TransientTests.test_unknown_conductivity) ... ok
+test_boundary_rejection (test_stage006.ConsistencyTests.test_boundary_rejection) ... ok
+test_edge_isolation_and_escalation (test_stage006.ConsistencyTests.test_edge_isolation_and_escalation) ... ok
+test_incompatible_windows_paths_and_ids (test_stage006.ConsistencyTests.test_incompatible_windows_paths_and_ids) ... ok
+test_invalid_assessments (test_stage006.ConsistencyTests.test_invalid_assessments) ... ok
+test_no_approval (test_stage006.ConsistencyTests.test_no_approval) ... ok
+test_property_union_encloses_each_scenario (test_stage006.ConsistencyTests.test_property_union_encloses_each_scenario) ... ok
+test_single_instant (test_stage006.ConsistencyTests.test_single_instant) ... ok
+test_union (test_stage006.ConsistencyTests.test_union) ... ok
+test_unknown_conductivity_fails_closed (test_stage006.ConsistencyTests.test_unknown_conductivity_fails_closed) ... ok
+test_unknown_interior_fails_closed (test_stage006.ConsistencyTests.test_unknown_interior_fails_closed) ... ok
+
+======================================================================
+FAIL: test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.6.0/tests/test_stage001.py", line 12, in test_hazard_structure
+    self.assertEqual(len([h for h in load("safety/hazards.json")["hazards"] if not h["id"].startswith(("ISLAND-GEO-HZ-", "H-GEO2-", "ISLAND-HAZ-GEO-004-", "ISLAND-HAZ-GEO-005-"))]),6)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 10 != 6
+
+======================================================================
+FAIL: test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.6.0/tests/test_stage001.py", line 6, in test_requirement_traceability
+    self.assertEqual(len([r for r in load("models/requirements.json")["requirements"] if not r["id"].startswith(("ISLAND-GEO2-", "ISLAND-GEO-004-", "ISLAND-GEO-005-")) and r["id"] not in {"ISLAND-GEO-002","ISLAND-GEO-003","ISLAND-GEO-004","ISLAND-GEO-005","ISLAND-GEO-006","ISLAND-GEO-007","ISLAND-GEO-008"}]),14)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 19 != 14
+
+======================================================================
+FAIL: test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.6.0/tests/test_stage002.py", line 62, in test_requirements_trace
+    self.assertEqual(len([x for x in r if not x['id'].startswith(('ISLAND-GEO2-', 'ISLAND-GEO-004-', 'ISLAND-GEO-005-'))]),21)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 26 != 21
+
+----------------------------------------------------------------------
+Ran 60 tests in 0.470s
+
+FAILED (failures=3)

@@ -1,0 +1,1173 @@
+{
+  "checks": {
+    "admission_chain_advanced": {
+      "pass": true,
+      "sequence_count": 25
+    },
+    "broker_cannot_read_client_key": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "broker_rejects_direct_client_peer": {
+      "pass": true
+    },
+    "client_cannot_read_permits": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "client_legacy_ledger_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "concurrent_broker_startup_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "direct_client_signed_admission": {
+      "pass": true,
+      "response": "{\"admitted\": true, \"digest\": \"09157ef31b2451f7cb17a7fb0293ecd2a42edf06699909b57f7793d4c019c56c\", \"engineering_approval\": \"BLOCKED/NO-GO\", \"sequence\": 1}\n"
+    },
+    "facade_cannot_read_client_key": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "facade_cannot_read_witness": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "facade_legacy_ledger_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "four_uid_real_processes": {
+      "pass": true,
+      "pids": {
+        "broker": 5115,
+        "facade": 5125,
+        "witness": 5095
+      }
+    },
+    "ledger_symlink_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "occupied_broker_socket_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "permit_database_symlink_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "phase_journal_tampering_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "real_sigkill_matrix": {
+      "count": 17,
+      "pass": true
+    },
+    "root_owned_fake_broker_peer_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "service_cannot_forge_client_signature": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "signed_replay_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "socket_owner_separation": {
+      "pass": true
+    },
+    "sqlite_sidecar_journal_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "sqlite_sidecar_shm_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "sqlite_sidecar_wal_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "startup_lock_symlink_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "witness_genesis_rollback_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "witness_legacy_ledger_denied": {
+      "exit_code": 1,
+      "pass": true
+    },
+    "witness_peer_owner": {
+      "pass": true
+    }
+  },
+  "crash_matrix": [
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_reconcile",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_reconcile",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_phase_begin",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_phase_begin",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_phase_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_phase_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_witness_cas",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_witness_cas",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_local_begin",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_local_begin",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_local_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_local_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_ipc_response",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_broker_ipc_read",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "before_nonce_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_nonce_commit",
+      "request_exit": 1,
+      "restarted": true
+    },
+    {
+      "broker_exit": -9,
+      "fresh_admission": true,
+      "point": "after_broker_ipc_write",
+      "request_exit": 0,
+      "restarted": true
+    }
+  ],
+  "environment": {
+    "linux": "linux",
+    "uid": 0
+  },
+  "limitations": [
+    "Root test controller may replace every file and impersonate every UID",
+    "Witness and permit authority intentionally share UID 24004",
+    "Broker UID code execution can call legacy Python APIs directly",
+    "No external secure monotonic root: simultaneous local/witness rollback not ruled out",
+    "No power-loss/fsync hardware fault injection or independently certified MAC policy",
+    "Test-only root removes orphaned sockets after SIGKILL"
+  ],
+  "processes": [
+    {
+      "exit_code": -15,
+      "name": "001-witness-authority",
+      "role": "witness",
+      "stderr": "stage022-fouruid-process/001-witness-authority.err",
+      "stdout": "stage022-fouruid-process/001-witness-authority.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "002-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/002-client-permit.err",
+      "stdout": "stage022-fouruid-process/002-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "003-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/003-broker-broker.err",
+      "stdout": "stage022-fouruid-process/003-broker-broker.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "004-service-facade",
+      "role": "service",
+      "stderr": "stage022-fouruid-process/004-service-facade.err",
+      "stdout": "stage022-fouruid-process/004-service-facade.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "005-client-sign",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/005-client-sign.err",
+      "stdout": "stage022-fouruid-process/005-client-sign.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "006-client-submit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/006-client-submit.err",
+      "stdout": "stage022-fouruid-process/006-client-submit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "007-client-submit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/007-client-submit.err",
+      "stdout": "stage022-fouruid-process/007-client-submit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "008-client-submit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/008-client-submit.err",
+      "stdout": "stage022-fouruid-process/008-client-submit.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "009-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/009-client-permit.err",
+      "stdout": "stage022-fouruid-process/009-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "010-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/010-broker-broker.err",
+      "stdout": "stage022-fouruid-process/010-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "011-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/011-client-permit.err",
+      "stdout": "stage022-fouruid-process/011-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "012-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/012-broker-broker.err",
+      "stdout": "stage022-fouruid-process/012-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "013-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/013-client-client.err",
+      "stdout": "stage022-fouruid-process/013-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "014-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/014-client-permit.err",
+      "stdout": "stage022-fouruid-process/014-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "015-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/015-broker-broker.err",
+      "stdout": "stage022-fouruid-process/015-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "016-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/016-client-client.err",
+      "stdout": "stage022-fouruid-process/016-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "017-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/017-client-permit.err",
+      "stdout": "stage022-fouruid-process/017-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "018-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/018-broker-broker.err",
+      "stdout": "stage022-fouruid-process/018-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "019-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/019-client-client.err",
+      "stdout": "stage022-fouruid-process/019-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "020-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/020-client-permit.err",
+      "stdout": "stage022-fouruid-process/020-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "021-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/021-broker-broker.err",
+      "stdout": "stage022-fouruid-process/021-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "022-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/022-client-client.err",
+      "stdout": "stage022-fouruid-process/022-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "023-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/023-client-permit.err",
+      "stdout": "stage022-fouruid-process/023-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "024-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/024-broker-broker.err",
+      "stdout": "stage022-fouruid-process/024-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "025-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/025-client-client.err",
+      "stdout": "stage022-fouruid-process/025-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "026-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/026-client-permit.err",
+      "stdout": "stage022-fouruid-process/026-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "027-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/027-broker-broker.err",
+      "stdout": "stage022-fouruid-process/027-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "028-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/028-client-client.err",
+      "stdout": "stage022-fouruid-process/028-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "029-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/029-client-permit.err",
+      "stdout": "stage022-fouruid-process/029-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "030-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/030-broker-broker.err",
+      "stdout": "stage022-fouruid-process/030-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "031-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/031-client-client.err",
+      "stdout": "stage022-fouruid-process/031-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "032-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/032-client-permit.err",
+      "stdout": "stage022-fouruid-process/032-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "033-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/033-broker-broker.err",
+      "stdout": "stage022-fouruid-process/033-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "034-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/034-client-client.err",
+      "stdout": "stage022-fouruid-process/034-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "035-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/035-client-permit.err",
+      "stdout": "stage022-fouruid-process/035-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "036-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/036-broker-broker.err",
+      "stdout": "stage022-fouruid-process/036-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "037-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/037-client-client.err",
+      "stdout": "stage022-fouruid-process/037-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "038-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/038-client-permit.err",
+      "stdout": "stage022-fouruid-process/038-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "039-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/039-broker-broker.err",
+      "stdout": "stage022-fouruid-process/039-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "040-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/040-client-client.err",
+      "stdout": "stage022-fouruid-process/040-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "041-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/041-client-permit.err",
+      "stdout": "stage022-fouruid-process/041-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "042-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/042-broker-broker.err",
+      "stdout": "stage022-fouruid-process/042-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "043-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/043-client-client.err",
+      "stdout": "stage022-fouruid-process/043-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "044-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/044-client-permit.err",
+      "stdout": "stage022-fouruid-process/044-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "045-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/045-broker-broker.err",
+      "stdout": "stage022-fouruid-process/045-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "046-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/046-client-client.err",
+      "stdout": "stage022-fouruid-process/046-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "047-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/047-client-permit.err",
+      "stdout": "stage022-fouruid-process/047-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "048-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/048-broker-broker.err",
+      "stdout": "stage022-fouruid-process/048-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "049-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/049-client-client.err",
+      "stdout": "stage022-fouruid-process/049-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "050-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/050-client-permit.err",
+      "stdout": "stage022-fouruid-process/050-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "051-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/051-broker-broker.err",
+      "stdout": "stage022-fouruid-process/051-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "052-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/052-client-client.err",
+      "stdout": "stage022-fouruid-process/052-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "053-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/053-client-permit.err",
+      "stdout": "stage022-fouruid-process/053-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "054-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/054-broker-broker.err",
+      "stdout": "stage022-fouruid-process/054-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "055-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/055-client-client.err",
+      "stdout": "stage022-fouruid-process/055-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "056-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/056-client-permit.err",
+      "stdout": "stage022-fouruid-process/056-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "057-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/057-broker-broker.err",
+      "stdout": "stage022-fouruid-process/057-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "058-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/058-client-client.err",
+      "stdout": "stage022-fouruid-process/058-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "059-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/059-client-permit.err",
+      "stdout": "stage022-fouruid-process/059-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "060-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/060-broker-broker.err",
+      "stdout": "stage022-fouruid-process/060-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "061-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/061-client-client.err",
+      "stdout": "stage022-fouruid-process/061-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "062-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/062-client-permit.err",
+      "stdout": "stage022-fouruid-process/062-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "063-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/063-broker-broker.err",
+      "stdout": "stage022-fouruid-process/063-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "064-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/064-client-client.err",
+      "stdout": "stage022-fouruid-process/064-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "065-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/065-client-permit.err",
+      "stdout": "stage022-fouruid-process/065-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "066-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/066-broker-broker.err",
+      "stdout": "stage022-fouruid-process/066-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "067-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/067-client-client.err",
+      "stdout": "stage022-fouruid-process/067-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "068-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/068-client-permit.err",
+      "stdout": "stage022-fouruid-process/068-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "069-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/069-broker-broker.err",
+      "stdout": "stage022-fouruid-process/069-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "070-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/070-client-client.err",
+      "stdout": "stage022-fouruid-process/070-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "071-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/071-client-permit.err",
+      "stdout": "stage022-fouruid-process/071-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "072-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/072-broker-broker.err",
+      "stdout": "stage022-fouruid-process/072-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "073-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/073-client-client.err",
+      "stdout": "stage022-fouruid-process/073-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "074-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/074-client-permit.err",
+      "stdout": "stage022-fouruid-process/074-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "075-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/075-broker-broker.err",
+      "stdout": "stage022-fouruid-process/075-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "076-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/076-client-client.err",
+      "stdout": "stage022-fouruid-process/076-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "077-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/077-client-permit.err",
+      "stdout": "stage022-fouruid-process/077-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "078-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/078-broker-broker.err",
+      "stdout": "stage022-fouruid-process/078-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "079-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/079-client-client.err",
+      "stdout": "stage022-fouruid-process/079-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "080-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/080-client-permit.err",
+      "stdout": "stage022-fouruid-process/080-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "081-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/081-broker-broker.err",
+      "stdout": "stage022-fouruid-process/081-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "082-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/082-client-client.err",
+      "stdout": "stage022-fouruid-process/082-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "083-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/083-client-permit.err",
+      "stdout": "stage022-fouruid-process/083-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "084-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/084-broker-broker.err",
+      "stdout": "stage022-fouruid-process/084-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "085-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/085-client-client.err",
+      "stdout": "stage022-fouruid-process/085-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "086-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/086-client-permit.err",
+      "stdout": "stage022-fouruid-process/086-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "087-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/087-broker-broker.err",
+      "stdout": "stage022-fouruid-process/087-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "088-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/088-client-client.err",
+      "stdout": "stage022-fouruid-process/088-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "089-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/089-client-permit.err",
+      "stdout": "stage022-fouruid-process/089-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "090-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/090-broker-broker.err",
+      "stdout": "stage022-fouruid-process/090-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "091-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/091-client-client.err",
+      "stdout": "stage022-fouruid-process/091-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "092-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/092-client-permit.err",
+      "stdout": "stage022-fouruid-process/092-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "093-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/093-broker-broker.err",
+      "stdout": "stage022-fouruid-process/093-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "094-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/094-client-client.err",
+      "stdout": "stage022-fouruid-process/094-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "095-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/095-client-permit.err",
+      "stdout": "stage022-fouruid-process/095-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "096-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/096-broker-broker.err",
+      "stdout": "stage022-fouruid-process/096-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "097-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/097-client-client.err",
+      "stdout": "stage022-fouruid-process/097-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "098-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/098-client-permit.err",
+      "stdout": "stage022-fouruid-process/098-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "099-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/099-broker-broker.err",
+      "stdout": "stage022-fouruid-process/099-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "100-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/100-client-client.err",
+      "stdout": "stage022-fouruid-process/100-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "101-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/101-client-permit.err",
+      "stdout": "stage022-fouruid-process/101-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "102-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/102-broker-broker.err",
+      "stdout": "stage022-fouruid-process/102-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "103-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/103-client-client.err",
+      "stdout": "stage022-fouruid-process/103-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "104-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/104-client-permit.err",
+      "stdout": "stage022-fouruid-process/104-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "105-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/105-broker-broker.err",
+      "stdout": "stage022-fouruid-process/105-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "106-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/106-client-client.err",
+      "stdout": "stage022-fouruid-process/106-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "107-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/107-client-permit.err",
+      "stdout": "stage022-fouruid-process/107-client-permit.out"
+    },
+    {
+      "exit_code": -9,
+      "name": "108-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/108-broker-broker.err",
+      "stdout": "stage022-fouruid-process/108-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "109-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/109-client-client.err",
+      "stdout": "stage022-fouruid-process/109-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "110-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/110-client-permit.err",
+      "stdout": "stage022-fouruid-process/110-client-permit.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "111-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/111-broker-broker.err",
+      "stdout": "stage022-fouruid-process/111-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "112-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/112-client-client.err",
+      "stdout": "stage022-fouruid-process/112-client-client.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "113-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/113-client-permit.err",
+      "stdout": "stage022-fouruid-process/113-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "114-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/114-broker-broker.err",
+      "stdout": "stage022-fouruid-process/114-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "115-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/115-client-permit.err",
+      "stdout": "stage022-fouruid-process/115-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "116-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/116-broker-broker.err",
+      "stdout": "stage022-fouruid-process/116-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "117-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/117-client-permit.err",
+      "stdout": "stage022-fouruid-process/117-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "118-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/118-broker-broker.err",
+      "stdout": "stage022-fouruid-process/118-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "119-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/119-client-permit.err",
+      "stdout": "stage022-fouruid-process/119-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "120-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/120-broker-broker.err",
+      "stdout": "stage022-fouruid-process/120-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "121-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/121-client-permit.err",
+      "stdout": "stage022-fouruid-process/121-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "122-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/122-broker-broker.err",
+      "stdout": "stage022-fouruid-process/122-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "123-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/123-client-permit.err",
+      "stdout": "stage022-fouruid-process/123-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "124-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/124-broker-broker.err",
+      "stdout": "stage022-fouruid-process/124-broker-broker.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "125-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/125-client-permit.err",
+      "stdout": "stage022-fouruid-process/125-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "126-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/126-broker-broker.err",
+      "stdout": "stage022-fouruid-process/126-broker-broker.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "127-client-client",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/127-client-client.err",
+      "stdout": "stage022-fouruid-process/127-client-client.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "128-witness-authority",
+      "role": "witness",
+      "stderr": "stage022-fouruid-process/128-witness-authority.err",
+      "stdout": "stage022-fouruid-process/128-witness-authority.out"
+    },
+    {
+      "exit_code": -15,
+      "name": "129-witness-authority",
+      "role": "witness",
+      "stderr": "stage022-fouruid-process/129-witness-authority.err",
+      "stdout": "stage022-fouruid-process/129-witness-authority.out"
+    },
+    {
+      "exit_code": 0,
+      "name": "130-client-permit",
+      "role": "client",
+      "stderr": "stage022-fouruid-process/130-client-permit.err",
+      "stdout": "stage022-fouruid-process/130-client-permit.out"
+    },
+    {
+      "exit_code": 1,
+      "name": "131-broker-broker",
+      "role": "broker",
+      "stderr": "stage022-fouruid-process/131-broker-broker.err",
+      "stdout": "stage022-fouruid-process/131-broker-broker.out"
+    }
+  ],
+  "stage": "ISLAND-GEO-021",
+  "success": true,
+  "uids": {
+    "broker": 24003,
+    "client": 24001,
+    "service": 24002,
+    "witness": 24004
+  }
+}

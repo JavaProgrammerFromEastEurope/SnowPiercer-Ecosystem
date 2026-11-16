@@ -1,0 +1,40 @@
+{
+  "stage": "ISLAND-GEO-005",
+  "version": "0.6.0",
+  "regressions": [
+    {
+      "run": 1,
+      "passed": true,
+      "tests": 60,
+      "warning_policy": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "tests": 60,
+      "warning_policy": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "tests": 60,
+      "warning_policy": [
+        "error::ResourceWarning",
+        "error::DeprecationWarning"
+      ]
+    }
+  ],
+  "physical_deployment": "BLOCKED/NO-GO",
+  "limitations": [
+    "Synthetic input only",
+    "No transient PDE solution",
+    "No site investigation",
+    "No physical hazard isolation"
+  ]
+}

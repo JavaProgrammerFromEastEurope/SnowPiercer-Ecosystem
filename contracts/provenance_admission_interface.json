@@ -1,0 +1,20 @@
+{
+  "contract_id": "geotechnical-provenance-admission-v1",
+  "version": "1.0",
+  "input": [
+    "ScenarioEvidence",
+    "SourcePolicy",
+    "payloads"
+  ],
+  "output": [
+    "admitted",
+    "reasons",
+    "trace",
+    "risk_flags",
+    "intervals",
+    "engineering_approval"
+  ],
+  "fail_closed": "Rejected admission yields null numeric intervals",
+  "trust_boundary": "Policies and payloads supplied by caller; no source authentication",
+  "deployment": "BLOCKED/NO-GO"
+}

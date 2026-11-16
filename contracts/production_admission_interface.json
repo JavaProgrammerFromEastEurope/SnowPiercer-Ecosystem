@@ -1,0 +1,17 @@
+{
+  "stage": "ISLAND-GEO-009",
+  "version": "1.0",
+  "transport": "AF_UNIX stream length-prefixed JSON",
+  "operations": [
+    "admit"
+  ],
+  "request": {
+    "operation": "admit",
+    "payload": "hex bytes <=4096"
+  },
+  "peer_identity": "Linux SO_PEERCRED allowlist",
+  "witness": "existing witness CAS IPC",
+  "security_status": "NOT VERIFIED independent cross-UID",
+  "production_bypass": "legacy APIs not OS fenced",
+  "readiness": "BLOCKED/NO-GO"
+}

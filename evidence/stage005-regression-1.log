@@ -1,0 +1,55 @@
+test_asset_identifiers (test_stage001.Stage001Tests.test_asset_identifiers) ... ok
+test_dependencies_resolve (test_stage001.Stage001Tests.test_dependencies_resolve) ... ok
+test_hazard_structure (test_stage001.Stage001Tests.test_hazard_structure) ... ok
+test_hazards_unverified (test_stage001.Stage001Tests.test_hazards_unverified) ... ok
+test_interface_coverage (test_stage001.Stage001Tests.test_interface_coverage) ... ok
+test_no_approval (test_stage001.Stage001Tests.test_no_approval) ... ok
+test_no_contract_actuation (test_stage001.Stage001Tests.test_no_contract_actuation) ... ok
+test_readiness_gate (test_stage001.Stage001Tests.test_readiness_gate) ... ok
+test_requirement_traceability (test_stage001.Stage001Tests.test_requirement_traceability) ... ok
+test_requirements_unique (test_stage001.Stage001Tests.test_requirements_unique) ... ok
+test_contract_and_hazards (test_stage002.Stage002Tests.test_contract_and_hazards) ... ok
+test_depth_bounds (test_stage002.Stage002Tests.test_depth_bounds) ... ok
+test_invalid_loads_and_types (test_stage002.Stage002Tests.test_invalid_loads_and_types) ... ok
+test_layer_validation (test_stage002.Stage002Tests.test_layer_validation) ... ok
+test_no_go (test_stage002.Stage002Tests.test_no_go) ... ok
+test_property_invariants (test_stage002.Stage002Tests.test_property_invariants) ... ok
+test_requirements_trace (test_stage002.Stage002Tests.test_requirements_trace) ... ok
+test_risk_flags (test_stage002.Stage002Tests.test_risk_flags) ... ok
+test_synthetic_case (test_stage002.Stage002Tests.test_synthetic_case) ... ok
+test_unknown_groundwater (test_stage002.Stage002Tests.test_unknown_groundwater) ... ok
+test_artifact_traceability (test_stage003.Stage003Tests.test_artifact_traceability) ... ok
+test_extrapolation_and_time_validation (test_stage003.Stage003Tests.test_extrapolation_and_time_validation) ... ok
+test_graph_cycles_and_isolation (test_stage003.Stage003Tests.test_graph_cycles_and_isolation) ... ok
+test_graph_invalid (test_stage003.Stage003Tests.test_graph_invalid) ... ok
+test_interval_invalid (test_stage003.Stage003Tests.test_interval_invalid) ... ok
+test_mismatch_and_depth (test_stage003.Stage003Tests.test_mismatch_and_depth) ... ok
+test_property_monotone_risk (test_stage003.Stage003Tests.test_property_monotone_risk) ... ok
+test_property_random_intervals (test_stage003.Stage003Tests.test_property_random_intervals) ... ok
+test_reference (test_stage003.Stage003Tests.test_reference) ... ok
+test_unknown_never_dry (test_stage003.Stage003Tests.test_unknown_never_dry) ... ok
+test_water_interpolation (test_stage003.Stage003Tests.test_water_interpolation) ... ok
+test_direction_ambiguity (test_stage004.TestSeepage.test_direction_ambiguity) ... ok
+test_invalid (test_stage004.TestSeepage.test_invalid) ... ok
+test_isolation_and_cycles (test_stage004.TestSeepage.test_isolation_and_cycles) ... ok
+test_nominal (test_stage004.TestSeepage.test_nominal) ... ok
+test_property_interval_enclosure (test_stage004.TestSeepage.test_property_interval_enclosure) ... ok
+test_property_isolation (test_stage004.TestSeepage.test_property_isolation) ... ok
+test_reject_undeclared_edges (test_stage004.TestSeepage.test_reject_undeclared_edges) ... ok
+test_reverse_flow (test_stage004.TestSeepage.test_reverse_flow) ... ok
+test_unknown_is_fail_closed (test_stage004.TestSeepage.test_unknown_is_fail_closed) ... ok
+test_asynchronous_knots (test_stage005.TransientTests.test_asynchronous_knots) ... ok
+test_basic_envelope (test_stage005.TransientTests.test_basic_envelope) ... ok
+test_invalid_series (test_stage005.TransientTests.test_invalid_series) ... ok
+test_isolation (test_stage005.TransientTests.test_isolation) ... ok
+test_no_extrapolation (test_stage005.TransientTests.test_no_extrapolation) ... ok
+test_property_enclosure (test_stage005.TransientTests.test_property_enclosure) ... ok
+test_reject_geometry_and_types (test_stage005.TransientTests.test_reject_geometry_and_types) ... ok
+test_single_instant (test_stage005.TransientTests.test_single_instant) ... ok
+test_unknown_at_knot_blocks_envelope (test_stage005.TransientTests.test_unknown_at_knot_blocks_envelope) ... ok
+test_unknown_conductivity (test_stage005.TransientTests.test_unknown_conductivity) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.351s
+
+OK

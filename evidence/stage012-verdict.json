@@ -1,0 +1,24 @@
+{
+  "software_regressions": 3,
+  "tests_per_regression": 127,
+  "total_passed": 381,
+  "multiuid": true,
+  "exhaustive_crash_proof": false,
+  "production_security": "BLOCKED/NO-GO",
+  "physical_deployment": "BLOCKED/NO-GO",
+  "environment": {
+    "linux": true,
+    "executed_as_root_harness": true,
+    "role_uids": {
+      "client": 23001,
+      "service": 23002,
+      "witness": 23003
+    }
+  },
+  "limitations": [
+    "Only service SIGKILL after successful commit tested; no exhaustive boundary injection",
+    "Witness store not protected from privileged host rollback",
+    "Legacy API import remains possible under service UID",
+    "No independent witness attestation"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "crash_points": {
+    "before_reconcile": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_reconcile": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_phase_begin": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_phase_begin": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_phase_commit": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_phase_commit": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_witness_cas": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_witness_cas": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_local_begin": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_local_begin": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_local_commit": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "after_local_commit": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    },
+    "before_ipc_response": {
+      "status": "PASS",
+      "sigkill": true,
+      "recovery_exit": 0
+    }
+  },
+  "rollback_to_genesis": {
+    "status": "PASS",
+    "scope": "privileged replacement of witness SQLite followed by recovery"
+  },
+  "concurrent_production_start": {
+    "status": "NOT_EXECUTED"
+  },
+  "socket_substitution": {
+    "status": "NOT_EXECUTED"
+  },
+  "phase_journal_tampering": {
+    "status": "NOT_EXECUTED"
+  },
+  "lock_file_tampering": {
+    "status": "NOT_EXECUTED"
+  },
+  "local_sqlite_tampering": {
+    "status": "NOT_EXECUTED"
+  },
+  "witness_anchor_tampering": {
+    "status": "PARTIAL",
+    "detail": "genesis rollback only"
+  },
+  "replay": {
+    "status": "NOT_EXECUTED in Stage013 E2E"
+  },
+  "legacy_production_fencing": {
+    "status": "NOT_VERIFIED"
+  },
+  "IPC_real_SIGKILL": {
+    "status": "NOT_EXECUTED"
+  },
+  "independent_witness_antirollback": {
+    "status": "NOT_VERIFIED"
+  },
+  "cross_uid_recovery_permits": {
+    "status": "NOT_IMPLEMENTED"
+  }
+}

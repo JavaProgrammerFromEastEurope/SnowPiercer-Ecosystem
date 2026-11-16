@@ -1,0 +1,30 @@
+{
+  "stage": "ISLAND-GEO-014",
+  "version": "0.15.0",
+  "regressions": [
+    {
+      "name": "stage015-regression-1.log",
+      "tests": 140,
+      "result": "PASS",
+      "warnings": "ResourceWarning, DeprecationWarning as errors"
+    },
+    {
+      "name": "stage015-regression-2.log",
+      "tests": 140,
+      "result": "PASS",
+      "warnings": "ResourceWarning, DeprecationWarning as errors"
+    },
+    {
+      "name": "stage015-regression-3.log",
+      "tests": 140,
+      "result": "PASS",
+      "warnings": "ResourceWarning, DeprecationWarning as errors"
+    }
+  ],
+  "failed_logs": [
+    "stage015-initial.log",
+    "stage015-retry.log"
+  ],
+  "deployment": "BLOCKED/NO-GO",
+  "security": "BLOCKED/NO-GO"
+}

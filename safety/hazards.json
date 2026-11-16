@@ -1,0 +1,962 @@
+{
+  "method": "preliminary hazard identification; not a certified FMEA",
+  "hazards": [
+    {
+      "id": "H-001",
+      "scenario": "Foundation instability",
+      "severity": "catastrophic",
+      "mitigation": "Geotechnical investigations and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-002",
+      "scenario": "Tunnel flooding",
+      "severity": "catastrophic",
+      "mitigation": "Hydrogeological model and isolation design",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-003",
+      "scenario": "Loss of critical utilities",
+      "severity": "catastrophic",
+      "mitigation": "Redundancy and load shedding analysis",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-004",
+      "scenario": "Control network compromise",
+      "severity": "major",
+      "mitigation": "Segmentation and authenticated commands",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-005",
+      "scenario": "Evacuation route failure",
+      "severity": "major",
+      "mitigation": "Life-safety engineering and drills",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-006",
+      "scenario": "Environmental contamination",
+      "severity": "major",
+      "mitigation": "Baseline sampling and containment plan",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-GEO-HZ-001",
+      "hazard": "Unrepresentative stratigraphy",
+      "cause": "Site-specific parameters and investigations absent",
+      "mitigation": "Block design approval; require licensed engineering review and field investigation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-GEO-HZ-002",
+      "hazard": "Unexpected groundwater rise",
+      "cause": "Site-specific parameters and investigations absent",
+      "mitigation": "Block design approval; require licensed engineering review and field investigation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-GEO-HZ-003",
+      "hazard": "Excessive settlement",
+      "cause": "Site-specific parameters and investigations absent",
+      "mitigation": "Block design approval; require licensed engineering review and field investigation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-GEO-HZ-004",
+      "hazard": "Bearing or slope failure",
+      "cause": "Site-specific parameters and investigations absent",
+      "mitigation": "Block design approval; require licensed engineering review and field investigation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-GEO-HZ-005",
+      "hazard": "Liquefaction or seismic instability",
+      "cause": "Site-specific parameters and investigations absent",
+      "mitigation": "Block design approval; require licensed engineering review and field investigation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO2-001",
+      "scenario": "Groundwater temporal extrapolation masks flood hazard",
+      "severity": "potentially catastrophic",
+      "mitigation": "Reject out-of-range time queries",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO2-002",
+      "scenario": "Unknown observation interpreted as dry ground",
+      "severity": "potentially catastrophic",
+      "mitigation": "Propagate null and unknown risk",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO2-003",
+      "scenario": "Point estimate hides soil uncertainty",
+      "severity": "potentially catastrophic",
+      "mitigation": "Conservative interval arithmetic",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO2-004",
+      "scenario": "Infrastructure dependency transmits geotechnical hazard",
+      "severity": "potentially catastrophic",
+      "mitigation": "Fixed-point graph propagation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO2-005",
+      "scenario": "Conceptual screening mistaken for design approval",
+      "severity": "potentially catastrophic",
+      "mitigation": "Permanent BLOCKED/NO-GO",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-004-01",
+      "hazard": "Unknown hydraulic boundary",
+      "mitigation": "Unknown outputs remain null and NO-GO",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-004-02",
+      "hazard": "Incorrect seepage extrapolation",
+      "mitigation": "No transient or 2D/3D inference permitted",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-004-03",
+      "hazard": "Cross-asset hazard leakage",
+      "mitigation": "Explicit edge admission with isolation tests",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-004-04",
+      "hazard": "Unverified critical gradient",
+      "mitigation": "Risk flag and independent engineering review",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-005-01",
+      "hazard": "Time-series extrapolation",
+      "mitigation": "Reject out-of-range query windows",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-005-02",
+      "hazard": "Hidden transient extrema",
+      "mitigation": "Evaluate every piecewise-linear knot; prohibit inference beyond model",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-005-03",
+      "hazard": "Missing observation masked",
+      "mitigation": "Invalidate entire envelope when any required sample is unknown",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-005-04",
+      "hazard": "Cross-asset risk leakage",
+      "mitigation": "Require declared and admitted directed graph edges",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-005-05",
+      "hazard": "False engineering approval",
+      "mitigation": "Unconditional BLOCKED/NO-GO output",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-006-01",
+      "hazard": "Scenario mismatch",
+      "mitigation": "Reject incompatible windows and paths",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-006-02",
+      "hazard": "Missing observation",
+      "mitigation": "Invalidate numeric union and escalate",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-006-03",
+      "hazard": "Risk propagation across unauthorized edge",
+      "mitigation": "Explicit directed admission required",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-006-04",
+      "hazard": "False engineering approval",
+      "mitigation": "Unconditional BLOCKED/NO-GO",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-01",
+      "hazard": "Forged provenance metadata",
+      "mitigation": "Fail-closed admission, digest checks and independent engineering review required",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-02",
+      "hazard": "Silent input mutation",
+      "mitigation": "Fail-closed admission, digest checks and independent engineering review required",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-03",
+      "hazard": "Unverified observation coverage",
+      "mitigation": "Fail-closed admission, digest checks and independent engineering review required",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-04",
+      "hazard": "False engineering approval",
+      "mitigation": "Fail-closed admission, digest checks and independent engineering review required",
+      "status": "OPEN",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-001",
+      "scenario": "Source private key compromise",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-002",
+      "scenario": "Trust root substitution",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-003",
+      "scenario": "SQLite replay ledger rollback or deletion",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-004",
+      "scenario": "Untrusted scenario epoch mapping",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-005",
+      "scenario": "Unsigned numeric model substitution",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "ISLAND-HAZ-GEO-007-006",
+      "scenario": "Physical misuse of software admission",
+      "severity": "major",
+      "mitigation": "Independent custody, external anchoring, instrument calibration and engineering review required",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-008-040",
+      "scenario": "Witness database rollback by privileged actor",
+      "severity": "major",
+      "mitigation": "OS separation, external attestation, fail-closed startup and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-008-041",
+      "scenario": "Crash between phase journal and witness CAS",
+      "severity": "major",
+      "mitigation": "OS separation, external attestation, fail-closed startup and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-008-042",
+      "scenario": "Witness socket substitution or forged peer",
+      "severity": "major",
+      "mitigation": "OS separation, external attestation, fail-closed startup and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-008-043",
+      "scenario": "Concurrent admission races and lock-file substitution",
+      "severity": "major",
+      "mitigation": "OS separation, external attestation, fail-closed startup and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-008-044",
+      "scenario": "Untrusted client bypass of admission API",
+      "severity": "major",
+      "mitigation": "OS separation, external attestation, fail-closed startup and independent review",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-009-01",
+      "scenario": "Legacy direct API bypasses production admission",
+      "severity": "critical",
+      "mitigation": "OS MAC policy and dedicated production entrypoint",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-009-02",
+      "scenario": "Witness rollback to genesis",
+      "severity": "critical",
+      "mitigation": "Independent immutable monotonic witness",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-009-03",
+      "scenario": "Socket swap between validation and connect",
+      "severity": "critical",
+      "mitigation": "Peer identity attestation and protected socket directory",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-009-04",
+      "scenario": "SQLite and lock file replacement races",
+      "severity": "critical",
+      "mitigation": "OS-enforced filesystem isolation and descriptor-based validation",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-009-05",
+      "scenario": "Crash between SQLite phase, witness CAS and IPC response",
+      "severity": "critical",
+      "mitigation": "Exhaustive SIGKILL matrix and recovery audit",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-010-01",
+      "scenario": "Legacy API bypasses hardened admission",
+      "severity": "critical",
+      "mitigation": "OS isolation, independently owned witness, monitored production deployment, crash matrix",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-010-02",
+      "scenario": "Local witness DB rolled back to genesis",
+      "severity": "critical",
+      "mitigation": "OS isolation, independently owned witness, monitored production deployment, crash matrix",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-010-03",
+      "scenario": "Socket pathname replaced after preflight",
+      "severity": "critical",
+      "mitigation": "OS isolation, independently owned witness, monitored production deployment, crash matrix",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-010-04",
+      "scenario": "Cross-UID deployment not exercised",
+      "severity": "critical",
+      "mitigation": "OS isolation, independently owned witness, monitored production deployment, crash matrix",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-010-05",
+      "scenario": "Crash between SQLite commit and witness CAS",
+      "severity": "critical",
+      "mitigation": "OS isolation, independently owned witness, monitored production deployment, crash matrix",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-011-01",
+      "scenario": "Client can write legacy production SQLite",
+      "severity": "critical",
+      "mitigation": "OS isolation, independent witness and crash matrix",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-011-02",
+      "scenario": "Witness anchor rollback by shared principal",
+      "severity": "critical",
+      "mitigation": "OS isolation, independent witness and crash matrix",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-011-03",
+      "scenario": "Forged socket endpoint impersonates witness",
+      "severity": "critical",
+      "mitigation": "OS isolation, independent witness and crash matrix",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-011-04",
+      "scenario": "Crash between SQLite commit and witness CAS",
+      "severity": "critical",
+      "mitigation": "OS isolation, independent witness and crash matrix",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-011-05",
+      "scenario": "Insecure filesystem permissions during startup",
+      "severity": "critical",
+      "mitigation": "OS isolation, independent witness and crash matrix",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-012-001",
+      "scenario": "Privileged rollback of witness anchor",
+      "severity": "critical",
+      "mitigation": "Fail closed; independent evidence required",
+      "status": "open",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-012-002",
+      "scenario": "Service killed between phase commit and witness CAS",
+      "severity": "critical",
+      "mitigation": "Fail closed; independent evidence required",
+      "status": "open",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-012-003",
+      "scenario": "Socket replacement between path validation and connect",
+      "severity": "critical",
+      "mitigation": "Fail closed; independent evidence required",
+      "status": "open",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-012-004",
+      "scenario": "Concurrent startup bypassing single writer",
+      "severity": "critical",
+      "mitigation": "Fail closed; independent evidence required",
+      "status": "open",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-012-005",
+      "scenario": "Legacy direct API called with service UID",
+      "severity": "critical",
+      "mitigation": "Fail closed; independent evidence required",
+      "status": "open",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-013-01",
+      "scenario": "Crash between witness CAS and SQLite commit",
+      "severity": "critical",
+      "mitigation": "fail-closed recovery and independent OS isolation",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-013-02",
+      "scenario": "Witness rollback to genesis",
+      "severity": "critical",
+      "mitigation": "fail-closed recovery and independent OS isolation",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-013-03",
+      "scenario": "Stale IPC socket after SIGKILL",
+      "severity": "critical",
+      "mitigation": "fail-closed recovery and independent OS isolation",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-013-04",
+      "scenario": "Concurrent service startup bypass",
+      "severity": "critical",
+      "mitigation": "fail-closed recovery and independent OS isolation",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-013-05",
+      "scenario": "Legacy service UID bypass of production admission",
+      "severity": "critical",
+      "mitigation": "fail-closed recovery and independent OS isolation",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-014-001",
+      "scenario": "Legacy direct write bypass",
+      "severity": "critical",
+      "mitigation": "OS isolation, transactional permits and fail-closed admission; independent review pending",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-014-002",
+      "scenario": "Permit replay or stolen token",
+      "severity": "critical",
+      "mitigation": "OS isolation, transactional permits and fail-closed admission; independent review pending",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-014-003",
+      "scenario": "Witness database rollback or deletion",
+      "severity": "critical",
+      "mitigation": "OS isolation, transactional permits and fail-closed admission; independent review pending",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-014-004",
+      "scenario": "Socket and inode TOCTOU substitution",
+      "severity": "critical",
+      "mitigation": "OS isolation, transactional permits and fail-closed admission; independent review pending",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-014-005",
+      "scenario": "Partial IPC response after durable CAS",
+      "severity": "critical",
+      "mitigation": "OS isolation, transactional permits and fail-closed admission; independent review pending",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-015-001",
+      "scenario": "Permit DB rollback permits replay of old token",
+      "severity": "critical",
+      "mitigation": "Fail closed, OS privilege isolation, independent witness and signed client binding required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-015-002",
+      "scenario": "Authority witness DB reset to genesis masks full rollback",
+      "severity": "critical",
+      "mitigation": "Fail closed, OS privilege isolation, independent witness and signed client binding required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-015-003",
+      "scenario": "Client token forwarding without direct client-to-service attestation",
+      "severity": "critical",
+      "mitigation": "Fail closed, OS privilege isolation, independent witness and signed client binding required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-015-004",
+      "scenario": "Concurrent startup consumes permit before crash",
+      "severity": "critical",
+      "mitigation": "Fail closed, OS privilege isolation, independent witness and signed client binding required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-015-005",
+      "scenario": "Legacy direct SQLite writes bypass production IPC",
+      "severity": "critical",
+      "mitigation": "Fail closed, OS privilege isolation, independent witness and signed client binding required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-016-001",
+      "scenario": "Legacy production direct SQLite bypass",
+      "severity": "critical",
+      "mitigation": "OS-isolated deployment and independently verified end-to-end adversarial tests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-016-002",
+      "scenario": "Witness and permit DB rollback to genesis",
+      "severity": "critical",
+      "mitigation": "OS-isolated deployment and independently verified end-to-end adversarial tests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-016-003",
+      "scenario": "Authority socket substitution and TOCTOU",
+      "severity": "critical",
+      "mitigation": "OS-isolated deployment and independently verified end-to-end adversarial tests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-016-004",
+      "scenario": "SIGKILL during permit consume and witness CAS",
+      "severity": "critical",
+      "mitigation": "OS-isolated deployment and independently verified end-to-end adversarial tests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-016-005",
+      "scenario": "Cross-UID filesystem and IPC authorization gap",
+      "severity": "critical",
+      "mitigation": "OS-isolated deployment and independently verified end-to-end adversarial tests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-017-01",
+      "scenario": "World-writable IPC namespace without sticky bit allows endpoint replacement",
+      "severity": "critical",
+      "mitigation": "fail closed; OS role isolation; independent audit required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-017-02",
+      "scenario": "Permit database rollback enables replay across witness rollback",
+      "severity": "critical",
+      "mitigation": "fail closed; OS role isolation; independent audit required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-017-03",
+      "scenario": "Legacy library write under service UID bypasses production facade",
+      "severity": "critical",
+      "mitigation": "fail closed; OS role isolation; independent audit required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-017-04",
+      "scenario": "Privileged orchestrator can substitute witness and local SQLite",
+      "severity": "critical",
+      "mitigation": "fail closed; OS role isolation; independent audit required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-017-05",
+      "scenario": "SIGKILL during IPC commit creates ambiguous client response",
+      "severity": "critical",
+      "mitigation": "fail closed; OS role isolation; independent audit required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-01",
+      "scenario": "Legacy API bypass by service UID",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-02",
+      "scenario": "Witness socket replacement after inspection",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-03",
+      "scenario": "Crash during permit consume before startup",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-04",
+      "scenario": "Rollback of both local and witness to genesis",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-05",
+      "scenario": "Concurrent startup and recovery contention",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-018-06",
+      "scenario": "SQLite journal or lock inode substitution",
+      "severity": "critical",
+      "mitigation": "fail-closed guard and independent OS/hardware boundary required",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-01",
+      "scenario": "Broker UID compromise bypasses facade admission",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-02",
+      "scenario": "Service forges client-origin payload at broker",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-03",
+      "scenario": "Witness or permit database rollback invalidates authorization",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-04",
+      "scenario": "IPC socket substitution or inode TOCTOU",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-05",
+      "scenario": "SIGKILL at SQLite/witness CAS boundary produces ambiguous recovery",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-020-06",
+      "scenario": "Legacy code executed as broker UID bypasses IPC",
+      "severity": "critical",
+      "mitigation": "OS isolation, authenticated IPC and independent crash/rollback testing",
+      "verification": "pending",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-01",
+      "scenario": "Facade or service forges client payload",
+      "severity": "critical",
+      "mitigation": "Broker-pinned Ed25519 verification; client private key owned by client UID",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-02",
+      "scenario": "Signed request replay after crash at nonce/witness gap",
+      "severity": "critical",
+      "mitigation": "Durable nonce reservation before witness CAS; fail closed with potentially burned requests",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-03",
+      "scenario": "Compromised broker UID invokes historical library API",
+      "severity": "critical",
+      "mitigation": "Mandatory MAC/LSM confinement and trusted service lifecycle; NOT IMPLEMENTED",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-04",
+      "scenario": "Root or witness owner reverts SQLite and anchor together",
+      "severity": "critical",
+      "mitigation": "Independent protected monotonic root required; NOT IMPLEMENTED",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-05",
+      "scenario": "Crash after nonce burn before admission causes permanently lost request",
+      "severity": "critical",
+      "mitigation": "No auto-retry of same nonce, auditable abort and authorized recovery workflow needed",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-06",
+      "scenario": "UID-socket impersonation, endpoint substitution or race",
+      "severity": "critical",
+      "mitigation": "SO_PEERCRED pinned peers; private storage; still no full root-resistant TOCTOU proof",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-07",
+      "scenario": "Recovery token stolen from command arguments",
+      "severity": "critical",
+      "mitigation": "Inherited FD only for broker startup; authority verifies original client-issued permit",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-021-08",
+      "scenario": "Power failure between disk cache and durable journal commit",
+      "severity": "critical",
+      "mitigation": "Hardware-level persistence testing absent; production NO-GO",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-01",
+      "scenario": "Signed software root rolled back with witness/ledger to genesis",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-02",
+      "scenario": "Untrusted root signs stale head or replays challenge",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-03",
+      "scenario": "Witness CAS commits but independent root CAS fails or process killed",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-04",
+      "scenario": "Permit authority rollback or stolen token bypasses recovery startup",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-05",
+      "scenario": "Broker UID executes legacy Python API and bypasses admission",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-06",
+      "scenario": "No effective OS MAC profile loaded at process exec",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-07",
+      "scenario": "Unmanaged service restart races stale socket or permit consumption",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-08",
+      "scenario": "Root controller or privileged UID replaces SQLite, checkpoint, keys or sockets",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-09",
+      "scenario": "Power failure in SQLite fsync or distributed witness root CAS",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    },
+    {
+      "id": "H-GEO-022-10",
+      "scenario": "Construction permitted on insufficient geological and environmental evidence",
+      "severity": "critical",
+      "mitigation": "Fail closed, independent MAC/secure monotonic root and certified deployment evidence required; see docs/stage023_architecture.md",
+      "verification": "pending independent E2E",
+      "residual_risk": "unassessed"
+    }
+  ]
+}

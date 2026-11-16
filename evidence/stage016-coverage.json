@@ -1,0 +1,21 @@
+{
+  "stage": "ISLAND-GEO-015",
+  "verified_unit": [
+    "state-bound permit issue",
+    "UID rejection",
+    "single use",
+    "concurrent consume",
+    "stale witness head rejection"
+  ],
+  "not_verified_e2e": [
+    "3 UID production admission with bound permits",
+    "direct client attestation",
+    "production SIGKILL exhaustive",
+    "concurrent production startups",
+    "rollback-to-genesis witness+permit",
+    "SQLite/journal/lock/socket substitutions",
+    "OS-enforced legacy production fencing"
+  ],
+  "security": "BLOCKED/NO-GO",
+  "physical": "BLOCKED/NO-GO"
+}

@@ -1,0 +1,47 @@
+{
+  "uids": {
+    "client": 23001,
+    "service": 23002,
+    "witness": 23003
+  },
+  "gid": 23000,
+  "checks": {
+    "real_client_admit": {
+      "pass": true,
+      "stdout": "{\"admitted\": true, \"digest\": \"0a10d580a337ed071a6e806940ea12ad23f9138a4d5e9c0a84fb3d2685ff10f5\", \"engineering_approval\": \"BLOCKED/NO-GO\", \"sequence\": 1}\n",
+      "stderr": ""
+    },
+    "unauthorized_service": {
+      "pass": true,
+      "stderr": "runtime.py\", line 17, in main\n    print(json.dumps(ProductionAdmissionClient(a.socket).admit(a.payload.encode()),sort_keys=True),flush=True)\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/snowpiercer-island-v0.13.0/island/production_admission.py\", line 127, in admit\n    raise AdmissionDenied(result.get('reason', 'invalid response') if type(result) is dict else 'invalid response')\nisland.anchored_admission.AdmissionDenied: client UID rejected\n"
+    },
+    "unauthorized_witness": {
+      "pass": true,
+      "stderr": "runtime.py\", line 17, in main\n    print(json.dumps(ProductionAdmissionClient(a.socket).admit(a.payload.encode()),sort_keys=True),flush=True)\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/snowpiercer-island-v0.13.0/island/production_admission.py\", line 127, in admit\n    raise AdmissionDenied(result.get('reason', 'invalid response') if type(result) is dict else 'invalid response')\nisland.anchored_admission.AdmissionDenied: client UID rejected\n"
+    },
+    "witness_db_denied_client": {
+      "pass": true
+    },
+    "witness_db_denied_service": {
+      "pass": true
+    },
+    "service_db_denied_client": {
+      "pass": true
+    },
+    "service_db_denied_witness": {
+      "pass": true
+    },
+    "peer_socket_ownership": {
+      "pass": true
+    },
+    "real_sigkill_service": {
+      "pass": true
+    }
+  },
+  "limitations": [
+    "Only service SIGKILL after successful commit tested; no exhaustive boundary injection",
+    "Witness store not protected from privileged host rollback",
+    "Legacy API import remains possible under service UID",
+    "No independent witness attestation"
+  ]
+}

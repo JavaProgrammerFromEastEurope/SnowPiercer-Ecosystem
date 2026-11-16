@@ -1,0 +1,45 @@
+{
+  "stage": "ISLAND-GEO-013",
+  "version": "0.14.0",
+  "regressions": [
+    {
+      "run": 1,
+      "tests": 132,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "run": 2,
+      "tests": 132,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "run": 3,
+      "tests": 132,
+      "status": "PASS",
+      "warnings_as_errors": [
+        "ResourceWarning",
+        "DeprecationWarning"
+      ]
+    }
+  ],
+  "real_sigkill_points": 13,
+  "sigkill_pass": 13,
+  "rollback_to_genesis_denied": true,
+  "production_security": "BLOCKED/NO-GO",
+  "physical_deployment": "BLOCKED/NO-GO",
+  "unverified": [
+    "production IPC injection",
+    "legacy OS fencing",
+    "exhaustive cross UID recovery",
+    "concurrent startup",
+    "tamper matrix"
+  ]
+}

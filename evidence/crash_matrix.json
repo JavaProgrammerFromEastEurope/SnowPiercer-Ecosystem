@@ -1,0 +1,46 @@
+{
+  "stage": "ISLAND-GEO-010",
+  "crash_points": [
+    {
+      "point": "sqlite_begin",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "sqlite_phase_commit",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "witness_cas_before_commit",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "witness_cas_after_commit",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "sqlite_accepted_commit",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "ipc_accept",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "ipc_send",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "socket_publish",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    },
+    {
+      "point": "startup_recovery",
+      "status": "NOT_EXECUTED_IN_STAGE_010"
+    }
+  ],
+  "inherited_stage_008_crash_tests": "os._exit checkpoints phase/witness/local; not equivalent to exhaustive SIGKILL",
+  "cross_uid_e2e": "NOT_EXECUTED",
+  "rollback_to_genesis_independent_witness": "NOT_VERIFIED",
+  "legacy_production_bypass": "OPEN",
+  "decision": "BLOCKED/NO-GO"
+}

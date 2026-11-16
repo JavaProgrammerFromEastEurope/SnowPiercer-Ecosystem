@@ -1,0 +1,46 @@
+{
+  "stage": "ISLAND-GEO-011",
+  "actual_sigkill_exhaustive": "NOT_EXECUTED",
+  "cross_uid_e2e": "NOT_EXECUTED",
+  "legacy_os_fencing": "NOT_VERIFIED",
+  "rollback_to_genesis": "NOT_VERIFIED",
+  "points": [
+    {
+      "boundary": "before SQLite BEGIN",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "after phase journal COMMIT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "before witness CAS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "after witness CAS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "before local accepted COMMIT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "after local accepted COMMIT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "before IPC socket publication",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "after IPC socket publication",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "boundary": "during concurrent recovery",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "prior_stage_crash_tests": "inherited, not independent cross-UID proof"
+}

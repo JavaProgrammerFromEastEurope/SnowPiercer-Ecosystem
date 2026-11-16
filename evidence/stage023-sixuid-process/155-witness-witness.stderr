@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/monotonic_root.py", line 60, in verify_proof
+    Ed25519PublicKey.from_public_bytes(public_key).verify(sig, DOMAIN + _canonical(body))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cryptography.exceptions.InvalidSignature
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 71, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/secure_runtime.py", line 51, in main
+    a.permit_uid,a.crash_at).serve()
+                             ~~~~~^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/split_authorities.py", line 101, in serve
+    self.root.require_head(head)  # Strictly no socket publication on rollback.
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/monotonic_root.py", line 94, in require_head
+    head = self.execute('read')
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/monotonic_root.py", line 88, in execute
+    head = verify_proof(response.get('proof'), challenge, self.public_key)
+  File "/mnt/data/snowpiercer-island-v0.23.0/island/monotonic_root.py", line 62, in verify_proof
+    raise AdmissionDenied('invalid root attestation signature') from exc
+island.anchored_admission.AdmissionDenied: invalid root attestation signature

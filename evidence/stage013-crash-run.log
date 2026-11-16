@@ -1,0 +1,110 @@
+{
+  "points": {
+    "before_reconcile": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_reconcile": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_phase_begin": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_phase_begin": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_phase_commit": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_phase_commit": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_witness_cas": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 0, \"digest\": \"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_witness_cas": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_local_begin": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_local_begin": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_local_commit": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    },
+    "after_local_commit": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    },
+    "before_ipc_response": {
+      "sigkill": true,
+      "recovery_exit": 0,
+      "recovery_output": "{\"sequence\": 1, \"digest\": \"abd0578b583e1748e40f01c924e87f5e3c922b335628dfe6c6cddd80bdb389db\"}",
+      "error": "",
+      "pass": true
+    }
+  },
+  "other": {
+    "witness_genesis_rollback_denied": {
+      "pass": true,
+      "admit_exit": 0,
+      "recovery_exit": 1,
+      "stderr": "                       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n  File \"/mnt/data/snowpiercer-island-v0.14.0/island/anchored_admission.py\", line 106, in execute\n    sock.settimeout(3); sock.connect(self.path)\n                        ~~~~~~~~~~~~^^^^^^^^^^^\nConnectionRefusedError: [Errno 111] Connection refused\n"
+    }
+  },
+  "limitations": [
+    "Crash points are in an opt-in worker, not the production IPC service",
+    "No independent cross-UID recovery permit protocol",
+    "No exhaustive concurrency, socket substitution or legacy production bypass proof",
+    "Privileged coordinator can rewrite witness; external anchor not independent",
+    "SQLite internal fsync crash points and IPC response transmission are not instrumented"
+  ]
+}

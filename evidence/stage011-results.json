@@ -1,0 +1,23 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "exit": 0,
+      "summary": "OK"
+    },
+    {
+      "run": 2,
+      "exit": 0,
+      "summary": "OK"
+    },
+    {
+      "run": 3,
+      "exit": 0,
+      "summary": "OK"
+    }
+  ],
+  "initial": "stage011-initial.log (9 failures)",
+  "retry": "stage011-retry.log (123 pass)",
+  "security": "BLOCKED/NO-GO",
+  "physical": "BLOCKED/NO-GO"
+}

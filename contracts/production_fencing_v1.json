@@ -1,0 +1,15 @@
+{
+  "name": "production-fencing-v1",
+  "version": "0.11.0",
+  "client_to_service": "AF_UNIX SO_PEERCRED",
+  "service_to_witness": "AF_UNIX SO_PEERCRED",
+  "required_principals": [
+    "client",
+    "service",
+    "witness"
+  ],
+  "requires_distinct_uids": true,
+  "external_provisioning_required": true,
+  "legacy_library_api": "preserved but NOT fenced",
+  "physical_deployment": "BLOCKED/NO-GO"
+}

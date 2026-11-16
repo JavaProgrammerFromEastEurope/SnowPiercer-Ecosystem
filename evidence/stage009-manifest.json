@@ -1,0 +1,17 @@
+{
+  "stage": "ISLAND-GEO-008",
+  "version": "0.9.0",
+  "regression_runs": 3,
+  "tests_per_run": 100,
+  "status": "software_tests_pass",
+  "independent_end_to_end": "NOT_VERIFIED",
+  "physical_deployment": "BLOCKED/NO-GO",
+  "limitations": [
+    "same-UID test harness",
+    "no external hardware anchor",
+    "legacy direct admission remains accessible",
+    "no exhaustive crash-point enumeration",
+    "witness database rollback not independently protected"
+  ],
+  "initial_failure_log": "stage009-initial.log"
+}

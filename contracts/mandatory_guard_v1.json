@@ -1,0 +1,17 @@
+{
+  "id": "mandatory_guard_v1",
+  "stage": "ISLAND-GEO-019",
+  "version": "0.20.0",
+  "entrypoint": "python -m island.guarded_runtime",
+  "startup": {
+    "requires": "state-bound recovery token",
+    "startup_lease": "nonblocking flock for lifetime",
+    "preflight": "private storage + socket inode + SO_PEERCRED"
+  },
+  "limitations": [
+    "legacy service UID can import legacy library",
+    "not all SIGKILL points exercised E2E",
+    "root controller not adversarially isolated",
+    "no immutable external witness"
+  ]
+}

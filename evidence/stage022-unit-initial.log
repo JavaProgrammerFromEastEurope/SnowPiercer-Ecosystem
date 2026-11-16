@@ -1,0 +1,16 @@
+test_client_disallows_unsigned (tests.test_stage022.AttestationTests.test_client_disallows_unsigned) ... ok
+test_crash_point_registry (tests.test_stage022.AttestationTests.test_crash_point_registry) ... ok
+test_four_uid_separation (tests.test_stage022.AttestationTests.test_four_uid_separation) ... ok
+test_invalid_request_schemas (tests.test_stage022.AttestationTests.test_invalid_request_schemas) ... ok
+test_nonce_is_durable_before_admission (tests.test_stage022.AttestationTests.test_nonce_is_durable_before_admission) ... ok
+test_private_key_modes (tests.test_stage022.AttestationTests.test_private_key_modes) ... ok
+test_signed_canonical_success (tests.test_stage022.AttestationTests.test_signed_canonical_success) ... ok
+test_tampered_payload_and_signature (tests.test_stage022.AttestationTests.test_tampered_payload_and_signature) ... ok
+test_wrong_signer_and_identity (tests.test_stage022.AttestationTests.test_wrong_signer_and_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.011s
+
+OK
+Exception ignored in: <sqlite3.Connection object at 0x7fac69f2f970>
+ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fac69f2f970>

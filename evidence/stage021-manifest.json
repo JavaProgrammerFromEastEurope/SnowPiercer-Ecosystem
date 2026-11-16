@@ -1,0 +1,17 @@
+{
+  "stage": "ISLAND-GEO-020",
+  "version": "0.21.0",
+  "final_full_regressions": 3,
+  "tests_per_regression": 175,
+  "warnings_as_errors": [
+    "ResourceWarning",
+    "DeprecationWarning"
+  ],
+  "initial_failed_logs": [
+    "stage021-regression-1.log"
+  ],
+  "security_status": "BLOCKED/NO-GO",
+  "physical_status": "BLOCKED/NO-GO",
+  "real_four_uid_e2e": "NOT_EXECUTED",
+  "production_crash_matrix": "NOT_EXECUTED"
+}

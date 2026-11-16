@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "stage": "ISLAND-GEO-001",
+  "previous_stage": "ISLAND-CORE-001",
+  "regressions": 3,
+  "tests_per_run": 20,
+  "physical_deployment": "BLOCKED/NO-GO",
+  "assumptions": [
+    "synthetic inputs",
+    "hydrostatic water",
+    "1D vertical stress",
+    "no design authorization"
+  ],
+  "generated_utc": "2026-11-14T13:57:33.215691+00:00"
+}
